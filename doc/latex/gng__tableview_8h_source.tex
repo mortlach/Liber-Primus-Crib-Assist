@@ -1,0 +1,41 @@
+\doxysection{gng\+\_\+tableview.\+h}
+\hypertarget{gng__tableview_8h_source}{}\label{gng__tableview_8h_source}\index{source/view/gng\_tableview.h@{source/view/gng\_tableview.h}}
+\mbox{\hyperlink{gng__tableview_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GNG\_TABLEVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GNG\_TABLEVIEW\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QTableView>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QMouseEvent>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_g_table_view}{GNGTableView}}\ :\ \textcolor{keyword}{public}\ QTableView}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_g_n_g_table_view}{GNGTableView}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a09973b0ef806b8211d6bdb299a8313f4}{allWidgetsEnabled}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:\ signals:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a6f8933a460fb91d99ff30c789876e5cf}{space\_bar\_sig}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a5346b77f25f6c959334994d09e420627}{alt\_f\_sig}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_acabff568b28b318c1c2aae33f9bd7327}{f\_sig}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a5e5a88cd6ccc35f41575cd48fb899417}{t\_sig}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a8a585582314140612951e53b2676e1d1}{alt\_a\_sig}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_adf7d51ae57c1749695219cad83390877}{alt\_c\_sig}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a35952dc10e425b4382ae234e33d18419}{alt\_n\_sig}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_ae19d05c50c4955071e053ba9d249dab5}{ctrl\_c\_sig}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a1c0d67f341894679e572de1130752809}{left\_doubleclick\_sig}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a7e9e6df3ebfb99b29b9f37c6fc74750f}{keyPressEvent}}(QKeyEvent\ *event);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_g_table_view_a92977acff58a824a49df344ce89f5a25}{mouseDoubleClickEvent}}(\ QMouseEvent\ *event);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_g_table_view_aa1499270223e1b07cacd0ad67bf3591d}{eventFilter}}(QObject\ *obj,\ QEvent\ *event);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_n_g_table_view_af7f9a112c643784fe164d291a6065775}{count}};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GNG\_TABLEVIEW\_H}}
+
+\end{DoxyCode}

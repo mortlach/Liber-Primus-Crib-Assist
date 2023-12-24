@@ -1,0 +1,73 @@
+\doxysection{NGram\+Data\+Model.\+h}
+\hypertarget{_n_gram_data_model_8h_source}{}\label{_n_gram_data_model_8h_source}\index{source/view/NGramDataModel.h@{source/view/NGramDataModel.h}}
+\mbox{\hyperlink{_n_gram_data_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NGRAMDATAMODEL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NGRAMDATAMODEL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QAbstractTableModel>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngramdata_8h}{ngramdata.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_gram_data_model}{NGramDataModel}}\ :\ \textcolor{keyword}{public}\ QAbstractTableModel}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ QT\_SIG}}
+\DoxyCodeLine{00012\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ signals:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ message(\textcolor{keyword}{const}\ QString\&\ str);}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model}{NGramDataModel}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model_a6454f9dbd8e983b02ab7051bbf9cdd65}{\string~NGramDataModel}}()\{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_af4a3be7f7c6332dc28a71bb43de0e27a}{beginResetThisModel}}()\{\ beginResetModel();\}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_a5a07defa3c19906d4dcbf3b7683285fc}{endResetThisModel}}()\{\ endResetModel();\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_ngram_data}{NgramData}}*\ \mbox{\hyperlink{class_n_gram_data_model_a7b8bbe9fd66a1dfb2f993d66d51b773f}{raw\_data}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_a1531cffcf632b6bd6bb2b3ec25809f5d}{setNewData}}(\mbox{\hyperlink{class_ngram_data}{NgramData}}\&\ \mbox{\hyperlink{class_n_gram_data_model_a7b8bbe9fd66a1dfb2f993d66d51b773f}{raw\_data}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ QList<QString>*\ \mbox{\hyperlink{class_n_gram_data_model_af34bcdb7574db1c557a63415526555bc}{words}};}
+\DoxyCodeLine{00028\ \ \ \ \ QList<bool>*\ \mbox{\hyperlink{class_n_gram_data_model_a4ac6c8076b195cec65706557aa22d760}{chosen}};}
+\DoxyCodeLine{00029\ \ \ \ \ QList<unsigned\ long\ long>*\ \mbox{\hyperlink{class_n_gram_data_model_acc96453ae725768cf7ace05f2c96020e}{counts}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ QList<QList<bool>>*\ \mbox{\hyperlink{class_n_gram_data_model_aa5905d1fa71aa9a6dc5cc332985a18cd}{chosen\_by\_word\_transposed\_ptr}};}
+\DoxyCodeLine{00032\ \ \ \ \ QList<QList<bool>>\ \mbox{\hyperlink{class_n_gram_data_model_ad2486a3be4f7e910766c6e34330ff0f7}{chosen\_by\_word\_transposed}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_ae2f5e264d123ed4172ca1cc09d9884d9}{clear}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ QT\ stuff}}
+\DoxyCodeLine{00036\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_n_gram_data_model_a8bfeb4bf9dbb35cf54d034b61a36b598}{editrole\_list}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ required\ virtual\ overloads,\ columnCount\ done\ in\ derived\ classes}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_n_gram_data_model_a17cdd69c30024daa6ae50000abd52e25}{rowCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//int\ columnCount(const\ QModelIndex\ \&parent\ =\ QModelIndex())\ const\ override\ \{return\ raw\_data\ ?\ chosen\_by\_word\_transposed.at(0).size()\ :\ 2;\ \};}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_n_gram_data_model_a2620a2c66ac2b8480d82592d0d1c2fca}{columnCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\textcolor{keyword}{\ const\ override\ }\{Q\_UNUSED(parent);\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a00a80b8211f0a55ad1953083f6674d85}{col\_count}};\ \};}
+\DoxyCodeLine{00041\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_n_gram_data_model_a6e47f49dd51fb2340ad2d8d39debbe0f}{data}}(\textcolor{keyword}{const}\ QModelIndex\ \&index,\ \textcolor{keywordtype}{int}\ role\ =\ Qt::DisplayRole)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ function\ used\ when\ filtering\ on\ chosen}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_n_gram_data_model_a01661143f7ca953eb099f9dd21fcb869}{isChosen}}(\textcolor{keyword}{const}\ QModelIndex\&\ index)\textcolor{keyword}{const};\ \textcolor{comment}{//\ todo\ \ needed?}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_n_gram_data_model_afaf365a3ab1e664005c71b0c9ebe9c9b}{isNotChosen}}(\textcolor{keyword}{const}\ QModelIndex\&\ index)\textcolor{keyword}{const};\ \textcolor{comment}{//\ todo\ needed?}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_ae6938dab4bcbd1420b3de45f1e431a37}{setNewData}}(\mbox{\hyperlink{class_ngram_data}{NgramData}}*\ raw\_data\_in);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ toggle\ the\ chosen\ value\ for\ rows}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_acf5a48ed8950635fc242ba4adce3b1fa}{toggleChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_n_gram_data_model_a7b3cb409ed496a93d77a97264617e91d}{getChosen}}(\textcolor{keywordtype}{int}\ row)\textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_a6d783f1a4e4ca5d1ceb15c6e502eadf6}{setChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_model_a8d3f7199b4f4fc3b346a610b84fd028e}{setNotChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ required\ for\ editable\ table}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{using\ }QAbstractTableModel::flags;}
+\DoxyCodeLine{00053\ \ \ \ \ Qt::ItemFlags\ \mbox{\hyperlink{class_n_gram_data_model_a8984f06e31c27d0be0cbdd6e742cbfa6}{flags}}(\textcolor{keyword}{const}\ QModelIndex\ \&index);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_n_gram_data_model_acaf43f607894a21ed8b090fbb13b257d}{headerData}}(\textcolor{keywordtype}{int}\ section,\ Qt::Orientation\ orientation,\ \textcolor{keywordtype}{int}\ role)\textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105}{Constants}}}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a592ad1ef1deafc716d227c3c68f26960}{word\_col}}\ =\ \ 0,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105afb05c6239d88928267169c971839f3db}{chosen\_col}}\ =\ 1,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a3353f2e6c587ab0ff3dd11c5dced1cb1}{counts\_col}}\ =\ 2,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a00a80b8211f0a55ad1953083f6674d85}{col\_count}}\ =\ 3}
+\DoxyCodeLine{00063\ \ \ \ \ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NGRAMDATAMODEL\_H}}
+
+\end{DoxyCode}

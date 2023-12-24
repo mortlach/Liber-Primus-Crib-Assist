@@ -1,0 +1,262 @@
+\doxysection{Phrase\+Unique\+Words\+Model Class Reference}
+\hypertarget{class_phrase_unique_words_model}{}\label{class_phrase_unique_words_model}\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+
+
+{\ttfamily \#include $<$phraseuniquewordsmodel.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7f}{Constants}} \{ \newline
+\mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa0fd40fb0b5b14744332f4525abe55a81}{word\+\_\+col}} = 1
+, \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7facf4ac8debbdce28c90349afb99158c51}{chosen\+\_\+col}} = 0
+, \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa69db3c31098863c7b73a33e99bc681eb}{total\+\_\+counts\+\_\+in\+\_\+all\+\_\+ngrams\+\_\+col}} =2
+, \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa6e213a40a6fe70987939d0c683dc4e90}{ngrams\+\_\+with\+\_\+this\+\_\+word\+\_\+col}} = 3
+, \newline
+\mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10}{col\+\_\+count}} = 4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_phrase_unique_words_model_aa4a07ce1b63adff50a7e3f9ed105d0f0}{Phrase\+Unique\+Words\+Model}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_phrase_unique_words_model_a9c35aba8c9dffe3744f8ccf7bde0ff3c}{\texorpdfstring{$\sim$}{\string~}\+Phrase\+Unique\+Words\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_a4c33e14563fbe59ccafcc6f103c3ed84}{begin\+Reset\+This\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_a9a350e989cc7707dec63cd8e3337279c}{end\+Reset\+This\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_a54b17eed0b9fb41a9168ef41c9089cdf}{set\+New\+Data}} (\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \&\mbox{\hyperlink{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}{raw\+\_\+data}})
+\item 
+int \mbox{\hyperlink{class_phrase_unique_words_model_a13fbc4066f7196cabc5fcb4b622245a2}{row\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\item 
+int \mbox{\hyperlink{class_phrase_unique_words_model_a9b03ace57443a2306fc80d6a552ece94}{column\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\item 
+QVariant \mbox{\hyperlink{class_phrase_unique_words_model_ae80bd0dde6f06f710c1fe47fe5dcce43}{data}} (const QModel\+Index \&index, int role=Qt\+::\+Display\+Role) const override
+\item 
+bool \mbox{\hyperlink{class_phrase_unique_words_model_aed4cfdb5c898b405f70da9980cc6ce9c}{is\+Chosen}} (const QModel\+Index \&index) const
+\item 
+bool \mbox{\hyperlink{class_phrase_unique_words_model_a4101a396ef1e9d6938f17a17ca656942}{is\+Not\+Chosen}} (const QModel\+Index \&index) const
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_a4f0bce66fce43e389a25d76a14a1938f}{set\+New\+Data}} (\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*}raw\+\_\+data\+\_\+in)
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_af9f6e7eb3e7475713922001213dd1d67}{toggle\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+bool \mbox{\hyperlink{class_phrase_unique_words_model_aa1561f38f0d1122759af30f76e2669e2}{get\+Chosen}} (int row) const
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_ab5e3fadcca6bb0f2a52e566342d745eb}{set\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_ad59d0e9e30756586bfbff5c6cc4b0d60}{set\+Not\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+Qt\+::\+Item\+Flags \mbox{\hyperlink{class_phrase_unique_words_model_ac2a6b4808c3bcb09e375737345896214}{flags}} (const QModel\+Index \&index)
+\item 
+QVariant \mbox{\hyperlink{class_phrase_unique_words_model_a76dc9f532d1b71962bb66f9be4eebc08}{header\+Data}} (int section, Qt\+::\+Orientation orientation, int role) const override
+\item 
+void \mbox{\hyperlink{class_phrase_unique_words_model_a9e17546950d512635dfb396b2192cd68}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}{raw\+\_\+data}}
+\item 
+QList$<$ QString $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_phrase_unique_words_model_a0b96f3ac537076337979dc2c541e110f}{words}}
+\item 
+QList$<$ bool $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_phrase_unique_words_model_ac39915cf248748d5787dea4ccfd0a5f1}{chosen}}
+\item 
+QList$<$ unsigned long long $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_phrase_unique_words_model_aef247e8e48bdc8d3ba3a3f5829141553}{counts}}
+\item 
+QList$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_phrase_unique_words_model_a82de31b0acbc45c10e70098314666372}{count\+\_\+in\+\_\+ngrams}}
+\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_phrase_unique_words_model_a7b9c7803213f5ea52bb02b5c4ef1432d}{editrole\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7f}\label{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7f} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!Constants@{Constants}}
+\index{Constants@{Constants}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{Constants}{Constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7f}{Phrase\+Unique\+Words\+Model\+::\+Constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{word\_col@{word\_col}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!word\_col@{word\_col}}}\Hypertarget{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa0fd40fb0b5b14744332f4525abe55a81}\label{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa0fd40fb0b5b14744332f4525abe55a81} 
+word\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{chosen\_col@{chosen\_col}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!chosen\_col@{chosen\_col}}}\Hypertarget{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7facf4ac8debbdce28c90349afb99158c51}\label{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7facf4ac8debbdce28c90349afb99158c51} 
+chosen\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{total\_counts\_in\_all\_ngrams\_col@{total\_counts\_in\_all\_ngrams\_col}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!total\_counts\_in\_all\_ngrams\_col@{total\_counts\_in\_all\_ngrams\_col}}}\Hypertarget{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa69db3c31098863c7b73a33e99bc681eb}\label{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa69db3c31098863c7b73a33e99bc681eb} 
+total\+\_\+counts\+\_\+in\+\_\+all\+\_\+ngrams\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ngrams\_with\_this\_word\_col@{ngrams\_with\_this\_word\_col}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!ngrams\_with\_this\_word\_col@{ngrams\_with\_this\_word\_col}}}\Hypertarget{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa6e213a40a6fe70987939d0c683dc4e90}\label{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa6e213a40a6fe70987939d0c683dc4e90} 
+ngrams\+\_\+with\+\_\+this\+\_\+word\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{col\_count@{col\_count}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!col\_count@{col\_count}}}\Hypertarget{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10}\label{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10} 
+col\+\_\+count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_phrase_unique_words_model_aa4a07ce1b63adff50a7e3f9ed105d0f0}\label{class_phrase_unique_words_model_aa4a07ce1b63adff50a7e3f9ed105d0f0} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{PhraseUniqueWordsModel()}{PhraseUniqueWordsModel()}}
+{\footnotesize\ttfamily Phrase\+Unique\+Words\+Model\+::\+Phrase\+Unique\+Words\+Model (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_a9c35aba8c9dffe3744f8ccf7bde0ff3c}\label{class_phrase_unique_words_model_a9c35aba8c9dffe3744f8ccf7bde0ff3c} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!````~PhraseUniqueWordsModel@{\texorpdfstring{$\sim$}{\string~}PhraseUniqueWordsModel}}
+\index{````~PhraseUniqueWordsModel@{\texorpdfstring{$\sim$}{\string~}PhraseUniqueWordsModel}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PhraseUniqueWordsModel()}{\string~PhraseUniqueWordsModel()}}
+{\footnotesize\ttfamily Phrase\+Unique\+Words\+Model\+::\texorpdfstring{$\sim$}{\string~}\+Phrase\+Unique\+Words\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_phrase_unique_words_model_a4c33e14563fbe59ccafcc6f103c3ed84}\label{class_phrase_unique_words_model_a4c33e14563fbe59ccafcc6f103c3ed84} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!beginResetThisModel@{beginResetThisModel}}
+\index{beginResetThisModel@{beginResetThisModel}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{beginResetThisModel()}{beginResetThisModel()}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::begin\+Reset\+This\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_phrase_unique_words_model_a9e17546950d512635dfb396b2192cd68}\label{class_phrase_unique_words_model_a9e17546950d512635dfb396b2192cd68} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!clear@{clear}}
+\index{clear@{clear}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_a9b03ace57443a2306fc80d6a552ece94}\label{class_phrase_unique_words_model_a9b03ace57443a2306fc80d6a552ece94} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily int Phrase\+Unique\+Words\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class_phrase_unique_words_model_ae80bd0dde6f06f710c1fe47fe5dcce43}\label{class_phrase_unique_words_model_ae80bd0dde6f06f710c1fe47fe5dcce43} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!data@{data}}
+\index{data@{data}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily QVariant Phrase\+Unique\+Words\+Model\+::data (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index,  }\item[{int}]{role = {\ttfamily Qt\+:\+:DisplayRole} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_phrase_unique_words_model_a9a350e989cc7707dec63cd8e3337279c}\label{class_phrase_unique_words_model_a9a350e989cc7707dec63cd8e3337279c} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!endResetThisModel@{endResetThisModel}}
+\index{endResetThisModel@{endResetThisModel}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{endResetThisModel()}{endResetThisModel()}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::end\+Reset\+This\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_phrase_unique_words_model_ac2a6b4808c3bcb09e375737345896214}\label{class_phrase_unique_words_model_ac2a6b4808c3bcb09e375737345896214} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!flags@{flags}}
+\index{flags@{flags}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily Qt\+::\+Item\+Flags Phrase\+Unique\+Words\+Model\+::flags (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_aa1561f38f0d1122759af30f76e2669e2}\label{class_phrase_unique_words_model_aa1561f38f0d1122759af30f76e2669e2} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!getChosen@{getChosen}}
+\index{getChosen@{getChosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{getChosen()}{getChosen()}}
+{\footnotesize\ttfamily bool Phrase\+Unique\+Words\+Model\+::get\+Chosen (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_phrase_unique_words_model_a76dc9f532d1b71962bb66f9be4eebc08}\label{class_phrase_unique_words_model_a76dc9f532d1b71962bb66f9be4eebc08} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!headerData@{headerData}}
+\index{headerData@{headerData}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily QVariant Phrase\+Unique\+Words\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{Qt\+::\+Orientation}]{orientation,  }\item[{int}]{role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_phrase_unique_words_model_aed4cfdb5c898b405f70da9980cc6ce9c}\label{class_phrase_unique_words_model_aed4cfdb5c898b405f70da9980cc6ce9c} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}}
+{\footnotesize\ttfamily bool Phrase\+Unique\+Words\+Model\+::is\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_phrase_unique_words_model_a4101a396ef1e9d6938f17a17ca656942}\label{class_phrase_unique_words_model_a4101a396ef1e9d6938f17a17ca656942} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!isNotChosen@{isNotChosen}}
+\index{isNotChosen@{isNotChosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{isNotChosen()}{isNotChosen()}}
+{\footnotesize\ttfamily bool Phrase\+Unique\+Words\+Model\+::is\+Not\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_phrase_unique_words_model_a13fbc4066f7196cabc5fcb4b622245a2}\label{class_phrase_unique_words_model_a13fbc4066f7196cabc5fcb4b622245a2} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily int Phrase\+Unique\+Words\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_phrase_unique_words_model_ab5e3fadcca6bb0f2a52e566342d745eb}\label{class_phrase_unique_words_model_ab5e3fadcca6bb0f2a52e566342d745eb} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!setChosen@{setChosen}}
+\index{setChosen@{setChosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{setChosen()}{setChosen()}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::set\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_a54b17eed0b9fb41a9168ef41c9089cdf}\label{class_phrase_unique_words_model_a54b17eed0b9fb41a9168ef41c9089cdf} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!setNewData@{setNewData}}
+\index{setNewData@{setNewData}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{setNewData()}{setNewData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::set\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \&}]{raw\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_a4f0bce66fce43e389a25d76a14a1938f}\label{class_phrase_unique_words_model_a4f0bce66fce43e389a25d76a14a1938f} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!setNewData@{setNewData}}
+\index{setNewData@{setNewData}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{setNewData()}{setNewData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::set\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*}}]{raw\+\_\+data\+\_\+in }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_ad59d0e9e30756586bfbff5c6cc4b0d60}\label{class_phrase_unique_words_model_ad59d0e9e30756586bfbff5c6cc4b0d60} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!setNotChosen@{setNotChosen}}
+\index{setNotChosen@{setNotChosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{setNotChosen()}{setNotChosen()}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::set\+Not\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+\Hypertarget{class_phrase_unique_words_model_af9f6e7eb3e7475713922001213dd1d67}\label{class_phrase_unique_words_model_af9f6e7eb3e7475713922001213dd1d67} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!toggleChosen@{toggleChosen}}
+\index{toggleChosen@{toggleChosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{toggleChosen()}{toggleChosen()}}
+{\footnotesize\ttfamily void Phrase\+Unique\+Words\+Model\+::toggle\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_phrase_unique_words_model_ac39915cf248748d5787dea4ccfd0a5f1}\label{class_phrase_unique_words_model_ac39915cf248748d5787dea4ccfd0a5f1} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!chosen@{chosen}}
+\index{chosen@{chosen}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{chosen}{chosen}}
+{\footnotesize\ttfamily QList$<$bool$>$\texorpdfstring{$\ast$}{*} Phrase\+Unique\+Words\+Model\+::chosen}
+
+\Hypertarget{class_phrase_unique_words_model_a82de31b0acbc45c10e70098314666372}\label{class_phrase_unique_words_model_a82de31b0acbc45c10e70098314666372} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!count\_in\_ngrams@{count\_in\_ngrams}}
+\index{count\_in\_ngrams@{count\_in\_ngrams}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{count\_in\_ngrams}{count\_in\_ngrams}}
+{\footnotesize\ttfamily QList$<$int$>$\texorpdfstring{$\ast$}{*} Phrase\+Unique\+Words\+Model\+::count\+\_\+in\+\_\+ngrams}
+
+\Hypertarget{class_phrase_unique_words_model_aef247e8e48bdc8d3ba3a3f5829141553}\label{class_phrase_unique_words_model_aef247e8e48bdc8d3ba3a3f5829141553} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!counts@{counts}}
+\index{counts@{counts}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{counts}{counts}}
+{\footnotesize\ttfamily QList$<$unsigned long long$>$\texorpdfstring{$\ast$}{*} Phrase\+Unique\+Words\+Model\+::counts}
+
+\Hypertarget{class_phrase_unique_words_model_a7b9c7803213f5ea52bb02b5c4ef1432d}\label{class_phrase_unique_words_model_a7b9c7803213f5ea52bb02b5c4ef1432d} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!editrole\_list@{editrole\_list}}
+\index{editrole\_list@{editrole\_list}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{editrole\_list}{editrole\_list}}
+{\footnotesize\ttfamily QList$<$int$>$ Phrase\+Unique\+Words\+Model\+::editrole\+\_\+list}
+
+\Hypertarget{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}\label{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!raw\_data@{raw\_data}}
+\index{raw\_data@{raw\_data}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{raw\_data}{raw\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}}\texorpdfstring{$\ast$}{*} Phrase\+Unique\+Words\+Model\+::raw\+\_\+data}
+
+\Hypertarget{class_phrase_unique_words_model_a0b96f3ac537076337979dc2c541e110f}\label{class_phrase_unique_words_model_a0b96f3ac537076337979dc2c541e110f} 
+\index{PhraseUniqueWordsModel@{PhraseUniqueWordsModel}!words@{words}}
+\index{words@{words}!PhraseUniqueWordsModel@{PhraseUniqueWordsModel}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily QList$<$QString$>$\texorpdfstring{$\ast$}{*} Phrase\+Unique\+Words\+Model\+::words}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/view/\mbox{\hyperlink{phraseuniquewordsmodel_8h}{phraseuniquewordsmodel.\+h}}\item 
+source/view/\mbox{\hyperlink{phraseuniquewordsmodel_8cpp}{phraseuniquewordsmodel.\+cpp}}\end{DoxyCompactItemize}

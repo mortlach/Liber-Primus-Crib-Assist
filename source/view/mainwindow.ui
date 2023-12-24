@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>633</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::West</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Notes</string>
+       </attribute>
+      </widget>
+      <widget class="WordTab" name="mainWords">
+       <attribute name="title">
+        <string>Main Words</string>
+       </attribute>
+      </widget>
+      <widget class="ChoosePhrase" name="choosePhrase">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Choose Phrase</string>
+       </attribute>
+      </widget>
+      <widget class="PhraseUniqueWordsForm" name="puw_tab">
+       <attribute name="title">
+        <string>PUW</string>
+       </attribute>
+      </widget>
+      <widget class="NGramDataForm" name="ngram_tab">
+       <attribute name="title">
+        <string>ngram</string>
+       </attribute>
+      </widget>
+      <widget class="WordPickFORM" name="wordpick_tab">
+       <attribute name="title">
+        <string>Word Pick</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="all_phrases">
+       <attribute name="title">
+        <string>All Phrases</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QTextEdit" name="allPhrasesTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="lpSentences">
+       <attribute name="title">
+        <string>LP Sentences</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QTextEdit" name="lpSentsPlainTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="logTab">
+       <attribute name="title">
+        <string>Debug</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>633</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionLoad_Phrase"/>
+    <addaction name="actionClear_Phrase"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad_Phrase">
+   <property name="text">
+    <string>Load Phrase</string>
+   </property>
+  </action>
+  <action name="actionClear_Phrase">
+   <property name="text">
+    <string>Clear Phrase</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WordTab</class>
+   <extends>QWidget</extends>
+   <header location="global">wordtab.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChoosePhrase</class>
+   <extends>QWidget</extends>
+   <header location="global">choosephrase.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PhraseUniqueWordsForm</class>
+   <extends>QWidget</extends>
+   <header location="global">phraseuniquewordsform.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NGramDataForm</class>
+   <extends>QWidget</extends>
+   <header location="global">ngramdataform.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WordPickFORM</class>
+   <extends>QWidget</extends>
+   <header location="global">wordpickform.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

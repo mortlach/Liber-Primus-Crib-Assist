@@ -1,0 +1,393 @@
+\doxysection{Ngram\+Data\+Hub Class Reference}
+\hypertarget{class_ngram_data_hub}{}\label{class_ngram_data_hub}\index{NgramDataHub@{NgramDataHub}}
+
+
+The \doxylink{class_ngram_data_hub}{Ngram\+Data\+Hub} class holds main objects and functions for.  
+
+
+
+
+{\ttfamily \#include $<$ngramdatahub.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ngram_data_hub_a501eb513f8b7e4060a6ab56932fc3de9}{Ngram\+Data\+Hub}} (QSettings \&settings\+\_\+in)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_ngram_data_hub}{Ngram\+Data\+Hub}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ngram_data_hub_acbd50227b5f331d48e5b3c28e68c719c}{Ngram\+Data\+Hub}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_ngram_data_hub}{Ngram\+Data\+Hub} use this constructor to get access to the data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ngram_data_hub_a6f483d953e44d7541dd449d638a2f068}{\texorpdfstring{$\sim$}{\string~}\+Ngram\+Data\+Hub}} ()
+\item 
+void \mbox{\hyperlink{class_ngram_data_hub_ab82ed28dea9d3c7d5d57d5599eb66180}{set\+Path}} (const QString \&chosen\+\_\+dir\+\_\+in, const QString \&chosen\+\_\+fn\+\_\+in)
+\begin{DoxyCompactList}\small\item\em set\+Path \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_a72cc9810023405af8781ebb2f3212ed7}{load\+Set\+Phrase\+Phrase}} ()
+\begin{DoxyCompactList}\small\item\em load\+Set\+Phrase\+Phrase \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_raw1_grams}{Raw1\+Grams}} \& \mbox{\hyperlink{class_ngram_data_hub_ad38a9a3ef3316a7d345f7c99ad09f180}{get1\+Gram\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em get1\+Gram\+Ptr \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}} \& \mbox{\hyperlink{class_ngram_data_hub_a9ab64b2ff5a9cfe4ebb19c196cdba298}{get\+Ngram\+Phrase\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em get\+Ngram\+Phrase\+Ptr \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}} \& \mbox{\hyperlink{class_ngram_data_hub_a60eabd1a4bcf2061b32445c2c555728a}{get\+Ngram\+Phrase\+CRef}} () const
+\begin{DoxyCompactList}\small\item\em get\+Ngram\+Phrase\+CRef \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_a779353507c4fc338082894eeb85bdfcf}{new\+Phrase}} (const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&data\+\_\+in)
+\begin{DoxyCompactList}\small\item\em new\+Phrase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_data_hub_af9575a941ca2ad88fed5941a2d0130d7}{clear\+Phrase\+Data}} ()
+\begin{DoxyCompactList}\small\item\em clear\+Phrase\+Data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_data_hub_ac3d16680243b966e8bc77500c810e4b0}{copy\+Ngram\+Phrase\+Data}} (const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&s)
+\begin{DoxyCompactList}\small\item\em copy\+Ngram\+Phrase\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_ab70db12511f883adcfa4661d7a229a97}{load\+Raw1grams}} (QSettings \&settings)
+\begin{DoxyCompactList}\small\item\em load\+Raw1grams \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_abc540b6cb32aa98f866d3141a3b7e555}{load\+Phrase}} (const QString \&dir\+\_\+path, const QString \&filename)
+\begin{DoxyCompactList}\small\item\em load\+Phrase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_data_hub_a2f6de86f2aaac67eb53c2d6e380de40d}{get\+And\+Print\+Ngram\+PUWChosen\+Counts}} (QList$<$ int $>$ \&ngram\+\_\+chosen\+\_\+counts, QList$<$ int $>$ \&puw\+\_\+chosen\+\_\+counts)
+\begin{DoxyCompactList}\small\item\em get\+And\+Print\+Ngram\+PUWChosen\+Counts \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_a9013a165e57e7a6def33c42a9df7e4c0}{rationalize\+Ngram\+Data}} (bool delete\+\_\+not\+\_\+chosen\+\_\+ngrams=true)
+\begin{DoxyCompactList}\small\item\em rationalize\+Ngram\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_af59fbab201d1eba2fc0bb70b6d31fa7f}{rationalize\+Ngram\+Data}} (bool delete\+\_\+not\+\_\+chosen\+\_\+ngrams, bool puw\+\_\+has\+\_\+priority\+\_\+in)
+\begin{DoxyCompactList}\small\item\em rationalize\+Ngram\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_a9e9ed9c8229131b795a052505b2c7817}{rationalize\+Phrase\+With\+Delete}} ()
+\begin{DoxyCompactList}\small\item\em rationalize\+Phrase\+With\+Delete \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_hub_a7f8ce8f4c2efec1d0b59e9bd56dca149}{save\+Phrase}} ()
+\begin{DoxyCompactList}\small\item\em save\+Phrase \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_raw1_grams}{Raw1\+Grams}} \mbox{\hyperlink{class_ngram_data_hub_af896f14d17bd240db5b13ef9288f8810}{raw1gram}} = \mbox{\hyperlink{class_raw1_grams}{Raw1\+Grams}}()
+\begin{DoxyCompactList}\small\item\em raw1gram \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}} \mbox{\hyperlink{class_ngram_data_hub_a8233ca8b6665b0927a3025559d8da95b}{ngram\+\_\+phrase}} = \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}}()
+\begin{DoxyCompactList}\small\item\em ngram\+\_\+phrase \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \mbox{\hyperlink{class_ngram_data_hub_a4f00b918c9620c1d62aafe118d3e19b2}{ngram\+\_\+phrase\+\_\+data}} = \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}}()
+\begin{DoxyCompactList}\small\item\em ngram\+\_\+phrase\+\_\+data \end{DoxyCompactList}\item 
+static QString \mbox{\hyperlink{class_ngram_data_hub_ad0be1b02079c629bd208d06a3b27472d}{chosen\+\_\+dir}} = QString("{}chosen\+\_\+dir NOT SET"{})
+\begin{DoxyCompactList}\small\item\em chosen\+\_\+dir \end{DoxyCompactList}\item 
+static QString \mbox{\hyperlink{class_ngram_data_hub_ab9b3155e44e903a1841bd5a0286ec42e}{chosen\+\_\+fn}} = QString("{}chosen\+\_\+fn NOT SET"{})
+\begin{DoxyCompactList}\small\item\em chosen\+\_\+fn \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_ngram_data_hub}{Ngram\+Data\+Hub} class holds main objects and functions for. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ngram_data_hub_a501eb513f8b7e4060a6ab56932fc3de9}\label{class_ngram_data_hub_a501eb513f8b7e4060a6ab56932fc3de9} 
+\index{NgramDataHub@{NgramDataHub}!NgramDataHub@{NgramDataHub}}
+\index{NgramDataHub@{NgramDataHub}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{NgramDataHub()}{NgramDataHub()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ngram\+Data\+Hub\+::\+Ngram\+Data\+Hub (\begin{DoxyParamCaption}\item[{QSettings \&}]{settings\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_ngram_data_hub}{Ngram\+Data\+Hub}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings\+\_\+in} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ngram_data_hub_acbd50227b5f331d48e5b3c28e68c719c}\label{class_ngram_data_hub_acbd50227b5f331d48e5b3c28e68c719c} 
+\index{NgramDataHub@{NgramDataHub}!NgramDataHub@{NgramDataHub}}
+\index{NgramDataHub@{NgramDataHub}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{NgramDataHub()}{NgramDataHub()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ngram\+Data\+Hub\+::\+Ngram\+Data\+Hub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_ngram_data_hub}{Ngram\+Data\+Hub} use this constructor to get access to the data. 
+
+\Hypertarget{class_ngram_data_hub_a6f483d953e44d7541dd449d638a2f068}\label{class_ngram_data_hub_a6f483d953e44d7541dd449d638a2f068} 
+\index{NgramDataHub@{NgramDataHub}!````~NgramDataHub@{\texorpdfstring{$\sim$}{\string~}NgramDataHub}}
+\index{````~NgramDataHub@{\texorpdfstring{$\sim$}{\string~}NgramDataHub}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NgramDataHub()}{\string~NgramDataHub()}}
+{\footnotesize\ttfamily Ngram\+Data\+Hub\+::\texorpdfstring{$\sim$}{\string~}\+Ngram\+Data\+Hub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ngram_data_hub_af9575a941ca2ad88fed5941a2d0130d7}\label{class_ngram_data_hub_af9575a941ca2ad88fed5941a2d0130d7} 
+\index{NgramDataHub@{NgramDataHub}!clearPhraseData@{clearPhraseData}}
+\index{clearPhraseData@{clearPhraseData}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{clearPhraseData()}{clearPhraseData()}}
+{\footnotesize\ttfamily void Ngram\+Data\+Hub\+::clear\+Phrase\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear\+Phrase\+Data 
+
+\Hypertarget{class_ngram_data_hub_ac3d16680243b966e8bc77500c810e4b0}\label{class_ngram_data_hub_ac3d16680243b966e8bc77500c810e4b0} 
+\index{NgramDataHub@{NgramDataHub}!copyNgramPhraseData@{copyNgramPhraseData}}
+\index{copyNgramPhraseData@{copyNgramPhraseData}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{copyNgramPhraseData()}{copyNgramPhraseData()}}
+{\footnotesize\ttfamily void Ngram\+Data\+Hub\+::copy\+Ngram\+Phrase\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+copy\+Ngram\+Phrase\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ngram_data_hub_ad38a9a3ef3316a7d345f7c99ad09f180}\label{class_ngram_data_hub_ad38a9a3ef3316a7d345f7c99ad09f180} 
+\index{NgramDataHub@{NgramDataHub}!get1GramRef@{get1GramRef}}
+\index{get1GramRef@{get1GramRef}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{get1GramRef()}{get1GramRef()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_raw1_grams}{Raw1\+Grams}} \& Ngram\+Data\+Hub\+::get1\+Gram\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get1\+Gram\+Ptr 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a2f6de86f2aaac67eb53c2d6e380de40d}\label{class_ngram_data_hub_a2f6de86f2aaac67eb53c2d6e380de40d} 
+\index{NgramDataHub@{NgramDataHub}!getAndPrintNgramPUWChosenCounts@{getAndPrintNgramPUWChosenCounts}}
+\index{getAndPrintNgramPUWChosenCounts@{getAndPrintNgramPUWChosenCounts}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{getAndPrintNgramPUWChosenCounts()}{getAndPrintNgramPUWChosenCounts()}}
+{\footnotesize\ttfamily void Ngram\+Data\+Hub\+::get\+And\+Print\+Ngram\+PUWChosen\+Counts (\begin{DoxyParamCaption}\item[{QList$<$ int $>$ \&}]{ngram\+\_\+chosen\+\_\+counts,  }\item[{QList$<$ int $>$ \&}]{puw\+\_\+chosen\+\_\+counts }\end{DoxyParamCaption})}
+
+
+
+get\+And\+Print\+Ngram\+PUWChosen\+Counts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ngram\+\_\+chosen\+\_\+counts} & \\
+\hline
+{\em puw\+\_\+chosen\+\_\+counts} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ngram_data_hub_a60eabd1a4bcf2061b32445c2c555728a}\label{class_ngram_data_hub_a60eabd1a4bcf2061b32445c2c555728a} 
+\index{NgramDataHub@{NgramDataHub}!getNgramPhraseCRef@{getNgramPhraseCRef}}
+\index{getNgramPhraseCRef@{getNgramPhraseCRef}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{getNgramPhraseCRef()}{getNgramPhraseCRef()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}} \& Ngram\+Data\+Hub\+::get\+Ngram\+Phrase\+CRef (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Ngram\+Phrase\+CRef 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a9ab64b2ff5a9cfe4ebb19c196cdba298}\label{class_ngram_data_hub_a9ab64b2ff5a9cfe4ebb19c196cdba298} 
+\index{NgramDataHub@{NgramDataHub}!getNgramPhraseRef@{getNgramPhraseRef}}
+\index{getNgramPhraseRef@{getNgramPhraseRef}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{getNgramPhraseRef()}{getNgramPhraseRef()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}} \& Ngram\+Data\+Hub\+::get\+Ngram\+Phrase\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Ngram\+Phrase\+Ptr 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_abc540b6cb32aa98f866d3141a3b7e555}\label{class_ngram_data_hub_abc540b6cb32aa98f866d3141a3b7e555} 
+\index{NgramDataHub@{NgramDataHub}!loadPhrase@{loadPhrase}}
+\index{loadPhrase@{loadPhrase}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{loadPhrase()}{loadPhrase()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::load\+Phrase (\begin{DoxyParamCaption}\item[{const QString \&}]{dir\+\_\+path,  }\item[{const QString \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+load\+Phrase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+path} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_ab70db12511f883adcfa4661d7a229a97}\label{class_ngram_data_hub_ab70db12511f883adcfa4661d7a229a97} 
+\index{NgramDataHub@{NgramDataHub}!loadRaw1grams@{loadRaw1grams}}
+\index{loadRaw1grams@{loadRaw1grams}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{loadRaw1grams()}{loadRaw1grams()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::load\+Raw1grams (\begin{DoxyParamCaption}\item[{QSettings \&}]{settings }\end{DoxyParamCaption})}
+
+
+
+load\+Raw1grams 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a72cc9810023405af8781ebb2f3212ed7}\label{class_ngram_data_hub_a72cc9810023405af8781ebb2f3212ed7} 
+\index{NgramDataHub@{NgramDataHub}!loadSetPhrasePhrase@{loadSetPhrasePhrase}}
+\index{loadSetPhrasePhrase@{loadSetPhrasePhrase}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{loadSetPhrasePhrase()}{loadSetPhrasePhrase()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::load\+Set\+Phrase\+Phrase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+load\+Set\+Phrase\+Phrase 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a779353507c4fc338082894eeb85bdfcf}\label{class_ngram_data_hub_a779353507c4fc338082894eeb85bdfcf} 
+\index{NgramDataHub@{NgramDataHub}!newPhrase@{newPhrase}}
+\index{newPhrase@{newPhrase}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{newPhrase()}{newPhrase()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::new\+Phrase (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&}]{data\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+new\+Phrase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_af59fbab201d1eba2fc0bb70b6d31fa7f}\label{class_ngram_data_hub_af59fbab201d1eba2fc0bb70b6d31fa7f} 
+\index{NgramDataHub@{NgramDataHub}!rationalizeNgramData@{rationalizeNgramData}}
+\index{rationalizeNgramData@{rationalizeNgramData}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{rationalizeNgramData()}{rationalizeNgramData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::rationalize\+Ngram\+Data (\begin{DoxyParamCaption}\item[{bool}]{delete\+\_\+not\+\_\+chosen\+\_\+ngrams,  }\item[{bool}]{puw\+\_\+has\+\_\+priority\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+rationalize\+Ngram\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delete\+\_\+not\+\_\+chosen\+\_\+ngrams} & \\
+\hline
+{\em puw\+\_\+has\+\_\+priority\+\_\+in} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a9013a165e57e7a6def33c42a9df7e4c0}\label{class_ngram_data_hub_a9013a165e57e7a6def33c42a9df7e4c0} 
+\index{NgramDataHub@{NgramDataHub}!rationalizeNgramData@{rationalizeNgramData}}
+\index{rationalizeNgramData@{rationalizeNgramData}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{rationalizeNgramData()}{rationalizeNgramData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::rationalize\+Ngram\+Data (\begin{DoxyParamCaption}\item[{bool}]{delete\+\_\+not\+\_\+chosen\+\_\+ngrams = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+rationalize\+Ngram\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delete\+\_\+not\+\_\+chosen\+\_\+ngrams} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a9e9ed9c8229131b795a052505b2c7817}\label{class_ngram_data_hub_a9e9ed9c8229131b795a052505b2c7817} 
+\index{NgramDataHub@{NgramDataHub}!rationalizePhraseWithDelete@{rationalizePhraseWithDelete}}
+\index{rationalizePhraseWithDelete@{rationalizePhraseWithDelete}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{rationalizePhraseWithDelete()}{rationalizePhraseWithDelete()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::rationalize\+Phrase\+With\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+rationalize\+Phrase\+With\+Delete 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_a7f8ce8f4c2efec1d0b59e9bd56dca149}\label{class_ngram_data_hub_a7f8ce8f4c2efec1d0b59e9bd56dca149} 
+\index{NgramDataHub@{NgramDataHub}!savePhrase@{savePhrase}}
+\index{savePhrase@{savePhrase}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{savePhrase()}{savePhrase()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+Hub\+::save\+Phrase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+save\+Phrase 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_hub_ab82ed28dea9d3c7d5d57d5599eb66180}\label{class_ngram_data_hub_ab82ed28dea9d3c7d5d57d5599eb66180} 
+\index{NgramDataHub@{NgramDataHub}!setPath@{setPath}}
+\index{setPath@{setPath}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Ngram\+Data\+Hub\+::set\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{chosen\+\_\+dir\+\_\+in,  }\item[{const QString \&}]{chosen\+\_\+fn\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Path 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+\_\+dir\+\_\+in} & \\
+\hline
+{\em chosen\+\_\+fn\+\_\+in} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ngram_data_hub_ad0be1b02079c629bd208d06a3b27472d}\label{class_ngram_data_hub_ad0be1b02079c629bd208d06a3b27472d} 
+\index{NgramDataHub@{NgramDataHub}!chosen\_dir@{chosen\_dir}}
+\index{chosen\_dir@{chosen\_dir}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{chosen\_dir}{chosen\_dir}}
+{\footnotesize\ttfamily QString Ngram\+Data\+Hub\+::chosen\+\_\+dir = QString("{}chosen\+\_\+dir NOT SET"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+chosen\+\_\+dir 
+
+\Hypertarget{class_ngram_data_hub_ab9b3155e44e903a1841bd5a0286ec42e}\label{class_ngram_data_hub_ab9b3155e44e903a1841bd5a0286ec42e} 
+\index{NgramDataHub@{NgramDataHub}!chosen\_fn@{chosen\_fn}}
+\index{chosen\_fn@{chosen\_fn}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{chosen\_fn}{chosen\_fn}}
+{\footnotesize\ttfamily QString Ngram\+Data\+Hub\+::chosen\+\_\+fn = QString("{}chosen\+\_\+fn NOT SET"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+chosen\+\_\+fn 
+
+\Hypertarget{class_ngram_data_hub_a8233ca8b6665b0927a3025559d8da95b}\label{class_ngram_data_hub_a8233ca8b6665b0927a3025559d8da95b} 
+\index{NgramDataHub@{NgramDataHub}!ngram\_phrase@{ngram\_phrase}}
+\index{ngram\_phrase@{ngram\_phrase}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{ngram\_phrase}{ngram\_phrase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}} Ngram\+Data\+Hub\+::ngram\+\_\+phrase = \mbox{\hyperlink{class_ngram_phrase}{Ngram\+Phrase}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ngram\+\_\+phrase 
+
+\Hypertarget{class_ngram_data_hub_a4f00b918c9620c1d62aafe118d3e19b2}\label{class_ngram_data_hub_a4f00b918c9620c1d62aafe118d3e19b2} 
+\index{NgramDataHub@{NgramDataHub}!ngram\_phrase\_data@{ngram\_phrase\_data}}
+\index{ngram\_phrase\_data@{ngram\_phrase\_data}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{ngram\_phrase\_data}{ngram\_phrase\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} Ngram\+Data\+Hub\+::ngram\+\_\+phrase\+\_\+data = \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ngram\+\_\+phrase\+\_\+data 
+
+\Hypertarget{class_ngram_data_hub_af896f14d17bd240db5b13ef9288f8810}\label{class_ngram_data_hub_af896f14d17bd240db5b13ef9288f8810} 
+\index{NgramDataHub@{NgramDataHub}!raw1gram@{raw1gram}}
+\index{raw1gram@{raw1gram}!NgramDataHub@{NgramDataHub}}
+\doxysubsubsection{\texorpdfstring{raw1gram}{raw1gram}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_raw1_grams}{Raw1\+Grams}} Ngram\+Data\+Hub\+::raw1gram = \mbox{\hyperlink{class_raw1_grams}{Raw1\+Grams}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+raw1gram 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{ngramdatahub_8h}{ngramdatahub.\+h}}\item 
+source/\mbox{\hyperlink{ngramdatahub_8cpp}{ngramdatahub.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,567 @@
+\doxysection{Ngram\+Data Class Reference}
+\hypertarget{class_ngram_data}{}\label{class_ngram_data}\index{NgramData@{NgramData}}
+
+
+The \doxylink{class_ngram_data}{Ngram\+Data} class.  
+
+
+
+
+{\ttfamily \#include $<$ngramdata.\+h$>$}
+
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ngram_data_a24754397768ba5e456080480955e5bb4}{message}} (const QString \&str)
+\item 
+void \mbox{\hyperlink{class_ngram_data_a54704f9e6a86c616de103a0bafc9e429}{update\+Ngram\+Chosen}} (unsigned int \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\+\_\+count}}, unsigned int \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\+\_\+chosen\+\_\+count}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ngram_data_af3b720c11c37dd8df066e36d546390d3}{Ngram\+Data}} (\mbox{\hyperlink{class_ngram_meta_data}{Ngram\+Meta\+Data}} \&file\+\_\+data\+\_\+in, int passed\+\_\+ngram\+\_\+index\+\_\+in\+\_\+phrase)
+\item 
+\mbox{\hyperlink{class_ngram_data_aa31bc54ff76b465bf523b2d6a551f922}{\texorpdfstring{$\sim$}{\string~}\+Ngram\+Data}} ()
+\item 
+bool \mbox{\hyperlink{class_ngram_data_a0bbf3b931eda2ee63388fb00072dc798}{set\+Chosen\+By\+Word\+By\+PUW}} (const \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \&puw)
+\begin{DoxyCompactList}\small\item\em set\+Chosen\+By\+Word\+By\+PUW \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_aa68560d6df79ca3a02b56ac9fe215906}{set\+Chosen\+False\+If\+Any\+Chosen\+By\+Word\+Is\+False}} ()
+\begin{DoxyCompactList}\small\item\em set\+Chosen\+False\+If\+Any\+Chosen\+By\+Word\+Is\+False \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ngram_data_ae20d3fae0fcfc4a555a1aa2b56f6f43c}{get\+Ngram\+Index\+For\+Word\+Index\+In\+Phrase}} (int word\+\_\+index\+\_\+in\+\_\+phrase) const
+\begin{DoxyCompactList}\small\item\em get\+Ngram\+Index\+For\+Word\+Index\+In\+Phrase \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a3b81f20b22abe630c4890aad47c03dc9}{get\+Unique\+Words\+At\+Phrase\+Index}} (int index\+\_\+of\+\_\+word\+\_\+in\+\_\+phrase, QHash$<$ QString, QPair$<$ int, int $>$ $>$ \&unique\+\_\+word\+\_\+hash) const
+\begin{DoxyCompactList}\small\item\em get\+Unique\+Words\+At\+Phrase\+Index \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a0bb74121036cee52d73002561b458b9b}{get\+Chosen\+Words\+At\+Word\+Index\+In\+Phrase}} (QList$<$ QString $>$ \&unique\+\_\+words, int word\+\_\+index\+\_\+in\+\_\+phrase) const
+\begin{DoxyCompactList}\small\item\em get\+Chosen\+Words\+At\+Word\+Index\+In\+Phrase \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_ngram_data_aa47d0921345587036d6d635045582a7a}{set\+File\+Path}} (const QString \&data\+\_\+file\+\_\+path\+\_\+in, const QString \&data\+\_\+file\+\_\+name\+\_\+in)
+\begin{DoxyCompactList}\small\item\em set\+File\+Path \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_data_a81b712e4fa9bd10339647fa8595d1237}{update\+Chosen\+Counts}} ()
+\begin{DoxyCompactList}\small\item\em update\+Chosen\+Counts \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_ngram_data_a74a6961786bbe4d77f8367d3b01151b6}{size}} () const
+\begin{DoxyCompactList}\small\item\em size \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a61a356264bc47954b8b4358496df1d47}{set\+Chosen\+Data\+From\+Raw}} ()
+\begin{DoxyCompactList}\small\item\em set\+Chosen\+Data\+From\+Raw \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a5f28ef1ba3e10ab62200e5639fadbf39}{delete\+Not\+Chosen}} ()
+\begin{DoxyCompactList}\small\item\em delete\+Not\+Chosen \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a03fc451aeb0cc988e458216f46189e25}{load}} (bool default\+\_\+location=true)
+\begin{DoxyCompactList}\small\item\em load outside this class always use load, can only ever load from 1 of two places \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_data_a8d42db4d21a6da30d7f70d52cba7aae4}{finish\+AFter\+Data\+Added\+Or\+Deleted}} ()
+\begin{DoxyCompactList}\small\item\em finish\+AFter\+Data\+Added\+Or\+Deleted \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a4387ddd48d93871ce5d91faa6c872b76}{save\+Raw\+Data}} () const
+\item 
+bool \mbox{\hyperlink{class_ngram_data_aa6a9cb46ca90cfd43e5895149d23ccab}{save}} () const
+\begin{DoxyCompactList}\small\item\em save \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_afc587f1479720c0c299ec456f2588b8e}{get\+As\+File\+Data}} (VVAny \&r) const
+\begin{DoxyCompactList}\small\item\em get\+As\+File\+Data\+: get class data lists into format for passiung to file\+IO // has chosen columns! \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a60217ff641423f62c184e027943a246e}{save\+NGram\+File\+Data}} (const QString \&full\+\_\+path, const VVAny \&data\+\_\+to\+\_\+write, unsigned int ngram\+\_\+length) const
+\begin{DoxyCompactList}\small\item\em save\+NGram\+File\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_data_a1ce186501aa42977a5f02daedebabef2}{set\+From\+Any\+Data\+With\+Chosen}} (const VVAny \&raw\+\_\+data, bool has\+\_\+sent\+\_\+start=false, bool has\+\_\+sent\+\_\+end=false)
+\item 
+bool \mbox{\hyperlink{class_ngram_data_aacaec1f5fdb1ee72dc5b3fbccff2134a}{set\+From\+Any\+Data\+No\+Chosen}} (VVAny \&any\+\_\+data, bool has\+\_\+sent\+\_\+start, bool has\+\_\+sent\+\_\+end)
+\item 
+bool \mbox{\hyperlink{class_ngram_data_ab32f3e513fef3500b58a34dbe83c1704}{load\+NGram\+No\+Chosen}} (const QString \&full\+\_\+path, VVAny \&data\+\_\+to\+\_\+fill, unsigned int ngram\+\_\+length) const
+\item 
+bool \mbox{\hyperlink{class_ngram_data_ab70ecb2a961e7b439d3962d93a3a5085}{load\+NGram\+With\+Chosen}} (const QString \&full\+\_\+path, VVAny \&data\+\_\+to\+\_\+fill, unsigned int ngram\+\_\+length) const
+\item 
+QString \mbox{\hyperlink{class_ngram_data_a4e34b463ca32ba560d7c0551033649b1}{set\+Data\+Full\+Path}} (const QString \&data\+\_\+file\+\_\+path\+\_\+in)
+\item 
+bool \mbox{\hyperlink{class_ngram_data_aca99378195665309c97dfea8b10dfa33}{set\+Chosen}} (int i, bool value)
+\item 
+bool \mbox{\hyperlink{class_ngram_data_a1939803dc6c457b9e1fec31601646473}{get\+Chosen}} (int i) const
+\item 
+void \mbox{\hyperlink{class_ngram_data_aba425ba19debc2717c9497e8bd82d79a}{toggle\+Chosen}} (int i)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_ngram_data_af495a7176885780fd5c405ab47b80f63}{size}} ()
+\item 
+bool \mbox{\hyperlink{class_ngram_data_a71935ab39285c87a4e30b9ab655cb6d2}{is\+Chosen}} (int i) const
+\item 
+bool \mbox{\hyperlink{class_ngram_data_a86b158eff3f3a60f3e2a45d27ce1a2a6}{is\+Not\+Chosen}} (int i) const
+\item 
+int \mbox{\hyperlink{class_ngram_data_af04fa42327a6cdecbae1b4e5ff776489}{get\+Chosen\+Count}} () const
+\item 
+void \mbox{\hyperlink{class_ngram_data_a749ce211a4e0c611786744b0ba4a16d8}{update\+Word\+To\+Index}} ()
+\item 
+bool \mbox{\hyperlink{class_ngram_data_ace38d4181164d3d52719ab8013067d55}{is\+Chosen}} (const QString \&word) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_data}{Base\+Data}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_data_aed47567c6ceb2a29f8f33e9402fd459d}{Base\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ngram_meta_data}{Ngram\+Meta\+Data}} \mbox{\hyperlink{class_ngram_data_abc209f1192bd6ce83acb785ad9a257d1}{my\+\_\+ngram\+\_\+meta\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em my\+\_\+ngram\+\_\+meta\+\_\+data all file data info here, and general settings \end{DoxyCompactList}\item 
+QList$<$ QString $>$ \mbox{\hyperlink{class_ngram_data_a1bcd31b42a1e48a60c30039bd53e172c}{ngram\+\_\+string}}
+\begin{DoxyCompactList}\small\item\em ngram\+\_\+string \end{DoxyCompactList}\item 
+QList$<$ QList$<$ bool $>$ $>$ \mbox{\hyperlink{class_ngram_data_a689b31fa97cc60962dc6ae870cef3905}{chosen\+\_\+by\+\_\+word}}
+\begin{DoxyCompactList}\small\item\em word\+\_\+chosen \end{DoxyCompactList}\item 
+QList$<$ QList$<$ QString $>$ $>$ \mbox{\hyperlink{class_ngram_data_aa5e74d3e2c7412b5d472fac40bb794a0}{words}}
+\begin{DoxyCompactList}\small\item\em words \end{DoxyCompactList}\item 
+QHash$<$ QString, int $>$ \mbox{\hyperlink{class_ngram_data_a9dd8868f4b6d0ca66c06f816dd7a7198}{word\+\_\+to\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em lookup table to retrireve data quickly \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_ngram_data_a28eff4a60d6b0a2928d933cb5a310f20}{data\+\_\+file\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em data\+\_\+path The default Ngram file name in the data (based on the word lengths in the ngram). Default files DO NOT HAVE ANY CHOSEN COLUMN (it\textquotesingle{}s a waste of space) instead local copies are made for a particular solution and the chosen column is added on creation \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_ngram_data_a8bb74b37bbec4805b10a2a358853d071}{data\+\_\+file\+\_\+path}}
+\item 
+QString \mbox{\hyperlink{class_ngram_data_adfdcb58f40b62dc2b1b55522bd5bfa1a}{data\+\_\+path}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_base_data}{Base\+Data}}}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ bool $>$ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}
+\begin{DoxyCompactList}\small\item\em chosen \end{DoxyCompactList}\item 
+QList$<$ unsigned long long $>$ \mbox{\hyperlink{class_base_data_ad4eea09001e314dc0885357ccfd3242a}{counts}}
+\begin{DoxyCompactList}\small\item\em counts \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em chosen \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\+\_\+chosen\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em count of false in chosen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_ngram_data}{Ngram\+Data} class. 
+
+Holds all the word/ count / chosen data found in an ngram file 2 type sof file\+: raw and phrase raw files do not have a chosen column, and are ONLY EVR REAAD phrase files are working files accosicatoed wwith a phrase 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ngram_data_af3b720c11c37dd8df066e36d546390d3}\label{class_ngram_data_af3b720c11c37dd8df066e36d546390d3} 
+\index{NgramData@{NgramData}!NgramData@{NgramData}}
+\index{NgramData@{NgramData}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{NgramData()}{NgramData()}}
+{\footnotesize\ttfamily Ngram\+Data\+::\+Ngram\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ngram_meta_data}{Ngram\+Meta\+Data}} \&}]{file\+\_\+data\+\_\+in,  }\item[{int}]{passed\+\_\+ngram\+\_\+index\+\_\+in\+\_\+phrase }\end{DoxyParamCaption})}
+
+\Hypertarget{class_ngram_data_aa31bc54ff76b465bf523b2d6a551f922}\label{class_ngram_data_aa31bc54ff76b465bf523b2d6a551f922} 
+\index{NgramData@{NgramData}!````~NgramData@{\texorpdfstring{$\sim$}{\string~}NgramData}}
+\index{````~NgramData@{\texorpdfstring{$\sim$}{\string~}NgramData}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NgramData()}{\string~NgramData()}}
+{\footnotesize\ttfamily Ngram\+Data\+::\texorpdfstring{$\sim$}{\string~}\+Ngram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ngram_data_a5f28ef1ba3e10ab62200e5639fadbf39}\label{class_ngram_data_a5f28ef1ba3e10ab62200e5639fadbf39} 
+\index{NgramData@{NgramData}!deleteNotChosen@{deleteNotChosen}}
+\index{deleteNotChosen@{deleteNotChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{deleteNotChosen()}{deleteNotChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::delete\+Not\+Chosen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+delete\+Not\+Chosen 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a8d42db4d21a6da30d7f70d52cba7aae4}\label{class_ngram_data_a8d42db4d21a6da30d7f70d52cba7aae4} 
+\index{NgramData@{NgramData}!finishAFterDataAddedOrDeleted@{finishAFterDataAddedOrDeleted}}
+\index{finishAFterDataAddedOrDeleted@{finishAFterDataAddedOrDeleted}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{finishAFterDataAddedOrDeleted()}{finishAFterDataAddedOrDeleted()}}
+{\footnotesize\ttfamily void Ngram\+Data\+::finish\+AFter\+Data\+Added\+Or\+Deleted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+finish\+AFter\+Data\+Added\+Or\+Deleted 
+
+\Hypertarget{class_ngram_data_afc587f1479720c0c299ec456f2588b8e}\label{class_ngram_data_afc587f1479720c0c299ec456f2588b8e} 
+\index{NgramData@{NgramData}!getAsFileData@{getAsFileData}}
+\index{getAsFileData@{getAsFileData}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{getAsFileData()}{getAsFileData()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::get\+As\+File\+Data (\begin{DoxyParamCaption}\item[{VVAny \&}]{r }\end{DoxyParamCaption}) const}
+
+
+
+get\+As\+File\+Data\+: get class data lists into format for passiung to file\+IO // has chosen columns! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+succeded 
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a1939803dc6c457b9e1fec31601646473}\label{class_ngram_data_a1939803dc6c457b9e1fec31601646473} 
+\index{NgramData@{NgramData}!getChosen@{getChosen}}
+\index{getChosen@{getChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{getChosen()}{getChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::get\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_af04fa42327a6cdecbae1b4e5ff776489}\label{class_ngram_data_af04fa42327a6cdecbae1b4e5ff776489} 
+\index{NgramData@{NgramData}!getChosenCount@{getChosenCount}}
+\index{getChosenCount@{getChosenCount}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{getChosenCount()}{getChosenCount()}}
+{\footnotesize\ttfamily int Ngram\+Data\+::get\+Chosen\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a0bb74121036cee52d73002561b458b9b}\label{class_ngram_data_a0bb74121036cee52d73002561b458b9b} 
+\index{NgramData@{NgramData}!getChosenWordsAtWordIndexInPhrase@{getChosenWordsAtWordIndexInPhrase}}
+\index{getChosenWordsAtWordIndexInPhrase@{getChosenWordsAtWordIndexInPhrase}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{getChosenWordsAtWordIndexInPhrase()}{getChosenWordsAtWordIndexInPhrase()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::get\+Chosen\+Words\+At\+Word\+Index\+In\+Phrase (\begin{DoxyParamCaption}\item[{QList$<$ QString $>$ \&}]{unique\+\_\+words,  }\item[{int}]{word\+\_\+index\+\_\+in\+\_\+phrase }\end{DoxyParamCaption}) const}
+
+
+
+get\+Chosen\+Words\+At\+Word\+Index\+In\+Phrase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+\_\+words} & \\
+\hline
+{\em word\+\_\+index\+\_\+in\+\_\+phrase} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_ae20d3fae0fcfc4a555a1aa2b56f6f43c}\label{class_ngram_data_ae20d3fae0fcfc4a555a1aa2b56f6f43c} 
+\index{NgramData@{NgramData}!getNgramIndexForWordIndexInPhrase@{getNgramIndexForWordIndexInPhrase}}
+\index{getNgramIndexForWordIndexInPhrase@{getNgramIndexForWordIndexInPhrase}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{getNgramIndexForWordIndexInPhrase()}{getNgramIndexForWordIndexInPhrase()}}
+{\footnotesize\ttfamily int Ngram\+Data\+::get\+Ngram\+Index\+For\+Word\+Index\+In\+Phrase (\begin{DoxyParamCaption}\item[{int}]{word\+\_\+index\+\_\+in\+\_\+phrase }\end{DoxyParamCaption}) const}
+
+
+
+get\+Ngram\+Index\+For\+Word\+Index\+In\+Phrase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word\+\_\+index\+\_\+in\+\_\+phrase} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a3b81f20b22abe630c4890aad47c03dc9}\label{class_ngram_data_a3b81f20b22abe630c4890aad47c03dc9} 
+\index{NgramData@{NgramData}!getUniqueWordsAtPhraseIndex@{getUniqueWordsAtPhraseIndex}}
+\index{getUniqueWordsAtPhraseIndex@{getUniqueWordsAtPhraseIndex}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{getUniqueWordsAtPhraseIndex()}{getUniqueWordsAtPhraseIndex()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::get\+Unique\+Words\+At\+Phrase\+Index (\begin{DoxyParamCaption}\item[{int}]{index\+\_\+of\+\_\+word\+\_\+in\+\_\+phrase,  }\item[{QHash$<$ QString, QPair$<$ int, int $>$ $>$ \&}]{unique\+\_\+word\+\_\+hash }\end{DoxyParamCaption}) const}
+
+
+
+get\+Unique\+Words\+At\+Phrase\+Index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+of\+\_\+word\+\_\+in\+\_\+phrase} & \\
+\hline
+{\em unique\+\_\+word\+\_\+hash} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_ace38d4181164d3d52719ab8013067d55}\label{class_ngram_data_ace38d4181164d3d52719ab8013067d55} 
+\index{NgramData@{NgramData}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::is\+Chosen (\begin{DoxyParamCaption}\item[{const QString \&}]{word }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a71935ab39285c87a4e30b9ab655cb6d2}\label{class_ngram_data_a71935ab39285c87a4e30b9ab655cb6d2} 
+\index{NgramData@{NgramData}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::is\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a86b158eff3f3a60f3e2a45d27ce1a2a6}\label{class_ngram_data_a86b158eff3f3a60f3e2a45d27ce1a2a6} 
+\index{NgramData@{NgramData}!isNotChosen@{isNotChosen}}
+\index{isNotChosen@{isNotChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{isNotChosen()}{isNotChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::is\+Not\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a03fc451aeb0cc988e458216f46189e25}\label{class_ngram_data_a03fc451aeb0cc988e458216f46189e25} 
+\index{NgramData@{NgramData}!load@{load}}
+\index{load@{load}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::load (\begin{DoxyParamCaption}\item[{bool}]{default\+\_\+location = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+load outside this class always use load, can only ever load from 1 of two places 
+
+
+\begin{DoxyParams}{Parameters}
+{\em default\+\_\+location,use} & default locatino to laod, or not\\
+\hline
+\end{DoxyParams}
+will also reset ngram\+\_\+length if loading from raw and
+
+\begin{DoxyReturn}{Returns}
+, success 
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_ab32f3e513fef3500b58a34dbe83c1704}\label{class_ngram_data_ab32f3e513fef3500b58a34dbe83c1704} 
+\index{NgramData@{NgramData}!loadNGramNoChosen@{loadNGramNoChosen}}
+\index{loadNGramNoChosen@{loadNGramNoChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{loadNGramNoChosen()}{loadNGramNoChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::load\+NGram\+No\+Chosen (\begin{DoxyParamCaption}\item[{const QString \&}]{full\+\_\+path,  }\item[{VVAny \&}]{data\+\_\+to\+\_\+fill,  }\item[{unsigned int}]{ngram\+\_\+length }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_ngram_data_ab70ecb2a961e7b439d3962d93a3a5085}\label{class_ngram_data_ab70ecb2a961e7b439d3962d93a3a5085} 
+\index{NgramData@{NgramData}!loadNGramWithChosen@{loadNGramWithChosen}}
+\index{loadNGramWithChosen@{loadNGramWithChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{loadNGramWithChosen()}{loadNGramWithChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::load\+NGram\+With\+Chosen (\begin{DoxyParamCaption}\item[{const QString \&}]{full\+\_\+path,  }\item[{VVAny \&}]{data\+\_\+to\+\_\+fill,  }\item[{unsigned int}]{ngram\+\_\+length }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_ngram_data_a24754397768ba5e456080480955e5bb4}\label{class_ngram_data_a24754397768ba5e456080480955e5bb4} 
+\index{NgramData@{NgramData}!message@{message}}
+\index{message@{message}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily void Ngram\+Data\+::message (\begin{DoxyParamCaption}\item[{const QString \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_ngram_data_aa6a9cb46ca90cfd43e5895149d23ccab}\label{class_ngram_data_aa6a9cb46ca90cfd43e5895149d23ccab} 
+\index{NgramData@{NgramData}!save@{save}}
+\index{save@{save}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+save 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a60217ff641423f62c184e027943a246e}\label{class_ngram_data_a60217ff641423f62c184e027943a246e} 
+\index{NgramData@{NgramData}!saveNGramFileData@{saveNGramFileData}}
+\index{saveNGramFileData@{saveNGramFileData}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{saveNGramFileData()}{saveNGramFileData()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::save\+NGram\+File\+Data (\begin{DoxyParamCaption}\item[{const QString \&}]{full\+\_\+path,  }\item[{const VVAny \&}]{data\+\_\+to\+\_\+write,  }\item[{unsigned int}]{ngram\+\_\+length }\end{DoxyParamCaption}) const}
+
+
+
+save\+NGram\+File\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em full\+\_\+path} & \\
+\hline
+{\em data\+\_\+to\+\_\+write} & \\
+\hline
+{\em ngram\+\_\+length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a4387ddd48d93871ce5d91faa6c872b76}\label{class_ngram_data_a4387ddd48d93871ce5d91faa6c872b76} 
+\index{NgramData@{NgramData}!saveRawData@{saveRawData}}
+\index{saveRawData@{saveRawData}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{saveRawData()}{saveRawData()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::save\+Raw\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_aca99378195665309c97dfea8b10dfa33}\label{class_ngram_data_aca99378195665309c97dfea8b10dfa33} 
+\index{NgramData@{NgramData}!setChosen@{setChosen}}
+\index{setChosen@{setChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setChosen()}{setChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::set\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a0bbf3b931eda2ee63388fb00072dc798}\label{class_ngram_data_a0bbf3b931eda2ee63388fb00072dc798} 
+\index{NgramData@{NgramData}!setChosenByWordByPUW@{setChosenByWordByPUW}}
+\index{setChosenByWordByPUW@{setChosenByWordByPUW}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setChosenByWordByPUW()}{setChosenByWordByPUW()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::set\+Chosen\+By\+Word\+By\+PUW (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \&}]{puw }\end{DoxyParamCaption})}
+
+
+
+set\+Chosen\+By\+Word\+By\+PUW 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puw} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a61a356264bc47954b8b4358496df1d47}\label{class_ngram_data_a61a356264bc47954b8b4358496df1d47} 
+\index{NgramData@{NgramData}!setChosenDataFromRaw@{setChosenDataFromRaw}}
+\index{setChosenDataFromRaw@{setChosenDataFromRaw}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setChosenDataFromRaw()}{setChosenDataFromRaw()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::set\+Chosen\+Data\+From\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set\+Chosen\+Data\+From\+Raw 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_aa68560d6df79ca3a02b56ac9fe215906}\label{class_ngram_data_aa68560d6df79ca3a02b56ac9fe215906} 
+\index{NgramData@{NgramData}!setChosenFalseIfAnyChosenByWordIsFalse@{setChosenFalseIfAnyChosenByWordIsFalse}}
+\index{setChosenFalseIfAnyChosenByWordIsFalse@{setChosenFalseIfAnyChosenByWordIsFalse}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setChosenFalseIfAnyChosenByWordIsFalse()}{setChosenFalseIfAnyChosenByWordIsFalse()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::set\+Chosen\+False\+If\+Any\+Chosen\+By\+Word\+Is\+False (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set\+Chosen\+False\+If\+Any\+Chosen\+By\+Word\+Is\+False 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_a4e34b463ca32ba560d7c0551033649b1}\label{class_ngram_data_a4e34b463ca32ba560d7c0551033649b1} 
+\index{NgramData@{NgramData}!setDataFullPath@{setDataFullPath}}
+\index{setDataFullPath@{setDataFullPath}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setDataFullPath()}{setDataFullPath()}}
+{\footnotesize\ttfamily QString Ngram\+Data\+::set\+Data\+Full\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{data\+\_\+file\+\_\+path\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_aa47d0921345587036d6d635045582a7a}\label{class_ngram_data_aa47d0921345587036d6d635045582a7a} 
+\index{NgramData@{NgramData}!setFilePath@{setFilePath}}
+\index{setFilePath@{setFilePath}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setFilePath()}{setFilePath()}}
+{\footnotesize\ttfamily QString Ngram\+Data\+::set\+File\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{data\+\_\+file\+\_\+path\+\_\+in,  }\item[{const QString \&}]{data\+\_\+file\+\_\+name\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+File\+Path 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+file\+\_\+path\+\_\+in} & \\
+\hline
+{\em data\+\_\+file\+\_\+name\+\_\+in} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_aacaec1f5fdb1ee72dc5b3fbccff2134a}\label{class_ngram_data_aacaec1f5fdb1ee72dc5b3fbccff2134a} 
+\index{NgramData@{NgramData}!setFromAnyDataNoChosen@{setFromAnyDataNoChosen}}
+\index{setFromAnyDataNoChosen@{setFromAnyDataNoChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setFromAnyDataNoChosen()}{setFromAnyDataNoChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::set\+From\+Any\+Data\+No\+Chosen (\begin{DoxyParamCaption}\item[{VVAny \&}]{any\+\_\+data,  }\item[{bool}]{has\+\_\+sent\+\_\+start,  }\item[{bool}]{has\+\_\+sent\+\_\+end }\end{DoxyParamCaption})}
+
+\Hypertarget{class_ngram_data_a1ce186501aa42977a5f02daedebabef2}\label{class_ngram_data_a1ce186501aa42977a5f02daedebabef2} 
+\index{NgramData@{NgramData}!setFromAnyDataWithChosen@{setFromAnyDataWithChosen}}
+\index{setFromAnyDataWithChosen@{setFromAnyDataWithChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{setFromAnyDataWithChosen()}{setFromAnyDataWithChosen()}}
+{\footnotesize\ttfamily bool Ngram\+Data\+::set\+From\+Any\+Data\+With\+Chosen (\begin{DoxyParamCaption}\item[{const VVAny \&}]{raw\+\_\+data,  }\item[{bool}]{has\+\_\+sent\+\_\+start = {\ttfamily false},  }\item[{bool}]{has\+\_\+sent\+\_\+end = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_ngram_data_af495a7176885780fd5c405ab47b80f63}\label{class_ngram_data_af495a7176885780fd5c405ab47b80f63} 
+\index{NgramData@{NgramData}!size@{size}}
+\index{size@{size}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Ngram\+Data\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a74a6961786bbe4d77f8367d3b01151b6}\label{class_ngram_data_a74a6961786bbe4d77f8367d3b01151b6} 
+\index{NgramData@{NgramData}!size@{size}}
+\index{size@{size}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int Ngram\+Data\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+size 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_data_aba425ba19debc2717c9497e8bd82d79a}\label{class_ngram_data_aba425ba19debc2717c9497e8bd82d79a} 
+\index{NgramData@{NgramData}!toggleChosen@{toggleChosen}}
+\index{toggleChosen@{toggleChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{toggleChosen()}{toggleChosen()}}
+{\footnotesize\ttfamily void Ngram\+Data\+::toggle\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_data_a81b712e4fa9bd10339647fa8595d1237}\label{class_ngram_data_a81b712e4fa9bd10339647fa8595d1237} 
+\index{NgramData@{NgramData}!updateChosenCounts@{updateChosenCounts}}
+\index{updateChosenCounts@{updateChosenCounts}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{updateChosenCounts()}{updateChosenCounts()}}
+{\footnotesize\ttfamily void Ngram\+Data\+::update\+Chosen\+Counts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Chosen\+Counts 
+
+\Hypertarget{class_ngram_data_a54704f9e6a86c616de103a0bafc9e429}\label{class_ngram_data_a54704f9e6a86c616de103a0bafc9e429} 
+\index{NgramData@{NgramData}!updateNgramChosen@{updateNgramChosen}}
+\index{updateNgramChosen@{updateNgramChosen}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{updateNgramChosen}{updateNgramChosen}}
+{\footnotesize\ttfamily void Ngram\+Data\+::update\+Ngram\+Chosen (\begin{DoxyParamCaption}\item[{unsigned int}]{chosen\+\_\+count,  }\item[{unsigned int}]{not\+\_\+chosen\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_ngram_data_a749ce211a4e0c611786744b0ba4a16d8}\label{class_ngram_data_a749ce211a4e0c611786744b0ba4a16d8} 
+\index{NgramData@{NgramData}!updateWordToIndex@{updateWordToIndex}}
+\index{updateWordToIndex@{updateWordToIndex}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{updateWordToIndex()}{updateWordToIndex()}}
+{\footnotesize\ttfamily void Ngram\+Data\+::update\+Word\+To\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ngram_data_a689b31fa97cc60962dc6ae870cef3905}\label{class_ngram_data_a689b31fa97cc60962dc6ae870cef3905} 
+\index{NgramData@{NgramData}!chosen\_by\_word@{chosen\_by\_word}}
+\index{chosen\_by\_word@{chosen\_by\_word}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{chosen\_by\_word}{chosen\_by\_word}}
+{\footnotesize\ttfamily QList$<$QList$<$bool$>$ $>$ Ngram\+Data\+::chosen\+\_\+by\+\_\+word}
+
+
+
+word\+\_\+chosen 
+
+\Hypertarget{class_ngram_data_a28eff4a60d6b0a2928d933cb5a310f20}\label{class_ngram_data_a28eff4a60d6b0a2928d933cb5a310f20} 
+\index{NgramData@{NgramData}!data\_file\_name@{data\_file\_name}}
+\index{data\_file\_name@{data\_file\_name}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{data\_file\_name}{data\_file\_name}}
+{\footnotesize\ttfamily QString Ngram\+Data\+::data\+\_\+file\+\_\+name}
+
+
+
+data\+\_\+path The default Ngram file name in the data (based on the word lengths in the ngram). Default files DO NOT HAVE ANY CHOSEN COLUMN (it\textquotesingle{}s a waste of space) instead local copies are made for a particular solution and the chosen column is added on creation 
+
+\Hypertarget{class_ngram_data_a8bb74b37bbec4805b10a2a358853d071}\label{class_ngram_data_a8bb74b37bbec4805b10a2a358853d071} 
+\index{NgramData@{NgramData}!data\_file\_path@{data\_file\_path}}
+\index{data\_file\_path@{data\_file\_path}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{data\_file\_path}{data\_file\_path}}
+{\footnotesize\ttfamily QString Ngram\+Data\+::data\+\_\+file\+\_\+path}
+
+\Hypertarget{class_ngram_data_adfdcb58f40b62dc2b1b55522bd5bfa1a}\label{class_ngram_data_adfdcb58f40b62dc2b1b55522bd5bfa1a} 
+\index{NgramData@{NgramData}!data\_path@{data\_path}}
+\index{data\_path@{data\_path}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{data\_path}{data\_path}}
+{\footnotesize\ttfamily QString Ngram\+Data\+::data\+\_\+path}
+
+\Hypertarget{class_ngram_data_abc209f1192bd6ce83acb785ad9a257d1}\label{class_ngram_data_abc209f1192bd6ce83acb785ad9a257d1} 
+\index{NgramData@{NgramData}!my\_ngram\_meta\_data@{my\_ngram\_meta\_data}}
+\index{my\_ngram\_meta\_data@{my\_ngram\_meta\_data}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{my\_ngram\_meta\_data}{my\_ngram\_meta\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ngram_meta_data}{Ngram\+Meta\+Data}} Ngram\+Data\+::my\+\_\+ngram\+\_\+meta\+\_\+data}
+
+
+
+my\+\_\+ngram\+\_\+meta\+\_\+data all file data info here, and general settings 
+
+\Hypertarget{class_ngram_data_a1bcd31b42a1e48a60c30039bd53e172c}\label{class_ngram_data_a1bcd31b42a1e48a60c30039bd53e172c} 
+\index{NgramData@{NgramData}!ngram\_string@{ngram\_string}}
+\index{ngram\_string@{ngram\_string}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{ngram\_string}{ngram\_string}}
+{\footnotesize\ttfamily QList$<$QString$>$ Ngram\+Data\+::ngram\+\_\+string}
+
+
+
+ngram\+\_\+string 
+
+\Hypertarget{class_ngram_data_a9dd8868f4b6d0ca66c06f816dd7a7198}\label{class_ngram_data_a9dd8868f4b6d0ca66c06f816dd7a7198} 
+\index{NgramData@{NgramData}!word\_to\_index@{word\_to\_index}}
+\index{word\_to\_index@{word\_to\_index}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{word\_to\_index}{word\_to\_index}}
+{\footnotesize\ttfamily QHash$<$QString, int$>$ Ngram\+Data\+::word\+\_\+to\+\_\+index}
+
+
+
+lookup table to retrireve data quickly 
+
+\Hypertarget{class_ngram_data_aa5e74d3e2c7412b5d472fac40bb794a0}\label{class_ngram_data_aa5e74d3e2c7412b5d472fac40bb794a0} 
+\index{NgramData@{NgramData}!words@{words}}
+\index{words@{words}!NgramData@{NgramData}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily QList$<$QList$<$QString$>$ $>$ Ngram\+Data\+::words}
+
+
+
+words 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/ngram\+\_\+phrase/\mbox{\hyperlink{ngramdata_8h}{ngramdata.\+h}}\item 
+source/ngram\+\_\+phrase/\mbox{\hyperlink{ngramdata_8cpp}{ngramdata.\+cpp}}\end{DoxyCompactItemize}

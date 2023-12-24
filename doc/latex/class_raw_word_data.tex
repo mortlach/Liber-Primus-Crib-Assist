@@ -1,0 +1,439 @@
+\doxysection{Raw\+Word\+Data Class Reference}
+\hypertarget{class_raw_word_data}{}\label{class_raw_word_data}\index{RawWordData@{RawWordData}}
+
+
+{\ttfamily \#include $<$rawworddata.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_raw_word_data_a586269b88179ce69d124e083501d2b39}{Raw\+Word\+Data}} (unsigned int \mbox{\hyperlink{class_raw_word_data_a73339eaabe896b03afbdfc05fb0e58d2}{word\+\_\+length}}, const QString \&full\+\_\+path\+\_\+in)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_raw_word_data}{Raw\+Word\+Data} class to hold raw 1 gram data and basic fucntions to manipulate / load and save data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_raw_word_data_a3cce1201fa8bbcde747bd437bdf9ae1a}{\texorpdfstring{$\sim$}{\string~}\+Raw\+Word\+Data}} ()
+\item 
+bool \mbox{\hyperlink{class_raw_word_data_a342f0e08139c172d55912b0fd366a136}{load\+Data}} ()
+\begin{DoxyCompactList}\small\item\em load\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_raw_word_data_aec66456a49c1f9d1c81a465542a159e1}{save\+Data}} () const
+\begin{DoxyCompactList}\small\item\em save\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_raw_word_data_adfbdb83aa6fb65e2aaed3d74e48b3b6a}{delete\+Not\+Chosen2}} ()
+\begin{DoxyCompactList}\small\item\em delete\+Not\+Chosen2 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_raw_word_data_a4b2d6cd3854052563c94b60aeccbc4dd}{set\+From\+Any\+Data}} (const std\+::vector$<$ std\+::vector$<$ std\+::any $>$ $>$ \&raw\+\_\+data)
+\begin{DoxyCompactList}\small\item\em set\+From\+Any\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_raw_word_data_a810165672aed8b9be14d33579803e786}{get\+As\+Any\+Data}} (std\+::vector$<$ std\+::vector$<$ std\+::any $>$ $>$ \&data\+\_\+to\+\_\+fill) const
+\begin{DoxyCompactList}\small\item\em get\+As\+Any\+Data \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_raw_word_data_a5d0bdce9efd16c7ffc7a4e3240665010}{set\+Data\+Full\+Path}} (const QString \&data\+\_\+file\+\_\+path\+\_\+in)
+\item 
+bool \mbox{\hyperlink{class_raw_word_data_ab52f56e01a69a5abbe1a7e4705b5aff9}{set\+Chosen}} (int i, bool value)
+\item 
+bool \mbox{\hyperlink{class_raw_word_data_a7654c5cc1ce3e2fa05a80b2c537f845e}{get\+Chosen}} (int i) const
+\item 
+void \mbox{\hyperlink{class_raw_word_data_a528dcb343668d8121f491dcb3373b0f4}{toggle\+Chosen}} (int i)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_raw_word_data_afe6ffa58cc931cb863ed5975dc81c070}{size}} ()
+\item 
+bool \mbox{\hyperlink{class_raw_word_data_a80dc82ad9a6a9ce1f3ae766d6522c433}{is\+Chosen}} (int i) const
+\item 
+bool \mbox{\hyperlink{class_raw_word_data_a50fa798cae557a5c66e9eb1a66ac6b45}{is\+Not\+Chosen}} (int i) const
+\item 
+void \mbox{\hyperlink{class_raw_word_data_a2ce8a3162852147f7a3649d063c8e390}{update\+Chosen\+Counts}} ()
+\item 
+int \mbox{\hyperlink{class_raw_word_data_a5029764dadd78c490ff0c6b30424350b}{get\+Chosen\+Count}} ()
+\item 
+void \mbox{\hyperlink{class_raw_word_data_adf66a60c10b4ac428e90c21a8e1be5d0}{update\+Word\+To\+Index}} ()
+\begin{DoxyCompactList}\small\item\em update\+Word\+To\+Index \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_raw_word_data_a30a1741a24d17cad9e833dc78db44f44}{is\+Chosen}} (const QString \&word) const
+\begin{DoxyCompactList}\small\item\em is\+Chosen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_data}{Base\+Data}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_data_aed47567c6ceb2a29f8f33e9402fd459d}{Base\+Data}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ unsigned long long $>$ \mbox{\hyperlink{class_raw_word_data_afe383c96a321fffde3530df7e5fd335e}{counts}}
+\begin{DoxyCompactList}\small\item\em count of each word in words \end{DoxyCompactList}\item 
+QVector$<$ bool $>$ \mbox{\hyperlink{class_raw_word_data_ae168b39450a998faaebcf8e9ee218a66}{chosen}}
+\begin{DoxyCompactList}\small\item\em chosen flag for each word in words \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_raw_word_data_a08009ada5ffb4f29f76620211375722e}{chosen\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em count of true in chosen \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_raw_word_data_a29e7335b18612bdfe6936a4c80d1532f}{not\+\_\+chosen\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em count of false in chosen \end{DoxyCompactList}\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_raw_word_data_aad43bd2d0e44b7c458f4e83e99adc1ee}{words}}
+\begin{DoxyCompactList}\small\item\em words \end{DoxyCompactList}\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_raw_word_data_a34f81f77c982c121c75c2042155d13e6}{chosen\+\_\+words}}
+\begin{DoxyCompactList}\small\item\em chosen words \end{DoxyCompactList}\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_raw_word_data_ad35b97a347f6193f966ed497201694b8}{not\+\_\+chosen\+\_\+words}}
+\begin{DoxyCompactList}\small\item\em not chosen words \end{DoxyCompactList}\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_raw_word_data_a0aab3b2a214c973f1988e9cb11de13bb}{runes}}
+\begin{DoxyCompactList}\small\item\em runes words converted to runes \end{DoxyCompactList}\item 
+QVector$<$ unsigned int $>$ \mbox{\hyperlink{class_raw_word_data_a2c57b63a4370080588d188581438de25}{gematria\+\_\+sum}}
+\begin{DoxyCompactList}\small\item\em gematria\+\_\+sum words word\textquotesingle{}s gematria sum \end{DoxyCompactList}\item 
+QHash$<$ QString, int $>$ \mbox{\hyperlink{class_raw_word_data_ae3599932b382cd632de9c3bc05872168}{word\+\_\+to\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em lookup tabel to retrireve data quickly \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::any $>$ $>$ \mbox{\hyperlink{class_raw_word_data_a903eeb867459163d95859deffa94c618}{any\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em compact way of holding all data of different types, see .cpp for encoding \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{class_raw_word_data_a0c96abbeea3c9c8bbb875a593d49f5c8}{string\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em string version of data to write / read from file, see .cpp for encoding \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_raw_word_data_a73339eaabe896b03afbdfc05fb0e58d2}{word\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em word length in runes \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_raw_word_data_a1382aaebc76cce6897dff93b58aebd14}{has\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em has data succesfully been loaded \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_raw_word_data_aec6f3b7089c4f77a38c8b074fcd486d6}{data\+\_\+file\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em path to data file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_base_data}{Base\+Data}}}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ bool $>$ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}
+\begin{DoxyCompactList}\small\item\em chosen \end{DoxyCompactList}\item 
+QList$<$ unsigned long long $>$ \mbox{\hyperlink{class_base_data_ad4eea09001e314dc0885357ccfd3242a}{counts}}
+\begin{DoxyCompactList}\small\item\em counts \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em chosen \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\+\_\+chosen\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em count of false in chosen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_raw_word_data_a586269b88179ce69d124e083501d2b39}\label{class_raw_word_data_a586269b88179ce69d124e083501d2b39} 
+\index{RawWordData@{RawWordData}!RawWordData@{RawWordData}}
+\index{RawWordData@{RawWordData}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{RawWordData()}{RawWordData()}}
+{\footnotesize\ttfamily Raw\+Word\+Data\+::\+Raw\+Word\+Data (\begin{DoxyParamCaption}\item[{unsigned int}]{word\+\_\+length,  }\item[{const QString \&}]{full\+\_\+path\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_raw_word_data}{Raw\+Word\+Data} class to hold raw 1 gram data and basic fucntions to manipulate / load and save data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word\+\_\+length} & what length word am I? 1 to 14 \\
+\hline
+{\em full\+\_\+path\+\_\+in,where} & is my data stored? this can be changed, but on instationitation data is loaded from settings file path \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_raw_word_data_a3cce1201fa8bbcde747bd437bdf9ae1a}\label{class_raw_word_data_a3cce1201fa8bbcde747bd437bdf9ae1a} 
+\index{RawWordData@{RawWordData}!````~RawWordData@{\texorpdfstring{$\sim$}{\string~}RawWordData}}
+\index{````~RawWordData@{\texorpdfstring{$\sim$}{\string~}RawWordData}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RawWordData()}{\string~RawWordData()}}
+{\footnotesize\ttfamily Raw\+Word\+Data\+::\texorpdfstring{$\sim$}{\string~}\+Raw\+Word\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_raw_word_data_adfbdb83aa6fb65e2aaed3d74e48b3b6a}\label{class_raw_word_data_adfbdb83aa6fb65e2aaed3d74e48b3b6a} 
+\index{RawWordData@{RawWordData}!deleteNotChosen2@{deleteNotChosen2}}
+\index{deleteNotChosen2@{deleteNotChosen2}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{deleteNotChosen2()}{deleteNotChosen2()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::delete\+Not\+Chosen2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+delete\+Not\+Chosen2 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_raw_word_data_a810165672aed8b9be14d33579803e786}\label{class_raw_word_data_a810165672aed8b9be14d33579803e786} 
+\index{RawWordData@{RawWordData}!getAsAnyData@{getAsAnyData}}
+\index{getAsAnyData@{getAsAnyData}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{getAsAnyData()}{getAsAnyData()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::get\+As\+Any\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ std\+::any $>$ $>$ \&}]{data\+\_\+to\+\_\+fill }\end{DoxyParamCaption}) const}
+
+
+
+get\+As\+Any\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+to\+\_\+fill} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_raw_word_data_a7654c5cc1ce3e2fa05a80b2c537f845e}\label{class_raw_word_data_a7654c5cc1ce3e2fa05a80b2c537f845e} 
+\index{RawWordData@{RawWordData}!getChosen@{getChosen}}
+\index{getChosen@{getChosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{getChosen()}{getChosen()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::get\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a5029764dadd78c490ff0c6b30424350b}\label{class_raw_word_data_a5029764dadd78c490ff0c6b30424350b} 
+\index{RawWordData@{RawWordData}!getChosenCount@{getChosenCount}}
+\index{getChosenCount@{getChosenCount}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{getChosenCount()}{getChosenCount()}}
+{\footnotesize\ttfamily int Raw\+Word\+Data\+::get\+Chosen\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a30a1741a24d17cad9e833dc78db44f44}\label{class_raw_word_data_a30a1741a24d17cad9e833dc78db44f44} 
+\index{RawWordData@{RawWordData}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::is\+Chosen (\begin{DoxyParamCaption}\item[{const QString \&}]{word }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+Chosen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_raw_word_data_a80dc82ad9a6a9ce1f3ae766d6522c433}\label{class_raw_word_data_a80dc82ad9a6a9ce1f3ae766d6522c433} 
+\index{RawWordData@{RawWordData}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::is\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a50fa798cae557a5c66e9eb1a66ac6b45}\label{class_raw_word_data_a50fa798cae557a5c66e9eb1a66ac6b45} 
+\index{RawWordData@{RawWordData}!isNotChosen@{isNotChosen}}
+\index{isNotChosen@{isNotChosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{isNotChosen()}{isNotChosen()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::is\+Not\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a342f0e08139c172d55912b0fd366a136}\label{class_raw_word_data_a342f0e08139c172d55912b0fd366a136} 
+\index{RawWordData@{RawWordData}!loadData@{loadData}}
+\index{loadData@{loadData}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load\+Data 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_raw_word_data_aec66456a49c1f9d1c81a465542a159e1}\label{class_raw_word_data_aec66456a49c1f9d1c81a465542a159e1} 
+\index{RawWordData@{RawWordData}!saveData@{saveData}}
+\index{saveData@{saveData}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+save\+Data 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_raw_word_data_ab52f56e01a69a5abbe1a7e4705b5aff9}\label{class_raw_word_data_ab52f56e01a69a5abbe1a7e4705b5aff9} 
+\index{RawWordData@{RawWordData}!setChosen@{setChosen}}
+\index{setChosen@{setChosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{setChosen()}{setChosen()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::set\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a5d0bdce9efd16c7ffc7a4e3240665010}\label{class_raw_word_data_a5d0bdce9efd16c7ffc7a4e3240665010} 
+\index{RawWordData@{RawWordData}!setDataFullPath@{setDataFullPath}}
+\index{setDataFullPath@{setDataFullPath}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{setDataFullPath()}{setDataFullPath()}}
+{\footnotesize\ttfamily QString Raw\+Word\+Data\+::set\+Data\+Full\+Path (\begin{DoxyParamCaption}\item[{const QString \&}]{data\+\_\+file\+\_\+path\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a4b2d6cd3854052563c94b60aeccbc4dd}\label{class_raw_word_data_a4b2d6cd3854052563c94b60aeccbc4dd} 
+\index{RawWordData@{RawWordData}!setFromAnyData@{setFromAnyData}}
+\index{setFromAnyData@{setFromAnyData}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{setFromAnyData()}{setFromAnyData()}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::set\+From\+Any\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::any $>$ $>$ \&}]{raw\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+set\+From\+Any\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+\_\+data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_raw_word_data_afe6ffa58cc931cb863ed5975dc81c070}\label{class_raw_word_data_afe6ffa58cc931cb863ed5975dc81c070} 
+\index{RawWordData@{RawWordData}!size@{size}}
+\index{size@{size}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Raw\+Word\+Data\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a528dcb343668d8121f491dcb3373b0f4}\label{class_raw_word_data_a528dcb343668d8121f491dcb3373b0f4} 
+\index{RawWordData@{RawWordData}!toggleChosen@{toggleChosen}}
+\index{toggleChosen@{toggleChosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{toggleChosen()}{toggleChosen()}}
+{\footnotesize\ttfamily void Raw\+Word\+Data\+::toggle\+Chosen (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_a2ce8a3162852147f7a3649d063c8e390}\label{class_raw_word_data_a2ce8a3162852147f7a3649d063c8e390} 
+\index{RawWordData@{RawWordData}!updateChosenCounts@{updateChosenCounts}}
+\index{updateChosenCounts@{updateChosenCounts}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{updateChosenCounts()}{updateChosenCounts()}}
+{\footnotesize\ttfamily void Raw\+Word\+Data\+::update\+Chosen\+Counts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_raw_word_data_adf66a60c10b4ac428e90c21a8e1be5d0}\label{class_raw_word_data_adf66a60c10b4ac428e90c21a8e1be5d0} 
+\index{RawWordData@{RawWordData}!updateWordToIndex@{updateWordToIndex}}
+\index{updateWordToIndex@{updateWordToIndex}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{updateWordToIndex()}{updateWordToIndex()}}
+{\footnotesize\ttfamily void Raw\+Word\+Data\+::update\+Word\+To\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+update\+Word\+To\+Index 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_raw_word_data_a903eeb867459163d95859deffa94c618}\label{class_raw_word_data_a903eeb867459163d95859deffa94c618} 
+\index{RawWordData@{RawWordData}!any\_data@{any\_data}}
+\index{any\_data@{any\_data}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{any\_data}{any\_data}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::any$>$ $>$ Raw\+Word\+Data\+::any\+\_\+data}
+
+
+
+compact way of holding all data of different types, see .cpp for encoding 
+
+\Hypertarget{class_raw_word_data_ae168b39450a998faaebcf8e9ee218a66}\label{class_raw_word_data_ae168b39450a998faaebcf8e9ee218a66} 
+\index{RawWordData@{RawWordData}!chosen@{chosen}}
+\index{chosen@{chosen}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{chosen}{chosen}}
+{\footnotesize\ttfamily QVector$<$bool$>$ Raw\+Word\+Data\+::chosen}
+
+
+
+chosen flag for each word in words 
+
+\Hypertarget{class_raw_word_data_a08009ada5ffb4f29f76620211375722e}\label{class_raw_word_data_a08009ada5ffb4f29f76620211375722e} 
+\index{RawWordData@{RawWordData}!chosen\_count@{chosen\_count}}
+\index{chosen\_count@{chosen\_count}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{chosen\_count}{chosen\_count}}
+{\footnotesize\ttfamily unsigned int Raw\+Word\+Data\+::chosen\+\_\+count}
+
+
+
+count of true in chosen 
+
+\Hypertarget{class_raw_word_data_a34f81f77c982c121c75c2042155d13e6}\label{class_raw_word_data_a34f81f77c982c121c75c2042155d13e6} 
+\index{RawWordData@{RawWordData}!chosen\_words@{chosen\_words}}
+\index{chosen\_words@{chosen\_words}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{chosen\_words}{chosen\_words}}
+{\footnotesize\ttfamily QVector$<$QString$>$ Raw\+Word\+Data\+::chosen\+\_\+words}
+
+
+
+chosen words 
+
+\Hypertarget{class_raw_word_data_afe383c96a321fffde3530df7e5fd335e}\label{class_raw_word_data_afe383c96a321fffde3530df7e5fd335e} 
+\index{RawWordData@{RawWordData}!counts@{counts}}
+\index{counts@{counts}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{counts}{counts}}
+{\footnotesize\ttfamily QVector$<$unsigned long long$>$ Raw\+Word\+Data\+::counts}
+
+
+
+count of each word in words 
+
+\Hypertarget{class_raw_word_data_aec6f3b7089c4f77a38c8b074fcd486d6}\label{class_raw_word_data_aec6f3b7089c4f77a38c8b074fcd486d6} 
+\index{RawWordData@{RawWordData}!data\_file\_path@{data\_file\_path}}
+\index{data\_file\_path@{data\_file\_path}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{data\_file\_path}{data\_file\_path}}
+{\footnotesize\ttfamily QString Raw\+Word\+Data\+::data\+\_\+file\+\_\+path}
+
+
+
+path to data file 
+
+\Hypertarget{class_raw_word_data_a2c57b63a4370080588d188581438de25}\label{class_raw_word_data_a2c57b63a4370080588d188581438de25} 
+\index{RawWordData@{RawWordData}!gematria\_sum@{gematria\_sum}}
+\index{gematria\_sum@{gematria\_sum}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{gematria\_sum}{gematria\_sum}}
+{\footnotesize\ttfamily QVector$<$unsigned int$>$ Raw\+Word\+Data\+::gematria\+\_\+sum}
+
+
+
+gematria\+\_\+sum words word\textquotesingle{}s gematria sum 
+
+\Hypertarget{class_raw_word_data_a1382aaebc76cce6897dff93b58aebd14}\label{class_raw_word_data_a1382aaebc76cce6897dff93b58aebd14} 
+\index{RawWordData@{RawWordData}!has\_data@{has\_data}}
+\index{has\_data@{has\_data}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{has\_data}{has\_data}}
+{\footnotesize\ttfamily bool Raw\+Word\+Data\+::has\+\_\+data}
+
+
+
+has data succesfully been loaded 
+
+\Hypertarget{class_raw_word_data_a29e7335b18612bdfe6936a4c80d1532f}\label{class_raw_word_data_a29e7335b18612bdfe6936a4c80d1532f} 
+\index{RawWordData@{RawWordData}!not\_chosen\_count@{not\_chosen\_count}}
+\index{not\_chosen\_count@{not\_chosen\_count}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{not\_chosen\_count}{not\_chosen\_count}}
+{\footnotesize\ttfamily unsigned int Raw\+Word\+Data\+::not\+\_\+chosen\+\_\+count}
+
+
+
+count of false in chosen 
+
+\Hypertarget{class_raw_word_data_ad35b97a347f6193f966ed497201694b8}\label{class_raw_word_data_ad35b97a347f6193f966ed497201694b8} 
+\index{RawWordData@{RawWordData}!not\_chosen\_words@{not\_chosen\_words}}
+\index{not\_chosen\_words@{not\_chosen\_words}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{not\_chosen\_words}{not\_chosen\_words}}
+{\footnotesize\ttfamily QVector$<$QString$>$ Raw\+Word\+Data\+::not\+\_\+chosen\+\_\+words}
+
+
+
+not chosen words 
+
+\Hypertarget{class_raw_word_data_a0aab3b2a214c973f1988e9cb11de13bb}\label{class_raw_word_data_a0aab3b2a214c973f1988e9cb11de13bb} 
+\index{RawWordData@{RawWordData}!runes@{runes}}
+\index{runes@{runes}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{runes}{runes}}
+{\footnotesize\ttfamily QVector$<$QString$>$ Raw\+Word\+Data\+::runes}
+
+
+
+runes words converted to runes 
+
+\Hypertarget{class_raw_word_data_a0c96abbeea3c9c8bbb875a593d49f5c8}\label{class_raw_word_data_a0c96abbeea3c9c8bbb875a593d49f5c8} 
+\index{RawWordData@{RawWordData}!string\_data@{string\_data}}
+\index{string\_data@{string\_data}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{string\_data}{string\_data}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ Raw\+Word\+Data\+::string\+\_\+data}
+
+
+
+string version of data to write / read from file, see .cpp for encoding 
+
+\Hypertarget{class_raw_word_data_a73339eaabe896b03afbdfc05fb0e58d2}\label{class_raw_word_data_a73339eaabe896b03afbdfc05fb0e58d2} 
+\index{RawWordData@{RawWordData}!word\_length@{word\_length}}
+\index{word\_length@{word\_length}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{word\_length}{word\_length}}
+{\footnotesize\ttfamily unsigned int Raw\+Word\+Data\+::word\+\_\+length}
+
+
+
+word length in runes 
+
+\Hypertarget{class_raw_word_data_ae3599932b382cd632de9c3bc05872168}\label{class_raw_word_data_ae3599932b382cd632de9c3bc05872168} 
+\index{RawWordData@{RawWordData}!word\_to\_index@{word\_to\_index}}
+\index{word\_to\_index@{word\_to\_index}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{word\_to\_index}{word\_to\_index}}
+{\footnotesize\ttfamily QHash$<$QString, int$>$ Raw\+Word\+Data\+::word\+\_\+to\+\_\+index}
+
+
+
+lookup tabel to retrireve data quickly 
+
+\Hypertarget{class_raw_word_data_aad43bd2d0e44b7c458f4e83e99adc1ee}\label{class_raw_word_data_aad43bd2d0e44b7c458f4e83e99adc1ee} 
+\index{RawWordData@{RawWordData}!words@{words}}
+\index{words@{words}!RawWordData@{RawWordData}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily QVector$<$QString$>$ Raw\+Word\+Data\+::words}
+
+
+
+words 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/ngram\+\_\+phrase/\mbox{\hyperlink{rawworddata_8h}{rawworddata.\+h}}\item 
+source/\mbox{\hyperlink{rawworddata_8cpp}{rawworddata.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+var class_ngram_meta_data =
+[
+    [ "NgramMetaData", "class_ngram_meta_data.html#aada7f0623a74a2df0f859dbe1be91b69", null ],
+    [ "~NgramMetaData", "class_ngram_meta_data.html#a047f098f4e3c5d7012df7ca7fbba49fd", null ],
+    [ "hasAnyDefaultSetttings", "class_ngram_meta_data.html#aabfbf8d02a90e5f891a02e8154cff84c", null ],
+    [ "print", "class_ngram_meta_data.html#afea2825373f6008616b59e94d9eded90", null ],
+    [ "first_token_index_in_phrase", "class_ngram_meta_data.html#a3c743feaa649a3863dc7025001033639", null ],
+    [ "first_word_index_in_phrase_word_indices", "class_ngram_meta_data.html#aa31eed3ea4de99eb9cee2faf37c7cec0", null ],
+    [ "has_sent_end", "class_ngram_meta_data.html#abbb2ad49090cfa70845e04ad9780f702", null ],
+    [ "has_sent_start", "class_ngram_meta_data.html#a6134d00f58886a2c849599de23e164d5", null ],
+    [ "ngram_index", "class_ngram_meta_data.html#a35ae3e833200f896cd5ba80685c97382", null ],
+    [ "ngram_length", "class_ngram_meta_data.html#a66f5db109a1b03302ce19dbcfb01bc7f", null ],
+    [ "ngram_root_dir", "class_ngram_meta_data.html#a4079a6f6414c3c2a65f95ca170ea7ff7", null ],
+    [ "ngram_tokens", "class_ngram_meta_data.html#a90252bd94cf191316af944c488068d18", null ],
+    [ "ngram_word_indices", "class_ngram_meta_data.html#a853bff40f306d6fda972266c266e30dd", null ],
+    [ "ngram_word_lengths", "class_ngram_meta_data.html#ab94feb3fec4f1b9c91ebb5468d5a3cc9", null ],
+    [ "phrase_dir", "class_ngram_meta_data.html#a10447053483a2985079881b41728bade", null ],
+    [ "phrase_ngram_filename", "class_ngram_meta_data.html#a8fed3c34875874e97d5f257cbcf75511", null ],
+    [ "phrase_ngram_filepath", "class_ngram_meta_data.html#a52985da46f49120334365055025f5ba7", null ],
+    [ "phrase_tokens", "class_ngram_meta_data.html#ab74ff9b3f1a125d82a80572cb3a1d01a", null ],
+    [ "phrase_word_indices", "class_ngram_meta_data.html#ace0e10acb62c3fd101ec2d108f50c0df", null ],
+    [ "phrase_word_lengths", "class_ngram_meta_data.html#a87d59f12d773f63bdfb8cf217bef8fbd", null ],
+    [ "raw_file_exists", "class_ngram_meta_data.html#a33508a90429aeabfb35f8770de433396", null ],
+    [ "raw_filename", "class_ngram_meta_data.html#a6d37eb645472f9a4120c21514fcc5278", null ],
+    [ "raw_filepath", "class_ngram_meta_data.html#abf06a617cbbb966af8d0ef2fe2001d29", null ]
+];

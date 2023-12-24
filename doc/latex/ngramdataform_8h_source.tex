@@ -1,0 +1,77 @@
+\doxysection{ngramdataform.\+h}
+\hypertarget{ngramdataform_8h_source}{}\label{ngramdataform_8h_source}\index{source/view/ngramdataform.h@{source/view/ngramdataform.h}}
+\mbox{\hyperlink{ngramdataform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NGRAMDATAFORM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NGRAMDATAFORM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QItemSelectionModel>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\#include\ "{}ngramdatafiltermodel.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{filtermodel_8h}{filtermodel.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngramdatahub_8h}{ngramdatahub.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_n_gram_data_model_8h}{ngramdatamodel.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{baseform_8h}{baseform.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_gram_data_form}{NGramDataForm}};}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_gram_data_form}{NGramDataForm}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_form}{BaseForm}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_n_gram_data_form}{NGramDataForm}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_form_a9d16b273de1bddaecc046e84a59fa78f}{\string~NGramDataForm}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a11fa82cda31b29800510a08fc3307c1d}{setWordListGeneralLabel}}(\textcolor{keyword}{const}\ QString\&\ text);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a79b659ef4b4c8a7c258861b76828f6ff}{setNgramData}}(QList<NgramData*>\&\ ptr);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a0a243ed68528b1fd8692c66de4fb2b7d}{setNgramChosenCounts}}(\textcolor{keyword}{const}\ QList<int>\&\ counts);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_ab00d79e5185f741e0a09432b9a543207}{setPUWChosenCounts}}(\textcolor{keyword}{const}\ QList<int>\&\ counts);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a661ae08856a7bfb05001738525a986b4}{clear}}()\{\ \mbox{\hyperlink{class_n_gram_data_form_a868b6d4aec397be37ecbd703912a6db5}{model}}.\mbox{\hyperlink{class_n_gram_data_model_ae2f5e264d123ed4172ca1cc09d9884d9}{clear}}();\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a009e678635ce27b4506a4b4a60f80304}{on\_tableView\_left\_doubleclick\_sig}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a8b161e2337447a7c8d36c6ddb549826e}{on\_tableView\_space\_bar\_sig}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_acaf965090e13c2ee820143503fe4683d}{update}}();\ \textcolor{comment}{//\ main\ update\ function}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a949d5d7c14725f2d55dd8198d6e04972}{updateLabel}}();\ \textcolor{comment}{//\ main\ update\ function}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a5fad820c85f8bc6cca3c9cb78da14e34}{updateTable}}();\ \textcolor{comment}{//\ main\ update\ function}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_aabe6171137d27df52053e9fa36e4faee}{on\_newDataChosen}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_af805f0cbba68dbc129356919b1e2fde9}{on\_loadData}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a4eadf43c2a1a829104f1bc06b3297493}{on\_saveData}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a0412bf2a5347b8c0b96400aa628d68e5}{on\_saveAllData}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_ac72e2c147717c9dda6bdc94a59bb5629}{on\_deleteData}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a7c4411a616eda691c3cebb77d45c4112}{on\_findData}}(\textcolor{keyword}{const}\ QString\&\ find\_string);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_gram_data_form_a4d5bd474676ccef61d51555b4f5ad881}{on\_changeFilter}}(\textcolor{keywordtype}{int}\ filter\_num);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_n_gram_data_model}{NGramDataModel}}\ \mbox{\hyperlink{class_n_gram_data_form_a868b6d4aec397be37ecbd703912a6db5}{model}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ \ \ \ \ Ui::NGramDataForm\ *ui;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setNewNgramDataInGUI(\textcolor{keywordtype}{int}\ ngram\_index);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ applyFilter(\textcolor{keywordtype}{int}\ a);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ eventuially\ will\ need\ a\ version\ of\ all\ of\ these}}
+\DoxyCodeLine{00061\ \ \ \ \ QItemSelectionModel*\ ngram\_selectionmodel;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ current\_ngram\_index;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{enum}\ Constants}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ all\_filter\ =\ 0,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ chosen\_filter\ =\ 1,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ not\_chosen\_filter\ =\ 2}
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PHRASEUNIQUEWORDSFORM\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['ngram_5fdata_0',['ngram_data',['../class_ngram_phrase.html#a15ae0bfc7e31f0e0ada37dcafc5d7bec',1,'NgramPhrase']]],
+  ['ngram_5findex_1',['ngram_index',['../class_ngram_meta_data.html#a35ae3e833200f896cd5ba80685c97382',1,'NgramMetaData']]],
+  ['ngram_5flength_2',['ngram_length',['../class_ngram_meta_data.html#a66f5db109a1b03302ce19dbcfb01bc7f',1,'NgramMetaData']]],
+  ['ngram_5flengths_3',['ngram_lengths',['../struct_ngram_phrase_meta_data.html#af57939e637a546005fd5c4ec2ae60c86',1,'NgramPhraseMetaData']]],
+  ['ngram_5fmeta_5fdata_4',['ngram_meta_data',['../struct_ngram_phrase_meta_data.html#ac4ead07305c92e0066cf9614c6830cc5',1,'NgramPhraseMetaData']]],
+  ['ngram_5fphrase_5',['ngram_phrase',['../class_ngram_data_hub.html#a8233ca8b6665b0927a3025559d8da95b',1,'NgramDataHub']]],
+  ['ngram_5fphrase_5fdata_6',['ngram_phrase_data',['../class_ngram_phrase.html#a74813ffa5a9bd8f1ff0564c9a7409b8f',1,'NgramPhrase::ngram_phrase_data'],['../class_ngram_data_hub.html#a4f00b918c9620c1d62aafe118d3e19b2',1,'NgramDataHub::ngram_phrase_data']]],
+  ['ngram_5froot_5fdir_7',['ngram_root_dir',['../class_ngram_meta_data.html#a4079a6f6414c3c2a65f95ca170ea7ff7',1,'NgramMetaData']]],
+  ['ngram_5fstring_8',['ngram_string',['../class_ngram_data.html#a1bcd31b42a1e48a60c30039bd53e172c',1,'NgramData']]],
+  ['ngram_5ftoken_5flengths_9',['ngram_token_lengths',['../struct_ngram_phrase_meta_data.html#ae2220f03a6042b9a82b5621aaa24d5c9',1,'NgramPhraseMetaData']]],
+  ['ngram_5ftokens_10',['ngram_tokens',['../class_ngram_meta_data.html#a90252bd94cf191316af944c488068d18',1,'NgramMetaData']]],
+  ['ngram_5fword_5findices_11',['ngram_word_indices',['../class_ngram_meta_data.html#a853bff40f306d6fda972266c266e30dd',1,'NgramMetaData']]],
+  ['ngram_5fword_5flengths_12',['ngram_word_lengths',['../class_ngram_meta_data.html#ab94feb3fec4f1b9c91ebb5468d5a3cc9',1,'NgramMetaData']]],
+  ['ngrams_5fwith_5fthis_5fword_13',['ngrams_with_this_word',['../class_phrase_unique_words.html#aed0207362fb4451b8ea0545172220c29',1,'PhraseUniqueWords']]],
+  ['not_5fchosen_5fcount_14',['not_chosen_count',['../class_base_data.html#a03495c43cb2cef152470a90d78ccebad',1,'BaseData::not_chosen_count'],['../class_raw_word_data.html#a29e7335b18612bdfe6936a4c80d1532f',1,'RawWordData::not_chosen_count']]],
+  ['not_5fchosen_5fwords_15',['not_chosen_words',['../class_raw_word_data.html#ad35b97a347f6193f966ed497201694b8',1,'RawWordData']]]
+];

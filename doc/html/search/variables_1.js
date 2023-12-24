@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['chosen_0',['chosen',['../class_base_data.html#a9f3e0f0ad303c88efa4a6bb486f8fe1f',1,'BaseData::chosen'],['../class_raw_word_data.html#ae168b39450a998faaebcf8e9ee218a66',1,'RawWordData::chosen'],['../class_n_gram_data_model.html#a4ac6c8076b195cec65706557aa22d760',1,'NGramDataModel::chosen'],['../class_phrase_unique_words_model.html#ac39915cf248748d5787dea4ccfd0a5f1',1,'PhraseUniqueWordsModel::chosen']]],
+  ['chosen_5fby_5fword_1',['chosen_by_word',['../class_ngram_data.html#a689b31fa97cc60962dc6ae870cef3905',1,'NgramData']]],
+  ['chosen_5fby_5fword_5ftransposed_2',['chosen_by_word_transposed',['../class_n_gram_data_model.html#ad2486a3be4f7e910766c6e34330ff0f7',1,'NGramDataModel']]],
+  ['chosen_5fby_5fword_5ftransposed_5fptr_3',['chosen_by_word_transposed_ptr',['../class_n_gram_data_model.html#aa5905d1fa71aa9a6dc5cc332985a18cd',1,'NGramDataModel']]],
+  ['chosen_5fcol_4',['chosen_col',['../class_filter_model.html#a819494b840eb9057e5254cce146c6033',1,'FilterModel']]],
+  ['chosen_5fcount_5',['chosen_count',['../class_base_data.html#ae7de2fcfcae5b632afe5ed089680be97',1,'BaseData::chosen_count'],['../class_raw_word_data.html#a08009ada5ffb4f29f76620211375722e',1,'RawWordData::chosen_count']]],
+  ['chosen_5fdir_6',['chosen_dir',['../class_ngram_data_hub.html#ad0be1b02079c629bd208d06a3b27472d',1,'NgramDataHub']]],
+  ['chosen_5ffn_7',['chosen_fn',['../class_ngram_data_hub.html#ab9b3155e44e903a1841bd5a0286ec42e',1,'NgramDataHub']]],
+  ['chosen_5fwords_8',['chosen_words',['../class_raw_word_data.html#a34f81f77c982c121c75c2042155d13e6',1,'RawWordData']]],
+  ['colon_9',['COLON',['../namespacedefinitions.html#a6614bcc52ed4b923dea2a3a4f92e76c1',1,'definitions']]],
+  ['comma_10',['COMMA',['../namespacedefinitions.html#a5ee63c59ac2954ec6bee84832c5338ef',1,'definitions']]],
+  ['comment_11',['COMMENT',['../namespacedefinitions.html#ac947f85a2710caead775a0a672d8150d',1,'definitions']]],
+  ['config_5fpath_12',['config_path',['../struct_ngram_phrase_meta_data.html#a3ae48bbedb320f4dbae1c8a55af7ee82',1,'NgramPhraseMetaData::config_path'],['../namespacedefinitions.html#ae775df1fc05f9f3eb4aad6679f24081c',1,'definitions::CONFIG_PATH']]],
+  ['count_13',['count',['../class_g_n_g_table_view.html#af7f9a112c643784fe164d291a6065775',1,'GNGTableView']]],
+  ['count_5fin_5fngrams_14',['count_in_ngrams',['../class_phrase_unique_words_model.html#a82de31b0acbc45c10e70098314666372',1,'PhraseUniqueWordsModel']]],
+  ['counts_15',['counts',['../class_base_data.html#ad4eea09001e314dc0885357ccfd3242a',1,'BaseData::counts'],['../class_raw_word_data.html#afe383c96a321fffde3530df7e5fd335e',1,'RawWordData::counts'],['../class_raw1_gram_model.html#ac4af795832261eddbc2d660a84d6ad94',1,'Raw1GramModel::counts'],['../class_n_gram_data_model.html#acc96453ae725768cf7ace05f2c96020e',1,'NGramDataModel::counts'],['../class_phrase_unique_words_model.html#aef247e8e48bdc8d3ba3a3f5829141553',1,'PhraseUniqueWordsModel::counts']]],
+  ['curly_5fclose_16',['CURLY_CLOSE',['../namespacedefinitions.html#afeca3c80ccac7602dcaf44f53e6d0143',1,'definitions']]],
+  ['curly_5fopen_17',['CURLY_OPEN',['../namespacedefinitions.html#a3a9cff93d1c11f87503592be6c7de1f0',1,'definitions']]],
+  ['current_5fngram_5findex_18',['current_ngram_index',['../class_ngram_phrase.html#ae9af9829379481f20f141a1fa4cc0149',1,'NgramPhrase']]]
+];

@@ -1,0 +1,189 @@
+\doxysection{Choose\+Phrase Class Reference}
+\hypertarget{class_choose_phrase}{}\label{class_choose_phrase}\index{ChoosePhrase@{ChoosePhrase}}
+
+
+The \doxylink{class_choose_phrase}{Choose\+Phrase} class.  
+
+
+
+
+{\ttfamily \#include $<$choosephrase.\+h$>$}
+
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a5e5a238e957e4b275bde6e0a22bb7b33}{on\+\_\+generate\+Template\+Push\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a03fb9d3404cb693a3c4acd2e1b3e8e98}{on\+\_\+ngram\+Length\+Index\+Changed}} (int ngram\+\_\+length, int ngram\+\_\+start\+\_\+index, int ngram\+\_\+row\+\_\+index)
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a48fe68ba23312524f673bb2ca27d51f7}{on\+\_\+word\+Length\+Line\+Edit\+\_\+editing\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a7525bc45642fa7e7b4fccb574c175327}{on\+\_\+browse\+Load\+Path\+Push\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_ac73b2dd7f2e0192642f5cdcdf85e2d3f}{on\+\_\+browse\+Save\+Path\+Push\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a913b800328e28b5bdeba57715d129620}{on\+\_\+file\+Path\+Line\+Edit\+\_\+editing\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a7738ef91222987c0c424dacef71f5b0d}{on\+\_\+clear\+All\+Push\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a3557de227878877ddbdc87591340ee20}{on\+\_\+ngram\+File\+Load\+Push\+Button\+\_\+clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a990d9b27ec755f4e86dd6a9768efafdf}{new\+Phrase\+Chosen}} (const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&ngram\+\_\+file\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_choose_phrase_a63fada4fd75686d74d37c6fb8f17c353}{Choose\+Phrase}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_choose_phrase_a00e7b60fecf884b05c11c5bd3bef4fd0}{\texorpdfstring{$\sim$}{\string~}\+Choose\+Phrase}} ()
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a08b4a8d8d8ce9de717899b3dbb27b640}{set\+Ngram\+Path\+Root}} (const QDir \&dir)
+\item 
+void \mbox{\hyperlink{class_choose_phrase_a491b602c55713e2de9ec6be91f033e17}{set\+Phrase\+Path\+Save\+Root}} (const QDir \&dir)
+\item 
+bool \mbox{\hyperlink{class_choose_phrase_a847d2729c07897a05bab7c5bf840c255}{set\+Ngram\+Path\+Save}} (const QString \&new\+\_\+dir)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_choose_phrase_af9db4b672c4d3104f5541893e08e1809}{Main\+Window}}
+\item 
+class \mbox{\hyperlink{class_choose_phrase_aec6bc6e87b958d4aaabe6a78042d363c}{Word\+List\+General\+Controls\+Form}}
+\item 
+class \mbox{\hyperlink{class_choose_phrase_a816cec1da020a322a5ed81a4fd1a61c0}{Word\+Tab}}
+\item 
+class \mbox{\hyperlink{class_choose_phrase_ab15818bd3ffa2ee194e59b5c13758098}{Ngram\+PUWRationlize\+Form}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_choose_phrase}{Choose\+Phrase} class. 
+
+gui to define a phrase to import word lists for enter word lengths, e.\+g. 3,12,4 optional include start end tags\+: s,3,12,4,e or use checkboxes after phrase token structure is defined a "{}schema-\/grid"{} is produced
+
+the "{}schema-\/grid"{} allows you to choose\+: the number of words in each ngram, the start position of the ngram in the phrase (the above two controls will enable/disable checkboxes to visualize the schema) the word lengths, set by spin boxes at the top of each column dynamic checking for requested files will determine if the current phrase schema can be created Will generate phrase on succesful clicking of "{}load ngram file data"{} Phrase-\/data will be saved to new folder (which cna be changed) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_choose_phrase_a63fada4fd75686d74d37c6fb8f17c353}\label{class_choose_phrase_a63fada4fd75686d74d37c6fb8f17c353} 
+\index{ChoosePhrase@{ChoosePhrase}!ChoosePhrase@{ChoosePhrase}}
+\index{ChoosePhrase@{ChoosePhrase}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{ChoosePhrase()}{ChoosePhrase()}}
+{\footnotesize\ttfamily Choose\+Phrase\+::\+Choose\+Phrase (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_choose_phrase_a00e7b60fecf884b05c11c5bd3bef4fd0}\label{class_choose_phrase_a00e7b60fecf884b05c11c5bd3bef4fd0} 
+\index{ChoosePhrase@{ChoosePhrase}!````~ChoosePhrase@{\texorpdfstring{$\sim$}{\string~}ChoosePhrase}}
+\index{````~ChoosePhrase@{\texorpdfstring{$\sim$}{\string~}ChoosePhrase}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ChoosePhrase()}{\string~ChoosePhrase()}}
+{\footnotesize\ttfamily Choose\+Phrase\+::\texorpdfstring{$\sim$}{\string~}\+Choose\+Phrase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_choose_phrase_a990d9b27ec755f4e86dd6a9768efafdf}\label{class_choose_phrase_a990d9b27ec755f4e86dd6a9768efafdf} 
+\index{ChoosePhrase@{ChoosePhrase}!newPhraseChosen@{newPhraseChosen}}
+\index{newPhraseChosen@{newPhraseChosen}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{newPhraseChosen}{newPhraseChosen}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::new\+Phrase\+Chosen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&}]{ngram\+\_\+file\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{class_choose_phrase_a7525bc45642fa7e7b4fccb574c175327}\label{class_choose_phrase_a7525bc45642fa7e7b4fccb574c175327} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_browseLoadPathPushButton\_clicked@{on\_browseLoadPathPushButton\_clicked}}
+\index{on\_browseLoadPathPushButton\_clicked@{on\_browseLoadPathPushButton\_clicked}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_browseLoadPathPushButton\_clicked}{on\_browseLoadPathPushButton\_clicked}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+browse\+Load\+Path\+Push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_ac73b2dd7f2e0192642f5cdcdf85e2d3f}\label{class_choose_phrase_ac73b2dd7f2e0192642f5cdcdf85e2d3f} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_browseSavePathPushButton\_clicked@{on\_browseSavePathPushButton\_clicked}}
+\index{on\_browseSavePathPushButton\_clicked@{on\_browseSavePathPushButton\_clicked}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_browseSavePathPushButton\_clicked}{on\_browseSavePathPushButton\_clicked}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+browse\+Save\+Path\+Push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a7738ef91222987c0c424dacef71f5b0d}\label{class_choose_phrase_a7738ef91222987c0c424dacef71f5b0d} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_clearAllPushButton\_clicked@{on\_clearAllPushButton\_clicked}}
+\index{on\_clearAllPushButton\_clicked@{on\_clearAllPushButton\_clicked}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_clearAllPushButton\_clicked}{on\_clearAllPushButton\_clicked}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+clear\+All\+Push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a913b800328e28b5bdeba57715d129620}\label{class_choose_phrase_a913b800328e28b5bdeba57715d129620} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_filePathLineEdit\_editingFinished@{on\_filePathLineEdit\_editingFinished}}
+\index{on\_filePathLineEdit\_editingFinished@{on\_filePathLineEdit\_editingFinished}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_filePathLineEdit\_editingFinished}{on\_filePathLineEdit\_editingFinished}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+file\+Path\+Line\+Edit\+\_\+editing\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a5e5a238e957e4b275bde6e0a22bb7b33}\label{class_choose_phrase_a5e5a238e957e4b275bde6e0a22bb7b33} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_generateTemplatePushButton\_clicked@{on\_generateTemplatePushButton\_clicked}}
+\index{on\_generateTemplatePushButton\_clicked@{on\_generateTemplatePushButton\_clicked}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_generateTemplatePushButton\_clicked}{on\_generateTemplatePushButton\_clicked}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+generate\+Template\+Push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a3557de227878877ddbdc87591340ee20}\label{class_choose_phrase_a3557de227878877ddbdc87591340ee20} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_ngramFileLoadPushButton\_clicked@{on\_ngramFileLoadPushButton\_clicked}}
+\index{on\_ngramFileLoadPushButton\_clicked@{on\_ngramFileLoadPushButton\_clicked}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_ngramFileLoadPushButton\_clicked}{on\_ngramFileLoadPushButton\_clicked}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+ngram\+File\+Load\+Push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a03fb9d3404cb693a3c4acd2e1b3e8e98}\label{class_choose_phrase_a03fb9d3404cb693a3c4acd2e1b3e8e98} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_ngramLengthIndexChanged@{on\_ngramLengthIndexChanged}}
+\index{on\_ngramLengthIndexChanged@{on\_ngramLengthIndexChanged}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_ngramLengthIndexChanged}{on\_ngramLengthIndexChanged}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+ngram\+Length\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{ngram\+\_\+length,  }\item[{int}]{ngram\+\_\+start\+\_\+index,  }\item[{int}]{ngram\+\_\+row\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a48fe68ba23312524f673bb2ca27d51f7}\label{class_choose_phrase_a48fe68ba23312524f673bb2ca27d51f7} 
+\index{ChoosePhrase@{ChoosePhrase}!on\_wordLengthLineEdit\_editingFinished@{on\_wordLengthLineEdit\_editingFinished}}
+\index{on\_wordLengthLineEdit\_editingFinished@{on\_wordLengthLineEdit\_editingFinished}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{on\_wordLengthLineEdit\_editingFinished}{on\_wordLengthLineEdit\_editingFinished}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::on\+\_\+word\+Length\+Line\+Edit\+\_\+editing\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_choose_phrase_a08b4a8d8d8ce9de717899b3dbb27b640}\label{class_choose_phrase_a08b4a8d8d8ce9de717899b3dbb27b640} 
+\index{ChoosePhrase@{ChoosePhrase}!setNgramPathRoot@{setNgramPathRoot}}
+\index{setNgramPathRoot@{setNgramPathRoot}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{setNgramPathRoot()}{setNgramPathRoot()}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::set\+Ngram\+Path\+Root (\begin{DoxyParamCaption}\item[{const QDir \&}]{dir }\end{DoxyParamCaption})}
+
+\Hypertarget{class_choose_phrase_a847d2729c07897a05bab7c5bf840c255}\label{class_choose_phrase_a847d2729c07897a05bab7c5bf840c255} 
+\index{ChoosePhrase@{ChoosePhrase}!setNgramPathSave@{setNgramPathSave}}
+\index{setNgramPathSave@{setNgramPathSave}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{setNgramPathSave()}{setNgramPathSave()}}
+{\footnotesize\ttfamily bool Choose\+Phrase\+::set\+Ngram\+Path\+Save (\begin{DoxyParamCaption}\item[{const QString \&}]{new\+\_\+dir }\end{DoxyParamCaption})}
+
+\Hypertarget{class_choose_phrase_a491b602c55713e2de9ec6be91f033e17}\label{class_choose_phrase_a491b602c55713e2de9ec6be91f033e17} 
+\index{ChoosePhrase@{ChoosePhrase}!setPhrasePathSaveRoot@{setPhrasePathSaveRoot}}
+\index{setPhrasePathSaveRoot@{setPhrasePathSaveRoot}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{setPhrasePathSaveRoot()}{setPhrasePathSaveRoot()}}
+{\footnotesize\ttfamily void Choose\+Phrase\+::set\+Phrase\+Path\+Save\+Root (\begin{DoxyParamCaption}\item[{const QDir \&}]{dir }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_choose_phrase_af9db4b672c4d3104f5541893e08e1809}\label{class_choose_phrase_af9db4b672c4d3104f5541893e08e1809} 
+\index{ChoosePhrase@{ChoosePhrase}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{MainWindow}{MainWindow}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_main_window}{Main\+Window}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_choose_phrase_ab15818bd3ffa2ee194e59b5c13758098}\label{class_choose_phrase_ab15818bd3ffa2ee194e59b5c13758098} 
+\index{ChoosePhrase@{ChoosePhrase}!NgramPUWRationlizeForm@{NgramPUWRationlizeForm}}
+\index{NgramPUWRationlizeForm@{NgramPUWRationlizeForm}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{NgramPUWRationlizeForm}{NgramPUWRationlizeForm}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{Ngram\+PUWRationlize\+Form}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_choose_phrase_aec6bc6e87b958d4aaabe6a78042d363c}\label{class_choose_phrase_aec6bc6e87b958d4aaabe6a78042d363c} 
+\index{ChoosePhrase@{ChoosePhrase}!WordListGeneralControlsForm@{WordListGeneralControlsForm}}
+\index{WordListGeneralControlsForm@{WordListGeneralControlsForm}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{WordListGeneralControlsForm}{WordListGeneralControlsForm}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_word_list_general_controls_form}{Word\+List\+General\+Controls\+Form}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_choose_phrase_a816cec1da020a322a5ed81a4fd1a61c0}\label{class_choose_phrase_a816cec1da020a322a5ed81a4fd1a61c0} 
+\index{ChoosePhrase@{ChoosePhrase}!WordTab@{WordTab}}
+\index{WordTab@{WordTab}!ChoosePhrase@{ChoosePhrase}}
+\doxysubsubsection{\texorpdfstring{WordTab}{WordTab}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_word_tab}{Word\+Tab}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/view/\mbox{\hyperlink{choosephrase_8h}{choosephrase.\+h}}\item 
+source/view/\mbox{\hyperlink{choosephrase_8cpp}{choosephrase.\+cpp}}\end{DoxyCompactItemize}

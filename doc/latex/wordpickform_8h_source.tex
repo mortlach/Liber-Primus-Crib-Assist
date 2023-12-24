@@ -1,0 +1,37 @@
+\doxysection{wordpickform.\+h}
+\hypertarget{wordpickform_8h_source}{}\label{wordpickform_8h_source}\index{source/view/wordpickform.h@{source/view/wordpickform.h}}
+\mbox{\hyperlink{wordpickform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WORDPICKFORM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WORDPICKFORM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QGridLayout>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngramdatahub_8h}{ngramdatahub.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_pick_f_o_r_m}{WordPickFORM}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_pick_f_o_r_m}{WordPickFORM}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_word_pick_f_o_r_m}{WordPickFORM}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_word_pick_f_o_r_m_a9ddb18c0867de4ef87a071c45a0726f0}{\string~WordPickFORM}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_pick_f_o_r_m_a918a685f2439e1bc12cff20b45199cc5}{setNewPUW}}(QList<PhraseUniqueWords*>\&\ ptr);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ Ui::WordPickFORM\ *ui;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_ngram_data_hub}{NgramDataHub}}\ data\_hub;}
+\DoxyCodeLine{00026\ \ \ \ \ QList<PhraseUniqueWords*>*\ puw\_ptr;}
+\DoxyCodeLine{00027\ \ \ \ \ QGridLayout*\ gridLayout;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ words\_per\_row;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WORDPICKFORM\_H}}
+
+\end{DoxyCode}

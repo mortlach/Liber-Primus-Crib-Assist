@@ -1,0 +1,251 @@
+\doxysection{Raw1\+Gram\+Model Class Reference}
+\hypertarget{class_raw1_gram_model}{}\label{class_raw1_gram_model}\index{Raw1GramModel@{Raw1GramModel}}
+
+
+{\ttfamily \#include $<$raw1grammodel.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1ba}{Constants}} \{ \newline
+\mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa8a7b647fb60fad5002f75ee6b15386ef}{word\+\_\+col}} = 1
+, \mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baaa1b6e8cbe178090408c336dacc9c2d39}{counts\+\_\+col}} = 2
+, \mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa185c1afed960466c68d0258e9e3e8acc}{chosen\+\_\+col}} = 0
+, \mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baac8b281050242f818dc7abe8082fa6531}{runes\+\_\+col}} = 4
+, \newline
+\mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baaec57a4b31c1e7dc0d5139716bea11508}{gematria\+\_\+sum\+\_\+col}} = 3
+, \mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa7db5036260ce42aca45088924466d91e}{col\+\_\+count}} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_raw1_gram_model_a0e4aec74a6066166f28238a72b5209a5}{Raw1\+Gram\+Model}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_raw1_gram_model_ae815569d0d98f9d56991c1596a1a0fdb}{\texorpdfstring{$\sim$}{\string~}\+Raw1\+Gram\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_raw1_gram_model_a8614ad8fc79e212873dd5c8ca871826d}{set\+New\+Data}} (\mbox{\hyperlink{class_raw_word_data}{Raw\+Word\+Data}} \&\mbox{\hyperlink{class_raw1_gram_model_a0bf19e5a16825ef7befbfa144a62ec68}{raw\+\_\+data}})
+\item 
+void \mbox{\hyperlink{class_raw1_gram_model_a84dcb3746613c98cb36d9bbd0a7a7a01}{clear}} ()
+\item 
+int \mbox{\hyperlink{class_raw1_gram_model_aa55c759376557156e383fa1184c7e9d2}{row\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\item 
+int \mbox{\hyperlink{class_raw1_gram_model_affa396330791269386415ee695ec904a}{column\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\item 
+QVariant \mbox{\hyperlink{class_raw1_gram_model_a4b714a71cb795a3a44f8f089b9061210}{data}} (const QModel\+Index \&index, int role=Qt\+::\+Display\+Role) const override
+\item 
+bool \mbox{\hyperlink{class_raw1_gram_model_a64a6b718d57104260fb1cb408f73abb2}{is\+Chosen}} (const QModel\+Index \&index) const
+\item 
+bool \mbox{\hyperlink{class_raw1_gram_model_a0fe4783ee94b82aacbc986ea1441fece}{is\+Not\+Chosen}} (const QModel\+Index \&index) const
+\item 
+void \mbox{\hyperlink{class_raw1_gram_model_ace3bdb67fdf18279435a85a0b60e1ce6}{set\+New\+Data}} (\mbox{\hyperlink{class_raw_word_data}{Raw\+Word\+Data}} \texorpdfstring{$\ast$}{*}gng\+\_\+database\+\_\+in)
+\item 
+void \mbox{\hyperlink{class_raw1_gram_model_ab097c3af885e4070d1763d798060097c}{toggle\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+bool \mbox{\hyperlink{class_raw1_gram_model_a4bc766e1b7cbdec7b0464be4d066e229}{get\+Chosen}} (int row) const
+\item 
+void \mbox{\hyperlink{class_raw1_gram_model_a109d8715247299afceb94e7203fab6db}{set\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+void \mbox{\hyperlink{class_raw1_gram_model_a2a47b340178de6c17a002d0c19e8c7a0}{set\+Not\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+Qt\+::\+Item\+Flags \mbox{\hyperlink{class_raw1_gram_model_a3f607a7f20a678502c0c2aa18913db3d}{flags}} (const QModel\+Index \&index)
+\item 
+QVariant \mbox{\hyperlink{class_raw1_gram_model_a5e0f8ddf105a60320f33c030da80e678}{header\+Data}} (int section, Qt\+::\+Orientation orientation, int role) const override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_raw_word_data}{Raw\+Word\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_raw1_gram_model_a0bf19e5a16825ef7befbfa144a62ec68}{raw\+\_\+data}}
+\item 
+QList$<$ QString $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_raw1_gram_model_a57e883415aaf5335863b35672c775007}{words}}
+\item 
+QList$<$ unsigned long long $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_raw1_gram_model_ac4af795832261eddbc2d660a84d6ad94}{counts}}
+\item 
+QList$<$ QString $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_raw1_gram_model_a52dd7f7b2ef320a393d5814030a67b88}{runes}}
+\item 
+QList$<$ unsigned int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_raw1_gram_model_a10e503b82324e270cea4c2e813960880}{gematria\+\_\+sum}}
+\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_raw1_gram_model_ab43407eb87c6512043b06101fdf994de}{editrole\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1ba}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1ba} 
+\index{Raw1GramModel@{Raw1GramModel}!Constants@{Constants}}
+\index{Constants@{Constants}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{Constants}{Constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1ba}{Raw1\+Gram\+Model\+::\+Constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{word\_col@{word\_col}!Raw1GramModel@{Raw1GramModel}}\index{Raw1GramModel@{Raw1GramModel}!word\_col@{word\_col}}}\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa8a7b647fb60fad5002f75ee6b15386ef}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa8a7b647fb60fad5002f75ee6b15386ef} 
+word\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{counts\_col@{counts\_col}!Raw1GramModel@{Raw1GramModel}}\index{Raw1GramModel@{Raw1GramModel}!counts\_col@{counts\_col}}}\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baaa1b6e8cbe178090408c336dacc9c2d39}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baaa1b6e8cbe178090408c336dacc9c2d39} 
+counts\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{chosen\_col@{chosen\_col}!Raw1GramModel@{Raw1GramModel}}\index{Raw1GramModel@{Raw1GramModel}!chosen\_col@{chosen\_col}}}\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa185c1afed960466c68d0258e9e3e8acc}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa185c1afed960466c68d0258e9e3e8acc} 
+chosen\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{runes\_col@{runes\_col}!Raw1GramModel@{Raw1GramModel}}\index{Raw1GramModel@{Raw1GramModel}!runes\_col@{runes\_col}}}\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baac8b281050242f818dc7abe8082fa6531}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baac8b281050242f818dc7abe8082fa6531} 
+runes\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gematria\_sum\_col@{gematria\_sum\_col}!Raw1GramModel@{Raw1GramModel}}\index{Raw1GramModel@{Raw1GramModel}!gematria\_sum\_col@{gematria\_sum\_col}}}\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baaec57a4b31c1e7dc0d5139716bea11508}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baaec57a4b31c1e7dc0d5139716bea11508} 
+gematria\+\_\+sum\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{col\_count@{col\_count}!Raw1GramModel@{Raw1GramModel}}\index{Raw1GramModel@{Raw1GramModel}!col\_count@{col\_count}}}\Hypertarget{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa7db5036260ce42aca45088924466d91e}\label{class_raw1_gram_model_a562f1d75bb8e14ba7e5b13fe3920b1baa7db5036260ce42aca45088924466d91e} 
+col\+\_\+count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_raw1_gram_model_a0e4aec74a6066166f28238a72b5209a5}\label{class_raw1_gram_model_a0e4aec74a6066166f28238a72b5209a5} 
+\index{Raw1GramModel@{Raw1GramModel}!Raw1GramModel@{Raw1GramModel}}
+\index{Raw1GramModel@{Raw1GramModel}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{Raw1GramModel()}{Raw1GramModel()}}
+{\footnotesize\ttfamily Raw1\+Gram\+Model\+::\+Raw1\+Gram\+Model (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_ae815569d0d98f9d56991c1596a1a0fdb}\label{class_raw1_gram_model_ae815569d0d98f9d56991c1596a1a0fdb} 
+\index{Raw1GramModel@{Raw1GramModel}!````~Raw1GramModel@{\texorpdfstring{$\sim$}{\string~}Raw1GramModel}}
+\index{````~Raw1GramModel@{\texorpdfstring{$\sim$}{\string~}Raw1GramModel}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Raw1GramModel()}{\string~Raw1GramModel()}}
+{\footnotesize\ttfamily Raw1\+Gram\+Model\+::\texorpdfstring{$\sim$}{\string~}\+Raw1\+Gram\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_raw1_gram_model_a84dcb3746613c98cb36d9bbd0a7a7a01}\label{class_raw1_gram_model_a84dcb3746613c98cb36d9bbd0a7a7a01} 
+\index{Raw1GramModel@{Raw1GramModel}!clear@{clear}}
+\index{clear@{clear}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Raw1\+Gram\+Model\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_affa396330791269386415ee695ec904a}\label{class_raw1_gram_model_affa396330791269386415ee695ec904a} 
+\index{Raw1GramModel@{Raw1GramModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily int Raw1\+Gram\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class_raw1_gram_model_a4b714a71cb795a3a44f8f089b9061210}\label{class_raw1_gram_model_a4b714a71cb795a3a44f8f089b9061210} 
+\index{Raw1GramModel@{Raw1GramModel}!data@{data}}
+\index{data@{data}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily QVariant Raw1\+Gram\+Model\+::data (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index,  }\item[{int}]{role = {\ttfamily Qt\+:\+:DisplayRole} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_raw1_gram_model_a3f607a7f20a678502c0c2aa18913db3d}\label{class_raw1_gram_model_a3f607a7f20a678502c0c2aa18913db3d} 
+\index{Raw1GramModel@{Raw1GramModel}!flags@{flags}}
+\index{flags@{flags}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily Qt\+::\+Item\+Flags Raw1\+Gram\+Model\+::flags (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_a4bc766e1b7cbdec7b0464be4d066e229}\label{class_raw1_gram_model_a4bc766e1b7cbdec7b0464be4d066e229} 
+\index{Raw1GramModel@{Raw1GramModel}!getChosen@{getChosen}}
+\index{getChosen@{getChosen}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{getChosen()}{getChosen()}}
+{\footnotesize\ttfamily bool Raw1\+Gram\+Model\+::get\+Chosen (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_raw1_gram_model_a5e0f8ddf105a60320f33c030da80e678}\label{class_raw1_gram_model_a5e0f8ddf105a60320f33c030da80e678} 
+\index{Raw1GramModel@{Raw1GramModel}!headerData@{headerData}}
+\index{headerData@{headerData}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily QVariant Raw1\+Gram\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{Qt\+::\+Orientation}]{orientation,  }\item[{int}]{role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_raw1_gram_model_a64a6b718d57104260fb1cb408f73abb2}\label{class_raw1_gram_model_a64a6b718d57104260fb1cb408f73abb2} 
+\index{Raw1GramModel@{Raw1GramModel}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}}
+{\footnotesize\ttfamily bool Raw1\+Gram\+Model\+::is\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_raw1_gram_model_a0fe4783ee94b82aacbc986ea1441fece}\label{class_raw1_gram_model_a0fe4783ee94b82aacbc986ea1441fece} 
+\index{Raw1GramModel@{Raw1GramModel}!isNotChosen@{isNotChosen}}
+\index{isNotChosen@{isNotChosen}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{isNotChosen()}{isNotChosen()}}
+{\footnotesize\ttfamily bool Raw1\+Gram\+Model\+::is\+Not\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_raw1_gram_model_aa55c759376557156e383fa1184c7e9d2}\label{class_raw1_gram_model_aa55c759376557156e383fa1184c7e9d2} 
+\index{Raw1GramModel@{Raw1GramModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily int Raw1\+Gram\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_raw1_gram_model_a109d8715247299afceb94e7203fab6db}\label{class_raw1_gram_model_a109d8715247299afceb94e7203fab6db} 
+\index{Raw1GramModel@{Raw1GramModel}!setChosen@{setChosen}}
+\index{setChosen@{setChosen}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{setChosen()}{setChosen()}}
+{\footnotesize\ttfamily void Raw1\+Gram\+Model\+::set\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_a8614ad8fc79e212873dd5c8ca871826d}\label{class_raw1_gram_model_a8614ad8fc79e212873dd5c8ca871826d} 
+\index{Raw1GramModel@{Raw1GramModel}!setNewData@{setNewData}}
+\index{setNewData@{setNewData}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{setNewData()}{setNewData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Raw1\+Gram\+Model\+::set\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_raw_word_data}{Raw\+Word\+Data}} \&}]{raw\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_ace3bdb67fdf18279435a85a0b60e1ce6}\label{class_raw1_gram_model_ace3bdb67fdf18279435a85a0b60e1ce6} 
+\index{Raw1GramModel@{Raw1GramModel}!setNewData@{setNewData}}
+\index{setNewData@{setNewData}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{setNewData()}{setNewData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Raw1\+Gram\+Model\+::set\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_raw_word_data}{Raw\+Word\+Data}} \texorpdfstring{$\ast$}{*}}]{gng\+\_\+database\+\_\+in }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_a2a47b340178de6c17a002d0c19e8c7a0}\label{class_raw1_gram_model_a2a47b340178de6c17a002d0c19e8c7a0} 
+\index{Raw1GramModel@{Raw1GramModel}!setNotChosen@{setNotChosen}}
+\index{setNotChosen@{setNotChosen}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{setNotChosen()}{setNotChosen()}}
+{\footnotesize\ttfamily void Raw1\+Gram\+Model\+::set\+Not\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+\Hypertarget{class_raw1_gram_model_ab097c3af885e4070d1763d798060097c}\label{class_raw1_gram_model_ab097c3af885e4070d1763d798060097c} 
+\index{Raw1GramModel@{Raw1GramModel}!toggleChosen@{toggleChosen}}
+\index{toggleChosen@{toggleChosen}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{toggleChosen()}{toggleChosen()}}
+{\footnotesize\ttfamily void Raw1\+Gram\+Model\+::toggle\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_raw1_gram_model_ac4af795832261eddbc2d660a84d6ad94}\label{class_raw1_gram_model_ac4af795832261eddbc2d660a84d6ad94} 
+\index{Raw1GramModel@{Raw1GramModel}!counts@{counts}}
+\index{counts@{counts}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{counts}{counts}}
+{\footnotesize\ttfamily QList$<$unsigned long long$>$\texorpdfstring{$\ast$}{*} Raw1\+Gram\+Model\+::counts}
+
+\Hypertarget{class_raw1_gram_model_ab43407eb87c6512043b06101fdf994de}\label{class_raw1_gram_model_ab43407eb87c6512043b06101fdf994de} 
+\index{Raw1GramModel@{Raw1GramModel}!editrole\_list@{editrole\_list}}
+\index{editrole\_list@{editrole\_list}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{editrole\_list}{editrole\_list}}
+{\footnotesize\ttfamily QList$<$int$>$ Raw1\+Gram\+Model\+::editrole\+\_\+list}
+
+\Hypertarget{class_raw1_gram_model_a10e503b82324e270cea4c2e813960880}\label{class_raw1_gram_model_a10e503b82324e270cea4c2e813960880} 
+\index{Raw1GramModel@{Raw1GramModel}!gematria\_sum@{gematria\_sum}}
+\index{gematria\_sum@{gematria\_sum}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{gematria\_sum}{gematria\_sum}}
+{\footnotesize\ttfamily QList$<$unsigned int$>$\texorpdfstring{$\ast$}{*} Raw1\+Gram\+Model\+::gematria\+\_\+sum}
+
+\Hypertarget{class_raw1_gram_model_a0bf19e5a16825ef7befbfa144a62ec68}\label{class_raw1_gram_model_a0bf19e5a16825ef7befbfa144a62ec68} 
+\index{Raw1GramModel@{Raw1GramModel}!raw\_data@{raw\_data}}
+\index{raw\_data@{raw\_data}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{raw\_data}{raw\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_raw_word_data}{Raw\+Word\+Data}}\texorpdfstring{$\ast$}{*} Raw1\+Gram\+Model\+::raw\+\_\+data}
+
+\Hypertarget{class_raw1_gram_model_a52dd7f7b2ef320a393d5814030a67b88}\label{class_raw1_gram_model_a52dd7f7b2ef320a393d5814030a67b88} 
+\index{Raw1GramModel@{Raw1GramModel}!runes@{runes}}
+\index{runes@{runes}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{runes}{runes}}
+{\footnotesize\ttfamily QList$<$QString$>$\texorpdfstring{$\ast$}{*} Raw1\+Gram\+Model\+::runes}
+
+\Hypertarget{class_raw1_gram_model_a57e883415aaf5335863b35672c775007}\label{class_raw1_gram_model_a57e883415aaf5335863b35672c775007} 
+\index{Raw1GramModel@{Raw1GramModel}!words@{words}}
+\index{words@{words}!Raw1GramModel@{Raw1GramModel}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily QList$<$QString$>$\texorpdfstring{$\ast$}{*} Raw1\+Gram\+Model\+::words}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{raw1grammodel_8h}{raw1grammodel.\+h}}\item 
+source/\mbox{\hyperlink{raw1grammodel_8cpp}{raw1grammodel.\+cpp}}\end{DoxyCompactItemize}

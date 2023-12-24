@@ -1,0 +1,244 @@
+\doxysection{NGram\+Data\+Form Class Reference}
+\hypertarget{class_n_gram_data_form}{}\label{class_n_gram_data_form}\index{NGramDataForm@{NGramDataForm}}
+
+
+{\ttfamily \#include $<$ngramdataform.\+h$>$}
+
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a009e678635ce27b4506a4b4a60f80304}{on\+\_\+table\+View\+\_\+left\+\_\+doubleclick\+\_\+sig}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a8b161e2337447a7c8d36c6ddb549826e}{on\+\_\+table\+View\+\_\+space\+\_\+bar\+\_\+sig}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_acaf965090e13c2ee820143503fe4683d}{update}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a949d5d7c14725f2d55dd8198d6e04972}{update\+Label}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a5fad820c85f8bc6cca3c9cb78da14e34}{update\+Table}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_aabe6171137d27df52053e9fa36e4faee}{on\+\_\+new\+Data\+Chosen}} (int index)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_af805f0cbba68dbc129356919b1e2fde9}{on\+\_\+load\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a4eadf43c2a1a829104f1bc06b3297493}{on\+\_\+save\+Data}} () const
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a0412bf2a5347b8c0b96400aa628d68e5}{on\+\_\+save\+All\+Data}} () const
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_ac72e2c147717c9dda6bdc94a59bb5629}{on\+\_\+delete\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a7c4411a616eda691c3cebb77d45c4112}{on\+\_\+find\+Data}} (const QString \&find\+\_\+string)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a4d5bd474676ccef61d51555b4f5ad881}{on\+\_\+change\+Filter}} (int filter\+\_\+num)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots inherited from \mbox{\hyperlink{class_base_form}{Base\+Form}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_base_form_ab1a93d041095227ee12d57ce1077861d}{on\+\_\+table\+View\+\_\+custom\+Context\+Menu\+Requested}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_gram_data_form_ae4a2de5d27285a8fe94f7eab40294726}{NGram\+Data\+Form}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_n_gram_data_form_a9d16b273de1bddaecc046e84a59fa78f}{\texorpdfstring{$\sim$}{\string~}\+NGram\+Data\+Form}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a11fa82cda31b29800510a08fc3307c1d}{set\+Word\+List\+General\+Label}} (const QString \&text)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a79b659ef4b4c8a7c258861b76828f6ff}{set\+Ngram\+Data}} (QList$<$ \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} $>$ \&ptr)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a0a243ed68528b1fd8692c66de4fb2b7d}{set\+Ngram\+Chosen\+Counts}} (const QList$<$ int $>$ \&counts)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_ab00d79e5185f741e0a09432b9a543207}{set\+PUWChosen\+Counts}} (const QList$<$ int $>$ \&counts)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_form_a661ae08856a7bfb05001738525a986b4}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_form}{Base\+Form}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_form_a9d793d985c045c9b86bd278da867749e}{Base\+Form}} (int chosen\+\_\+col, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_gram_data_model}{NGram\+Data\+Model}} \mbox{\hyperlink{class_n_gram_data_form_a868b6d4aec397be37ecbd703912a6db5}{model}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_n_gram_data_form_af9db4b672c4d3104f5541893e08e1809}{Main\+Window}}
+\item 
+class \mbox{\hyperlink{class_n_gram_data_form_aec6bc6e87b958d4aaabe6a78042d363c}{Word\+List\+General\+Controls\+Form}}
+\item 
+class \mbox{\hyperlink{class_n_gram_data_form_a816cec1da020a322a5ed81a4fd1a61c0}{Word\+Tab}}
+\item 
+class \mbox{\hyperlink{class_n_gram_data_form_a57e32e361b3aa44cacd6289329f040bc}{Choose\+Phrase}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_base_form}{Base\+Form}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_filter_model}{Filter\+Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_form_a332ffdea03edf462010062f1e7f0a487}{my\+\_\+sortfilterproxymodel}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_n_gram_data_form_ae4a2de5d27285a8fe94f7eab40294726}\label{class_n_gram_data_form_ae4a2de5d27285a8fe94f7eab40294726} 
+\index{NGramDataForm@{NGramDataForm}!NGramDataForm@{NGramDataForm}}
+\index{NGramDataForm@{NGramDataForm}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{NGramDataForm()}{NGramDataForm()}}
+{\footnotesize\ttfamily NGram\+Data\+Form\+::\+NGram\+Data\+Form (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_n_gram_data_form_a9d16b273de1bddaecc046e84a59fa78f}\label{class_n_gram_data_form_a9d16b273de1bddaecc046e84a59fa78f} 
+\index{NGramDataForm@{NGramDataForm}!````~NGramDataForm@{\texorpdfstring{$\sim$}{\string~}NGramDataForm}}
+\index{````~NGramDataForm@{\texorpdfstring{$\sim$}{\string~}NGramDataForm}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NGramDataForm()}{\string~NGramDataForm()}}
+{\footnotesize\ttfamily NGram\+Data\+Form\+::\texorpdfstring{$\sim$}{\string~}\+NGram\+Data\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_gram_data_form_a661ae08856a7bfb05001738525a986b4}\label{class_n_gram_data_form_a661ae08856a7bfb05001738525a986b4} 
+\index{NGramDataForm@{NGramDataForm}!clear@{clear}}
+\index{clear@{clear}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_n_gram_data_form_a4d5bd474676ccef61d51555b4f5ad881}\label{class_n_gram_data_form_a4d5bd474676ccef61d51555b4f5ad881} 
+\index{NGramDataForm@{NGramDataForm}!on\_changeFilter@{on\_changeFilter}}
+\index{on\_changeFilter@{on\_changeFilter}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_changeFilter}{on\_changeFilter}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+change\+Filter (\begin{DoxyParamCaption}\item[{int}]{filter\+\_\+num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_ac72e2c147717c9dda6bdc94a59bb5629}\label{class_n_gram_data_form_ac72e2c147717c9dda6bdc94a59bb5629} 
+\index{NGramDataForm@{NGramDataForm}!on\_deleteData@{on\_deleteData}}
+\index{on\_deleteData@{on\_deleteData}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_deleteData}{on\_deleteData}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+delete\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a7c4411a616eda691c3cebb77d45c4112}\label{class_n_gram_data_form_a7c4411a616eda691c3cebb77d45c4112} 
+\index{NGramDataForm@{NGramDataForm}!on\_findData@{on\_findData}}
+\index{on\_findData@{on\_findData}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_findData}{on\_findData}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+find\+Data (\begin{DoxyParamCaption}\item[{const QString \&}]{find\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_af805f0cbba68dbc129356919b1e2fde9}\label{class_n_gram_data_form_af805f0cbba68dbc129356919b1e2fde9} 
+\index{NGramDataForm@{NGramDataForm}!on\_loadData@{on\_loadData}}
+\index{on\_loadData@{on\_loadData}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_loadData}{on\_loadData}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_aabe6171137d27df52053e9fa36e4faee}\label{class_n_gram_data_form_aabe6171137d27df52053e9fa36e4faee} 
+\index{NGramDataForm@{NGramDataForm}!on\_newDataChosen@{on\_newDataChosen}}
+\index{on\_newDataChosen@{on\_newDataChosen}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_newDataChosen}{on\_newDataChosen}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+new\+Data\+Chosen (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a0412bf2a5347b8c0b96400aa628d68e5}\label{class_n_gram_data_form_a0412bf2a5347b8c0b96400aa628d68e5} 
+\index{NGramDataForm@{NGramDataForm}!on\_saveAllData@{on\_saveAllData}}
+\index{on\_saveAllData@{on\_saveAllData}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_saveAllData}{on\_saveAllData}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+save\+All\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a4eadf43c2a1a829104f1bc06b3297493}\label{class_n_gram_data_form_a4eadf43c2a1a829104f1bc06b3297493} 
+\index{NGramDataForm@{NGramDataForm}!on\_saveData@{on\_saveData}}
+\index{on\_saveData@{on\_saveData}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_saveData}{on\_saveData}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a009e678635ce27b4506a4b4a60f80304}\label{class_n_gram_data_form_a009e678635ce27b4506a4b4a60f80304} 
+\index{NGramDataForm@{NGramDataForm}!on\_tableView\_left\_doubleclick\_sig@{on\_tableView\_left\_doubleclick\_sig}}
+\index{on\_tableView\_left\_doubleclick\_sig@{on\_tableView\_left\_doubleclick\_sig}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_tableView\_left\_doubleclick\_sig}{on\_tableView\_left\_doubleclick\_sig}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+table\+View\+\_\+left\+\_\+doubleclick\+\_\+sig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a8b161e2337447a7c8d36c6ddb549826e}\label{class_n_gram_data_form_a8b161e2337447a7c8d36c6ddb549826e} 
+\index{NGramDataForm@{NGramDataForm}!on\_tableView\_space\_bar\_sig@{on\_tableView\_space\_bar\_sig}}
+\index{on\_tableView\_space\_bar\_sig@{on\_tableView\_space\_bar\_sig}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{on\_tableView\_space\_bar\_sig}{on\_tableView\_space\_bar\_sig}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::on\+\_\+table\+View\+\_\+space\+\_\+bar\+\_\+sig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a0a243ed68528b1fd8692c66de4fb2b7d}\label{class_n_gram_data_form_a0a243ed68528b1fd8692c66de4fb2b7d} 
+\index{NGramDataForm@{NGramDataForm}!setNgramChosenCounts@{setNgramChosenCounts}}
+\index{setNgramChosenCounts@{setNgramChosenCounts}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{setNgramChosenCounts()}{setNgramChosenCounts()}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::set\+Ngram\+Chosen\+Counts (\begin{DoxyParamCaption}\item[{const QList$<$ int $>$ \&}]{counts }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_form_a79b659ef4b4c8a7c258861b76828f6ff}\label{class_n_gram_data_form_a79b659ef4b4c8a7c258861b76828f6ff} 
+\index{NGramDataForm@{NGramDataForm}!setNgramData@{setNgramData}}
+\index{setNgramData@{setNgramData}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{setNgramData()}{setNgramData()}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::set\+Ngram\+Data (\begin{DoxyParamCaption}\item[{QList$<$ \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} $>$ \&}]{ptr }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_form_ab00d79e5185f741e0a09432b9a543207}\label{class_n_gram_data_form_ab00d79e5185f741e0a09432b9a543207} 
+\index{NGramDataForm@{NGramDataForm}!setPUWChosenCounts@{setPUWChosenCounts}}
+\index{setPUWChosenCounts@{setPUWChosenCounts}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{setPUWChosenCounts()}{setPUWChosenCounts()}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::set\+PUWChosen\+Counts (\begin{DoxyParamCaption}\item[{const QList$<$ int $>$ \&}]{counts }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_form_a11fa82cda31b29800510a08fc3307c1d}\label{class_n_gram_data_form_a11fa82cda31b29800510a08fc3307c1d} 
+\index{NGramDataForm@{NGramDataForm}!setWordListGeneralLabel@{setWordListGeneralLabel}}
+\index{setWordListGeneralLabel@{setWordListGeneralLabel}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{setWordListGeneralLabel()}{setWordListGeneralLabel()}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::set\+Word\+List\+General\+Label (\begin{DoxyParamCaption}\item[{const QString \&}]{text }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_form_acaf965090e13c2ee820143503fe4683d}\label{class_n_gram_data_form_acaf965090e13c2ee820143503fe4683d} 
+\index{NGramDataForm@{NGramDataForm}!update@{update}}
+\index{update@{update}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a949d5d7c14725f2d55dd8198d6e04972}\label{class_n_gram_data_form_a949d5d7c14725f2d55dd8198d6e04972} 
+\index{NGramDataForm@{NGramDataForm}!updateLabel@{updateLabel}}
+\index{updateLabel@{updateLabel}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{updateLabel}{updateLabel}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::update\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_n_gram_data_form_a5fad820c85f8bc6cca3c9cb78da14e34}\label{class_n_gram_data_form_a5fad820c85f8bc6cca3c9cb78da14e34} 
+\index{NGramDataForm@{NGramDataForm}!updateTable@{updateTable}}
+\index{updateTable@{updateTable}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{updateTable}{updateTable}}
+{\footnotesize\ttfamily void NGram\+Data\+Form\+::update\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_n_gram_data_form_a57e32e361b3aa44cacd6289329f040bc}\label{class_n_gram_data_form_a57e32e361b3aa44cacd6289329f040bc} 
+\index{NGramDataForm@{NGramDataForm}!ChoosePhrase@{ChoosePhrase}}
+\index{ChoosePhrase@{ChoosePhrase}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{ChoosePhrase}{ChoosePhrase}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_choose_phrase}{Choose\+Phrase}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_n_gram_data_form_af9db4b672c4d3104f5541893e08e1809}\label{class_n_gram_data_form_af9db4b672c4d3104f5541893e08e1809} 
+\index{NGramDataForm@{NGramDataForm}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{MainWindow}{MainWindow}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_main_window}{Main\+Window}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_n_gram_data_form_aec6bc6e87b958d4aaabe6a78042d363c}\label{class_n_gram_data_form_aec6bc6e87b958d4aaabe6a78042d363c} 
+\index{NGramDataForm@{NGramDataForm}!WordListGeneralControlsForm@{WordListGeneralControlsForm}}
+\index{WordListGeneralControlsForm@{WordListGeneralControlsForm}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{WordListGeneralControlsForm}{WordListGeneralControlsForm}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_word_list_general_controls_form}{Word\+List\+General\+Controls\+Form}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_n_gram_data_form_a816cec1da020a322a5ed81a4fd1a61c0}\label{class_n_gram_data_form_a816cec1da020a322a5ed81a4fd1a61c0} 
+\index{NGramDataForm@{NGramDataForm}!WordTab@{WordTab}}
+\index{WordTab@{WordTab}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{WordTab}{WordTab}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_word_tab}{Word\+Tab}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_n_gram_data_form_a868b6d4aec397be37ecbd703912a6db5}\label{class_n_gram_data_form_a868b6d4aec397be37ecbd703912a6db5} 
+\index{NGramDataForm@{NGramDataForm}!model@{model}}
+\index{model@{model}!NGramDataForm@{NGramDataForm}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_n_gram_data_model}{NGram\+Data\+Model}} NGram\+Data\+Form\+::model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/view/\mbox{\hyperlink{ngramdataform_8h}{ngramdataform.\+h}}\item 
+source/view/\mbox{\hyperlink{ngramdataform_8cpp}{ngramdataform.\+cpp}}\end{DoxyCompactItemize}

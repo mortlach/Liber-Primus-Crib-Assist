@@ -1,0 +1,108 @@
+\doxysection{choosephrase.\+h}
+\hypertarget{choosephrase_8h_source}{}\label{choosephrase_8h_source}\index{source/view/choosephrase.h@{source/view/choosephrase.h}}
+\mbox{\hyperlink{choosephrase_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHOOSEPHRASE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHOOSEPHRASE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QGridLayout>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngrammetadata_8h}{ngrammetadata.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_choose_phrase_a00e7b60fecf884b05c11c5bd3bef4fd0}{\string~ChoosePhrase}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a08b4a8d8d8ce9de717899b3dbb27b640}{setNgramPathRoot}}(\textcolor{keyword}{const}\ QDir\&\ dir);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a491b602c55713e2de9ec6be91f033e17}{setPhrasePathSaveRoot}}(\textcolor{keyword}{const}\ QDir\&\ dir);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_choose_phrase_a847d2729c07897a05bab7c5bf840c255}{setNgramPathSave}}(\textcolor{keyword}{const}\ QString\&\ new\_dir);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a5e5a238e957e4b275bde6e0a22bb7b33}{on\_generateTemplatePushButton\_clicked}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ enables/disables\ groups\ of\ checkboxes\ in\ the\ schema-\/grid-\/gui,\ ensuring\ mal-\/fromed\ requests\ are\ caught}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a03fb9d3404cb693a3c4acd2e1b3e8e98}{on\_ngramLengthIndexChanged}}(\textcolor{keywordtype}{int}\ ngram\_length,\ \textcolor{keywordtype}{int}\ ngram\_start\_index,\ \textcolor{keywordtype}{int}\ ngram\_row\_index);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a48fe68ba23312524f673bb2ca27d51f7}{on\_wordLengthLineEdit\_editingFinished}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a7525bc45642fa7e7b4fccb574c175327}{on\_browseLoadPathPushButton\_clicked}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_ac73b2dd7f2e0192642f5cdcdf85e2d3f}{on\_browseSavePathPushButton\_clicked}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a913b800328e28b5bdeba57715d129620}{on\_filePathLineEdit\_editingFinished}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a7738ef91222987c0c424dacef71f5b0d}{on\_clearAllPushButton\_clicked}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a3557de227878877ddbdc87591340ee20}{on\_ngramFileLoadPushButton\_clicked}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ signals:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_choose_phrase_a990d9b27ec755f4e86dd6a9768efafdf}{newPhraseChosen}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_ngram_phrase_meta_data}{NgramPhraseMetaData}}\&\ ngram\_file\_data);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00058\ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
+\DoxyCodeLine{00059\ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
+\DoxyCodeLine{00060\ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ Ui::ChoosePhrase\ *ui;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ reset\_schema\_gridlayout();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ setInputPhrase(\textcolor{keyword}{const}\ QString\&\ phrase,\ \textcolor{keywordtype}{bool}\ has\_sent\_start\_in,\ \textcolor{keywordtype}{bool}\ has\_sent\_end\_in);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ setPhraseSchemaGridView();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ create\_phrase\_schema();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ setRowDisabled(\textcolor{keywordtype}{int}\ row);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ isNgramSchemaGood();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ isNgramSchemaBad();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ canLookForFiles();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ test\ the\ ngram\ scahema,\ is\ it\ good\ and\ do\ files\ exist}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ testNgramSchema();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ lookForFiles(const\ QList<QPair<int,\ QList<int>>>\&\ ngram\_schema\_data\ );}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ lookForFilesAndSetGUI();}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ setNgramFileData();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ setNgramFileData2();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ gui\ function\ to\ set\ schmea-\/grid-\/gui\ column\ header\ spinboxes\ with\ defined\ word\ lengths}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ setWordLengthSpinboxes();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ how\ many\ real\ words\ are\ in\ the\ phrase\ (not\ tags\ lige\ start,\ end)}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ phrase\_word\_count;}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ how\ many\ tokens\ words\ plus\ tags\ in\ the\ phrase}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ phrase\_token\_count;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ how\ many\ ngrams\ in\ the\ phrase}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ phrase\_ngram\_count;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ detailed\ data\ for\ a\ phrase}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ cleanPhraseDataStruct();}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{struct_ngram_phrase_meta_data}{NgramPhraseMetaData}}\ phrase\_data\_struct;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ include\ S\ tag\ at\ start\ of\ phrase}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_sentence\_start;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ include\ E\ tag\ at\ start\ of\ phrase}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{bool}\ has\_sentence\_end;}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ ngram\_schema\_good;}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ can\_load\_ngram\_files;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ max\ number\ of\ ngrams\ possible\ for\ a\ given\ schema\ (?)}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_ngram\_count;}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//\ gui\ offset\ columns\ for\ phrase\ picker}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ phrase\_col\_offset;}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ gui\ offset\ rows\ for\ phrase\ picker}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ row\_offset;}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ total\ number\ of\ cols\ in\ phrase\ picker}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ col\_count;}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ total\ number\ of\ checkboxes\ in\ a\ row}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_checkboxes;}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ word\ lengths\ or\ tags\ that\ defien\ main\ tokens\ in\ phrase}}
+\DoxyCodeLine{00128\ \ \ \ \ QList<int>\ phrase\_tokens;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ word\ lengths}}
+\DoxyCodeLine{00130\ \ \ \ \ QList<int>\ word\_lengths;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ this\ grid\ layout\ is\ dynamically\ filled\ based\ on\ phrase\ token\ count}}
+\DoxyCodeLine{00132\ \ \ \ \ QGridLayout*\ schemaGridLayout;}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ where\ ngrams\ are\ saved}}
+\DoxyCodeLine{00134\ \ \ \ \ QDir\ ngram\_root\_dir;}
+\DoxyCodeLine{00135\ \ \ \ \ QDir\ phrase\_save\_root\_dir;}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHOOSEPHRASE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,27 @@
+var class_n_gram_data_form =
+[
+    [ "NGramDataForm", "class_n_gram_data_form.html#ae4a2de5d27285a8fe94f7eab40294726", null ],
+    [ "~NGramDataForm", "class_n_gram_data_form.html#a9d16b273de1bddaecc046e84a59fa78f", null ],
+    [ "clear", "class_n_gram_data_form.html#a661ae08856a7bfb05001738525a986b4", null ],
+    [ "on_changeFilter", "class_n_gram_data_form.html#a4d5bd474676ccef61d51555b4f5ad881", null ],
+    [ "on_deleteData", "class_n_gram_data_form.html#ac72e2c147717c9dda6bdc94a59bb5629", null ],
+    [ "on_findData", "class_n_gram_data_form.html#a7c4411a616eda691c3cebb77d45c4112", null ],
+    [ "on_loadData", "class_n_gram_data_form.html#af805f0cbba68dbc129356919b1e2fde9", null ],
+    [ "on_newDataChosen", "class_n_gram_data_form.html#aabe6171137d27df52053e9fa36e4faee", null ],
+    [ "on_saveAllData", "class_n_gram_data_form.html#a0412bf2a5347b8c0b96400aa628d68e5", null ],
+    [ "on_saveData", "class_n_gram_data_form.html#a4eadf43c2a1a829104f1bc06b3297493", null ],
+    [ "on_tableView_left_doubleclick_sig", "class_n_gram_data_form.html#a009e678635ce27b4506a4b4a60f80304", null ],
+    [ "on_tableView_space_bar_sig", "class_n_gram_data_form.html#a8b161e2337447a7c8d36c6ddb549826e", null ],
+    [ "setNgramChosenCounts", "class_n_gram_data_form.html#a0a243ed68528b1fd8692c66de4fb2b7d", null ],
+    [ "setNgramData", "class_n_gram_data_form.html#a79b659ef4b4c8a7c258861b76828f6ff", null ],
+    [ "setPUWChosenCounts", "class_n_gram_data_form.html#ab00d79e5185f741e0a09432b9a543207", null ],
+    [ "setWordListGeneralLabel", "class_n_gram_data_form.html#a11fa82cda31b29800510a08fc3307c1d", null ],
+    [ "update", "class_n_gram_data_form.html#acaf965090e13c2ee820143503fe4683d", null ],
+    [ "updateLabel", "class_n_gram_data_form.html#a949d5d7c14725f2d55dd8198d6e04972", null ],
+    [ "updateTable", "class_n_gram_data_form.html#a5fad820c85f8bc6cca3c9cb78da14e34", null ],
+    [ "ChoosePhrase", "class_n_gram_data_form.html#a57e32e361b3aa44cacd6289329f040bc", null ],
+    [ "MainWindow", "class_n_gram_data_form.html#af9db4b672c4d3104f5541893e08e1809", null ],
+    [ "WordListGeneralControlsForm", "class_n_gram_data_form.html#aec6bc6e87b958d4aaabe6a78042d363c", null ],
+    [ "WordTab", "class_n_gram_data_form.html#a816cec1da020a322a5ed81a4fd1a61c0", null ],
+    [ "model", "class_n_gram_data_form.html#a868b6d4aec397be37ecbd703912a6db5", null ]
+];

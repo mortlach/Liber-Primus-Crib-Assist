@@ -1,0 +1,345 @@
+\doxysection{Ngram\+Phrase Class Reference}
+\hypertarget{class_ngram_phrase}{}\label{class_ngram_phrase}\index{NgramPhrase@{NgramPhrase}}
+
+
+The \doxylink{class_ngram_phrase}{Ngram\+Phrase} class.  
+
+
+
+
+{\ttfamily \#include $<$ngramphrase.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ngram_phrase_a3a1a98c235e0eeb6a4ce06b95e2b15de}{Ngram\+Phrase}} ()
+\item 
+\mbox{\hyperlink{class_ngram_phrase_a7d05dc1289a7724e6cc54ac1acb59042}{\texorpdfstring{$\sim$}{\string~}\+Ngram\+Phrase}} ()
+\item 
+void \mbox{\hyperlink{class_ngram_phrase_aaa827aefc1b039155322441e0147cc3b}{rationalize\+Phrase}} (bool delete\+\_\+not\+\_\+chosen=true)
+\begin{DoxyCompactList}\small\item\em rationalize\+Phrase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_phrase_a19fc58e9ac9ee0ce0d89faf5a73f091b}{rationalize\+Phrase}} (bool delete\+\_\+not\+\_\+chosen, bool puw\+\_\+has\+\_\+priority\+\_\+in)
+\item 
+bool \mbox{\hyperlink{class_ngram_phrase_a631859f86ae4760b19784f697eb36f73}{set\+New\+Phase}} (const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&data\+\_\+in)
+\begin{DoxyCompactList}\small\item\em set\+New\+Phase \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_phrase_a78326b438540100c9a50b01c8a776311}{save\+All\+Phrase\+Data}} ()
+\begin{DoxyCompactList}\small\item\em save\+All\+Phrase\+Data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ngram_phrase_a1e669f94fada1a18160c4f33c198210b}{clear\+All\+Ngram\+Phrase\+Data}} ()
+\begin{DoxyCompactList}\small\item\em clear\+Data \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \& \mbox{\hyperlink{class_ngram_phrase_ac7d44590477a7b871535d38db916ca03}{get\+Ngram\+Phrase\+Data\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em get\+Ngram\+Phrase\+Data\+Ptr \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_phrase_ad704a89cbabf198d6431bf4caf040e53}{set\+Current\+Ngram\+Data\+Index}} (int current\+\_\+ngram\+\_\+index\+\_\+in)
+\item 
+\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \& \mbox{\hyperlink{class_ngram_phrase_ab4de22cc5216dd556a847b0d91b7b52d}{get\+Current\+Ngram\+Data\+Ref}} ()
+\item 
+const \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \& \mbox{\hyperlink{class_ngram_phrase_a5e984d24eb933f99940de57423196ae3}{get\+Current\+Ngram\+Data\+CRef}} () const
+\begin{DoxyCompactList}\small\item\em get\+Current\+Ngram\+Data\+CRef \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_ngram_phrase_ac720e48acb882d6ad30f27af2aa90bee}{get\+Ngram\+Data\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em get\+Ngram\+Data\+Ptr \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_ngram_phrase_a0ec59188952534fdbd80ada48311b7da}{get\+Phrase\+Unique\+Words\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em get\+Phrase\+Unique\+Words\+Ptr \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_ngram_phrase_ab7e5b10d7eee2b62c3e81c6d756e6284}{get\+PUWChosen\+Counts}} () const
+\begin{DoxyCompactList}\small\item\em get\+PUWChosen\+Counts \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_ngram_phrase_ad7ab271ca9c5d1820ad36bb128d9ba0d}{get\+Ngram\+Chosen\+Counts}} () const
+\begin{DoxyCompactList}\small\item\em get\+Ngram\+Chosen\+Counts \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_phrase_acb51f10628aacf1582765c17e446b64e}{save\+Phrase\+Data}} () const
+\begin{DoxyCompactList}\small\item\em save\+Phrase\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_phrase_a636098b86d1709b2a82bd577b075f103}{save\+PUWData}} () const
+\begin{DoxyCompactList}\small\item\em save\+PUWData \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_phrase_ae255193c52d0506529a82f3c1df8b13d}{save\+Ngram\+Data}} () const
+\begin{DoxyCompactList}\small\item\em save\+Ngram\+Data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ngram_phrase_a6991a811dff260b726de56d76b188c49}{load\+Phrase\+From\+Config}} (const QString \&dir\+\_\+path, const QString \&filename)
+\begin{DoxyCompactList}\small\item\em load\+Phrase \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \mbox{\hyperlink{class_ngram_phrase_a74813ffa5a9bd8f1ff0564c9a7409b8f}{ngram\+\_\+phrase\+\_\+data}} = \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}}()
+\begin{DoxyCompactList}\small\item\em ngram\+\_\+phrase\+\_\+data handy data to define the phase \end{DoxyCompactList}\item 
+static QList$<$ \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_ngram_phrase_a15ae0bfc7e31f0e0ada37dcafc5d7bec}{ngram\+\_\+data}} = QList$<$\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}}\texorpdfstring{$\ast$}{*}$>$()
+\begin{DoxyCompactList}\small\item\em ngram\+\_\+data \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_ngram_phrase_ae9af9829379481f20f141a1fa4cc0149}{current\+\_\+ngram\+\_\+index}} = 0
+\item 
+static QList$<$ \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_ngram_phrase_a901fe0b401f1cace4c147cd7de8b782e}{phrase\+\_\+unique\+\_\+words}} = QList$<$\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}}\texorpdfstring{$\ast$}{*}$>$()
+\begin{DoxyCompactList}\small\item\em phrase\+\_\+unique\+\_\+words \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_ngram_phrase}{Ngram\+Phrase} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ngram_phrase_a3a1a98c235e0eeb6a4ce06b95e2b15de}\label{class_ngram_phrase_a3a1a98c235e0eeb6a4ce06b95e2b15de} 
+\index{NgramPhrase@{NgramPhrase}!NgramPhrase@{NgramPhrase}}
+\index{NgramPhrase@{NgramPhrase}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{NgramPhrase()}{NgramPhrase()}}
+{\footnotesize\ttfamily Ngram\+Phrase\+::\+Ngram\+Phrase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_ngram_phrase_a7d05dc1289a7724e6cc54ac1acb59042}\label{class_ngram_phrase_a7d05dc1289a7724e6cc54ac1acb59042} 
+\index{NgramPhrase@{NgramPhrase}!````~NgramPhrase@{\texorpdfstring{$\sim$}{\string~}NgramPhrase}}
+\index{````~NgramPhrase@{\texorpdfstring{$\sim$}{\string~}NgramPhrase}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NgramPhrase()}{\string~NgramPhrase()}}
+{\footnotesize\ttfamily Ngram\+Phrase\+::\texorpdfstring{$\sim$}{\string~}\+Ngram\+Phrase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ngram_phrase_a1e669f94fada1a18160c4f33c198210b}\label{class_ngram_phrase_a1e669f94fada1a18160c4f33c198210b} 
+\index{NgramPhrase@{NgramPhrase}!clearAllNgramPhraseData@{clearAllNgramPhraseData}}
+\index{clearAllNgramPhraseData@{clearAllNgramPhraseData}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{clearAllNgramPhraseData()}{clearAllNgramPhraseData()}}
+{\footnotesize\ttfamily void Ngram\+Phrase\+::clear\+All\+Ngram\+Phrase\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear\+Data 
+
+\Hypertarget{class_ngram_phrase_a5e984d24eb933f99940de57423196ae3}\label{class_ngram_phrase_a5e984d24eb933f99940de57423196ae3} 
+\index{NgramPhrase@{NgramPhrase}!getCurrentNgramDataCRef@{getCurrentNgramDataCRef}}
+\index{getCurrentNgramDataCRef@{getCurrentNgramDataCRef}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getCurrentNgramDataCRef()}{getCurrentNgramDataCRef()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \& Ngram\+Phrase\+::get\+Current\+Ngram\+Data\+CRef (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Current\+Ngram\+Data\+CRef 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_ab4de22cc5216dd556a847b0d91b7b52d}\label{class_ngram_phrase_ab4de22cc5216dd556a847b0d91b7b52d} 
+\index{NgramPhrase@{NgramPhrase}!getCurrentNgramDataRef@{getCurrentNgramDataRef}}
+\index{getCurrentNgramDataRef@{getCurrentNgramDataRef}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getCurrentNgramDataRef()}{getCurrentNgramDataRef()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \& Ngram\+Phrase\+::get\+Current\+Ngram\+Data\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_phrase_ad7ab271ca9c5d1820ad36bb128d9ba0d}\label{class_ngram_phrase_ad7ab271ca9c5d1820ad36bb128d9ba0d} 
+\index{NgramPhrase@{NgramPhrase}!getNgramChosenCounts@{getNgramChosenCounts}}
+\index{getNgramChosenCounts@{getNgramChosenCounts}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getNgramChosenCounts()}{getNgramChosenCounts()}}
+{\footnotesize\ttfamily QList$<$ int $>$ Ngram\+Phrase\+::get\+Ngram\+Chosen\+Counts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Ngram\+Chosen\+Counts 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_ac720e48acb882d6ad30f27af2aa90bee}\label{class_ngram_phrase_ac720e48acb882d6ad30f27af2aa90bee} 
+\index{NgramPhrase@{NgramPhrase}!getNgramDataRef@{getNgramDataRef}}
+\index{getNgramDataRef@{getNgramDataRef}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getNgramDataRef()}{getNgramDataRef()}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} $>$ \& Ngram\+Phrase\+::get\+Ngram\+Data\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Ngram\+Data\+Ptr 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_ac7d44590477a7b871535d38db916ca03}\label{class_ngram_phrase_ac7d44590477a7b871535d38db916ca03} 
+\index{NgramPhrase@{NgramPhrase}!getNgramPhraseDataRef@{getNgramPhraseDataRef}}
+\index{getNgramPhraseDataRef@{getNgramPhraseDataRef}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getNgramPhraseDataRef()}{getNgramPhraseDataRef()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \& Ngram\+Phrase\+::get\+Ngram\+Phrase\+Data\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Ngram\+Phrase\+Data\+Ptr 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_a0ec59188952534fdbd80ada48311b7da}\label{class_ngram_phrase_a0ec59188952534fdbd80ada48311b7da} 
+\index{NgramPhrase@{NgramPhrase}!getPhraseUniqueWordsRef@{getPhraseUniqueWordsRef}}
+\index{getPhraseUniqueWordsRef@{getPhraseUniqueWordsRef}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getPhraseUniqueWordsRef()}{getPhraseUniqueWordsRef()}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*} $>$ \& Ngram\+Phrase\+::get\+Phrase\+Unique\+Words\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Phrase\+Unique\+Words\+Ptr 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_ab7e5b10d7eee2b62c3e81c6d756e6284}\label{class_ngram_phrase_ab7e5b10d7eee2b62c3e81c6d756e6284} 
+\index{NgramPhrase@{NgramPhrase}!getPUWChosenCounts@{getPUWChosenCounts}}
+\index{getPUWChosenCounts@{getPUWChosenCounts}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{getPUWChosenCounts()}{getPUWChosenCounts()}}
+{\footnotesize\ttfamily QList$<$ int $>$ Ngram\+Phrase\+::get\+PUWChosen\+Counts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+PUWChosen\+Counts 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_a6991a811dff260b726de56d76b188c49}\label{class_ngram_phrase_a6991a811dff260b726de56d76b188c49} 
+\index{NgramPhrase@{NgramPhrase}!loadPhraseFromConfig@{loadPhraseFromConfig}}
+\index{loadPhraseFromConfig@{loadPhraseFromConfig}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{loadPhraseFromConfig()}{loadPhraseFromConfig()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::load\+Phrase\+From\+Config (\begin{DoxyParamCaption}\item[{const QString \&}]{dir\+\_\+path,  }\item[{const QString \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+load\+Phrase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+path} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_a19fc58e9ac9ee0ce0d89faf5a73f091b}\label{class_ngram_phrase_a19fc58e9ac9ee0ce0d89faf5a73f091b} 
+\index{NgramPhrase@{NgramPhrase}!rationalizePhrase@{rationalizePhrase}}
+\index{rationalizePhrase@{rationalizePhrase}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{rationalizePhrase()}{rationalizePhrase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ngram\+Phrase\+::rationalize\+Phrase (\begin{DoxyParamCaption}\item[{bool}]{delete\+\_\+not\+\_\+chosen,  }\item[{bool}]{puw\+\_\+has\+\_\+priority\+\_\+in }\end{DoxyParamCaption})}
+
+\Hypertarget{class_ngram_phrase_aaa827aefc1b039155322441e0147cc3b}\label{class_ngram_phrase_aaa827aefc1b039155322441e0147cc3b} 
+\index{NgramPhrase@{NgramPhrase}!rationalizePhrase@{rationalizePhrase}}
+\index{rationalizePhrase@{rationalizePhrase}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{rationalizePhrase()}{rationalizePhrase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ngram\+Phrase\+::rationalize\+Phrase (\begin{DoxyParamCaption}\item[{bool}]{delete\+\_\+not\+\_\+chosen = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+rationalize\+Phrase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delete\+\_\+not\+\_\+chosen} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ngram_phrase_a78326b438540100c9a50b01c8a776311}\label{class_ngram_phrase_a78326b438540100c9a50b01c8a776311} 
+\index{NgramPhrase@{NgramPhrase}!saveAllPhraseData@{saveAllPhraseData}}
+\index{saveAllPhraseData@{saveAllPhraseData}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{saveAllPhraseData()}{saveAllPhraseData()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::save\+All\+Phrase\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+save\+All\+Phrase\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+new\+\_\+phrase} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_ae255193c52d0506529a82f3c1df8b13d}\label{class_ngram_phrase_ae255193c52d0506529a82f3c1df8b13d} 
+\index{NgramPhrase@{NgramPhrase}!saveNgramData@{saveNgramData}}
+\index{saveNgramData@{saveNgramData}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{saveNgramData()}{saveNgramData()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::save\+Ngram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+save\+Ngram\+Data 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_acb51f10628aacf1582765c17e446b64e}\label{class_ngram_phrase_acb51f10628aacf1582765c17e446b64e} 
+\index{NgramPhrase@{NgramPhrase}!savePhraseData@{savePhraseData}}
+\index{savePhraseData@{savePhraseData}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{savePhraseData()}{savePhraseData()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::save\+Phrase\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+save\+Phrase\+Data 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_a636098b86d1709b2a82bd577b075f103}\label{class_ngram_phrase_a636098b86d1709b2a82bd577b075f103} 
+\index{NgramPhrase@{NgramPhrase}!savePUWData@{savePUWData}}
+\index{savePUWData@{savePUWData}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{savePUWData()}{savePUWData()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::save\+PUWData (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+save\+PUWData 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_ngram_phrase_ad704a89cbabf198d6431bf4caf040e53}\label{class_ngram_phrase_ad704a89cbabf198d6431bf4caf040e53} 
+\index{NgramPhrase@{NgramPhrase}!setCurrentNgramDataIndex@{setCurrentNgramDataIndex}}
+\index{setCurrentNgramDataIndex@{setCurrentNgramDataIndex}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{setCurrentNgramDataIndex()}{setCurrentNgramDataIndex()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::set\+Current\+Ngram\+Data\+Index (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+ngram\+\_\+index\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_ngram_phrase_a631859f86ae4760b19784f697eb36f73}\label{class_ngram_phrase_a631859f86ae4760b19784f697eb36f73} 
+\index{NgramPhrase@{NgramPhrase}!setNewPhase@{setNewPhase}}
+\index{setNewPhase@{setNewPhase}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{setNewPhase()}{setNewPhase()}}
+{\footnotesize\ttfamily bool Ngram\+Phrase\+::set\+New\+Phase (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} \&}]{data\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+set\+New\+Phase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ngram_phrase_ae9af9829379481f20f141a1fa4cc0149}\label{class_ngram_phrase_ae9af9829379481f20f141a1fa4cc0149} 
+\index{NgramPhrase@{NgramPhrase}!current\_ngram\_index@{current\_ngram\_index}}
+\index{current\_ngram\_index@{current\_ngram\_index}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{current\_ngram\_index}{current\_ngram\_index}}
+{\footnotesize\ttfamily int Ngram\+Phrase\+::current\+\_\+ngram\+\_\+index = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_ngram_phrase_a15ae0bfc7e31f0e0ada37dcafc5d7bec}\label{class_ngram_phrase_a15ae0bfc7e31f0e0ada37dcafc5d7bec} 
+\index{NgramPhrase@{NgramPhrase}!ngram\_data@{ngram\_data}}
+\index{ngram\_data@{ngram\_data}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{ngram\_data}{ngram\_data}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} $>$ Ngram\+Phrase\+::ngram\+\_\+data = QList$<$\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}}\texorpdfstring{$\ast$}{*}$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ngram\+\_\+data 
+
+\Hypertarget{class_ngram_phrase_a74813ffa5a9bd8f1ff0564c9a7409b8f}\label{class_ngram_phrase_a74813ffa5a9bd8f1ff0564c9a7409b8f} 
+\index{NgramPhrase@{NgramPhrase}!ngram\_phrase\_data@{ngram\_phrase\_data}}
+\index{ngram\_phrase\_data@{ngram\_phrase\_data}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{ngram\_phrase\_data}{ngram\_phrase\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}} Ngram\+Phrase\+::ngram\+\_\+phrase\+\_\+data = \mbox{\hyperlink{struct_ngram_phrase_meta_data}{Ngram\+Phrase\+Meta\+Data}}()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ngram\+\_\+phrase\+\_\+data handy data to define the phase 
+
+\Hypertarget{class_ngram_phrase_a901fe0b401f1cace4c147cd7de8b782e}\label{class_ngram_phrase_a901fe0b401f1cace4c147cd7de8b782e} 
+\index{NgramPhrase@{NgramPhrase}!phrase\_unique\_words@{phrase\_unique\_words}}
+\index{phrase\_unique\_words@{phrase\_unique\_words}!NgramPhrase@{NgramPhrase}}
+\doxysubsubsection{\texorpdfstring{phrase\_unique\_words}{phrase\_unique\_words}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}} \texorpdfstring{$\ast$}{*} $>$ Ngram\+Phrase\+::phrase\+\_\+unique\+\_\+words = QList$<$\mbox{\hyperlink{class_phrase_unique_words}{Phrase\+Unique\+Words}}\texorpdfstring{$\ast$}{*}$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+phrase\+\_\+unique\+\_\+words 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/ngram\+\_\+phrase/\mbox{\hyperlink{ngramphrase_8h}{ngramphrase.\+h}}\item 
+source/ngram\+\_\+phrase/\mbox{\hyperlink{ngramphrase_8cpp}{ngramphrase.\+cpp}}\end{DoxyCompactItemize}

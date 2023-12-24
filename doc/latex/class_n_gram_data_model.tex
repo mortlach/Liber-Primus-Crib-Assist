@@ -1,0 +1,263 @@
+\doxysection{NGram\+Data\+Model Class Reference}
+\hypertarget{class_n_gram_data_model}{}\label{class_n_gram_data_model}\index{NGramDataModel@{NGramDataModel}}
+
+
+{\ttfamily \#include $<$NGram\+Data\+Model.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105}{Constants}} \{ \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a592ad1ef1deafc716d227c3c68f26960}{word\+\_\+col}} = 0
+, \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105afb05c6239d88928267169c971839f3db}{chosen\+\_\+col}} = 1
+, \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a3353f2e6c587ab0ff3dd11c5dced1cb1}{counts\+\_\+col}} = 2
+, \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a00a80b8211f0a55ad1953083f6674d85}{col\+\_\+count}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_gram_data_model_acc24ca3ea100e83a057055515baa0d7f}{NGram\+Data\+Model}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{class_n_gram_data_model_a6454f9dbd8e983b02ab7051bbf9cdd65}{\texorpdfstring{$\sim$}{\string~}\+NGram\+Data\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_af4a3be7f7c6332dc28a71bb43de0e27a}{begin\+Reset\+This\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_a5a07defa3c19906d4dcbf3b7683285fc}{end\+Reset\+This\+Model}} ()
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_a1531cffcf632b6bd6bb2b3ec25809f5d}{set\+New\+Data}} (\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \&\mbox{\hyperlink{class_n_gram_data_model_a7b8bbe9fd66a1dfb2f993d66d51b773f}{raw\+\_\+data}})
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_ae2f5e264d123ed4172ca1cc09d9884d9}{clear}} ()
+\item 
+int \mbox{\hyperlink{class_n_gram_data_model_a17cdd69c30024daa6ae50000abd52e25}{row\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\item 
+int \mbox{\hyperlink{class_n_gram_data_model_a2620a2c66ac2b8480d82592d0d1c2fca}{column\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\item 
+QVariant \mbox{\hyperlink{class_n_gram_data_model_a6e47f49dd51fb2340ad2d8d39debbe0f}{data}} (const QModel\+Index \&index, int role=Qt\+::\+Display\+Role) const override
+\item 
+bool \mbox{\hyperlink{class_n_gram_data_model_a01661143f7ca953eb099f9dd21fcb869}{is\+Chosen}} (const QModel\+Index \&index) const
+\item 
+bool \mbox{\hyperlink{class_n_gram_data_model_afaf365a3ab1e664005c71b0c9ebe9c9b}{is\+Not\+Chosen}} (const QModel\+Index \&index) const
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_ae6938dab4bcbd1420b3de45f1e431a37}{set\+New\+Data}} (\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*}raw\+\_\+data\+\_\+in)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_acf5a48ed8950635fc242ba4adce3b1fa}{toggle\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+bool \mbox{\hyperlink{class_n_gram_data_model_a7b3cb409ed496a93d77a97264617e91d}{get\+Chosen}} (int row) const
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_a6d783f1a4e4ca5d1ceb15c6e502eadf6}{set\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+void \mbox{\hyperlink{class_n_gram_data_model_a8d3f7199b4f4fc3b346a610b84fd028e}{set\+Not\+Chosen}} (const QModel\+Index\+List \&rows)
+\item 
+Qt\+::\+Item\+Flags \mbox{\hyperlink{class_n_gram_data_model_a8984f06e31c27d0be0cbdd6e742cbfa6}{flags}} (const QModel\+Index \&index)
+\item 
+QVariant \mbox{\hyperlink{class_n_gram_data_model_acaf43f607894a21ed8b090fbb13b257d}{header\+Data}} (int section, Qt\+::\+Orientation orientation, int role) const override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_n_gram_data_model_a7b8bbe9fd66a1dfb2f993d66d51b773f}{raw\+\_\+data}}
+\item 
+QList$<$ QString $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_n_gram_data_model_af34bcdb7574db1c557a63415526555bc}{words}}
+\item 
+QList$<$ bool $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_n_gram_data_model_a4ac6c8076b195cec65706557aa22d760}{chosen}}
+\item 
+QList$<$ unsigned long long $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_n_gram_data_model_acc96453ae725768cf7ace05f2c96020e}{counts}}
+\item 
+QList$<$ QList$<$ bool $>$ $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_n_gram_data_model_aa5905d1fa71aa9a6dc5cc332985a18cd}{chosen\+\_\+by\+\_\+word\+\_\+transposed\+\_\+ptr}}
+\item 
+QList$<$ QList$<$ bool $>$ $>$ \mbox{\hyperlink{class_n_gram_data_model_ad2486a3be4f7e910766c6e34330ff0f7}{chosen\+\_\+by\+\_\+word\+\_\+transposed}}
+\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_n_gram_data_model_a8bfeb4bf9dbb35cf54d034b61a36b598}{editrole\+\_\+list}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105}\label{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105} 
+\index{NGramDataModel@{NGramDataModel}!Constants@{Constants}}
+\index{Constants@{Constants}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{Constants}{Constants}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105}{NGram\+Data\+Model\+::\+Constants}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{word\_col@{word\_col}!NGramDataModel@{NGramDataModel}}\index{NGramDataModel@{NGramDataModel}!word\_col@{word\_col}}}\Hypertarget{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a592ad1ef1deafc716d227c3c68f26960}\label{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a592ad1ef1deafc716d227c3c68f26960} 
+word\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{chosen\_col@{chosen\_col}!NGramDataModel@{NGramDataModel}}\index{NGramDataModel@{NGramDataModel}!chosen\_col@{chosen\_col}}}\Hypertarget{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105afb05c6239d88928267169c971839f3db}\label{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105afb05c6239d88928267169c971839f3db} 
+chosen\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{counts\_col@{counts\_col}!NGramDataModel@{NGramDataModel}}\index{NGramDataModel@{NGramDataModel}!counts\_col@{counts\_col}}}\Hypertarget{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a3353f2e6c587ab0ff3dd11c5dced1cb1}\label{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a3353f2e6c587ab0ff3dd11c5dced1cb1} 
+counts\+\_\+col&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{col\_count@{col\_count}!NGramDataModel@{NGramDataModel}}\index{NGramDataModel@{NGramDataModel}!col\_count@{col\_count}}}\Hypertarget{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a00a80b8211f0a55ad1953083f6674d85}\label{class_n_gram_data_model_acaf53e7e5cb20d748e216692cf259105a00a80b8211f0a55ad1953083f6674d85} 
+col\+\_\+count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_n_gram_data_model_acc24ca3ea100e83a057055515baa0d7f}\label{class_n_gram_data_model_acc24ca3ea100e83a057055515baa0d7f} 
+\index{NGramDataModel@{NGramDataModel}!NGramDataModel@{NGramDataModel}}
+\index{NGramDataModel@{NGramDataModel}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{NGramDataModel()}{NGramDataModel()}}
+{\footnotesize\ttfamily NGram\+Data\+Model\+::\+NGram\+Data\+Model (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_a6454f9dbd8e983b02ab7051bbf9cdd65}\label{class_n_gram_data_model_a6454f9dbd8e983b02ab7051bbf9cdd65} 
+\index{NGramDataModel@{NGramDataModel}!````~NGramDataModel@{\texorpdfstring{$\sim$}{\string~}NGramDataModel}}
+\index{````~NGramDataModel@{\texorpdfstring{$\sim$}{\string~}NGramDataModel}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NGramDataModel()}{\string~NGramDataModel()}}
+{\footnotesize\ttfamily NGram\+Data\+Model\+::\texorpdfstring{$\sim$}{\string~}\+NGram\+Data\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_gram_data_model_af4a3be7f7c6332dc28a71bb43de0e27a}\label{class_n_gram_data_model_af4a3be7f7c6332dc28a71bb43de0e27a} 
+\index{NGramDataModel@{NGramDataModel}!beginResetThisModel@{beginResetThisModel}}
+\index{beginResetThisModel@{beginResetThisModel}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{beginResetThisModel()}{beginResetThisModel()}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::begin\+Reset\+This\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_n_gram_data_model_ae2f5e264d123ed4172ca1cc09d9884d9}\label{class_n_gram_data_model_ae2f5e264d123ed4172ca1cc09d9884d9} 
+\index{NGramDataModel@{NGramDataModel}!clear@{clear}}
+\index{clear@{clear}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_a2620a2c66ac2b8480d82592d0d1c2fca}\label{class_n_gram_data_model_a2620a2c66ac2b8480d82592d0d1c2fca} 
+\index{NGramDataModel@{NGramDataModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily int NGram\+Data\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+\Hypertarget{class_n_gram_data_model_a6e47f49dd51fb2340ad2d8d39debbe0f}\label{class_n_gram_data_model_a6e47f49dd51fb2340ad2d8d39debbe0f} 
+\index{NGramDataModel@{NGramDataModel}!data@{data}}
+\index{data@{data}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily QVariant NGram\+Data\+Model\+::data (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index,  }\item[{int}]{role = {\ttfamily Qt\+:\+:DisplayRole} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_n_gram_data_model_a5a07defa3c19906d4dcbf3b7683285fc}\label{class_n_gram_data_model_a5a07defa3c19906d4dcbf3b7683285fc} 
+\index{NGramDataModel@{NGramDataModel}!endResetThisModel@{endResetThisModel}}
+\index{endResetThisModel@{endResetThisModel}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{endResetThisModel()}{endResetThisModel()}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::end\+Reset\+This\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_n_gram_data_model_a8984f06e31c27d0be0cbdd6e742cbfa6}\label{class_n_gram_data_model_a8984f06e31c27d0be0cbdd6e742cbfa6} 
+\index{NGramDataModel@{NGramDataModel}!flags@{flags}}
+\index{flags@{flags}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily Qt\+::\+Item\+Flags NGram\+Data\+Model\+::flags (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_a7b3cb409ed496a93d77a97264617e91d}\label{class_n_gram_data_model_a7b3cb409ed496a93d77a97264617e91d} 
+\index{NGramDataModel@{NGramDataModel}!getChosen@{getChosen}}
+\index{getChosen@{getChosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{getChosen()}{getChosen()}}
+{\footnotesize\ttfamily bool NGram\+Data\+Model\+::get\+Chosen (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_n_gram_data_model_acaf43f607894a21ed8b090fbb13b257d}\label{class_n_gram_data_model_acaf43f607894a21ed8b090fbb13b257d} 
+\index{NGramDataModel@{NGramDataModel}!headerData@{headerData}}
+\index{headerData@{headerData}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily QVariant NGram\+Data\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{Qt\+::\+Orientation}]{orientation,  }\item[{int}]{role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_n_gram_data_model_a01661143f7ca953eb099f9dd21fcb869}\label{class_n_gram_data_model_a01661143f7ca953eb099f9dd21fcb869} 
+\index{NGramDataModel@{NGramDataModel}!isChosen@{isChosen}}
+\index{isChosen@{isChosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{isChosen()}{isChosen()}}
+{\footnotesize\ttfamily bool NGram\+Data\+Model\+::is\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_n_gram_data_model_afaf365a3ab1e664005c71b0c9ebe9c9b}\label{class_n_gram_data_model_afaf365a3ab1e664005c71b0c9ebe9c9b} 
+\index{NGramDataModel@{NGramDataModel}!isNotChosen@{isNotChosen}}
+\index{isNotChosen@{isNotChosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{isNotChosen()}{isNotChosen()}}
+{\footnotesize\ttfamily bool NGram\+Data\+Model\+::is\+Not\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_n_gram_data_model_a17cdd69c30024daa6ae50000abd52e25}\label{class_n_gram_data_model_a17cdd69c30024daa6ae50000abd52e25} 
+\index{NGramDataModel@{NGramDataModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily int NGram\+Data\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent = {\ttfamily QModelIndex()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{class_n_gram_data_model_a6d783f1a4e4ca5d1ceb15c6e502eadf6}\label{class_n_gram_data_model_a6d783f1a4e4ca5d1ceb15c6e502eadf6} 
+\index{NGramDataModel@{NGramDataModel}!setChosen@{setChosen}}
+\index{setChosen@{setChosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{setChosen()}{setChosen()}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::set\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_a1531cffcf632b6bd6bb2b3ec25809f5d}\label{class_n_gram_data_model_a1531cffcf632b6bd6bb2b3ec25809f5d} 
+\index{NGramDataModel@{NGramDataModel}!setNewData@{setNewData}}
+\index{setNewData@{setNewData}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{setNewData()}{setNewData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::set\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \&}]{raw\+\_\+data }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_ae6938dab4bcbd1420b3de45f1e431a37}\label{class_n_gram_data_model_ae6938dab4bcbd1420b3de45f1e431a37} 
+\index{NGramDataModel@{NGramDataModel}!setNewData@{setNewData}}
+\index{setNewData@{setNewData}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{setNewData()}{setNewData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::set\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ngram_data}{Ngram\+Data}} \texorpdfstring{$\ast$}{*}}]{raw\+\_\+data\+\_\+in }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_a8d3f7199b4f4fc3b346a610b84fd028e}\label{class_n_gram_data_model_a8d3f7199b4f4fc3b346a610b84fd028e} 
+\index{NGramDataModel@{NGramDataModel}!setNotChosen@{setNotChosen}}
+\index{setNotChosen@{setNotChosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{setNotChosen()}{setNotChosen()}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::set\+Not\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+\Hypertarget{class_n_gram_data_model_acf5a48ed8950635fc242ba4adce3b1fa}\label{class_n_gram_data_model_acf5a48ed8950635fc242ba4adce3b1fa} 
+\index{NGramDataModel@{NGramDataModel}!toggleChosen@{toggleChosen}}
+\index{toggleChosen@{toggleChosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{toggleChosen()}{toggleChosen()}}
+{\footnotesize\ttfamily void NGram\+Data\+Model\+::toggle\+Chosen (\begin{DoxyParamCaption}\item[{const QModel\+Index\+List \&}]{rows }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_n_gram_data_model_a4ac6c8076b195cec65706557aa22d760}\label{class_n_gram_data_model_a4ac6c8076b195cec65706557aa22d760} 
+\index{NGramDataModel@{NGramDataModel}!chosen@{chosen}}
+\index{chosen@{chosen}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{chosen}{chosen}}
+{\footnotesize\ttfamily QList$<$bool$>$\texorpdfstring{$\ast$}{*} NGram\+Data\+Model\+::chosen}
+
+\Hypertarget{class_n_gram_data_model_ad2486a3be4f7e910766c6e34330ff0f7}\label{class_n_gram_data_model_ad2486a3be4f7e910766c6e34330ff0f7} 
+\index{NGramDataModel@{NGramDataModel}!chosen\_by\_word\_transposed@{chosen\_by\_word\_transposed}}
+\index{chosen\_by\_word\_transposed@{chosen\_by\_word\_transposed}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{chosen\_by\_word\_transposed}{chosen\_by\_word\_transposed}}
+{\footnotesize\ttfamily QList$<$QList$<$bool$>$ $>$ NGram\+Data\+Model\+::chosen\+\_\+by\+\_\+word\+\_\+transposed}
+
+\Hypertarget{class_n_gram_data_model_aa5905d1fa71aa9a6dc5cc332985a18cd}\label{class_n_gram_data_model_aa5905d1fa71aa9a6dc5cc332985a18cd} 
+\index{NGramDataModel@{NGramDataModel}!chosen\_by\_word\_transposed\_ptr@{chosen\_by\_word\_transposed\_ptr}}
+\index{chosen\_by\_word\_transposed\_ptr@{chosen\_by\_word\_transposed\_ptr}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{chosen\_by\_word\_transposed\_ptr}{chosen\_by\_word\_transposed\_ptr}}
+{\footnotesize\ttfamily QList$<$QList$<$bool$>$ $>$\texorpdfstring{$\ast$}{*} NGram\+Data\+Model\+::chosen\+\_\+by\+\_\+word\+\_\+transposed\+\_\+ptr}
+
+\Hypertarget{class_n_gram_data_model_acc96453ae725768cf7ace05f2c96020e}\label{class_n_gram_data_model_acc96453ae725768cf7ace05f2c96020e} 
+\index{NGramDataModel@{NGramDataModel}!counts@{counts}}
+\index{counts@{counts}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{counts}{counts}}
+{\footnotesize\ttfamily QList$<$unsigned long long$>$\texorpdfstring{$\ast$}{*} NGram\+Data\+Model\+::counts}
+
+\Hypertarget{class_n_gram_data_model_a8bfeb4bf9dbb35cf54d034b61a36b598}\label{class_n_gram_data_model_a8bfeb4bf9dbb35cf54d034b61a36b598} 
+\index{NGramDataModel@{NGramDataModel}!editrole\_list@{editrole\_list}}
+\index{editrole\_list@{editrole\_list}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{editrole\_list}{editrole\_list}}
+{\footnotesize\ttfamily QList$<$int$>$ NGram\+Data\+Model\+::editrole\+\_\+list}
+
+\Hypertarget{class_n_gram_data_model_a7b8bbe9fd66a1dfb2f993d66d51b773f}\label{class_n_gram_data_model_a7b8bbe9fd66a1dfb2f993d66d51b773f} 
+\index{NGramDataModel@{NGramDataModel}!raw\_data@{raw\_data}}
+\index{raw\_data@{raw\_data}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{raw\_data}{raw\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ngram_data}{Ngram\+Data}}\texorpdfstring{$\ast$}{*} NGram\+Data\+Model\+::raw\+\_\+data}
+
+\Hypertarget{class_n_gram_data_model_af34bcdb7574db1c557a63415526555bc}\label{class_n_gram_data_model_af34bcdb7574db1c557a63415526555bc} 
+\index{NGramDataModel@{NGramDataModel}!words@{words}}
+\index{words@{words}!NGramDataModel@{NGramDataModel}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily QList$<$QString$>$\texorpdfstring{$\ast$}{*} NGram\+Data\+Model\+::words}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/view/\mbox{\hyperlink{_n_gram_data_model_8h}{NGram\+Data\+Model.\+h}}\item 
+source/view/\mbox{\hyperlink{ngramdatamodel_8cpp}{ngramdatamodel.\+cpp}}\end{DoxyCompactItemize}

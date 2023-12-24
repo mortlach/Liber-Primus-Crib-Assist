@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['rationalizengramdata_0',['rationalizengramdata',['../class_ngram_data_hub.html#a9013a165e57e7a6def33c42a9df7e4c0',1,'NgramDataHub::rationalizeNgramData(bool delete_not_chosen_ngrams=true)'],['../class_ngram_data_hub.html#af59fbab201d1eba2fc0bb70b6d31fa7f',1,'NgramDataHub::rationalizeNgramData(bool delete_not_chosen_ngrams, bool puw_has_priority_in)'],['../class_ngram_p_u_w_rationlize_form.html#ac9ceddfeee0d623c1d58f2f04fcde65e',1,'NgramPUWRationlizeForm::rationalizeNgramData()']]],
+  ['rationalizephrase_1',['rationalizephrase',['../class_ngram_phrase.html#aaa827aefc1b039155322441e0147cc3b',1,'NgramPhrase::rationalizePhrase(bool delete_not_chosen=true)'],['../class_ngram_phrase.html#a19fc58e9ac9ee0ce0d89faf5a73f091b',1,'NgramPhrase::rationalizePhrase(bool delete_not_chosen, bool puw_has_priority_in)']]],
+  ['rationalizephrasewithdelete_2',['rationalizePhraseWithDelete',['../class_ngram_data_hub.html#a9e9ed9c8229131b795a052505b2c7817',1,'NgramDataHub']]],
+  ['raw1grammodel_3',['Raw1GramModel',['../class_raw1_gram_model.html#a0e4aec74a6066166f28238a72b5209a5',1,'Raw1GramModel']]],
+  ['raw1grams_4',['raw1grams',['../class_raw1_grams.html#a2354c58e8361ce78ea68e4d9de75cef2',1,'Raw1Grams::Raw1Grams()'],['../class_raw1_grams.html#ae61f31d92a58831961291fe01d4936b8',1,'Raw1Grams::Raw1Grams(QSettings &amp;settings_in)']]],
+  ['rawworddata_5',['RawWordData',['../class_raw_word_data.html#a586269b88179ce69d124e083501d2b39',1,'RawWordData']]],
+  ['readcsvfile_6',['readcsvfile',['../namespaceutilities.html#afa99dc9708e1b34ecd997dc6404e4b2e',1,'utilities::readCSVFile(const std::string &amp;directory, std::string &amp;filename, VVString &amp;file_data)'],['../namespaceutilities.html#a1f1624014c560db016a8ed192812c939',1,'utilities::readCSVFile(const std::string &amp;path, VVString &amp;file_data)'],['../namespaceutilities.html#a3190c5a0d3e295fbc2e66f1c2b0b4809',1,'utilities::readCSVFile(const std::string &amp;directory, const std::string &amp;filename, std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;file_data)']]],
+  ['readtruecsvfile_7',['readTrueCSVFile',['../namespaceutilities.html#adda57787d80e0e158a4a97d25e609f15',1,'utilities']]],
+  ['rowcount_8',['rowcount',['../class_raw1_gram_model.html#aa55c759376557156e383fa1184c7e9d2',1,'Raw1GramModel::rowCount()'],['../class_n_gram_data_model.html#a17cdd69c30024daa6ae50000abd52e25',1,'NGramDataModel::rowCount()'],['../class_phrase_unique_words_model.html#a13fbc4066f7196cabc5fcb4b622245a2',1,'PhraseUniqueWordsModel::rowCount()']]]
+];

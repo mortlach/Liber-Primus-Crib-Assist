@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['raw1gram_0',['raw1gram',['../class_ngram_data_hub.html#af896f14d17bd240db5b13ef9288f8810',1,'NgramDataHub']]],
+  ['raw_5f1gram_5ffilekey_5f01_1',['raw_1gram_filekey_01',['../namespacedefinitions.html#af0ac2dbe736c8f4d602b86dd7c4d9b00',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f02_2',['raw_1gram_filekey_02',['../namespacedefinitions.html#ae9a316b1a186e4dd64df06881ccd90e5',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f03_3',['raw_1gram_filekey_03',['../namespacedefinitions.html#a29555da3fd8c75c4680a4e521897d95e',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f04_4',['raw_1gram_filekey_04',['../namespacedefinitions.html#a18f3435cf21640c74dd41cf311777317',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f05_5',['raw_1gram_filekey_05',['../namespacedefinitions.html#a4cf4de9d87d503d7b6d8199e2d8b9481',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f06_6',['raw_1gram_filekey_06',['../namespacedefinitions.html#a4011b55b056699ac7d30344b30cb5b87',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f07_7',['raw_1gram_filekey_07',['../namespacedefinitions.html#a10ff0eec5477551dc02257aa661bfb0f',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f08_8',['raw_1gram_filekey_08',['../namespacedefinitions.html#af3b350b715dee62c69e9be4833072000',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f09_9',['raw_1gram_filekey_09',['../namespacedefinitions.html#a030d0651c0e6c33920e270454c81767a',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f10_10',['raw_1gram_filekey_10',['../namespacedefinitions.html#a470d634d50a0d464960ad49ff4d41449',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f11_11',['raw_1gram_filekey_11',['../namespacedefinitions.html#a952dbc2b21ef1a999f1b517b80562a7c',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f12_12',['raw_1gram_filekey_12',['../namespacedefinitions.html#a098d50aee1d319ba0d1de7b304bb83b7',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f13_13',['raw_1gram_filekey_13',['../namespacedefinitions.html#a841c03951840a16ce9f8e8c8e4c6ff0a',1,'definitions']]],
+  ['raw_5f1gram_5ffilekey_5f14_14',['raw_1gram_filekey_14',['../namespacedefinitions.html#a33154c6435f54183252eaa0436f9247f',1,'definitions']]],
+  ['raw_5fdata_15',['raw_data',['../class_raw1_gram_model.html#a0bf19e5a16825ef7befbfa144a62ec68',1,'Raw1GramModel::raw_data'],['../class_n_gram_data_model.html#a7b8bbe9fd66a1dfb2f993d66d51b773f',1,'NGramDataModel::raw_data'],['../class_phrase_unique_words_model.html#a07d9417ef0962d45b88341e611753de8',1,'PhraseUniqueWordsModel::raw_data']]],
+  ['raw_5ffile_5fexists_16',['raw_file_exists',['../class_ngram_meta_data.html#a33508a90429aeabfb35f8770de433396',1,'NgramMetaData']]],
+  ['raw_5ffilename_17',['raw_filename',['../class_ngram_meta_data.html#a6d37eb645472f9a4120c21514fcc5278',1,'NgramMetaData']]],
+  ['raw_5ffilepath_18',['raw_filepath',['../class_ngram_meta_data.html#abf06a617cbbb966af8d0ef2fe2001d29',1,'NgramMetaData']]],
+  ['raw_5fngram_5ffilenames_19',['raw_ngram_filenames',['../struct_ngram_phrase_meta_data.html#a7f98332038fcf02949de7176ceb229ab',1,'NgramPhraseMetaData']]],
+  ['raw_5fngram_5froot_5fdir_20',['raw_ngram_root_dir',['../struct_ngram_phrase_meta_data.html#aade19a002b6c499a4881f0d2cb81dd9c',1,'NgramPhraseMetaData']]],
+  ['raw_5fword_5fdata_21',['raw_word_data',['../class_raw1_grams.html#ae1c5d191df3b8dbce727c005f65292b8',1,'Raw1Grams']]],
+  ['runes_22',['runes',['../class_raw_word_data.html#a0aab3b2a214c973f1988e9cb11de13bb',1,'RawWordData::runes'],['../class_raw1_gram_model.html#a52dd7f7b2ef320a393d5814030a67b88',1,'Raw1GramModel::runes']]]
+];

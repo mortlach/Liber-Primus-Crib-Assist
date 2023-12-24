@@ -1,0 +1,86 @@
+\doxysection{ngrammetadata.\+h}
+\hypertarget{ngrammetadata_8h_source}{}\label{ngrammetadata_8h_source}\index{source/ngram\_phrase/ngrammetadata.h@{source/ngram\_phrase/ngrammetadata.h}}
+\mbox{\hyperlink{ngrammetadata_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NGRAMMETADATA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NGRAMMETADATA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_meta_data}{NgramMetaData}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_ngram_meta_data_aada7f0623a74a2df0f859dbe1be91b69}{NgramMetaData}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_ngram_meta_data_a047f098f4e3c5d7012df7ca7fbba49fd}{\string~NgramMetaData}}()\{\}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_meta_data_afea2825373f6008616b59e94d9eded90}{print}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_meta_data_aabfbf8d02a90e5f891a02e8154cff84c}{hasAnyDefaultSetttings}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ file\ paths\ to\ get\ to\ raw\ data}}
+\DoxyCodeLine{00018\ \ \ \ \ QDir\ \mbox{\hyperlink{class_ngram_meta_data_a4079a6f6414c3c2a65f95ca170ea7ff7}{ngram\_root\_dir}};\ \textcolor{comment}{//\ raw\ files\ opnly\ ever\ read}}
+\DoxyCodeLine{00019\ \ \ \ \ QString\ \mbox{\hyperlink{class_ngram_meta_data_abf06a617cbbb966af8d0ef2fe2001d29}{raw\_filepath}};}
+\DoxyCodeLine{00020\ \ \ \ \ QString\ \mbox{\hyperlink{class_ngram_meta_data_a6d37eb645472f9a4120c21514fcc5278}{raw\_filename}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ file\ paths\ to\ get\ to\ \ "{}local\ copy"{}\ phrase\ data}}
+\DoxyCodeLine{00022\ \ \ \ \ QDir\ \mbox{\hyperlink{class_ngram_meta_data_a10447053483a2985079881b41728bade}{phrase\_dir}};}
+\DoxyCodeLine{00023\ \ \ \ \ QString\ \mbox{\hyperlink{class_ngram_meta_data_a8fed3c34875874e97d5f257cbcf75511}{phrase\_ngram\_filename}};\ \textcolor{comment}{//\ local\ files\ can\ save\ and\ read}}
+\DoxyCodeLine{00024\ \ \ \ \ QString\ \mbox{\hyperlink{class_ngram_meta_data_a52985da46f49120334365055025f5ba7}{phrase\_ngram\_filepath}};\ \textcolor{comment}{//\ local\ files\ can\ save\ and\ read}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ define\ word\ lengths,\ or\ tags,\ -\/1\ ==\ S,\ -\/2\ ==E\ and\ must\ be\ at\ start,\ end}}
+\DoxyCodeLine{00026\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_ngram_meta_data_ab74ff9b3f1a125d82a80572cb3a1d01a}{phrase\_tokens}};\ \textcolor{comment}{//\ tokens\ for\ whole\ phrase}}
+\DoxyCodeLine{00027\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_ngram_meta_data_a90252bd94cf191316af944c488068d18}{ngram\_tokens}};\ \textcolor{comment}{//\ tokens\ for\ this\ ngram}}
+\DoxyCodeLine{00028\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_ngram_meta_data_a87d59f12d773f63bdfb8cf217bef8fbd}{phrase\_word\_lengths}};}
+\DoxyCodeLine{00029\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_ngram_meta_data_ab94feb3fec4f1b9c91ebb5468d5a3cc9}{ngram\_word\_lengths}};}
+\DoxyCodeLine{00030\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_ngram_meta_data_ace0e10acb62c3fd101ec2d108f50c0df}{phrase\_word\_indices}};}
+\DoxyCodeLine{00031\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_ngram_meta_data_a853bff40f306d6fda972266c266e30dd}{ngram\_word\_indices}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ number\ of\ tokens\ in\ ngram\ (including\ S\ E\ tags)}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ngram_meta_data_a66f5db109a1b03302ce19dbcfb01bc7f}{ngram\_length}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ index\ of\ first\ token\ this\ ngram\ in\ phrase}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ngram_meta_data_a3c743feaa649a3863dc7025001033639}{first\_token\_index\_in\_phrase}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ index\ of\ first\ word\ in\ phrase}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ngram_meta_data_aa31eed3ea4de99eb9cee2faf37c7cec0}{first\_word\_index\_in\_phrase\_word\_indices}};\ \textcolor{comment}{//\ index\ of\ first\ phrase-\/word\ in\ this\ ngram}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_meta_data_a33508a90429aeabfb35f8770de433396}{raw\_file\_exists}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_meta_data_a6134d00f58886a2c849599de23e164d5}{has\_sent\_start}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_meta_data_abbb2ad49090cfa70845e04ad9780f702}{has\_sent\_end}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ index\ of\ this\ ngram\ in\ the\ phrase}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ngram_meta_data_a35ae3e833200f896cd5ba80685c97382}{ngram\_index}};}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_ngram_phrase_meta_data}{NgramPhraseMetaData}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a4601ff03f04d630ca07365045280a330}{NgramPhraseMetaData}}()}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ :\mbox{\hyperlink{struct_ngram_phrase_meta_data_a3ae48bbedb320f4dbae1c8a55af7ee82}{config\_path}}(QString())}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_aade19a002b6c499a4881f0d2cb81dd9c}{raw\_ngram\_root\_dir}}(QDir())}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_ac0fe44327ae96791705ab49ce13d6a7b}{phrase\_dir}}(QDir())}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_aa37e3979b4db6f905fa6660c6d937315}{phrase\_tokens}}(\ QList<int>())}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_a5f8d53afb098f95e3d99df8b9f0c0208}{phrase\_word\_lengths}}(QList<int>())}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_ae2220f03a6042b9a82b5621aaa24d5c9}{ngram\_token\_lengths}}(QList<int>())}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_af57939e637a546005fd5c4ec2ae60c86}{ngram\_lengths}}(QList<int>())}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_a6fdf8e48db507cb8eba561eae6892a29}{phrase\_ngram\_filenames}}(QList<QString>())}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_a7f98332038fcf02949de7176ceb229ab}{raw\_ngram\_filenames}}(QList<QString>())}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_a139e1d01afc30123bdd83536b28973f3}{has\_sent\_start}}(false)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_a5dd68759b280597b21580e8d8b7d68bf}{has\_sent\_end}}(false)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{struct_ngram_phrase_meta_data_ac4ead07305c92e0066cf9614c6830cc5}{ngram\_meta\_data}}(QList<\mbox{\hyperlink{class_ngram_meta_data}{NgramMetaData}}>())}
+\DoxyCodeLine{00062\ \ \ \ \ \{\}}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a774e01cf1f29439bc8dc9add27d06cb8}{\string~NgramPhraseMetaData}}()\{\}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00065\ \ \ \ \ QString\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a3ae48bbedb320f4dbae1c8a55af7ee82}{config\_path}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00067\ \ \ \ \ QDir\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_aade19a002b6c499a4881f0d2cb81dd9c}{raw\_ngram\_root\_dir}};\ \textcolor{comment}{//\ raw\ files\ opnly\ ever\ read}}
+\DoxyCodeLine{00068\ \ \ \ \ QDir\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_ac0fe44327ae96791705ab49ce13d6a7b}{phrase\_dir}};\ \textcolor{comment}{//\ local\ files\ can\ save\ an\ dread}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ define\ word\ lengths,\ or\ tags,\ -\/1\ ==\ S,\ -\/2\ ==E\ and\ must\ be\ at\ start,\ end}}
+\DoxyCodeLine{00070\ \ \ \ \ QList<int>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_aa37e3979b4db6f905fa6660c6d937315}{phrase\_tokens}};}
+\DoxyCodeLine{00071\ \ \ \ \ QList<int>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a5f8d53afb098f95e3d99df8b9f0c0208}{phrase\_word\_lengths}};}
+\DoxyCodeLine{00072\ \ \ \ \ QList<int>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_ae2220f03a6042b9a82b5621aaa24d5c9}{ngram\_token\_lengths}};}
+\DoxyCodeLine{00073\ \ \ \ \ QList<int>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_af57939e637a546005fd5c4ec2ae60c86}{ngram\_lengths}};}
+\DoxyCodeLine{00074\ \ \ \ \ QList<QString>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a6fdf8e48db507cb8eba561eae6892a29}{phrase\_ngram\_filenames}};}
+\DoxyCodeLine{00075\ \ \ \ \ QList<QString>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a7f98332038fcf02949de7176ceb229ab}{raw\_ngram\_filenames}};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a139e1d01afc30123bdd83536b28973f3}{has\_sent\_start}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_a5dd68759b280597b21580e8d8b7d68bf}{has\_sent\_end}};}
+\DoxyCodeLine{00078\ \ \ \ \ QList<NgramMetaData>\ \mbox{\hyperlink{struct_ngram_phrase_meta_data_ac4ead07305c92e0066cf9614c6830cc5}{ngram\_meta\_data}};}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NGRAMMETADATA\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+
+/////////////////////////////////////////////////////////////////////////////
+//    LPCribAssist v0.1: to help with cribbing the Liber Primus
+//    mortlach
+//
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+/////////////////////////////////////////////////////////////////////////////
+#ifndef BASEDATA_H
+#define BASEDATA_H
+
+#include <QList>
+
+// TODO add data to here where you can
+
+class BaseData
+{
+public:
+    BaseData();
+    /*!
+     * \brief chosen
+     */
+    QList<bool> chosen;
+    /*!
+     * \brief counts
+     */
+    QList<unsigned long long> counts;
+    /*!
+     * \brief chosen
+     */
+    // QList<bool> chosen;
+    /*!
+     * \brief count of true in chosen
+     */
+    unsigned int chosen_count;
+    /*!
+     * \brief count of false in chosen
+     */
+    unsigned int not_chosen_count;
+};
+
+#endif // BASEDATA_H

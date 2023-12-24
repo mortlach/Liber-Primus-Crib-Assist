@@ -1,0 +1,77 @@
+\doxysection{wordtab.\+h}
+\hypertarget{wordtab_8h_source}{}\label{wordtab_8h_source}\index{source/view/wordtab.h@{source/view/wordtab.h}}
+\mbox{\hyperlink{wordtab_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WORDTAB\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WORDTAB\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QItemSelectionModel>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{raw1grammodel_8h}{raw1grammodel.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{raw1grams_8h}{raw1grams.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngramdatahub_8h}{ngramdatahub.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{filtermodel_8h}{filtermodel.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
+\DoxyCodeLine{00013\ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_word_tab}{WordTab}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_word_tab_a38a061d219b7b937805ea6f006a2abac}{\string~WordTab}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a826b227020de173292979787586e0043}{setWordListGeneralLabel}}(\textcolor{keyword}{const}\ QString\&\ text);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_accae1af97a3b93e297385c2d528cdb9a}{clear}}()\{\ model.\mbox{\hyperlink{class_raw1_gram_model_a84dcb3746613c98cb36d9bbd0a7a7a01}{clear}}();\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ signals:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_aea1b12928553d04de19ac28b42632e9b}{message}}(\textcolor{keyword}{const}\ QString\&\ str);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a72a581fb7b77039777470b9879902fb5}{on\_tableView\_customContextMenuRequested}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_ad93b97c0c9915cc30cda5d5965fd9279}{on\_tableView\_left\_doubleclick\_sig}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_af7e5489414a0e16892b78faccc6184c6}{on\_tableView\_space\_bar\_sig}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_af1176621bebd19a6b3777ff85d8ef1d9}{update}}();\ \textcolor{comment}{//\ main\ update\ function}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a7bdae8bd47524cfe1b7a5eb42d0abd60}{updateLabel}}();\ \textcolor{comment}{//\ main\ update\ function}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_ad159992b6b3d3549a4108820c7e19540}{updateTable}}();\ \textcolor{comment}{//\ main\ update\ function}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a1bf7d9a350f0ace887fc7bb60420963c}{on\_newDataChosen}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_ae29c897e0217a322e7fe5e1d686ff6b3}{on\_loadData}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a73666cfe530b59d834f3b94a1206cd99}{on\_saveData}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a1105fe1f346d61aca208aa4974a046c1}{on\_saveAllData}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_adefa8081fe18be432a650cc8a3e3775a}{on\_deleteData}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a92ff4c1fcaf6d31bdf36a0c618468480}{on\_findData}}(\textcolor{keyword}{const}\ QString\&\ find\_string);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tab_a012cddd87486b70421edd25f42469587}{on\_changeFilter}}(\textcolor{keywordtype}{int}\ filter\_num);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ set\ word\ data}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ setNewWordData(\textcolor{keywordtype}{int}\ word\_length);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ applyFilter(\textcolor{keywordtype}{int}\ a);}
+\DoxyCodeLine{00052\ \ \ \ \ Ui::WordTab\ *ui;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ eventuially\ will\ need\ a\ version\ of\ all\ of\ these}}
+\DoxyCodeLine{00054\ \ \ \ \ QItemSelectionModel*\ onegram\_selectionmodel;}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_filter_model}{FilterModel}}*\ onegram\_sortfilterproxymodel;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_raw1_gram_model}{Raw1GramModel}}\ model;}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_ngram_data_hub}{NgramDataHub}}\ data\_hub;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_raw1_grams}{Raw1Grams}}\ *\ \textcolor{keyword}{const}\ raw\_1grams\_ptr;}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}*\ current\_raw\_1grams\_ptr;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ current\_word\_length;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ current\_word\_index;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{enum}\ Constants}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ all\_filter\ =\ 0,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ chosen\_filter\ =\ 1,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ not\_chosen\_filter\ =\ 2}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WORDTAB\_H}}
+
+\end{DoxyCode}
