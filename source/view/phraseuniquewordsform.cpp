@@ -45,6 +45,7 @@ PhraseUniqueWordsForm::PhraseUniqueWordsForm(QWidget *parent)
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::deleteData,this, &PhraseUniqueWordsForm::on_deleteData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::findData,this, &PhraseUniqueWordsForm::on_findData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &PhraseUniqueWordsForm::on_saveAllData);
+    QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &PhraseUniqueWordsForm::on_changeFontSize);
 
     QObject::connect(ui->wordList_general_controls,
                      &WordListGeneralControlsForm::changeFilter,
@@ -74,6 +75,12 @@ PhraseUniqueWordsForm::~PhraseUniqueWordsForm()
 {
     delete ui;
 }
+
+void PhraseUniqueWordsForm::on_changeFontSize(int fs){
+    ui->tableView->changeFontSize(fs);
+    ui->tableView->resizeColumnsToContents();
+}
+
 
 void PhraseUniqueWordsForm::setPUW(QList<PhraseUniqueWords*>& ptr)
 {

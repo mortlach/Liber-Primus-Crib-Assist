@@ -17,6 +17,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 #include "gng_tableview.h"
+#include "utilities.h"
 #include <QObject>
 #include <QHeaderView>
 #include <QApplication>
@@ -49,6 +50,12 @@ bool GNGTableView::eventFilter(QObject *obj, QEvent *event)
 {   // see  OneGramTableView::eventFilter
     return QTableView::eventFilter(obj, event);
 }
+
+void GNGTableView::changeFontSize(int fs){
+    setFont(utilities::getFont(fs));
+}
+
+
 void GNGTableView::keyPressEvent(QKeyEvent *event)
 {
     if( (event->key() == Qt::Key_Space)

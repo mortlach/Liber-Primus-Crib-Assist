@@ -29,6 +29,13 @@ WordListGeneralControlsForm::WordListGeneralControlsForm(QWidget *parent, int da
     ui->setupUi(this);
     setup(min_index, data_count);
 
+    for(int i = 8; i < 21; ++i){
+        QString t = QString::number(i);
+        QVariant v = QVariant(i);
+        ui->fontSizeComboBox->addItem(t, v);
+    }
+
+
     QObject::connect(ui->allRadioButton,
                      &QRadioButton::toggled,
                      this,
@@ -81,7 +88,6 @@ void WordListGeneralControlsForm::on_filterChanged(){
     }
 }
 
-
 void WordListGeneralControlsForm::on_loadPushButton_clicked() {
     qDebug() << "on_loadPushButton_clicked";
     emit loadData();
@@ -105,7 +111,11 @@ void WordListGeneralControlsForm::on_dataChoiceHorizontalScrollBar_valueChanged(
     //ui->dataComboBox->setCurrentIndex(next_index);
     emit newDataChosen(next_index);
 }
-
+void WordListGeneralControlsForm::on_fontSizeComboBox_currentIndexChanged(int i){
+    qDebug() << "on_fontSizeComboBox_currentTextChanged" << ui->fontSizeComboBox->currentData();
+    QVariant nf = ui->fontSizeComboBox->currentData();
+    emit newFontSizeChosen(nf.toInt());
+}
 void WordListGeneralControlsForm::on_updateChosenNotChosen(unsigned int chosen_count,unsigned int not_chosen_count){
     //qDebug() << "on_updateChosenNotChosen" << chosen_count << "/" << not_chosen_count;
     QString newtext = QString::number(chosen_count);

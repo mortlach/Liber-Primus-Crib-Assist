@@ -43,8 +43,8 @@ void printSettings(const QSettings& settings){
     //TODO Write
 }
 //
-QFont getFont(){
-    QFont font("Courier New",9);
+QFont getFont(int fs ){
+    QFont font("Courier New",fs);
     font.setStyleHint(QFont::Monospace);
     return font;
 }

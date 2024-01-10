@@ -86,6 +86,10 @@ MainWindow::MainWindow(QSettings& settings_in, QWidget *parent)
     // menu actions
     QObject::connect(ui->actionLoad_Phrase, &QAction::triggered,this, &MainWindow::openPhrase);
     QObject::connect(ui->actionClear_Phrase, &QAction::triggered,this, &MainWindow::clearPhrase);
+
+
+
+
     // handy ref
     auto& pt = ui->puw_tab->ui->ngram_puw_rationlize;
     auto& nt = ui->ngram_tab->ui->ngram_puw_rationlize;

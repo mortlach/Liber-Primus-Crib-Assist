@@ -58,6 +58,7 @@ public slots:
     void on_deleteData();
     void on_findData(const QString& find_string);
     void on_changeFilter(int filter_num);
+    void on_changeFontSize(int fs);
 
     friend class MainWindow;
     friend class WordListGeneralControlsForm;

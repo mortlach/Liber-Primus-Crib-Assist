@@ -42,6 +42,11 @@ public: signals:
     void ctrl_c_sig();
     void left_doubleclick_sig();
 
+
+public slots:
+    void changeFontSize(int fs);
+
+
 protected:
     void keyPressEvent(QKeyEvent *event);
     void mouseDoubleClickEvent( QMouseEvent *event);

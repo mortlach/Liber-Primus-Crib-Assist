@@ -48,9 +48,10 @@ WordTab::WordTab(QWidget *parent)
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::deleteData,this, &WordTab::on_deleteData);
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::findData,this, &WordTab::on_findData);
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &WordTab::on_saveAllData);
-        QObject::connect(ui->wordList_general_controls,
-                         &WordListGeneralControlsForm::changeFilter,this,
-                         &WordTab::on_changeFilter);
+        QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::changeFilter,this,&WordTab::on_changeFilter);
+        QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &WordTab::on_changeFontSize);
+
+
         auto* anyLayout = new QVBoxLayout();
         anyLayout->addWidget(new QLabel("Some Text in Section", ui->spoiler));
         anyLayout->addWidget(new QPushButton("Button in Section", ui->spoiler));
@@ -69,8 +70,14 @@ WordTab::~WordTab()
 {
     delete ui;
 }
+
+void WordTab::on_changeFontSize(int fs){
+    ui->tableView->changeFontSize(fs);
+    ui->tableView->resizeColumnsToContents();
+}
+
 //
-void  WordTab::setNewWordData(int word_length_minus_one){
+void WordTab::setNewWordData(int word_length_minus_one){
     qDebug() << "\nWordTab::setNewWordData" << word_length_minus_one;
     if( word_length_minus_one < raw_1grams_ptr->raw_word_data.size() ){
         current_word_length = word_length_minus_one+1;

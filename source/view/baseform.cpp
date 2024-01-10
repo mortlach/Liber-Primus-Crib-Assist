@@ -21,9 +21,13 @@
 
 BaseForm::BaseForm(int chosen_col, QWidget *parent)
     : QWidget(parent)
-    , my_sortfilterproxymodel(new FilterModel(chosen_col)){
+    , my_sortfilterproxymodel(new FilterModel(chosen_col))
+{
 }
 
+// void BaseForm::on_changeFontSize(int fs){
+//     //tableView->changeFontSize(fs);
+// }
 
 void BaseForm::on_tableView_customContextMenuRequested(){
     //qDebug() << pt.x() << pt.y();

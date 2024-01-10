@@ -37,6 +37,9 @@ NGramDataForm::NGramDataForm(QWidget *parent)
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::findData,this, &NGramDataForm::on_findData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &NGramDataForm::on_saveAllData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::changeFilter,this, &NGramDataForm::on_changeFilter);
+    QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &NGramDataForm::on_changeFontSize);
+
+
     my_sortfilterproxymodel->setSourceModel(&model);
     ngram_selectionmodel->setModel(my_sortfilterproxymodel);
     ui->tableView->setModel(my_sortfilterproxymodel);
@@ -51,6 +54,12 @@ void NGramDataForm::on_changeFilter(int filter_num){
 NGramDataForm::~NGramDataForm(){
     delete ui;
 }
+
+void NGramDataForm::on_changeFontSize(int fs){
+    ui->tableView->changeFontSize(fs);
+    ui->tableView->resizeColumnsToContents();
+}
+
 
 void NGramDataForm::setNgramChosenCounts(const QList<int>& counts){
     //qDebug() << "NGramDataForm::setNgramChosenCounts";
