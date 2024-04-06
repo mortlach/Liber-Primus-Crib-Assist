@@ -160,28 +160,14 @@ void WordTab::on_tableView_delete_sig(){
     bool add_row = true;
     int new_selected_row = 0;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
-        //qDebug() << "row/col" << index.row() << "/" << index.column();
         to_delete.push_back(onegram_sortfilterproxymodel->mapToSource(index));
-//        if(add_row){
-//            new_selection = index;
-//            qDebug() << new_selection.row();
-//            if(new_selection.row() > 0){
-//                new_selected_row = new_selection.row()-1;
-//            }
-//            add_row = false;
-//        }
-//    }
-//    if(onegram_sortfilterproxymodel->filter_mode == QString("all") ){
-//    }
-//    else{
-//        ui->tableView->selectRow(new_selected_row);
     }
     new_selected_row = model.deleteSelected(to_delete);
+    qDebug() << "WordTab::on_tableView_delete_sig new_selected_row = " << new_selected_row;
     update();
-    ui->tableView->selectRow(new_selected_row);
-//    // set  a selected row
-//    const QModelIndex &index;
-//    ui->tableView->selectionModel()->setCurrentIndex(1, QItemSelectionModel::Select);
+    // set the new selected row to be one above the
+    const QModelIndex new_index = ui->tableView->model()->index(new_selected_row,0);
+    ui->tableView->selectionModel()->setCurrentIndex(new_index, QItemSelectionModel::Rows |QItemSelectionModel::Select);
 }
 //
 void WordTab::on_tableView_space_bar_sig(){
