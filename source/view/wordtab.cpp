@@ -158,11 +158,23 @@ void WordTab::on_tableView_delete_sig(){
     QModelIndexList to_delete;
     QModelIndex new_selection;
     bool add_row = true;
-    int new_selected_row = 0;
+    int new_selected_row = 9999999;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
         to_delete.push_back(onegram_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+            new_selected_row = index.row() - 1;
+        }
     }
-    new_selected_row = model.deleteSelected(to_delete);
+    //new_selected_row = model.deleteSelected(to_delete);
+    model.deleteSelected(to_delete);
+
+    if(new_selected_row >= model.rowCount()){
+        new_selected_row = model.rowCount() - 1;
+    }
+    if(new_selected_row < 0 ){
+        new_selected_row = 0;
+    }
+
     qDebug() << "WordTab::on_tableView_delete_sig new_selected_row = " << new_selected_row;
     update();
     // set the new selected row to be one above the
