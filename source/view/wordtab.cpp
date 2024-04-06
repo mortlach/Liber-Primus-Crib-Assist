@@ -50,6 +50,7 @@ WordTab::WordTab(QWidget *parent)
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &WordTab::on_saveAllData);
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::changeFilter,this,&WordTab::on_changeFilter);
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &WordTab::on_changeFontSize);
+        //QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &WordTab::on_changeFontSize);
 
 
         auto* anyLayout = new QVBoxLayout();
@@ -150,6 +151,37 @@ void WordTab::updateLabel(){
 //
 void WordTab::updateTable(){
     ui->tableView->update();
+}
+//
+void WordTab::on_tableView_delete_sig(){
+    qDebug() << "WordTab::on_tableView_delete_sig";
+    QModelIndexList to_delete;
+    QModelIndex new_selection;
+    bool add_row = true;
+    int new_selected_row = 0;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_delete.push_back(onegram_sortfilterproxymodel->mapToSource(index));
+//        if(add_row){
+//            new_selection = index;
+//            qDebug() << new_selection.row();
+//            if(new_selection.row() > 0){
+//                new_selected_row = new_selection.row()-1;
+//            }
+//            add_row = false;
+//        }
+//    }
+//    if(onegram_sortfilterproxymodel->filter_mode == QString("all") ){
+//    }
+//    else{
+//        ui->tableView->selectRow(new_selected_row);
+    }
+    new_selected_row = model.deleteSelected(to_delete);
+    update();
+    ui->tableView->selectRow(new_selected_row);
+//    // set  a selected row
+//    const QModelIndex &index;
+//    ui->tableView->selectionModel()->setCurrentIndex(1, QItemSelectionModel::Select);
 }
 //
 void WordTab::on_tableView_space_bar_sig(){

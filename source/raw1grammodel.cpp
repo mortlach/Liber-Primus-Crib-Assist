@@ -124,6 +124,20 @@ void Raw1GramModel::toggleChosen(const QModelIndexList&rows){
         emit dataChanged(index(in.row(), chosen_col),index(in.row(), chosen_col));
     }
 }
+int Raw1GramModel::deleteSelected(const QModelIndexList&rows){
+    beginResetModel();
+    qDebug() << "Raw1GramModel::deleteSelected";
+    //do all in one go
+    QList<int> to_delete;
+    for(const QModelIndex &in: rows){
+        to_delete.append(in.row());
+    }
+    int new_selection = raw_data->deleteItems(to_delete);
+    //emit dataChanged(index(in.row(), chosen_col),index(in.row(), chosen_col));
+    endResetModel();
+    return new_selection;
+}
+
 Qt::ItemFlags Raw1GramModel::flags(const QModelIndex&){
     return Qt::ItemIsSelectable | Qt::ItemIsEnabled  | Qt::ItemIsEditable;
 }

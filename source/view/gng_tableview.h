@@ -40,6 +40,7 @@ public: signals:
     void alt_c_sig();
     void alt_n_sig();
     void ctrl_c_sig();
+    void delete_sig();
     void left_doubleclick_sig();
 
 

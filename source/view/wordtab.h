@@ -48,6 +48,7 @@ public slots:
     void on_tableView_customContextMenuRequested();
     void on_tableView_left_doubleclick_sig();
     void on_tableView_space_bar_sig();
+    void on_tableView_delete_sig();
     void update(); // main update function
     void updateLabel(); // main update function
     void updateTable(); // main update function

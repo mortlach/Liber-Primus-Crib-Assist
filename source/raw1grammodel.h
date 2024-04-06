@@ -60,7 +60,11 @@ public:
     bool getChosen(int row)const;
     void setChosen(const QModelIndexList &rows);
     void setNotChosen(const QModelIndexList &rows);
+    //  PERMANENTLY delete selected items
+    int deleteSelected(const QModelIndexList &rows);
+
     // required for editable table
+
     using QAbstractTableModel::flags;
     Qt::ItemFlags flags(const QModelIndex &index);
 
