@@ -46,6 +46,12 @@ bool NgramData::setChosenDataFromRaw(){
     qDebug() << "NgramData::setChosenDataFromRaw";
     // these lists need setting based on the entires in the 1-grams data
     auto raw1grams = Raw1Grams();
+    auto raw1grams2 = Raw1Grams();
+
+    qDebug() << raw1grams.raw_word_data.size();
+    qDebug() << raw1grams2.raw_word_data.size();
+
+
     for(int index = 0; index < my_ngram_meta_data.ngram_length; ++index){
         int int_word_length = my_ngram_meta_data.ngram_tokens[index];
         qDebug() << "word_length =" << int_word_length;

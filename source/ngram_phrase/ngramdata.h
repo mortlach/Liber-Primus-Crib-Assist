@@ -232,14 +232,38 @@ public:
     inline bool isNotChosen(int i)const{ return getChosen(i) == false;}
     inline int getChosenCount()const{ return chosen_count;}
     void updateWordToIndex();
-    inline bool isChosen(const QString& word)const{
-        int i = word_to_index.value(word,-1);
-        if(i<0){
-            //qDebug() << "Warning/ERROR passed word that does nto exist in my data:" << word;
-            return false;
+//    inline bool isChosen(const QString& word)const{
+//        int i = word_to_index.value(word,-1);
+//        if(i<0){
+//            //qDebug() << "Warning/ERROR passed word that does nto exist in my data:" << word;
+//            return false;
+//        }
+//        return isChosen(i);
+//    }
+    inline int deleteItems(QList<int>& items){
+        // remove items in reverse order, first sort descending
+        std::sort(items.begin(), items.end(), std::greater<int>());
+        for (auto& i : items) {
+            qDebug() << "NgramData::deleteItems" << i;
+            words.remove(i);
+            counts.remove(i);
+            ngram_string.remove(i);
+            chosen.remove(i);
+            chosen_by_word.remove(i);
         }
-        return isChosen(i);
+        qDebug() << "REM finished ";
+        words.squeeze();
+        counts.squeeze();
+        chosen.squeeze();
+        ngram_string.squeeze();
+        chosen_by_word.squeeze();
+        updateChosenCounts();
+        // return new row index to be selected after delete
+        int new_selection = items.last();
+        qDebug() << "Del finished ";
+        return new_selection;
     }
+
 };
 
 #endif // NGRAMDATA_H

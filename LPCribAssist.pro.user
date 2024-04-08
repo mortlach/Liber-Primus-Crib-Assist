@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 11.0.1, 2024-04-08T12:04:50. -->
+<!-- Written by QtCreator 11.0.1, 2024-04-08T13:25:16. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -238,12 +238,13 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/sjduk/OneDrive/Documents/Liber-Primus-Crib-Assist/LPCribAssist.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/sjduk/OneDrive/Documents/Liber-Primus-Crib-Assist/LPCribAssist.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">LPCribAssist2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/sjduk/OneDrive/Documents/github/Liber-Primus-Crib-Assist/LPCribAssist.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/sjduk/OneDrive/Documents/github/Liber-Primus-Crib-Assist/LPCribAssist.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/sjduk/OneDrive/Documents/Liber-Primus-Crib-Assist/bin</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/sjduk/OneDrive/Documents/github/Liber-Primus-Crib-Assist/bin</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

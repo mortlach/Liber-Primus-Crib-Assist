@@ -29,7 +29,7 @@
 #include <QHash>
 #include "basedata.h"
 
-// TODO Rename ton RAW1grams or something
+// TODO Rename to RAW1grams or something
 class RawWordData : public QObject, public BaseData
 {
 #ifdef QT_SIG
@@ -194,9 +194,7 @@ public:
         gematria_sum.squeeze();
         updateChosenCounts();
         // return new row index to be selected after delete
-        int new_selection = items.last() - 1;
-        if(new_selection  < 0)
-            new_selection =0;
+        int new_selection = items.last();
         return new_selection;
     }
 

@@ -201,18 +201,18 @@ public:
         for (auto& i : items) {
             qDebug() << "PhraseUniqueWords::deleteItems" << i;
             words.remove(i);
-//            counts.remove(i);
-//            chosen.remove(i);
+            total_counts_in_all_ngrams.remove(i);
+            chosen.remove(i);
+            ngrams_with_this_word.remove(i);
         }
         qDebug() << "REM finished ";
         words.squeeze();
-        counts.squeeze();
+        total_counts_in_all_ngrams.squeeze();
         chosen.squeeze();
+        ngrams_with_this_word.squeeze();
         updateChosenCounts();
         // return new row index to be selected after delete
-        int new_selection = items.last() - 1;
-        if(new_selection  < 0)
-            new_selection =0;
+        int new_selection = items.last();
         qDebug() << "Del finished ";
         return new_selection;
     }
