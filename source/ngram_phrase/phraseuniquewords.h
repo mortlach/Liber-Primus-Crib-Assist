@@ -195,6 +195,28 @@ public:
         }
         return isChosen(i);
     }
+    inline int deleteItems(QList<int>& items){
+        // remove items in reverse order, first sort descending
+        std::sort(items.begin(), items.end(), std::greater<int>());
+        for (auto& i : items) {
+            qDebug() << "PhraseUniqueWords::deleteItems" << i;
+            words.remove(i);
+//            counts.remove(i);
+//            chosen.remove(i);
+        }
+        qDebug() << "REM finished ";
+        words.squeeze();
+        counts.squeeze();
+        chosen.squeeze();
+        updateChosenCounts();
+        // return new row index to be selected after delete
+        int new_selection = items.last() - 1;
+        if(new_selection  < 0)
+            new_selection =0;
+        qDebug() << "Del finished ";
+        return new_selection;
+    }
+
 
 };
 

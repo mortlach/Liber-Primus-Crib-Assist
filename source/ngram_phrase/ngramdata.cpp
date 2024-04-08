@@ -281,6 +281,9 @@ bool NgramData::load(bool default_location){
         setFromAnyDataNoChosen(data,
                                my_ngram_meta_data.has_sent_start,
                                my_ngram_meta_data.has_sent_end);
+
+        setChosenDataFromRaw();
+
         if(my_ngram_meta_data.has_sent_start){
             my_ngram_meta_data.ngram_length -= 1;
             //ngram_length=ngram_data->ngram_length;
@@ -431,7 +434,7 @@ bool NgramData::setFromAnyDataNoChosen(VVAny& raw_data,
         }
         counts.push_back(std::any_cast<unsigned long long>(*it));
         // based on start end tags remove items
-        QList<QString> t;
+        //QList<QString> t;
         if(has_sent_start ){
             int sss = next_words.size();
             next_words.takeFirst();
