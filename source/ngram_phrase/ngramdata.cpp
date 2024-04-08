@@ -49,15 +49,18 @@ bool NgramData::setChosenDataFromRaw(){
     for(int index = 0; index < my_ngram_meta_data.ngram_length; ++index){
         int int_word_length = my_ngram_meta_data.ngram_tokens[index];
         qDebug() << "word_length =" << int_word_length;
-        const RawWordData& rawworddataptr = raw1grams.getRawWordDataRef(int_word_length);
-        for(int row = 0; row < words.size(); ++row){
-            QString & next_word = words[row][index];
-            bool & c = chosen_by_word[row][index];
-            c = rawworddataptr.isChosen(next_word);
-            if(c == false){
-                //qDebug() << words[row][index] << "chosen" << chosen_by_word[row][index];
-                //chosen.replace(row, false);
-                chosen[row] = false;
+        // word length can be -1 to handle START and END tags (!)  // TODO
+        if(int_word_length > 0){
+            const RawWordData& rawworddataptr = raw1grams.getRawWordDataRef(int_word_length);
+            for(int row = 0; row < words.size(); ++row){
+                QString & next_word = words[row][index];
+                bool & c = chosen_by_word[row][index];
+                c = rawworddataptr.isChosen(next_word);
+                if(c == false){
+                    //qDebug() << words[row][index] << "chosen" << chosen_by_word[row][index];
+                    //chosen.replace(row, false);
+                    chosen[row] = false;
+                }
             }
         }
     }
