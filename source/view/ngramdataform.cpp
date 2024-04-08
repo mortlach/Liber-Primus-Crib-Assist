@@ -225,6 +225,7 @@ void NGramDataForm::on_tableView_left_doubleclick_sig(){
         to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
     }
     model.toggleChosen(to_toggle);
+    model.toggleNgramChosen(to_toggle);
     update();
 }
 

@@ -109,9 +109,14 @@ public:
      */
     QList<QString> ngram_string; // each ngram as a single string (for display purposes) TODO RENAME
     /*!
-     * \brief word_chosen
+     * \brief chosen_by_word,
+     *  each word in each ngram can be individual chosen / not chosen
      */
-    QList<QList<bool>> chosen_by_word; //previously word_chosen; // each word in each ngram can be individual chosen / not chosen
+    QList<QList<bool>> chosen_by_word;
+    /*!
+     * \brief ngram_chosen, flag to choose entire ngram
+     */
+    QList<bool> ngram_chosen;
     /*!
      * \brief words
      */
@@ -227,6 +232,11 @@ public:
         chosen.replace(i, !chosen.at(i));
         updateChosenCounts();
     }
+    inline void toggleNgramChosen(int i){
+        Q_ASSERT( i < ngram_chosen.size() );
+        ngram_chosen.replace(i, !ngram_chosen.at(i));
+    }
+
     inline size_t size(){ return chosen.size(); }
     inline bool isChosen(int i)const{ return getChosen(i);}
     inline bool isNotChosen(int i)const{ return getChosen(i) == false;}

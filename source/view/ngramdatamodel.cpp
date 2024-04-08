@@ -139,6 +139,13 @@ void NGramDataModel::toggleChosen(const QModelIndexList&rows){
         emit dataChanged(index(in.row(), chosen_col),index(in.row(), chosen_col));
     }
 }
+void NGramDataModel::toggleNgramChosen(const QModelIndexList&rows){
+    for(const QModelIndex &in: rows){
+        raw_data->toggleNgramChosen(in.row());
+        emit dataChanged(index(in.row(), chosen_col),index(in.row(), chosen_col));
+    }
+}
+
 
 
 int NGramDataModel::deleteSelected(const QModelIndexList&rows){
