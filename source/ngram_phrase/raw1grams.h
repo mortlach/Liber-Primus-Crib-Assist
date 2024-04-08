@@ -119,6 +119,7 @@ public:
     const RawWordData& getRawWordDataRef(int word_len)const{
         // todo what if passed bad value ?
         if(word_len <= raw_word_data.size()){
+            qDebug() << "word_len-1=" << word_len- 1 << "/ raw_word_data.size()=" << raw_word_data.size();
             return *raw_word_data.at(word_len-1);
         }
         else{
