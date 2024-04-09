@@ -14,7 +14,7 @@ var searchData=
   ['getcurrentngramdataref_11',['getCurrentNgramDataRef',['../class_ngram_phrase.html#ab4de22cc5216dd556a847b0d91b7b52d',1,'NgramPhrase']]],
   ['getdirectory_12',['getDirectory',['../namespaceutilities.html#af3cebec3a6cedfeeeade17fcd661ea67',1,'utilities']]],
   ['getfilenameanddir_13',['getFileNameAndDir',['../namespaceutilities.html#a2fd16d0b729cdf0cb456b3bd3b800a4d',1,'utilities']]],
-  ['getfont_14',['getFont',['../namespaceutilities.html#a161c2681a44936d36b5a1c07fb31dc7a',1,'utilities']]],
+  ['getfont_14',['getFont',['../namespaceutilities.html#a442e45601f1493bf59de461db38c6233',1,'utilities']]],
   ['getfullpath_15',['getfullpath',['../namespaceutilities.html#a2e945d2ed944e5f41e3793b616c3e661',1,'utilities::getFullPath(const std::string &amp;directory, const std::string &amp;filename)'],['../namespaceutilities.html#a27e8066bddc76465fda036ba99cf1145',1,'utilities::getFullPath(const QString &amp;directory, const QString &amp;filename)']]],
   ['getngramchosencounts_16',['getNgramChosenCounts',['../class_ngram_phrase.html#ad7ab271ca9c5d1820ad36bb128d9ba0d',1,'NgramPhrase']]],
   ['getngramdataref_17',['getNgramDataRef',['../class_ngram_phrase.html#ac720e48acb882d6ad30f27af2aa90bee',1,'NgramPhrase']]],

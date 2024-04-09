@@ -2,54 +2,70 @@
 \hypertarget{raw1grams_8h_source}{}\label{raw1grams_8h_source}\index{source/ngram\_phrase/raw1grams.h@{source/ngram\_phrase/raw1grams.h}}
 \mbox{\hyperlink{raw1grams_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RAW1GRAMS\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RAW1GRAMS\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QSettings>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QDir>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMap>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rawworddata_8h}{rawworddata.h}}"{}}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_raw1_grams}{Raw1Grams}}\ :\ \textcolor{keyword}{public}\ QObject}
-\DoxyCodeLine{00012\ \{}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifdef\ QT\_SIG}}
-\DoxyCodeLine{00014\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ signals:}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ message(\textcolor{keyword}{const}\ QString\&\ str);}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ will\ just\ startup,\ use\ this\ for\ accessing\ this\ data\ in\ general}}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_raw1_grams_a2354c58e8361ce78ea68e4d9de75cef2}{Raw1Grams}}();}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ will\ laod\ data\ on\ instatntiation}}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_raw1_grams_a2354c58e8361ce78ea68e4d9de75cef2}{Raw1Grams}}(QSettings\&\ settings\_in);}
-\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_raw1_grams_a5c82644e01488c6b439353f5b0ff1988}{\string~Raw1Grams}}();}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a4f566742bfa5a65acb9bda0ef5d06cdf}{applySettingsAndLoad}}(QSettings\&\ settings\_in);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ QSettings*\ \mbox{\hyperlink{class_raw1_grams_ac86ab3575e226766c2628edcefe6424d}{settings}};}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}*\ \mbox{\hyperlink{class_raw1_grams_ae31d3c225d9452310e5787a3587e1101}{dummy\_model\_data}};}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ QList<RawWordData*>\ \mbox{\hyperlink{class_raw1_grams_ae1c5d191df3b8dbce727c005f65292b8}{raw\_word\_data}};}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{static}\ QList<RawWordData*>\ \mbox{\hyperlink{class_raw1_grams_a9d1c2dd0ecc3f90d2c71c9bb1aa21c1d}{phrase\_word\_data}};}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_ad33dff51ab2aebb6be8d53648ccba459}{loaded\_raw1gram\_files}};}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_aa6f4744d2cef89ecfaf23882951d3749}{loaded\_local1gram\_files}};}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a3e222c232a166d49fcf901d100941414}{loaded\_phrase\_local1gram\_files}};}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_raw1_grams_a58ece6a09604937d1f3e2b15695bd40f}{onegram\_file\_count}};}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_raw1_grams_a114c7c8adb3e4b6e918641e8dfe6a869}{setLocalDataFileDirectory}}();}
-\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ when\ new\ config\ is\ loaded\ /\ created\ run\ this}}
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a6c5907baf8b73c04fe950bb7b0776496}{newConfig}}();}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_aa69693798435c824c35030d0b5d11acf}{loadRaw1grams}}();}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a3814d1edf245952f4e8a69e9ff5909ed}{saveRaw1grams}}()\textcolor{keyword}{const};}
-\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}*\ \mbox{\hyperlink{class_raw1_grams_a238897535adf81cc12a4bc0421776233}{getRawWordData}}(\textcolor{keywordtype}{int}\ word\_len)\textcolor{keyword}{const}\{}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_raw1_grams_ae1c5d191df3b8dbce727c005f65292b8}{raw\_word\_data}}.at(word\_len-\/1);}
-\DoxyCodeLine{00095\ \ \ \ \ \}}
-\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}\&\ \mbox{\hyperlink{class_raw1_grams_a90136a26e374eb80e66c9a910e4d5f9d}{getRawWordDataRef}}(\textcolor{keywordtype}{int}\ word\_len)\textcolor{keyword}{const}\{}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_raw1_grams_ae1c5d191df3b8dbce727c005f65292b8}{raw\_word\_data}}.at(word\_len-\/1);}
-\DoxyCodeLine{00103\ \ \ \ \ \}}
-\DoxyCodeLine{00104\ }
-\DoxyCodeLine{00105\ \};}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RAW1GRAMS\_H}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ LPCribAssist\ v0.1:\ to\ help\ with\ cribbing\ the\ Liber\ Primus}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ mortlach}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ RAW1GRAMS\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ RAW1GRAMS\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QSettings>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rawworddata_8h}{rawworddata.h}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_raw1_grams}{Raw1Grams}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#ifdef\ QT\_SIG}}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ signals:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ message(\textcolor{keyword}{const}\ QString\&\ str);}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ will\ just\ startup,\ use\ this\ for\ accessing\ this\ data\ in\ general}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_raw1_grams_a2354c58e8361ce78ea68e4d9de75cef2}{Raw1Grams}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ will\ laod\ data\ on\ instatntiation}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_raw1_grams_a2354c58e8361ce78ea68e4d9de75cef2}{Raw1Grams}}(QSettings\&\ settings\_in);}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_raw1_grams_a5c82644e01488c6b439353f5b0ff1988}{\string~Raw1Grams}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a4f566742bfa5a65acb9bda0ef5d06cdf}{applySettingsAndLoad}}(QSettings\&\ settings\_in);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ QSettings*\ \mbox{\hyperlink{class_raw1_grams_ac86ab3575e226766c2628edcefe6424d}{settings}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}*\ \mbox{\hyperlink{class_raw1_grams_ae31d3c225d9452310e5787a3587e1101}{dummy\_model\_data}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ QList<RawWordData*>\ \mbox{\hyperlink{class_raw1_grams_ae1c5d191df3b8dbce727c005f65292b8}{raw\_word\_data}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ QList<RawWordData*>\ \mbox{\hyperlink{class_raw1_grams_a9d1c2dd0ecc3f90d2c71c9bb1aa21c1d}{phrase\_word\_data}};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_ad33dff51ab2aebb6be8d53648ccba459}{loaded\_raw1gram\_files}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_aa6f4744d2cef89ecfaf23882951d3749}{loaded\_local1gram\_files}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a3e222c232a166d49fcf901d100941414}{loaded\_phrase\_local1gram\_files}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_raw1_grams_a58ece6a09604937d1f3e2b15695bd40f}{onegram\_file\_count}};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_raw1_grams_a114c7c8adb3e4b6e918641e8dfe6a869}{setLocalDataFileDirectory}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ when\ new\ config\ is\ loaded\ /\ created\ run\ this}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a6c5907baf8b73c04fe950bb7b0776496}{newConfig}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_aa69693798435c824c35030d0b5d11acf}{loadRaw1grams}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_raw1_grams_a3814d1edf245952f4e8a69e9ff5909ed}{saveRaw1grams}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}*\ \mbox{\hyperlink{class_raw1_grams_a238897535adf81cc12a4bc0421776233}{getRawWordData}}(\textcolor{keywordtype}{int}\ word\_len)\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_raw1_grams_ae1c5d191df3b8dbce727c005f65292b8}{raw\_word\_data}}.at(word\_len-\/1);}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_raw_word_data}{RawWordData}}\&\ \mbox{\hyperlink{class_raw1_grams_a90136a26e374eb80e66c9a910e4d5f9d}{getRawWordDataRef}}(\textcolor{keywordtype}{int}\ word\_len)\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{class_raw1_grams_ae1c5d191df3b8dbce727c005f65292b8}{raw\_word\_data}}.at(word\_len-\/1);}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RAW1GRAMS\_H}}
 
 \end{DoxyCode}

@@ -9,11 +9,15 @@ var searchData=
   ['definitions_6',['definitions',['../namespacedefinitions.html',1,'']]],
   ['definitions_2ecpp_7',['definitions.cpp',['../definitions_8cpp.html',1,'']]],
   ['definitions_2eh_8',['definitions.h',['../definitions_8h.html',1,'']]],
-  ['deletedata_9',['deleteData',['../class_word_list_general_controls_form.html#a3b7d8eb6780949a1095b52ef5e676eda',1,'WordListGeneralControlsForm']]],
-  ['deletenotchosen_10',['deleteNotChosen',['../class_ngram_data.html#a5f28ef1ba3e10ab62200e5639fadbf39',1,'NgramData']]],
-  ['deletenotchosen2_11',['deletenotchosen2',['../class_phrase_unique_words.html#a104a433b4dfeaca0e36d1dcf96471e47',1,'PhraseUniqueWords::deleteNotChosen2()'],['../class_raw_word_data.html#adfbdb83aa6fb65e2aaed3d74e48b3b6a',1,'RawWordData::deleteNotChosen2()']]],
-  ['deletenotchosenngrams_12',['deleteNotChosenNgrams',['../class_ngram_p_u_w_rationlize_form.html#ae32b0a989e034a18f7fa7a3e2e9c7e88',1,'NgramPUWRationlizeForm']]],
-  ['double_5fquote_13',['DOUBLE_QUOTE',['../namespacedefinitions.html#a4b90ab01450a318b172b13709a02c3a3',1,'definitions']]],
-  ['drawcontrol_14',['drawControl',['../class_custom_tab_style.html#ac864d3b6d7435ef825d3f5c366ec9a6b',1,'CustomTabStyle']]],
-  ['dummy_5fmodel_5fdata_15',['dummy_model_data',['../class_raw1_grams.html#ae31d3c225d9452310e5787a3587e1101',1,'Raw1Grams']]]
+  ['delete_5fsig_9',['delete_sig',['../class_g_n_g_table_view.html#a3e2738fa89f7ae008aa299a24707eac7',1,'GNGTableView']]],
+  ['deletedata_10',['deleteData',['../class_word_list_general_controls_form.html#a3b7d8eb6780949a1095b52ef5e676eda',1,'WordListGeneralControlsForm']]],
+  ['deleteitem_11',['deleteItem',['../class_raw_word_data.html#a457114f58a0355f082f9c03677f74d3e',1,'RawWordData']]],
+  ['deleteitems_12',['deleteItems',['../class_raw_word_data.html#a87571f6c3f5908a4f1406c5702d487da',1,'RawWordData']]],
+  ['deletenotchosen_13',['deleteNotChosen',['../class_ngram_data.html#a5f28ef1ba3e10ab62200e5639fadbf39',1,'NgramData']]],
+  ['deletenotchosen2_14',['deletenotchosen2',['../class_phrase_unique_words.html#a104a433b4dfeaca0e36d1dcf96471e47',1,'PhraseUniqueWords::deleteNotChosen2()'],['../class_raw_word_data.html#adfbdb83aa6fb65e2aaed3d74e48b3b6a',1,'RawWordData::deleteNotChosen2()']]],
+  ['deletenotchosenngrams_15',['deleteNotChosenNgrams',['../class_ngram_p_u_w_rationlize_form.html#ae32b0a989e034a18f7fa7a3e2e9c7e88',1,'NgramPUWRationlizeForm']]],
+  ['deleteselected_16',['deleteSelected',['../class_raw1_gram_model.html#a405a0a0d70a9e2ce965e764f91138756',1,'Raw1GramModel']]],
+  ['double_5fquote_17',['DOUBLE_QUOTE',['../namespacedefinitions.html#a4b90ab01450a318b172b13709a02c3a3',1,'definitions']]],
+  ['drawcontrol_18',['drawControl',['../class_custom_tab_style.html#ac864d3b6d7435ef825d3f5c366ec9a6b',1,'CustomTabStyle']]],
+  ['dummy_5fmodel_5fdata_19',['dummy_model_data',['../class_raw1_grams.html#ae31d3c225d9452310e5787a3587e1101',1,'Raw1Grams']]]
 ];

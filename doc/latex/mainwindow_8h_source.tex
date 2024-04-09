@@ -2,79 +2,95 @@
 \hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{source/view/mainwindow.h@{source/view/mainwindow.h}}
 \mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QWidget>}}
-\DoxyCodeLine{00006\ \textcolor{comment}{//\#include\ <QFutureWatcher>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QTextEdit>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{wordtab_8h}{wordtab.h}}"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngramphraseworker_8h}{ngramphraseworker.h}}"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QThread>}}
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_worker_thread}{WorkerThread}}\ :\ \textcolor{keyword}{public}\ QThread}
-\DoxyCodeLine{00016\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_worker_thread_aa81689e8e7c26d3490f9b316e11fca76}{WorkerThread}}(QObject\ *parent)\{}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Q\_UNUSED(parent);}
-\DoxyCodeLine{00021\ \ \ \ \ \};}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_worker_thread_a5aa554e7d73f0f185a850ca0ef145d6d}{\string~WorkerThread}}()\{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isRunning())}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//requestInterruption();\ //\ Stop\ loop}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ wait();\ \textcolor{comment}{//\ Wait\ for\ return\ from\ run()}}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00028\ \ \ \ \ \}}
-\DoxyCodeLine{00029\ signals:}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_worker_thread_adee61ac03b0abccf27650fac4a47ad89}{debug}}(QString);}
-\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//void\ run()\ override;}}
-\DoxyCodeLine{00033\ \};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ QT\_BEGIN\_NAMESPACE}
-\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};\ \}}
-\DoxyCodeLine{00037\ QT\_END\_NAMESPACE}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
-\DoxyCodeLine{00040\ \{}
-\DoxyCodeLine{00041\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}(QSettings\&\ settings\_in,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ for\ prtinting\ to\ GUI,\ not\ used\ atm\ due\ to\ thread\ safety}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ QTextEdit\ *\ \mbox{\hyperlink{class_main_window_a6d55790fa11620521503b9b6976b9dcb}{s\_textEdit}};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{keyword}{public}\ slots:}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aed3c88a25b0d8655719ccd1e349ac976}{on\_newPhraseChosen}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_ngram_phrase_meta_data}{NgramPhraseMetaData}}\&\ data);}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9d40d71b85fa2cc860699e85cd13d6c9}{on\_saveNgramPhrases}}();}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ab311514017019cf44d023996a29781b0}{on\_rationalizeNgramData}}();}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad8ddf8816ce7822ea57b8f036f855c40}{on\_deleteNotChosenNgrams}}(Qt::CheckState\ state);}
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa5e78978efec11414ce7546101f2fe27}{on\_ShowAllPhrases}}();}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ab91bc6d09a310290b04d6c472bc82255}{openPhrase}}();}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_abe40b38516e501717830323422e4eb18}{clearPhrase}}();}
-\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4e20a4a065fbb0e4d3532a45a0a91425}{closeEvent}}\ (QCloseEvent\ *event);}
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a850a3238bd75b0808c1dfaa96a862025}{on\_puwHasPriority}}(\textcolor{keywordtype}{bool}\ puw\_has\_priority);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
-\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words_form}{PhraseUniqueWordsForm}};}
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}};}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00097\ \ \ \ \ Ui::MainWindow\ *ui;}
-\DoxyCodeLine{00101\ \ \ \ \ QSettings\&\ main\_settings;}
-\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ setGUIEnabled(\textcolor{keywordtype}{bool}\ enable);}
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ updateChosenPUWRunningTotals();}
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ updateChosenNgramRunningTotals();}
-\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGuiAfterLoadRawPhrase();}
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPhrase();}
-\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePUWNgramCOuntsEnable();}
-\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ showLPSentences();}
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{bool}\ busy;}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00137\ \};}
-\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ LPCribAssist\ v0.1:\ to\ help\ with\ cribbing\ the\ Liber\ Primus}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ mortlach}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\#include\ <QFutureWatcher>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QTextEdit>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{wordtab_8h}{wordtab.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ngramphraseworker_8h}{ngramphraseworker.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_worker_thread}{WorkerThread}}\ :\ \textcolor{keyword}{public}\ QThread}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_worker_thread_aa81689e8e7c26d3490f9b316e11fca76}{WorkerThread}}(QObject\ *parent)\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ Q\_UNUSED(parent);}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_worker_thread_a5aa554e7d73f0f185a850ca0ef145d6d}{\string~WorkerThread}}()\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isRunning())}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//requestInterruption();\ //\ Stop\ loop}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ wait();\ \textcolor{comment}{//\ Wait\ for\ return\ from\ run()}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ signals:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_worker_thread_adee61ac03b0abccf27650fac4a47ad89}{debug}}(QString);}
+\DoxyCodeLine{00049\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//void\ run()\ override;}}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00054\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};\ \}}
+\DoxyCodeLine{00055\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}(QSettings\&\ settings\_in,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ for\ prtinting\ to\ GUI,\ not\ used\ atm\ due\ to\ thread\ safety}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ QTextEdit\ *\ \mbox{\hyperlink{class_main_window_a6d55790fa11620521503b9b6976b9dcb}{s\_textEdit}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aed3c88a25b0d8655719ccd1e349ac976}{on\_newPhraseChosen}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_ngram_phrase_meta_data}{NgramPhraseMetaData}}\&\ data);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9d40d71b85fa2cc860699e85cd13d6c9}{on\_saveNgramPhrases}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ab311514017019cf44d023996a29781b0}{on\_rationalizeNgramData}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ad8ddf8816ce7822ea57b8f036f855c40}{on\_deleteNotChosenNgrams}}(Qt::CheckState\ state);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa5e78978efec11414ce7546101f2fe27}{on\_ShowAllPhrases}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ab91bc6d09a310290b04d6c472bc82255}{openPhrase}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_abe40b38516e501717830323422e4eb18}{clearPhrase}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4e20a4a065fbb0e4d3532a45a0a91425}{closeEvent}}\ (QCloseEvent\ *event);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a850a3238bd75b0808c1dfaa96a862025}{on\_puwHasPriority}}(\textcolor{keywordtype}{bool}\ puw\_has\_priority);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words_form}{PhraseUniqueWordsForm}};}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00115\ \ \ \ \ Ui::MainWindow\ *ui;}
+\DoxyCodeLine{00119\ \ \ \ \ QSettings\&\ main\_settings;}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ setGUIEnabled(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ updateChosenPUWRunningTotals();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ updateChosenNgramRunningTotals();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGuiAfterLoadRawPhrase();}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ connectPhrase();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePUWNgramCOuntsEnable();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ showLPSentences();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{bool}\ busy;}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \};}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
 
 \end{DoxyCode}

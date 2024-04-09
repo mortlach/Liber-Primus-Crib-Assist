@@ -2,58 +2,74 @@
 \hypertarget{ngrampuwrationlizeform_8h_source}{}\label{ngrampuwrationlizeform_8h_source}\index{source/view/ngrampuwrationlizeform.h@{source/view/ngrampuwrationlizeform.h}}
 \mbox{\hyperlink{ngrampuwrationlizeform_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NGRAMPUWRATIONLIZEFORM\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NGRAMPUWRATIONLIZEFORM\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}};}
-\DoxyCodeLine{00009\ \}}
-\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}}\ :\ \textcolor{keyword}{public}\ QWidget}
-\DoxyCodeLine{00014\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ab8d4b91bfd8139ff4d474afc539c8f5c}{\string~NgramPUWRationlizeForm}}();}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a17dcde2fa4caaf81481f765c48a67807}{setPUWCountLabel}}(\textcolor{keyword}{const}\ QList<int>\&\ counts);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a0f63ade9fab9878c63235fd7717c367b}{setNgramCountLabel}}(\textcolor{keyword}{const}\ QList<int>\&\ counts);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_afd0b1ade3cf20772969c1fae793b66bc}{setTotalPossiblePhrasesLabel}}(\textcolor{keyword}{const}\ QList<int>\&\ puw\_counts);}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_afd0b1ade3cf20772969c1fae793b66bc}{setTotalPossiblePhrasesLabel}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ count);}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a779addeb7bae5744f91f05a1a9fbc779}{isPUWPriority}}()\textcolor{keyword}{const};}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_afc7a0e9891485c167b66c8cc8c0a93e0}{isNgramPriority}}()\textcolor{keyword}{const};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ signals:}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a1b9cf578569bbd0150e7b11a0c5b9573}{saveNgramPhrases}}();}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a0699327656c31696dffd07f829175fba}{viewNgramPhrases}}();}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ac9ceddfeee0d623c1d58f2f04fcde65e}{rationalizeNgramData}}();}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ae32b0a989e034a18f7fa7a3e2e9c7e88}{deleteNotChosenNgrams}}(Qt::CheckState\ state);}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ac2281933fdebda99072eb67fd1cb654a}{puwHasPriority}}(\textcolor{keywordtype}{bool}\ value);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{keyword}{public}\ slots:}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a8b8210c38a3c21b6caaaacd0fa2a6808}{on\_savePossiblePhrasesPushButton\_clicked}}();}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a5cc09c56b27926df708a7baccd0836a3}{on\_viewPossiblePhrasesPushButton\_clicked}}();}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_aca5a3745c98d6c98b33400655dfc4985}{on\_rationlizePushButton\_clicked}}();}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a5e3cf0653c5176267966c594ef106b25}{on\_puwPriorityRadioButton\_toggled}}();}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ac94f20008a601a3e574cbc2ccc77a511}{on\_ngramPriorityRadioButton\_toggled}}();}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a452f6a1f46846de39371d7bf0c49478c}{on\_deleteNotChosenNgramsCheckBox\_stateChanged}}(\textcolor{keywordtype}{int}\ state);}
-\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ LPCribAssist\ v0.1:\ to\ help\ with\ cribbing\ the\ Liber\ Primus}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ mortlach}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ NGRAMPUWRATIONLIZEFORM\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ NGRAMPUWRATIONLIZEFORM\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}};}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form}{NgramPUWRationlizeForm}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ab8d4b91bfd8139ff4d474afc539c8f5c}{\string~NgramPUWRationlizeForm}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a17dcde2fa4caaf81481f765c48a67807}{setPUWCountLabel}}(\textcolor{keyword}{const}\ QList<int>\&\ counts);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a0f63ade9fab9878c63235fd7717c367b}{setNgramCountLabel}}(\textcolor{keyword}{const}\ QList<int>\&\ counts);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_afd0b1ade3cf20772969c1fae793b66bc}{setTotalPossiblePhrasesLabel}}(\textcolor{keyword}{const}\ QList<int>\&\ puw\_counts);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_afd0b1ade3cf20772969c1fae793b66bc}{setTotalPossiblePhrasesLabel}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ count);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a779addeb7bae5744f91f05a1a9fbc779}{isPUWPriority}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_afc7a0e9891485c167b66c8cc8c0a93e0}{isNgramPriority}}()\textcolor{keyword}{const};}
 \DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00069\ \ \ \ \ Ui::NgramPUWRationlizeForm\ *ui;}
-\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ signals:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a1b9cf578569bbd0150e7b11a0c5b9573}{saveNgramPhrases}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a0699327656c31696dffd07f829175fba}{viewNgramPhrases}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ac9ceddfeee0d623c1d58f2f04fcde65e}{rationalizeNgramData}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ae32b0a989e034a18f7fa7a3e2e9c7e88}{deleteNotChosenNgrams}}(Qt::CheckState\ state);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ac2281933fdebda99072eb67fd1cb654a}{puwHasPriority}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00070\ }
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NGRAMPUWRATIONLIZEFORM\_H}}
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a8b8210c38a3c21b6caaaacd0fa2a6808}{on\_savePossiblePhrasesPushButton\_clicked}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a5cc09c56b27926df708a7baccd0836a3}{on\_viewPossiblePhrasesPushButton\_clicked}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_aca5a3745c98d6c98b33400655dfc4985}{on\_rationlizePushButton\_clicked}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a5e3cf0653c5176267966c594ef106b25}{on\_puwPriorityRadioButton\_toggled}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_ac94f20008a601a3e574cbc2ccc77a511}{on\_ngramPriorityRadioButton\_toggled}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ngram_p_u_w_rationlize_form_a452f6a1f46846de39371d7bf0c49478c}{on\_deleteNotChosenNgramsCheckBox\_stateChanged}}(\textcolor{keywordtype}{int}\ state);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ Ui::NgramPUWRationlizeForm\ *ui;}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NGRAMPUWRATIONLIZEFORM\_H}}
 
 \end{DoxyCode}

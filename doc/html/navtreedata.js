@@ -60,9 +60,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_n_gram_data_model_8h.html",
-"class_ngram_phrase.html",
-"class_word_pick_f_o_r_m.html#a9ddb18c0867de4ef87a071c45a0726f0",
-"spoiler_8h_source.html"
+"class_ngram_p_u_w_rationlize_form.html#af9db4b672c4d3104f5541893e08e1809",
+"class_word_list_general_controls_form.html#ac01ab81f89bf3f0c99f00fb7265752a9",
+"raw1grammodel_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -2,63 +2,79 @@
 \hypertarget{phraseuniquewordsmodel_8h_source}{}\label{phraseuniquewordsmodel_8h_source}\index{source/view/phraseuniquewordsmodel.h@{source/view/phraseuniquewordsmodel.h}}
 \mbox{\hyperlink{phraseuniquewordsmodel_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PHRASEUNIQUEWORDSMODEL\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PHRASEUNIQUEWORDSMODEL\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QAbstractTableModel>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{phraseuniquewords_8h}{phraseuniquewords.h}}"{}}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words_model}{PhraseUniqueWordsModel}}\ :\ \textcolor{keyword}{public}\ QAbstractTableModel}
-\DoxyCodeLine{00009\ \{}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifdef\ QT\_SIG}}
-\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ signals:}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ message(\textcolor{keyword}{const}\ QString\&\ str);}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model}{PhraseUniqueWordsModel}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a9c35aba8c9dffe3744f8ccf7bde0ff3c}{\string~PhraseUniqueWordsModel}}()\{\};}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a4c33e14563fbe59ccafcc6f103c3ed84}{beginResetThisModel}}()\{\ beginResetModel();\}}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a9a350e989cc7707dec63cd8e3337279c}{endResetThisModel}}()\{\ endResetModel();\}}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}*\ \mbox{\hyperlink{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}{raw\_data}};}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a54b17eed0b9fb41a9168ef41c9089cdf}{setNewData}}(\mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}\&\ \mbox{\hyperlink{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}{raw\_data}});}
-\DoxyCodeLine{00023\ \ \ \ \ QList<QString>*\ \mbox{\hyperlink{class_phrase_unique_words_model_a0b96f3ac537076337979dc2c541e110f}{words}};}
-\DoxyCodeLine{00024\ \ \ \ \ QList<bool>*\ \mbox{\hyperlink{class_phrase_unique_words_model_ac39915cf248748d5787dea4ccfd0a5f1}{chosen}};}
-\DoxyCodeLine{00025\ \ \ \ \ QList<unsigned\ long\ long>*\ \mbox{\hyperlink{class_phrase_unique_words_model_aef247e8e48bdc8d3ba3a3f5829141553}{counts}};}
-\DoxyCodeLine{00026\ \ \ \ \ QList<int>*\ \mbox{\hyperlink{class_phrase_unique_words_model_a82de31b0acbc45c10e70098314666372}{count\_in\_ngrams}};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ QT\ stuff}}
-\DoxyCodeLine{00028\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_phrase_unique_words_model_a7b9c7803213f5ea52bb02b5c4ef1432d}{editrole\_list}};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ required\ virtual\ overloads,\ columnCount\ done\ in\ derived\ classes}}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_model_a13fbc4066f7196cabc5fcb4b622245a2}{rowCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_model_a9b03ace57443a2306fc80d6a552ece94}{columnCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\textcolor{keyword}{\ const\ override\ }\{Q\_UNUSED(parent);\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10}{col\_count}};\ \};}
-\DoxyCodeLine{00032\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_phrase_unique_words_model_ae80bd0dde6f06f710c1fe47fe5dcce43}{data}}(\textcolor{keyword}{const}\ QModelIndex\ \&index,\ \textcolor{keywordtype}{int}\ role\ =\ Qt::DisplayRole)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ function\ used\ when\ filtering\ on\ chosen}}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_model_aed4cfdb5c898b405f70da9980cc6ce9c}{isChosen}}(\textcolor{keyword}{const}\ QModelIndex\&\ index)\textcolor{keyword}{const};\ \textcolor{comment}{//\ todo\ \ needed?}}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_model_a4101a396ef1e9d6938f17a17ca656942}{isNotChosen}}(\textcolor{keyword}{const}\ QModelIndex\&\ index)\textcolor{keyword}{const};\ \textcolor{comment}{//\ todo\ needed?}}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a4f0bce66fce43e389a25d76a14a1938f}{setNewData}}(\mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}*\ raw\_data\_in);}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ toggle\ the\ chosen\ value\ for\ rows}}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_af9f6e7eb3e7475713922001213dd1d67}{toggleChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_model_aa1561f38f0d1122759af30f76e2669e2}{getChosen}}(\textcolor{keywordtype}{int}\ row)\textcolor{keyword}{const};}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_ab5e3fadcca6bb0f2a52e566342d745eb}{setChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_ad59d0e9e30756586bfbff5c6cc4b0d60}{setNotChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ required\ for\ editable\ table}}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{using\ }QAbstractTableModel::flags;}
-\DoxyCodeLine{00044\ \ \ \ \ Qt::ItemFlags\ \mbox{\hyperlink{class_phrase_unique_words_model_ac2a6b4808c3bcb09e375737345896214}{flags}}(\textcolor{keyword}{const}\ QModelIndex\ \&index);}
-\DoxyCodeLine{00045\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_phrase_unique_words_model_a76dc9f532d1b71962bb66f9be4eebc08}{headerData}}(\textcolor{keywordtype}{int}\ section,\ Qt::Orientation\ orientation,\ \textcolor{keywordtype}{int}\ role)\textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a9e17546950d512635dfb396b2192cd68}{clear}}();}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7f}{Constants}}}
-\DoxyCodeLine{00048\ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa0fd40fb0b5b14744332f4525abe55a81}{word\_col}}\ =\ \ 1,}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7facf4ac8debbdce28c90349afb99158c51}{chosen\_col}}\ =\ 0,}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa69db3c31098863c7b73a33e99bc681eb}{total\_counts\_in\_all\_ngrams\_col}}\ =2,}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa6e213a40a6fe70987939d0c683dc4e90}{ngrams\_with\_this\_word\_col}}\ =\ 3,}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10}{col\_count}}\ =\ 4}
-\DoxyCodeLine{00054\ \ \ \ \ \};}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RAW1GRAMMODEL\_H}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ LPCribAssist\ v0.1:\ to\ help\ with\ cribbing\ the\ Liber\ Primus}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ mortlach}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ PHRASEUNIQUEWORDSMODEL\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ PHRASEUNIQUEWORDSMODEL\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QAbstractTableModel>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{phraseuniquewords_8h}{phraseuniquewords.h}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words_model}{PhraseUniqueWordsModel}}\ :\ \textcolor{keyword}{public}\ QAbstractTableModel}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#ifdef\ QT\_SIG}}
+\DoxyCodeLine{00029\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ signals:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ message(\textcolor{keyword}{const}\ QString\&\ str);}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model}{PhraseUniqueWordsModel}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a9c35aba8c9dffe3744f8ccf7bde0ff3c}{\string~PhraseUniqueWordsModel}}()\{\};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a4c33e14563fbe59ccafcc6f103c3ed84}{beginResetThisModel}}()\{\ beginResetModel();\}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a9a350e989cc7707dec63cd8e3337279c}{endResetThisModel}}()\{\ endResetModel();\}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}*\ \mbox{\hyperlink{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}{raw\_data}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a54b17eed0b9fb41a9168ef41c9089cdf}{setNewData}}(\mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}\&\ \mbox{\hyperlink{class_phrase_unique_words_model_a07d9417ef0962d45b88341e611753de8}{raw\_data}});}
+\DoxyCodeLine{00041\ \ \ \ \ QList<QString>*\ \mbox{\hyperlink{class_phrase_unique_words_model_a0b96f3ac537076337979dc2c541e110f}{words}};}
+\DoxyCodeLine{00042\ \ \ \ \ QList<bool>*\ \mbox{\hyperlink{class_phrase_unique_words_model_ac39915cf248748d5787dea4ccfd0a5f1}{chosen}};}
+\DoxyCodeLine{00043\ \ \ \ \ QList<unsigned\ long\ long>*\ \mbox{\hyperlink{class_phrase_unique_words_model_aef247e8e48bdc8d3ba3a3f5829141553}{counts}};}
+\DoxyCodeLine{00044\ \ \ \ \ QList<int>*\ \mbox{\hyperlink{class_phrase_unique_words_model_a82de31b0acbc45c10e70098314666372}{count\_in\_ngrams}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ QT\ stuff}}
+\DoxyCodeLine{00046\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_phrase_unique_words_model_a7b9c7803213f5ea52bb02b5c4ef1432d}{editrole\_list}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ required\ virtual\ overloads,\ columnCount\ done\ in\ derived\ classes}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_model_a13fbc4066f7196cabc5fcb4b622245a2}{rowCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_model_a9b03ace57443a2306fc80d6a552ece94}{columnCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\textcolor{keyword}{\ const\ override\ }\{Q\_UNUSED(parent);\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10}{col\_count}};\ \};}
+\DoxyCodeLine{00050\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_phrase_unique_words_model_ae80bd0dde6f06f710c1fe47fe5dcce43}{data}}(\textcolor{keyword}{const}\ QModelIndex\ \&index,\ \textcolor{keywordtype}{int}\ role\ =\ Qt::DisplayRole)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ function\ used\ when\ filtering\ on\ chosen}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_model_aed4cfdb5c898b405f70da9980cc6ce9c}{isChosen}}(\textcolor{keyword}{const}\ QModelIndex\&\ index)\textcolor{keyword}{const};\ \textcolor{comment}{//\ todo\ \ needed?}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_model_a4101a396ef1e9d6938f17a17ca656942}{isNotChosen}}(\textcolor{keyword}{const}\ QModelIndex\&\ index)\textcolor{keyword}{const};\ \textcolor{comment}{//\ todo\ needed?}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a4f0bce66fce43e389a25d76a14a1938f}{setNewData}}(\mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}*\ raw\_data\_in);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ toggle\ the\ chosen\ value\ for\ rows}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_af9f6e7eb3e7475713922001213dd1d67}{toggleChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_model_aa1561f38f0d1122759af30f76e2669e2}{getChosen}}(\textcolor{keywordtype}{int}\ row)\textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_ab5e3fadcca6bb0f2a52e566342d745eb}{setChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_ad59d0e9e30756586bfbff5c6cc4b0d60}{setNotChosen}}(\textcolor{keyword}{const}\ QModelIndexList\ \&rows);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ required\ for\ editable\ table}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{using\ }QAbstractTableModel::flags;}
+\DoxyCodeLine{00062\ \ \ \ \ Qt::ItemFlags\ \mbox{\hyperlink{class_phrase_unique_words_model_ac2a6b4808c3bcb09e375737345896214}{flags}}(\textcolor{keyword}{const}\ QModelIndex\ \&index);}
+\DoxyCodeLine{00063\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_phrase_unique_words_model_a76dc9f532d1b71962bb66f9be4eebc08}{headerData}}(\textcolor{keywordtype}{int}\ section,\ Qt::Orientation\ orientation,\ \textcolor{keywordtype}{int}\ role)\textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_model_a9e17546950d512635dfb396b2192cd68}{clear}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7f}{Constants}}}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa0fd40fb0b5b14744332f4525abe55a81}{word\_col}}\ =\ \ 1,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7facf4ac8debbdce28c90349afb99158c51}{chosen\_col}}\ =\ 0,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa69db3c31098863c7b73a33e99bc681eb}{total\_counts\_in\_all\_ngrams\_col}}\ =2,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa6e213a40a6fe70987939d0c683dc4e90}{ngrams\_with\_this\_word\_col}}\ =\ 3,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_model_a00b23de3f37a4899c0a9db167b5bdb7fa9c767c556bedc580b91ef1679c52db10}{col\_count}}\ =\ 4}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RAW1GRAMMODEL\_H}}
 
 \end{DoxyCode}
