@@ -196,6 +196,7 @@ void NGramDataForm::on_tableView_space_bar_sig(){
         ui->tableView->selectRow(new_selected_row);
     }
     model.toggleChosen(to_toggle);
+    model.toggleNgramChosen(to_toggle);
     update();
 }
 
