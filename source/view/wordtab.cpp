@@ -173,6 +173,12 @@ void WordTab::on_tableView_f_sig(){
     update();
 }
 
+
+void WordTab::on_tableView_alt_f_sig(){
+    on_tableView_customContextMenuRequested();
+}
+
+
 void WordTab::on_tableView_alt_a_sig(){
     ui->wordList_general_controls->setAllFilter();
 }

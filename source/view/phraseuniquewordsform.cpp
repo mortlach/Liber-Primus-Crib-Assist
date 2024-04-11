@@ -261,6 +261,9 @@ void PhraseUniqueWordsForm::on_tableView_alt_n_sig(){
     qDebug() << "PhraseUniqueWordsForm::on_tableview_alt_n_sig";
     ui->wordList_general_controls->setNotChosenFilter();
 }
+void PhraseUniqueWordsForm::on_tableView_alt_f_sig(){
+    on_tableView_customContextMenuRequested();
+}
 
 void PhraseUniqueWordsForm::on_findData(const QString& find_string){
     qDebug() << "PhraseUniqueWordsForm::on_findData" << find_string;

@@ -55,6 +55,7 @@ public slots:
     void on_tableView_alt_a_sig(); // set filter - all
     void on_tableView_alt_c_sig(); // set filter - chosen
     void on_tableView_alt_n_sig(); // set filter - not chosen
+    void on_tableView_alt_f_sig();
     void on_tableView_delete_sig();
     void update(); // main update function
     void updateLabel(); // main update function

@@ -261,6 +261,10 @@ void NGramDataForm::on_tableView_alt_n_sig(){
     qDebug() << "NGramDataForm::on_tableView_alt_n_sig";
     ui->wordList_general_controls->setNotChosenFilter();
 }
+void NGramDataForm::on_tableView_alt_f_sig(){
+    on_tableView_customContextMenuRequested();
+}
+
 
 void NGramDataForm::on_tableView_delete_sig(){
     QModelIndexList to_delete;
