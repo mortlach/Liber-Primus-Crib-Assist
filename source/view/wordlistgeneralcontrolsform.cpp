@@ -88,15 +88,24 @@ void WordListGeneralControlsForm::on_filterChanged(){
     }
 }
 void WordListGeneralControlsForm::setAllFilter(){
+    const bool wasBlocked = ui->filtersGroupBox->blockSignals(true);
     ui->allRadioButton->setChecked(true);
+    on_filterChanged();
+    ui->filtersGroupBox->blockSignals(wasBlocked);
 }
 
 void WordListGeneralControlsForm::setChosenFilter(){
+    const bool wasBlocked = ui->filtersGroupBox->blockSignals(true);
     ui->chosenRadioButton->setChecked(true);
+    on_filterChanged();
+    ui->filtersGroupBox->blockSignals(wasBlocked);
 }
 
 void WordListGeneralControlsForm::setNotChosenFilter(){
+    const bool wasBlocked = ui->filtersGroupBox->blockSignals(true);
     ui->notChosenRadioButton->setChecked(true);
+    on_filterChanged();
+    ui->filtersGroupBox->blockSignals(wasBlocked);
 }
 
 void WordListGeneralControlsForm::on_loadPushButton_clicked() {

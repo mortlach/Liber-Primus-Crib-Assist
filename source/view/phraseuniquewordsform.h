@@ -52,6 +52,13 @@ public slots:
     void on_tableView_left_doubleclick_sig();
     void on_tableView_space_bar_sig();
     void on_tableView_delete_sig();
+    void on_tableView_t_sig(); // set true
+    void on_tableView_f_sig(); // set false
+    void on_tableView_alt_a_sig(); // set filter - all
+    void on_tableView_alt_c_sig(); // set filter - chosen
+    void on_tableView_alt_n_sig(); // set filter - not chosen
+
+
     void update(); // main update function
     void updateLabel(); // main update function
     void updateTable(); // main update function

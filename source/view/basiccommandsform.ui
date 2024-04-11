@@ -306,7 +306,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Alt+F</string>
+      <string>Alt+f</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -372,7 +372,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Alt+C</string>
+      <string>Alt+c</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -438,7 +438,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Alt+N</string>
+      <string>Alt+n</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -504,7 +504,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Alt+A</string>
+      <string>Alt+a</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>

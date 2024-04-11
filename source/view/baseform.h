@@ -31,7 +31,7 @@ public:
     FilterModel* my_sortfilterproxymodel;
 
 public slots:
-    void on_tableView_customContextMenuRequested();
+    //void on_tableView_customContextMenuRequested();
 //    void on_changeFontSize(int fs);
 
     // TODO keep adding

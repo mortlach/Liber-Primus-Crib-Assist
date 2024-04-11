@@ -29,24 +29,24 @@ BaseForm::BaseForm(int chosen_col, QWidget *parent)
 //     //tableView->changeFontSize(fs);
 // }
 
-void BaseForm::on_tableView_customContextMenuRequested(){
-    //qDebug() << pt.x() << pt.y();
-    //qDebug() << "showContextMenu passed" << pt.x() << pt.y();
-    //QPoint globalPos = ui->tableView->mapToGlobal(pt);
-    //qDebug() << globalPos.x() << globalPos.y();
-    qDebug() << QCursor().pos().x() << QCursor().pos().y();
-    QPoint pt2 = QPoint(QCursor().pos().x() - 100 , QCursor().pos().y()  );
-    QMenu contextMenu(tr("NGRAM Filter Menu"), this);
-    QAction* all = contextMenu.addAction("Filer: All");
-    QAction* chosen = contextMenu.addAction("Filer: Chosen");
-    QAction* not_chosen = contextMenu.addAction("Filer: Not Chosen");
-    //QAction* reload = contextMenu.addAction("Reload Data");
-    QAction* selectedItem = contextMenu.exec(pt2);
-    if (selectedItem == all){ applyFilter(all_filter); }
-    if (selectedItem == chosen){ applyFilter(chosen_filter); }
-    if (selectedItem == not_chosen){ applyFilter(not_chosen_filter); }
-    //if (selectedItem == reload){ applyFilter(3); }
-}
+//void BaseForm::on_tableView_customContextMenuRequested(){
+//    //qDebug() << pt.x() << pt.y();
+//    //qDebug() << "showContextMenu passed" << pt.x() << pt.y();
+//    //QPoint globalPos = ui->tableView->mapToGlobal(pt);
+//    //qDebug() << globalPos.x() << globalPos.y();
+//    qDebug() << QCursor().pos().x() << QCursor().pos().y();
+//    QPoint pt2 = QPoint(QCursor().pos().x() - 100 , QCursor().pos().y()  );
+//    QMenu contextMenu(tr("NGRAM Filter Menu"), this);
+//    QAction* all = contextMenu.addAction("Filer: All");
+//    QAction* chosen = contextMenu.addAction("Filer: Chosen");
+//    QAction* not_chosen = contextMenu.addAction("Filer: Not Chosen");
+//    //QAction* reload = contextMenu.addAction("Reload Data");
+//    QAction* selectedItem = contextMenu.exec(pt2);
+//    if (selectedItem == all){ applyFilter(all_filter); }
+//    if (selectedItem == chosen){ applyFilter(chosen_filter); }
+//    if (selectedItem == not_chosen){ applyFilter(not_chosen_filter); }
+//    //if (selectedItem == reload){ applyFilter(3); }
+//}
 void BaseForm::applyFilter(int a){
     //    check filters for phrase unqiue words
     qDebug() << "ngramApplyFilter" << a;

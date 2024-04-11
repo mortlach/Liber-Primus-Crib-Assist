@@ -85,7 +85,9 @@ void GNGTableView::keyPressEvent(QKeyEvent *event)
             qDebug() << "GNGTableView::keyPressEvent delete signal caught";
             emit delete_sig();
             }
-    else if( (event->key() == Qt::Key_A)  && (int(event->modifiers()) == Qt::AltModifier) ){emit alt_a_sig();}
+    else if( (event->key() == Qt::Key_A)  && (int(event->modifiers()) == Qt::AltModifier) ){
+            qDebug() << "GNGTableView::keyPressEvent alt_a_sig signal caught";
+            emit alt_a_sig();}
     else if( (event->key() == Qt::Key_C)  && (int(event->modifiers()) == Qt::AltModifier) ){emit alt_c_sig();}
     else if( (event->key() == Qt::Key_N)  && (int(event->modifiers()) == Qt::AltModifier) ){emit alt_n_sig();}
     else if( (event->key() == Qt::Key_C)

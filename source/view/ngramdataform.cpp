@@ -249,17 +249,20 @@ void NGramDataForm::on_tableView_f_sig(){
     update();
 }
 
-void NGramDataForm::on_tableview_alt_a_sig(){
+void NGramDataForm::on_tableView_alt_a_sig(){
+    qDebug() << "NGramDataForm::on_tableView_alt_a_sig";
     ui->wordList_general_controls->setAllFilter();
 }
-void NGramDataForm::on_tableview_alt_c_sig(){
+void NGramDataForm::on_tableView_alt_c_sig(){
+    qDebug() << "NGramDataForm::on_tableView_alt_c_sig";
     ui->wordList_general_controls->setChosenFilter();
 }
-void NGramDataForm::on_tableview_alt_n_sig(){
+void NGramDataForm::on_tableView_alt_n_sig(){
+    qDebug() << "NGramDataForm::on_tableView_alt_n_sig";
     ui->wordList_general_controls->setNotChosenFilter();
 }
+
 void NGramDataForm::on_tableView_delete_sig(){
-    qDebug() << "NGramDataForm::on_tableView_delete_sig";
     QModelIndexList to_delete;
     int new_selected_row = model.rowCount() +2;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
@@ -279,7 +282,7 @@ void NGramDataForm::on_tableView_delete_sig(){
 }
 void NGramDataForm::applyFilter(int a){
     //    check filters for phrase unqiue words
-    qDebug() << "ngramApplyFilter" << a;
+    qDebug() << "NGramDataForm" << a;
     switch(a){
     case not_chosen_filter: my_sortfilterproxymodel->setFilter("not_chosen"); break;
     case chosen_filter:     my_sortfilterproxymodel->setFilter("chosen");     break;
@@ -287,3 +290,24 @@ void NGramDataForm::applyFilter(int a){
     default:;
     }
 }
+void NGramDataForm::on_tableView_customContextMenuRequested(){
+    //qDebug() << pt.x() << pt.y();
+    //qDebug() << "showContextMenu passed" << pt.x() << pt.y();
+    //QPoint globalPos = ui->tableView->mapToGlobal(pt);
+    //qDebug() << globalPos.x() << globalPos.y();
+    qDebug() << QCursor().pos().x() << QCursor().pos().y();
+    QPoint pt2 = QPoint(QCursor().pos().x() - 100 , QCursor().pos().y()  );
+    QMenu contextMenu(tr("NGRAM Filter Menu"), this);
+    QAction* all = contextMenu.addAction("Filer: All");
+    QAction* chosen = contextMenu.addAction("Filer: Chosen");
+    QAction* not_chosen = contextMenu.addAction("Filer: Not Chosen");
+    //QAction* reload = contextMenu.addAction("Reload Data");
+    QAction* selectedItem = contextMenu.exec(pt2);
+    if (selectedItem == all){ on_tableView_alt_a_sig(); }
+    if (selectedItem == chosen){ on_tableView_alt_c_sig(); }
+    if (selectedItem == not_chosen){ on_tableView_alt_n_sig(); }
+    //if (selectedItem == reload){ applyFilter(3); }
+}
+
+
+
