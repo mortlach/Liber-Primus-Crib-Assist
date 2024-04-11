@@ -63,9 +63,11 @@ public:
     void setNewData(NgramData* raw_data_in);
     // toggle the chosen value for rows
     void toggleChosen(const QModelIndexList &rows);
+    void toggleNgramChosen(const QModelIndexList &rows);
     bool getChosen(int row)const;
     void setChosen(const QModelIndexList &rows);
     void setNotChosen(const QModelIndexList &rows);
+    int deleteSelected(const QModelIndexList&rows);
     // required for editable table
     using QAbstractTableModel::flags;
     Qt::ItemFlags flags(const QModelIndex &index);

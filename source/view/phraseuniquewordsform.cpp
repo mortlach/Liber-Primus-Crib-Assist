@@ -182,6 +182,26 @@ void PhraseUniqueWordsForm::on_changeFilter(int filter_num){
     applyFilter(filter_num);
 }
 
+//
+void PhraseUniqueWordsForm::on_tableView_delete_sig(){
+    qDebug() << "PhraseUniqueWordsForm::on_tableView_delete_sig";
+    QModelIndexList to_delete;
+    int new_selected_row = model.rowCount() +2;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        to_delete.push_back(my_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+           new_selected_row = index.row();
+        }
+    }
+    model.deleteSelected(to_delete);
+    update();
+    // set the new selected row to be one above the
+    new_selected_row -= 1;
+    if(new_selected_row < 0)
+              new_selected_row = 0;
+    //qDebug() << new_selected_row;
+    ui->tableView->selectRow(new_selected_row);
+}
 
 void PhraseUniqueWordsForm::on_tableView_space_bar_sig(){
     QModelIndexList to_toggle;

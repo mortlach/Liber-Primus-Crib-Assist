@@ -26,7 +26,7 @@ WordTab::WordTab(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::WordTab)
     , onegram_selectionmodel(new QItemSelectionModel())
-    , onegram_sortfilterproxymodel(new FilterModel(0))
+    , my_sortfilterproxymodel(new FilterModel(0))
     , model(Raw1GramModel())
     // todo move this
     , data_hub(NgramDataHub())
@@ -58,9 +58,9 @@ WordTab::WordTab(QWidget *parent)
         anyLayout->addWidget(new QPushButton("Button in Section", ui->spoiler));
         ui->spoiler->setContentLayout(*anyLayout);
 //        // todo, can the following just be in constructor ?
-        onegram_sortfilterproxymodel->setSourceModel(&model);
-        onegram_selectionmodel->setModel(onegram_sortfilterproxymodel);
-        ui->tableView->setModel(onegram_sortfilterproxymodel);
+        my_sortfilterproxymodel->setSourceModel(&model);
+        onegram_selectionmodel->setModel(my_sortfilterproxymodel);
+        ui->tableView->setModel(my_sortfilterproxymodel);
         ui->tableView->setSelectionModel(onegram_selectionmodel);
         ui->tableView->show();
         ui->wordList_general_controls->setDataIndex();
@@ -176,10 +176,21 @@ void WordTab::on_tableView_delete_sig(){
     }
 
     qDebug() << "WordTab::on_tableView_delete_sig new_selected_row = " << new_selected_row;
+    int new_selected_row = model.rowCount() +2;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        to_delete.push_back(my_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+            new_selected_row = index.row();
+        }
+    }
+    model.deleteSelected(to_delete);
     update();
     // set the new selected row to be one above the
-    const QModelIndex new_index = ui->tableView->model()->index(new_selected_row,0);
-    ui->tableView->selectionModel()->setCurrentIndex(new_index, QItemSelectionModel::Rows |QItemSelectionModel::Select);
+    new_selected_row -= 1;
+    if(new_selected_row < 0)
+        new_selected_row = 0;
+    //qDebug() << new_selected_row;
+    ui->tableView->selectRow(new_selected_row);
 }
 //
 void WordTab::on_tableView_space_bar_sig(){
@@ -189,7 +200,7 @@ void WordTab::on_tableView_space_bar_sig(){
     int new_selected_row = 0;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
         //qDebug() << "row/col" << index.row() << "/" << index.column();
-        to_toggle.push_back(onegram_sortfilterproxymodel->mapToSource(index));
+        to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
         if(add_row){
             new_selection = index;
             qDebug() << new_selection.row();
@@ -199,7 +210,7 @@ void WordTab::on_tableView_space_bar_sig(){
             add_row = false;
         }
     }
-    if(onegram_sortfilterproxymodel->filter_mode == QString("all") ){
+    if(my_sortfilterproxymodel->filter_mode == QString("all") ){
     }
     else{
         ui->tableView->selectRow(new_selected_row);
@@ -220,7 +231,7 @@ void WordTab::on_findData(const QString& find_string){
         );
     if(list.size() > 0){
         onegram_selectionmodel->select(list[0], QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
-        ui->tableView->scrollTo(onegram_sortfilterproxymodel->mapFromSource(list[0]));
+        ui->tableView->scrollTo(my_sortfilterproxymodel->mapFromSource(list[0]));
     }
 }
 
@@ -228,7 +239,7 @@ void WordTab::on_tableView_left_doubleclick_sig(){
     QModelIndexList to_toggle;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
         //qDebug() << "row/col" << index.row() << "/" << index.column();
-        to_toggle.push_back(onegram_sortfilterproxymodel->mapToSource(index));
+        to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
     }
     model.toggleChosen(to_toggle);
     update();
@@ -238,9 +249,9 @@ void WordTab::applyFilter(int a){
     //    check filters for phrase unqiue words
     qDebug() << "ngramApplyFilter" << a;
     switch(a){
-        case not_chosen_filter: onegram_sortfilterproxymodel->setFilter("not_chosen"); break;
-        case chosen_filter:     onegram_sortfilterproxymodel->setFilter("chosen");     break;
-        case all_filter:        onegram_sortfilterproxymodel->setFilter("");           break;
+    case not_chosen_filter: my_sortfilterproxymodel->setFilter("not_chosen"); break;
+    case chosen_filter:     my_sortfilterproxymodel->setFilter("chosen");     break;
+    case all_filter:        my_sortfilterproxymodel->setFilter("");           break;
         default:;
     }
 }

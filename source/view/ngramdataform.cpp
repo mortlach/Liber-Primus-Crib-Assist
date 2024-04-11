@@ -196,6 +196,7 @@ void NGramDataForm::on_tableView_space_bar_sig(){
         ui->tableView->selectRow(new_selected_row);
     }
     model.toggleChosen(to_toggle);
+    model.toggleNgramChosen(to_toggle);
     update();
 }
 
@@ -225,6 +226,7 @@ void NGramDataForm::on_tableView_left_doubleclick_sig(){
         to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
     }
     model.toggleChosen(to_toggle);
+    model.toggleNgramChosen(to_toggle);
     update();
 }
 
@@ -256,10 +258,25 @@ void NGramDataForm::on_tableview_alt_c_sig(){
 void NGramDataForm::on_tableview_alt_n_sig(){
     ui->wordList_general_controls->setNotChosenFilter();
 }
-
-
-
-
+void NGramDataForm::on_tableView_delete_sig(){
+    qDebug() << "NGramDataForm::on_tableView_delete_sig";
+    QModelIndexList to_delete;
+    int new_selected_row = model.rowCount() +2;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        to_delete.push_back(my_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+            new_selected_row = index.row();
+        }
+    }
+    model.deleteSelected(to_delete);
+    update();
+    // set the new selected row to be one above the
+    new_selected_row -= 1;
+    if(new_selected_row < 0)
+        new_selected_row = 0;
+    //qDebug() << new_selected_row;
+    ui->tableView->selectRow(new_selected_row);
+}
 void NGramDataForm::applyFilter(int a){
     //    check filters for phrase unqiue words
     qDebug() << "ngramApplyFilter" << a;

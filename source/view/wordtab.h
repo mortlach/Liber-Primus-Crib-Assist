@@ -72,7 +72,7 @@ private:
     Ui::WordTab *ui;
     // eventuially will need a version of all of these
     QItemSelectionModel* onegram_selectionmodel;
-    FilterModel* onegram_sortfilterproxymodel;
+    FilterModel* my_sortfilterproxymodel;
     Raw1GramModel model;
     NgramDataHub data_hub;
     const Raw1Grams * const raw_1grams_ptr;
