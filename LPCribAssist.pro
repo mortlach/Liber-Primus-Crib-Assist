@@ -97,7 +97,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     README.md \
     build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/config.ini \
-    build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Release/config.ini
+    build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Release/config.ini \
+    config.ini
 
 win32 {
 DESTDIR = $$PWD/bin
