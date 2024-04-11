@@ -38,6 +38,9 @@ public:
     void setDataIndex(int index = 0);
     void setup(int min, int data_count);
     void setDeleteEnabled(bool enabled);
+    void setAllFilter();
+    void setChosenFilter();
+    void setNotChosenFilter();
 
 public slots:
     void on_savePushButton_clicked();

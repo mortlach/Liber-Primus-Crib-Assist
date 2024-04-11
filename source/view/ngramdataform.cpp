@@ -228,6 +228,38 @@ void NGramDataForm::on_tableView_left_doubleclick_sig(){
     update();
 }
 
+void NGramDataForm::on_tableView_t_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setChosen(to_set_t);
+    update();
+}
+void NGramDataForm::on_tableView_f_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setNotChosen(to_set_t);
+    update();
+}
+
+void NGramDataForm::on_tableview_alt_a_sig(){
+    ui->wordList_general_controls->setAllFilter();
+}
+void NGramDataForm::on_tableview_alt_c_sig(){
+    ui->wordList_general_controls->setChosenFilter();
+}
+void NGramDataForm::on_tableview_alt_n_sig(){
+    ui->wordList_general_controls->setNotChosenFilter();
+}
+
+
+
+
 void NGramDataForm::applyFilter(int a){
     //    check filters for phrase unqiue words
     qDebug() << "ngramApplyFilter" << a;

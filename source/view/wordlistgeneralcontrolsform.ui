@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>200</width>
-    <height>300</height>
+    <width>400</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>200</width>
-    <height>300</height>
+    <width>400</width>
+    <height>900</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -238,7 +238,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QGroupBox" name="filtersGroupBox">
      <property name="title">
       <string>Filters</string>
      </property>
@@ -277,6 +277,9 @@
     </widget>
    </item>
    <item>
+    <widget class="BasicCommandsForm" name="widget" native="true"/>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -291,6 +294,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BasicCommandsForm</class>
+   <extends>QWidget</extends>
+   <header location="global">basiccommandsform.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

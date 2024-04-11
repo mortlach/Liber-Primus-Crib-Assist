@@ -87,6 +87,17 @@ void WordListGeneralControlsForm::on_filterChanged(){
         emit changeFilter(2);
     }
 }
+void WordListGeneralControlsForm::setAllFilter(){
+    ui->allRadioButton->setChecked(true);
+}
+
+void WordListGeneralControlsForm::setChosenFilter(){
+    ui->chosenRadioButton->setChecked(true);
+}
+
+void WordListGeneralControlsForm::setNotChosenFilter(){
+    ui->notChosenRadioButton->setChecked(true);
+}
 
 void WordListGeneralControlsForm::on_loadPushButton_clicked() {
     qDebug() << "on_loadPushButton_clicked";
