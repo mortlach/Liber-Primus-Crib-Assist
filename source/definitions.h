@@ -49,7 +49,7 @@ const QString raw_1gram_filekey_11 = "raw_1grams_11";
 const QString raw_1gram_filekey_12 = "raw_1grams_12";
 const QString raw_1gram_filekey_13 = "raw_1grams_13";
 const QString raw_1gram_filekey_14 = "raw_1grams_14";
-const QString CONFIG_PATH= "../config.ini";
+const QString CONFIG_PATH= "../../config.ini";
 
 static QVector<QString> raw_1gram_keys ={
 raw_1gram_filekey_01,raw_1gram_filekey_02,raw_1gram_filekey_03,raw_1gram_filekey_04,

@@ -212,7 +212,7 @@ bool NgramData::deleteNotChosen(){
     }
     words = words2;
     chosen = chosen2;
-    ngram_chosen2 = ngram_chosen2;
+    ngram_chosen = ngram_chosen2;
     counts = counts2;
     ngram_string = ngram_string2;
     chosen_by_word = chosen_by_word2;

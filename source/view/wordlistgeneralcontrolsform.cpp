@@ -17,7 +17,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 #include "wordlistgeneralcontrolsform.h"
-#include "ui_Wordlistgeneralcontrolsform.h"
+#include "ui_wordlistgeneralcontrolsform.h"
 
 WordListGeneralControlsForm::WordListGeneralControlsForm(QWidget *parent, int data_count)
     : QWidget(parent), ui(new Ui::WordListGeneralControlsForm)

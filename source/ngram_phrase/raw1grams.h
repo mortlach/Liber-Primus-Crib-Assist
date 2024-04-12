@@ -126,7 +126,7 @@ public:
             qDebug() << "RawWordData::getRawWordDataRef raw_word_data.size()" << raw_word_data.size();
             qDebug() << "ERROR, asked for item" << word_len << "with raw_word_data.size() = " << raw_word_data.size();
         }
-
+        return *raw_word_data.at(0);
     }
 
 };
