@@ -17,7 +17,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 //#include "ngramdatamodel.h"
-#include "NGramDataModel.h"
+#include "ngramdatamodel.h"
 #include <QColor>
 
 NGramDataModel::NGramDataModel(QObject *parent)

@@ -16,9 +16,9 @@
 //    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 /////////////////////////////////////////////////////////////////////////////
-#include "NGramDataForm.h"
+#include "ngramdataform.h"
 #include "utilities.h"
-#include "ui_NGramDataForm.h"
+#include "ui_ngramdataform.h"
 #include <QMenu>
 
 NGramDataForm::NGramDataForm(QWidget *parent)
