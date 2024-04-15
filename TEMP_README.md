@@ -17,6 +17,39 @@ Liber-Primus-Crib-Assistant is an application designed to help crib words and ph
 
 ## quickstart 
 
+All paths are relative to the application folder, e.g>: 
+
+
+```html
+Liber-Primus-Crib-Assit/
+├─ node_modules/
+├─ dist/
+├─ src/
+│  ├─ _data/
+│  ├─ _includes/
+│  ├─ css/
+│  ├─ filters/
+│  ├─ font/
+│  ├─ img/
+│  ├─ js/
+│  ├─ posts/
+│  ├─ scss/
+│  ├─ shortcodes/
+│  ├─ transforms/
+│  ├─ changelog.md
+│  ├─ faq.md
+│  ├─ index.md
+├─ .eleventy.js
+├─ package.json
+├─ README.md
+├─ ...
+
+```
+ 
+
+## windwos 
+
+
 
 
 
@@ -178,7 +211,7 @@ https://doc.qt.io/qt-6/linux-building.html
 $ git clone [repository-url]
 $ cd [project-folder]
 $ [install-command]
-
+```
 
 
 
