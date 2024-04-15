@@ -15,39 +15,95 @@ Liber-Primus-Crib-Assistant is an application designed to help crib words and ph
 - [Contributing](#contributing)
 - [License](#license)
 
-## quickstart 
+## Definitions  
 
-All paths are relative to the application folder, e.g>: 
-
+All paths are relative to the application folder, e.g. some of teh main folders and files should look something like this: 
 
 ```html
-Liber-Primus-Crib-Assit/
-├─ node_modules/
-├─ dist/
-├─ src/
-│  ├─ _data/
-│  ├─ _includes/
-│  ├─ css/
-│  ├─ filters/
-│  ├─ font/
-│  ├─ img/
-│  ├─ js/
-│  ├─ posts/
-│  ├─ scss/
-│  ├─ shortcodes/
-│  ├─ transforms/
-│  ├─ changelog.md
-│  ├─ faq.md
-│  ├─ index.md
-├─ .eleventy.js
-├─ package.json
+Liber-Primus-Crib-Assist/
+├─ bin/
+│  ├─ win/
+│  │  ├─ LPCribAssist.exe
+├─ data/
+├─ assets/
+├─ doc/
+├─ data/
+│  ├─ n_grams/
+│  │  ├─ 2-grams/
+│  │  │  ├─ 1 2.txt
+│  │  │  ├─ 1 3.txt
+│  │  │  ├─ ... 
+│  ├─ 1_grams_full/
+│  ├─ phrases/
+│  ├─lp_sents_2023.txt 
+├─ source/
+├─ config.ini
 ├─ README.md
+├─ LICENSE
+├─ LPCribAssist.pro
 ├─ ...
-
 ```
  
+All paths will be relative to the Liber-Primus-Crib-Assist folder. E.g. the windows binary is at  ./bin/win/LPCribAssist.exe
 
-## windwos 
+
+## Quickstart - Installation 
+
+Download the repository to your local PC.  
+
+### Windows 
+
+A compiled executable and other binary files are shared as part of th eproject simply run  ./bin/win/LPCribAssist.exe
+
+
+### linux 
+As is often usual for linux users the best solution is to compile the source yourself. QT libraries and any dependancies are required for the build. If you use the QT developer tools (QT Creator) this should not be difficult, if you use your own tool-chain it may be.  When the application is run raw data files are typically loaded using relative paths that assume the main executabale is contained two folders lower from the root directory. This means that placing the compiled binaries in a folder such as ./bin/linux/ is advised.  
+ 
+## Quickstart - Tutorial 
+
+### Main Concepts  
+
+The app allows users to select words from different lists to build up possible phrase cribs. A phrase is defined by the number of runes in each word: 
+
+3 12 4 is phrase consisting of a 3 words, 1st 3 runes long, 2nd 12 runes long and the 3rd 4 runes long.  
+
+Phrases are split into a series of n-grams. N-grams are defined in pre-computed lists. The number of words in an n-gram (the n) can be 2,3,4 or 5 (currently only 2 has been tested and only data for 2-grams is supplied with the application).  The phrase 3 6 5 5, can be split in a number of different ways, for example:
+
+into 3 2-grams 3 6, 6 5 and  5 5
+into 2 3-grams 3 6 5, 6 5 5
+into 1 2-gram and 1 3-gram 3 6, 6 5 5
+etc. 
+ 
+Each n-gram must overlap at least one other n-gram. This measn that there is also a word list for each word in the phrase (the so-called phrase-unique-words, often abbreviated to "puw" ) For the phrase 3 6 5 5 split into 3 2-grams 3 6, 6 5 and  5 5 the puw are: 
+
+1st word (length 3): The unique 1st words contained in ngram  3 6 
+2nd word (length 6): The unique 2nd words contained in ngram  3 6 AND 1st words contained in ngram 6 5
+3rd word (length 5): The unique 2nd words contained in ngram  6 5 AND 1st words contained in ngram 5 5
+4th word (length 5): The unique 2nd words contained in ngram  5 5
+
+ 
+
+ 
+
+ 
+ 
+All possible 1-grams from the raw n-gram files are used to make cuts to the n-gram data when first defining a phrase.  
+
+
+  
+
+
+
+
+### Main words 
+
+There are the word 1-grams. They are always loaded on startup.  
+
+
+
+
+
+
 
 
 
