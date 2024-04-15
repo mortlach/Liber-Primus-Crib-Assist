@@ -56,6 +56,9 @@ int main(int argc, char *argv[])
     QApplication::setFont(utilities::getFont());
     MainWindow w(settings);
     w.show();
+    //w.setWindowState( (windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
+    w.raise();  // for MacOS
+    w.activateWindow();
     return a.exec();
 }
 
