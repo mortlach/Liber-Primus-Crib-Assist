@@ -1,4 +1,5 @@
 # ![normal logo ](./images/tree_small.bmp) Liber-Primus-Crib-Assistant
+It's a game of guess the words. 
 
 **Welcome to the documentation.**
 
@@ -74,20 +75,30 @@ into 2 3-grams 3 6 5, 6 5 5
 into 1 2-gram and 1 3-gram 3 6, 6 5 5
 etc. 
  
-Each n-gram must overlap at least one other n-gram. This measn that there is also a word list for each word in the phrase (the so-called phrase-unique-words, often abbreviated to "puw" ) For the phrase 3 6 5 5 split into 3 2-grams 3 6, 6 5 and  5 5 the puw are: 
+Each n-gram must overlap at least one other n-gram. This results in another word list for each word in the phrase (the so-called phrase-unique-words, often abbreviated to "puw" ) For the phrase 3 6 5 5 split into 3 2-grams 3 6, 6 5 and  5 5 the puw are: 
 
-1st word (length 3): The unique 1st words contained in ngram  3 6 
-2nd word (length 6): The unique 2nd words contained in ngram  3 6 AND 1st words contained in ngram 6 5
-3rd word (length 5): The unique 2nd words contained in ngram  6 5 AND 1st words contained in ngram 5 5
-4th word (length 5): The unique 2nd words contained in ngram  5 5
+1st word (length 3): The unique, 1st words in ngram  3 6 
+2nd word (length 6): The unique, 2nd words in ngram  3 6 AND 1st words in ngram 6 5
+3rd word (length 5): The unique, 2nd words in ngram  6 5 AND 1st words in ngram 5 5
+4th word (length 5): The unique, 2nd words in ngram  5 5
 
+Finally there is athe main -wor dlist, these are lists  of all possible 1-grams from the raw n-gram files. These are used as the "global" word list that are used to make cuts to the n-gram data when first defining a phrase. 
+
+
+### Tutorial: Setting up a new phrase example. 
+
+
+Here we will woalk throught setting up a new phrase and making some simple cuts.    
+
+On startup you shoudl see a window simialr to this:  
+ 
+ 
+ 
  
 
- 
+
 
  
- 
-All possible 1-grams from the raw n-gram files are used to make cuts to the n-gram data when first defining a phrase.  
 
 
   
