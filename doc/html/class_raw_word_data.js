@@ -2,6 +2,8 @@ var class_raw_word_data =
 [
     [ "RawWordData", "class_raw_word_data.html#a586269b88179ce69d124e083501d2b39", null ],
     [ "~RawWordData", "class_raw_word_data.html#a3cce1201fa8bbcde747bd437bdf9ae1a", null ],
+    [ "deleteItem", "class_raw_word_data.html#a457114f58a0355f082f9c03677f74d3e", null ],
+    [ "deleteItems", "class_raw_word_data.html#a87571f6c3f5908a4f1406c5702d487da", null ],
     [ "deleteNotChosen2", "class_raw_word_data.html#adfbdb83aa6fb65e2aaed3d74e48b3b6a", null ],
     [ "getAsAnyData", "class_raw_word_data.html#a810165672aed8b9be14d33579803e786", null ],
     [ "getChosen", "class_raw_word_data.html#a7654c5cc1ce3e2fa05a80b2c537f845e", null ],

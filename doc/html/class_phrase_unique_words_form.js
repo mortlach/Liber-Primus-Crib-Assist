@@ -5,6 +5,7 @@ var class_phrase_unique_words_form =
     [ "clear", "class_phrase_unique_words_form.html#aa78a14d26f045a2bb1e93fb7422768ad", null ],
     [ "message", "class_phrase_unique_words_form.html#aa28eb392ad04017cb46c788292df8591", null ],
     [ "on_changeFilter", "class_phrase_unique_words_form.html#a3fa3553a02d3fcd1ed03e8ba1478808f", null ],
+    [ "on_changeFontSize", "class_phrase_unique_words_form.html#a24368a331abb9b8695ef4376757317af", null ],
     [ "on_deleteData", "class_phrase_unique_words_form.html#a4559901f15ef667b47d6bbef4bdbd426", null ],
     [ "on_findData", "class_phrase_unique_words_form.html#a417458bc5544884f39ddb4565225aa7b", null ],
     [ "on_loadData", "class_phrase_unique_words_form.html#a076d829ba2a43d95f6c4175c7672cb7e", null ],

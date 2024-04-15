@@ -31,13 +31,16 @@ public:
     FilterModel* my_sortfilterproxymodel;
 
 public slots:
-    void on_tableView_customContextMenuRequested();
+    //void on_tableView_customContextMenuRequested();
+//    void on_changeFontSize(int fs);
+
     // TODO keep adding
     //void on_tableView_left_doubleclick_sig();
     //void on_tableView_space_bar_sig();
 
 private:
     void applyFilter(int a);
+
 
     enum Constants
     {

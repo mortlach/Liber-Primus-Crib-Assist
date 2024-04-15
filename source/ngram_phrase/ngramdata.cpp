@@ -46,18 +46,23 @@ bool NgramData::setChosenDataFromRaw(){
     qDebug() << "NgramData::setChosenDataFromRaw";
     // these lists need setting based on the entires in the 1-grams data
     auto raw1grams = Raw1Grams();
+    qDebug() << raw1grams.raw_word_data.size();
     for(int index = 0; index < my_ngram_meta_data.ngram_length; ++index){
         int int_word_length = my_ngram_meta_data.ngram_tokens[index];
         qDebug() << "word_length =" << int_word_length;
-        const RawWordData& rawworddataptr = raw1grams.getRawWordDataRef(int_word_length);
-        for(int row = 0; row < words.size(); ++row){
-            QString & next_word = words[row][index];
-            bool & c = chosen_by_word[row][index];
-            c = rawworddataptr.isChosen(next_word);
-            if(c == false){
-                //qDebug() << words[row][index] << "chosen" << chosen_by_word[row][index];
-                //chosen.replace(row, false);
-                chosen[row] = false;
+        // word length can be -1 to handle START and END tags (!)  // TODO
+        if(int_word_length > 0){
+            const RawWordData& rawworddataptr = raw1grams.getRawWordDataRef(int_word_length);
+            for(int row = 0; row < words.size(); ++row){
+                QString & next_word = words[row][index];
+                bool & c = chosen_by_word[row][index];
+                c = rawworddataptr.isChosen(next_word);
+                if(c == false){
+                    //qDebug() << words[row][index] << "chosen" << chosen_by_word[row][index];
+                    //chosen.replace(row, false);
+                    chosen[row] = false;
+                    ngram_chosen[row] = false;
+                }
             }
         }
     }
@@ -102,10 +107,20 @@ bool NgramData::setChosenFalseIfAnyChosenByWordIsFalse(){
     Q_ASSERT(chosen.size() == chosen_by_word.size());
     for(int i = 0; i < chosen.size();++i){
         const QList<bool>& this_chosen_by_word = chosen_by_word.at(i);
+        int true_count = 0;
         for(const auto& item: this_chosen_by_word){
             if(!item){
                 chosen.replace(i,false);
                 break;
+            }
+            else{
+                true_count += 1;
+            }
+        }
+        // if all chosen by word were true, AND ngram_chosen is true, then set chosen = true;
+        if(true_count == this_chosen_by_word.size()){
+            if(ngram_chosen.at(i)){
+                chosen.replace(i,true);
             }
         }
     }
@@ -180,6 +195,7 @@ bool NgramData::deleteNotChosen(){
     words2.reserve(chosen_indexes.size()) ;
     QList<unsigned long long> counts2;
     counts2.reserve(chosen_indexes.size()) ;
+    QList<bool> ngram_chosen2;
     QList<bool> chosen2;
     chosen2.reserve(chosen_indexes.size()) ;
     QList<QList<bool>> chosen_by_word2;
@@ -189,12 +205,14 @@ bool NgramData::deleteNotChosen(){
     for(const auto& i : chosen_indexes){
         words2.push_back( words.at(i));
         chosen2.push_back( chosen.at(i));
+        ngram_chosen2.push_back( ngram_chosen.at(i));
         ngram_string2.push_back( ngram_string.at(i));
         counts2.push_back( counts.at(i));
         chosen_by_word2.push_back(chosen_by_word.at(i));
     }
     words = words2;
     chosen = chosen2;
+    ngram_chosen = ngram_chosen2;
     counts = counts2;
     ngram_string = ngram_string2;
     chosen_by_word = chosen_by_word2;
@@ -217,7 +235,7 @@ bool NgramData::getAsFileData(VVAny& data_to_fill)const{
     data_to_fill.reserve(words.size());
     for(unsigned int i = 0; i < words.size(); ++i){ // !
         std::vector<std::any> next_line;
-        next_line.reserve(my_ngram_meta_data.ngram_length*2 + 2);
+        next_line.reserve(my_ngram_meta_data.ngram_length*2 + 3);
         for(const auto& w : words.at(i)){
             std::string nw = w.toStdString();
             next_line.push_back( std::any( nw ) );
@@ -225,6 +243,7 @@ bool NgramData::getAsFileData(VVAny& data_to_fill)const{
         for(const auto& w : chosen_by_word.at(i)){
             next_line.push_back( std::any( w ) );
         }
+        next_line.push_back( std::any(ngram_chosen.at(i)) );
         next_line.push_back( std::any(counts.at(i)) );
         next_line.push_back( std::any(chosen.at(i)) );
         data_to_fill.push_back(next_line);
@@ -236,12 +255,13 @@ bool NgramData::saveNGramFileData(const QString& full_path,
                                   const VVAny& data_to_write,
                                   unsigned int ngram_length)const{
     std::vector<std::vector<std::string>> string_data;
-    unsigned int count_index, chosen_index=0, items_per_line = 0;
+    unsigned int count_index, chosen_index=0, items_per_line = 0, ngram_chosen_index=0;
     // work out ngram size
     if(data_to_write.size() > 0){
         items_per_line = data_to_write[0].size();
         qDebug() << "save_ngitems_per_line" << items_per_line << ",(2 * ngram_length + 2)=" << 2 * ngram_length + 2;
-        Q_ASSERT( items_per_line == 2 * ngram_length + 2);
+        Q_ASSERT( items_per_line == 2 * ngram_length + 3);
+        ngram_chosen_index = items_per_line - 3;
         count_index = items_per_line - 2;
         chosen_index = items_per_line - 1;
     }
@@ -254,6 +274,7 @@ bool NgramData::saveNGramFileData(const QString& full_path,
         for(unsigned int i = 0; i < ngram_length; ++i ){
             next_line.push_back(std::to_string(std::any_cast<bool>(item.at(ngram_length+i))));
         }
+        next_line.push_back(std::to_string(std::any_cast<bool>(item.at(ngram_chosen_index))));
         next_line.push_back(std::to_string(std::any_cast<unsigned long long>(item.at(count_index))));
         next_line.push_back(std::to_string(std::any_cast<bool>(item.at(chosen_index))));
         string_data.push_back(next_line);
@@ -281,6 +302,7 @@ bool NgramData::load(bool default_location){
         setFromAnyDataNoChosen(data,
                                my_ngram_meta_data.has_sent_start,
                                my_ngram_meta_data.has_sent_end);
+
         if(my_ngram_meta_data.has_sent_start){
             my_ngram_meta_data.ngram_length -= 1;
             //ngram_length=ngram_data->ngram_length;
@@ -295,6 +317,10 @@ bool NgramData::load(bool default_location){
             qDebug() << "Change ngram_length" << my_ngram_meta_data.ngram_length+1 << "to" << my_ngram_meta_data.ngram_length;
             qDebug() << "words.at(0).size() =" << words.at(0).size();
         }
+
+
+        setChosenDataFromRaw();
+
     }
     else{
         qDebug() << my_ngram_meta_data.phrase_dir.path();
@@ -304,6 +330,9 @@ bool NgramData::load(bool default_location){
         qDebug() << "Call NgramData::loadNGramWithChosen " << data_path;
         if(!loadNGramWithChosen(data_path, data, my_ngram_meta_data.ngram_length)){
             return false;
+        }
+        for(auto& item: data){
+            Q_ASSERT(item.size() == 7);
         }
         setFromAnyDataWithChosen(data,
                                  my_ngram_meta_data.has_sent_start,
@@ -330,11 +359,12 @@ bool NgramData::loadNGramNoChosen(const QString& full_path,
         // word1 word2 wordX counts
         if(file_string_data.size() > 0 ){
             qDebug() << "read_items_per_line" << file_string_data.at(0).size() << "ngram_length" << ngram_length;
-            // chosen files have ngram_lengths + 1 columns (counts )
+            // no chosen files have ngram_length + 1 columns (counts)
             Q_ASSERT(ngram_length == (file_string_data.at(0).size() - 1));
         }
         data_to_fill.clear();
         data_to_fill.reserve(file_string_data.size());
+        int counter = 0;
         for(const auto& item : file_string_data){
             std::vector<std::any> next_line_data;
             next_line_data.reserve(item.size());
@@ -350,6 +380,8 @@ bool NgramData::loadNGramNoChosen(const QString& full_path,
             // ***************
             next_line_data.push_back( std::any(std::stoull(item.at(ngram_length))));
             data_to_fill.push_back(next_line_data);
+            //qDebug() << counter;
+            counter += 1;
         }
         return true;
     }
@@ -360,12 +392,13 @@ bool NgramData::loadNGramWithChosen(const QString& full_path,
                                     unsigned int ngram_length)const{
     std::vector<std::vector<std::string>> file_string_data;
     if(utilities::readCSVFile(full_path.toStdString(), file_string_data)){
-        unsigned int items_per_line = 0, count_index, chosen_index;
+        unsigned int items_per_line = 0, count_index, chosen_index, ngram_chosen_index;
         // check ngram size
         if(file_string_data.size() > 0 ){
             items_per_line = file_string_data.at(0).size();
             qDebug() << "items_per_line" << items_per_line << "ngram_length" << ngram_length;
-            Q_ASSERT(ngram_length == (items_per_line - 2) / 2);
+            Q_ASSERT(ngram_length == (items_per_line - 3) / 2);
+            ngram_chosen_index = items_per_line - 3;
             count_index = items_per_line - 2;
             chosen_index = items_per_line - 1;
         }
@@ -383,12 +416,23 @@ bool NgramData::loadNGramWithChosen(const QString& full_path,
                 utilities::stringToBool(item.at(i), bool_value);
                 next_line_data.push_back(std::any(bool_value));
             }
+            Q_ASSERT( (item.at(ngram_chosen_index) == "1") || (item.at(ngram_chosen_index) == "0"));
+            utilities::stringToBool(item.at(chosen_index), bool_value);
+            next_line_data.push_back(std::any(bool_value));
+
             next_line_data.push_back(std::any(std::stoull(item.at(count_index))));
+
             Q_ASSERT( (item.at(chosen_index) == "1") || (item.at(chosen_index) == "0"));
             utilities::stringToBool(item.at(chosen_index), bool_value);
             next_line_data.push_back(std::any(bool_value));
+
+            Q_ASSERT(next_line_data.size() == items_per_line);
             data_to_fill.push_back(next_line_data);
+            Q_ASSERT(data_to_fill.back().size() == items_per_line);
         }
+//        for(auto& item: data_to_fill){
+//            Q_ASSERT(item.size() == items_per_line);
+//        }
         return true;
     }
     return false;
@@ -412,10 +456,12 @@ bool NgramData::setFromAnyDataNoChosen(VVAny& raw_data,
     ngram_string.clear();
     counts.clear();
     chosen.clear();
+    ngram_chosen.clear();
     chosen_by_word.clear();
     words.reserve(raw_data.size());
     ngram_string.reserve(raw_data.size());
     counts.reserve(raw_data.size());
+    ngram_chosen.reserve(raw_data.size());
     chosen.reserve(raw_data.size());
     chosen_by_word.reserve(raw_data.size());
     qDebug() << "start loop";
@@ -431,7 +477,7 @@ bool NgramData::setFromAnyDataNoChosen(VVAny& raw_data,
         }
         counts.push_back(std::any_cast<unsigned long long>(*it));
         // based on start end tags remove items
-        QList<QString> t;
+        //QList<QString> t;
         if(has_sent_start ){
             int sss = next_words.size();
             next_words.takeFirst();
@@ -444,6 +490,7 @@ bool NgramData::setFromAnyDataNoChosen(VVAny& raw_data,
         words.push_back(next_words);
         ngram_string.push_back(next_words.join(" "));
         // as setting from raw, chosen & chosen_by_word have all true default values
+        ngram_chosen.push_back(true);
         chosen.push_back(true);
         QList<bool> default_chosen_by_word(next_words.size(), true);
         chosen_by_word.push_back(default_chosen_by_word);
@@ -461,7 +508,8 @@ bool NgramData::setFromAnyDataWithChosen(const VVAny& raw_data,
     }
     qDebug() << "setFromFileData, has_sent_start" << has_sent_start;
     qDebug() << "setFromFileData, has_sent_end" << has_sent_end;
-    Q_ASSERT((int)raw_data[0].size() == 2* my_ngram_meta_data.ngram_length + 2 );
+    qDebug() << "raw_data[0].size()" << raw_data[0].size();
+    Q_ASSERT((int)raw_data[0].size() == 2* my_ngram_meta_data.ngram_length + 3 );
     words.clear();
     ngram_string.clear();
     counts.clear();
@@ -490,6 +538,8 @@ bool NgramData::setFromAnyDataWithChosen(const VVAny& raw_data,
             base_word_chosen.push_back(std::any_cast<bool>(*it));
             ++it;
         }
+        ngram_chosen.push_back(std::any_cast<bool>(*it));
+        ++it;
         counts.push_back(std::any_cast<unsigned long long>(*it));
         ++it;
         chosen.push_back(std::any_cast<bool>(*it));

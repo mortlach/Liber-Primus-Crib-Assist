@@ -17,6 +17,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 #include "gng_tableview.h"
+#include "utilities.h"
 #include <QObject>
 #include <QHeaderView>
 #include <QApplication>
@@ -49,6 +50,12 @@ bool GNGTableView::eventFilter(QObject *obj, QEvent *event)
 {   // see  OneGramTableView::eventFilter
     return QTableView::eventFilter(obj, event);
 }
+
+void GNGTableView::changeFontSize(int fs){
+    setFont(utilities::getFont(fs));
+}
+
+
 void GNGTableView::keyPressEvent(QKeyEvent *event)
 {
     if( (event->key() == Qt::Key_Space)
@@ -74,7 +81,13 @@ void GNGTableView::keyPressEvent(QKeyEvent *event)
     }
     else if( (event->key() == Qt::Key_F)  ){emit f_sig();}
     else if( (event->key() == Qt::Key_T)  ){emit t_sig();}
-    else if( (event->key() == Qt::Key_A)  && (int(event->modifiers()) == Qt::AltModifier) ){emit alt_a_sig();}
+    else if( (event->key() == Qt::Key_Delete)  ){
+            qDebug() << "GNGTableView::keyPressEvent delete signal caught";
+            emit delete_sig();
+            }
+    else if( (event->key() == Qt::Key_A)  && (int(event->modifiers()) == Qt::AltModifier) ){
+            qDebug() << "GNGTableView::keyPressEvent alt_a_sig signal caught";
+            emit alt_a_sig();}
     else if( (event->key() == Qt::Key_C)  && (int(event->modifiers()) == Qt::AltModifier) ){emit alt_c_sig();}
     else if( (event->key() == Qt::Key_N)  && (int(event->modifiers()) == Qt::AltModifier) ){emit alt_n_sig();}
     else if( (event->key() == Qt::Key_C)

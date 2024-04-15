@@ -2,136 +2,152 @@
 \hypertarget{phraseuniquewords_8h_source}{}\label{phraseuniquewords_8h_source}\index{source/ngram\_phrase/phraseuniquewords.h@{source/ngram\_phrase/phraseuniquewords.h}}
 \mbox{\hyperlink{phraseuniquewords_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PHRASEUNIQUEWORDS\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PHRASEUNIQUEWORDS\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <algorithm>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QObject>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QDir>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QHash>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <any>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{basedata_8h}{basedata.h}}"{}}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}\ :\ \textcolor{keyword}{public}\ QObject\ ,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_data}{BaseData}}}
-\DoxyCodeLine{00014\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a2614f787ad3305dbc376c9b061ace917}{PhraseUniqueWords}}();}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a2614f787ad3305dbc376c9b061ace917}{PhraseUniqueWords}}(\textcolor{keywordtype}{int}\ word\_index,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a41295931d7b679af170ae590b2d159ce}{word\_length}},\ \ \textcolor{keyword}{const}\ QString\&\ data\_file\_path\_in,\ \textcolor{keyword}{const}\ QHash<QString,\ QPair<int,int>>\&\ hash\_in);}
-\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a2614f787ad3305dbc376c9b061ace917}{PhraseUniqueWords}}(\textcolor{keywordtype}{int}\ word\_index,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a41295931d7b679af170ae590b2d159ce}{word\_length}},\ \textcolor{keyword}{const}\ QString\&\ data\_file\_name\_in);}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_ae08617224f645762a803ebe6174fd0b9}{\string~PhraseUniqueWords}}()\{}
-\DoxyCodeLine{00022\ \ \ \ \ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a82e5376f047935b1d453ec838e975815}{getWordIndexInPhrase}}()\textcolor{keyword}{const}\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_a29c63bf479861a9bcd9076fe70eda697}{word\_index\_in\_phrase}};\}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aa075d5fe969bef4150a4e23513329bdd}{setTheseWordsChosenElseFalse}}(\textcolor{keyword}{const}\ QList<QString>\&\ chosen\_words);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a23eb1ebadb80846911b0a1b9b673f882}{setNewWords}}(\textcolor{keyword}{const}\ QList<QString>\&\ new\_words,}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QList<unsigned\ long\ long>\&\ new\_total\_counts\_in\_all\_ngrams,}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QList<int>\&\ new\_ngrams\_with\_this\_word);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a97c02e0bc2bfd8fe4ae1fe7676b00d6e}{keepDatForTheseWordssOnly}}(\textcolor{keyword}{const}\ QList<QString>\&\ new\_words);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a213c837296596bb00ffaf9b73820233a}{updateWordToIndex}}();}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_adf33ee035d9dc9a14e8c3109341cf70e}{getChosenWords}}(QList<QString>\&\ new\_words)\textcolor{keyword}{const};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{inline}\ QString\ \mbox{\hyperlink{class_phrase_unique_words_a28ba549f6b5376261f5536dcfc69f1f0}{setFilePath}}(\textcolor{keyword}{const}\ QString\&\ data\_file\_path\_in,\ \textcolor{keyword}{const}\ QString\&\ data\_file\_name\_in)\{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a9a4a5d6922d11f76e8ac6e75c536d26b}{data\_file\_path}}\ =\ data\_file\_path\_in;}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_aa10b944316b856cedb2d2c2047480628}{data\_file\_name}}\ =\ data\_file\_name\_in;}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_aa56e71c9a39ea390d40ed6024f371e36}{data\_path}}\ =\ \mbox{\hyperlink{class_phrase_unique_words_a9a4a5d6922d11f76e8ac6e75c536d26b}{data\_file\_path}}+QString(\textcolor{stringliteral}{"{}/"{}})+\mbox{\hyperlink{class_phrase_unique_words_aa10b944316b856cedb2d2c2047480628}{data\_file\_name}};}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_aa56e71c9a39ea390d40ed6024f371e36}{data\_path}};}
-\DoxyCodeLine{00043\ \ \ \ \ \}}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{inline}\ QList<QString>\ \mbox{\hyperlink{class_phrase_unique_words_a5dc4e7fc73b0093a57de483636efa9c5}{getChosenWordsInCountOrder}}()\textcolor{keyword}{const}\{}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }qp\ =\ QPair<QString,unsigned\ long\ long\ >;}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ QList<QString>\ r;}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ QList<QPair<QString,unsigned\ long\ long\ >>\ chosen\_word\_counts;}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}.size();\ ++i)\{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i))\{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qp\ p\{\mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}.at(i),\mbox{\hyperlink{class_phrase_unique_words_a5d915a923a898d03511656c566179fc6}{total\_counts\_in\_all\_ngrams}}.at(i)\};}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosen\_word\_counts\ <<\ p;}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::sort(chosen\_word\_counts.begin(),\ chosen\_word\_counts.end(),}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [](qp\&\ a,\ qp\&\ b)\{return\ a.second\ >\ b.second;\}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ item:\ chosen\_word\_counts)\{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ r\ <<\ item.first;}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
-\DoxyCodeLine{00062\ \ \ \ \ \}}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ signals:}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_aeaa725b8bc527b875aec85ef34e4ed91}{updatePUWChosen}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\_chosen\_count}});}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a14cb16dceb93ce3cf0bd1379b76765d3}{setWords}}(\textcolor{keyword}{const}\ \ QList<QString>\&\ words\_in)\{}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}\ =\ words\_in;}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}\ =\ QList<bool>(\mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}.size(),\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a213c837296596bb00ffaf9b73820233a}{updateWordToIndex}}();}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00074\ \ \ \ \ \}}
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a29c63bf479861a9bcd9076fe70eda697}{word\_index\_in\_phrase}};}
-\DoxyCodeLine{00082\ \ \ \ \ QList<QString>\ \mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}};\ \textcolor{comment}{//}}
-\DoxyCodeLine{00086\ \ \ \ \ std::vector<std::vector<std::any>>\ \mbox{\hyperlink{class_phrase_unique_words_a7632af39a99742f47a673fd9a5a66642}{any\_data}};}
-\DoxyCodeLine{00090\ \ \ \ \ std::vector<std::vector<std::string>>\ \mbox{\hyperlink{class_phrase_unique_words_a9c790a31f885023328bf69fdde0510f3}{string\_data}};}
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a41295931d7b679af170ae590b2d159ce}{word\_length}};}
-\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aebb2bfba25bf59409c3a578c0a5dd5db}{has\_data}};}
-\DoxyCodeLine{00102\ \ \ \ \ QString\ \mbox{\hyperlink{class_phrase_unique_words_aa10b944316b856cedb2d2c2047480628}{data\_file\_name}};}
-\DoxyCodeLine{00103\ \ \ \ \ QString\ \mbox{\hyperlink{class_phrase_unique_words_a9a4a5d6922d11f76e8ac6e75c536d26b}{data\_file\_path}};}
-\DoxyCodeLine{00104\ \ \ \ \ QString\ \mbox{\hyperlink{class_phrase_unique_words_aa56e71c9a39ea390d40ed6024f371e36}{data\_path}};}
-\DoxyCodeLine{00108\ \ \ \ \ QList<unsigned\ long\ long>\ \mbox{\hyperlink{class_phrase_unique_words_a5d915a923a898d03511656c566179fc6}{total\_counts\_in\_all\_ngrams}};}
-\DoxyCodeLine{00112\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_phrase_unique_words_aed0207362fb4451b8ea0545172220c29}{ngrams\_with\_this\_word}};}
-\DoxyCodeLine{00116\ \ \ \ \ QHash<QString,\ int>\ \mbox{\hyperlink{class_phrase_unique_words_afd194d7ac0bc3be8456734ab2a5cf7bd}{word\_to\_index}};}
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a3414f9e75542bd6d05c10dc00800a9f6}{loadData}}();\textcolor{comment}{//\{\ return\ false;\}}}
-\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a5ab479e79b14764cc8170b384fac741c}{saveData}}()\textcolor{keyword}{const};\textcolor{comment}{//\{\ return\ false;\}}}
-\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a104a433b4dfeaca0e36d1dcf96471e47}{deleteNotChosen2}}()\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aae02b9857f34f60253ad1160b02b9d73}{setFromAnyData}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::any>>\&\ raw\_data);}
-\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_ae2eb3a41b24361205a2b3da21748b323}{getAsAnyData}}(std::vector<std::vector<std::any>>\&\ data\_to\_fill)\textcolor{keyword}{const};}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_ae838170a2215645d6cc608fe5327d24a}{setChosen}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{bool}\ value)\{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ Q\_ASSERT(\ i\ <=\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ );}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.replace(i,\ value);}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a77e6353dc1fac4f596f33b71030107f4}{updateChosenCounts}}();}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i);}
-\DoxyCodeLine{00151\ \ \ \ \ \}}
-\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aec322475aa0e7800ccb3a56b7667ae1d}{getChosen}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\{}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ Q\_ASSERT(\ i\ <\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ );}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i);}
-\DoxyCodeLine{00155\ \ \ \ \ \}}
-\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_ab278ecc29980f744c5cdb728c374ba40}{toggleChosen}}(\textcolor{keywordtype}{int}\ i)\{}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ Q\_ASSERT(\ i\ <\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ );}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.replace(i,\ !\mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i));}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a77e6353dc1fac4f596f33b71030107f4}{updateChosenCounts}}();}
-\DoxyCodeLine{00160\ \ \ \ \ \}}
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_phrase_unique_words_a3b11b5e2c00bbc8746bff10afca980c8}{size}}()\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size();\ \}}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_ad4e54c90ad6f39a69f71ff7413e4c0e7}{isChosen}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_aec322475aa0e7800ccb3a56b7667ae1d}{getChosen}}(i);\}}
-\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a8be58cf64b6a4d49396839e77f2a0889}{isNotChosen}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_aec322475aa0e7800ccb3a56b7667ae1d}{getChosen}}(i)\ ==\ \textcolor{keyword}{false};\}}
-\DoxyCodeLine{00164\ }
-\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a77e6353dc1fac4f596f33b71030107f4}{updateChosenCounts}}()\{}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}}\ =\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.count(\textcolor{keyword}{true});}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\_chosen\_count}}\ =\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ -\/\ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}};}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_phrase_unique_words_aeaa725b8bc527b875aec85ef34e4ed91}{updatePUWChosen}}(\mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}},\ \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\_chosen\_count}});}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ LPCribAssist\ v0.1:\ to\ help\ with\ cribbing\ the\ Liber\ Primus}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ mortlach}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ PHRASEUNIQUEWORDS\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ PHRASEUNIQUEWORDS\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QHash>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <any>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{basedata_8h}{basedata.h}}"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words}{PhraseUniqueWords}}\ :\ \textcolor{keyword}{public}\ QObject\ ,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_base_data}{BaseData}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a2614f787ad3305dbc376c9b061ace917}{PhraseUniqueWords}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a2614f787ad3305dbc376c9b061ace917}{PhraseUniqueWords}}(\textcolor{keywordtype}{int}\ word\_index,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a41295931d7b679af170ae590b2d159ce}{word\_length}},\ \ \textcolor{keyword}{const}\ QString\&\ data\_file\_path\_in,\ \textcolor{keyword}{const}\ QHash<QString,\ QPair<int,int>>\&\ hash\_in);}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a2614f787ad3305dbc376c9b061ace917}{PhraseUniqueWords}}(\textcolor{keywordtype}{int}\ word\_index,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a41295931d7b679af170ae590b2d159ce}{word\_length}},\ \textcolor{keyword}{const}\ QString\&\ data\_file\_name\_in);}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_ae08617224f645762a803ebe6174fd0b9}{\string~PhraseUniqueWords}}()\{}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a82e5376f047935b1d453ec838e975815}{getWordIndexInPhrase}}()\textcolor{keyword}{const}\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_a29c63bf479861a9bcd9076fe70eda697}{word\_index\_in\_phrase}};\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aa075d5fe969bef4150a4e23513329bdd}{setTheseWordsChosenElseFalse}}(\textcolor{keyword}{const}\ QList<QString>\&\ chosen\_words);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a23eb1ebadb80846911b0a1b9b673f882}{setNewWords}}(\textcolor{keyword}{const}\ QList<QString>\&\ new\_words,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QList<unsigned\ long\ long>\&\ new\_total\_counts\_in\_all\_ngrams,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QList<int>\&\ new\_ngrams\_with\_this\_word);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a97c02e0bc2bfd8fe4ae1fe7676b00d6e}{keepDatForTheseWordssOnly}}(\textcolor{keyword}{const}\ QList<QString>\&\ new\_words);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a213c837296596bb00ffaf9b73820233a}{updateWordToIndex}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_adf33ee035d9dc9a14e8c3109341cf70e}{getChosenWords}}(QList<QString>\&\ new\_words)\textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{inline}\ QString\ \mbox{\hyperlink{class_phrase_unique_words_a28ba549f6b5376261f5536dcfc69f1f0}{setFilePath}}(\textcolor{keyword}{const}\ QString\&\ data\_file\_path\_in,\ \textcolor{keyword}{const}\ QString\&\ data\_file\_name\_in)\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a9a4a5d6922d11f76e8ac6e75c536d26b}{data\_file\_path}}\ =\ data\_file\_path\_in;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_aa10b944316b856cedb2d2c2047480628}{data\_file\_name}}\ =\ data\_file\_name\_in;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_aa56e71c9a39ea390d40ed6024f371e36}{data\_path}}\ =\ \mbox{\hyperlink{class_phrase_unique_words_a9a4a5d6922d11f76e8ac6e75c536d26b}{data\_file\_path}}+QString(\textcolor{stringliteral}{"{}/"{}})+\mbox{\hyperlink{class_phrase_unique_words_aa10b944316b856cedb2d2c2047480628}{data\_file\_name}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_aa56e71c9a39ea390d40ed6024f371e36}{data\_path}};}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{inline}\ QList<QString>\ \mbox{\hyperlink{class_phrase_unique_words_a5dc4e7fc73b0093a57de483636efa9c5}{getChosenWordsInCountOrder}}()\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }qp\ =\ QPair<QString,unsigned\ long\ long\ >;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ QList<QString>\ r;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ QList<QPair<QString,unsigned\ long\ long\ >>\ chosen\_word\_counts;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}.size();\ ++i)\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i))\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qp\ p\{\mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}.at(i),\mbox{\hyperlink{class_phrase_unique_words_a5d915a923a898d03511656c566179fc6}{total\_counts\_in\_all\_ngrams}}.at(i)\};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosen\_word\_counts\ <<\ p;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::sort(chosen\_word\_counts.begin(),\ chosen\_word\_counts.end(),}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [](qp\&\ a,\ qp\&\ b)\{return\ a.second\ >\ b.second;\}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ item:\ chosen\_word\_counts)\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ r\ <<\ item.first;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ signals:}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_aeaa725b8bc527b875aec85ef34e4ed91}{updatePUWChosen}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\_chosen\_count}});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a14cb16dceb93ce3cf0bd1379b76765d3}{setWords}}(\textcolor{keyword}{const}\ \ QList<QString>\&\ words\_in)\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}\ =\ words\_in;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}\ =\ QList<bool>(\mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}}.size(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a213c837296596bb00ffaf9b73820233a}{updateWordToIndex}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a29c63bf479861a9bcd9076fe70eda697}{word\_index\_in\_phrase}};}
+\DoxyCodeLine{00100\ \ \ \ \ QList<QString>\ \mbox{\hyperlink{class_phrase_unique_words_a6a635090fef3a8545118bff7b6615e07}{words}};\ \textcolor{comment}{//}}
+\DoxyCodeLine{00104\ \ \ \ \ std::vector<std::vector<std::any>>\ \mbox{\hyperlink{class_phrase_unique_words_a7632af39a99742f47a673fd9a5a66642}{any\_data}};}
+\DoxyCodeLine{00108\ \ \ \ \ std::vector<std::vector<std::string>>\ \mbox{\hyperlink{class_phrase_unique_words_a9c790a31f885023328bf69fdde0510f3}{string\_data}};}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a41295931d7b679af170ae590b2d159ce}{word\_length}};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aebb2bfba25bf59409c3a578c0a5dd5db}{has\_data}};}
+\DoxyCodeLine{00120\ \ \ \ \ QString\ \mbox{\hyperlink{class_phrase_unique_words_aa10b944316b856cedb2d2c2047480628}{data\_file\_name}};}
+\DoxyCodeLine{00121\ \ \ \ \ QString\ \mbox{\hyperlink{class_phrase_unique_words_a9a4a5d6922d11f76e8ac6e75c536d26b}{data\_file\_path}};}
+\DoxyCodeLine{00122\ \ \ \ \ QString\ \mbox{\hyperlink{class_phrase_unique_words_aa56e71c9a39ea390d40ed6024f371e36}{data\_path}};}
+\DoxyCodeLine{00126\ \ \ \ \ QList<unsigned\ long\ long>\ \mbox{\hyperlink{class_phrase_unique_words_a5d915a923a898d03511656c566179fc6}{total\_counts\_in\_all\_ngrams}};}
+\DoxyCodeLine{00130\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_phrase_unique_words_aed0207362fb4451b8ea0545172220c29}{ngrams\_with\_this\_word}};}
+\DoxyCodeLine{00134\ \ \ \ \ QHash<QString,\ int>\ \mbox{\hyperlink{class_phrase_unique_words_afd194d7ac0bc3be8456734ab2a5cf7bd}{word\_to\_index}};}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a3414f9e75542bd6d05c10dc00800a9f6}{loadData}}();\textcolor{comment}{//\{\ return\ false;\}}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a5ab479e79b14764cc8170b384fac741c}{saveData}}()\textcolor{keyword}{const};\textcolor{comment}{//\{\ return\ false;\}}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a104a433b4dfeaca0e36d1dcf96471e47}{deleteNotChosen2}}()\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aae02b9857f34f60253ad1160b02b9d73}{setFromAnyData}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::any>>\&\ raw\_data);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_ae2eb3a41b24361205a2b3da21748b323}{getAsAnyData}}(std::vector<std::vector<std::any>>\&\ data\_to\_fill)\textcolor{keyword}{const};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_ae838170a2215645d6cc608fe5327d24a}{setChosen}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{bool}\ value)\{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ Q\_ASSERT(\ i\ <=\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ );}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.replace(i,\ value);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a77e6353dc1fac4f596f33b71030107f4}{updateChosenCounts}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i);}
 \DoxyCodeLine{00169\ \ \ \ \ \}}
-\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a83d034105c0ecc62d04791d48bf0a14b}{getChosenCount}}()\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}};\}}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aaffb9d55af79d2799a4149f16b109ba9}{isChosen}}(\textcolor{keyword}{const}\ QString\&\ word)\textcolor{keyword}{const}\{}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ \mbox{\hyperlink{class_phrase_unique_words_afd194d7ac0bc3be8456734ab2a5cf7bd}{word\_to\_index}}.value(word,-\/1);}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i<0)\{}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ "{}Warning/ERROR\ passed\ word\ that\ does\ nto\ exist\ in\ my\ data:"{}\ <<\ word;}}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_ad4e54c90ad6f39a69f71ff7413e4c0e7}{isChosen}}(i);}
-\DoxyCodeLine{00179\ \ \ \ \ \}}
-\DoxyCodeLine{00180\ }
-\DoxyCodeLine{00181\ \};}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aec322475aa0e7800ccb3a56b7667ae1d}{getChosen}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ Q\_ASSERT(\ i\ <\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ );}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i);}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_ab278ecc29980f744c5cdb728c374ba40}{toggleChosen}}(\textcolor{keywordtype}{int}\ i)\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ Q\_ASSERT(\ i\ <\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ );}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.replace(i,\ !\mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.at(i));}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_phrase_unique_words_a77e6353dc1fac4f596f33b71030107f4}{updateChosenCounts}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_phrase_unique_words_a3b11b5e2c00bbc8746bff10afca980c8}{size}}()\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size();\ \}}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_ad4e54c90ad6f39a69f71ff7413e4c0e7}{isChosen}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_aec322475aa0e7800ccb3a56b7667ae1d}{getChosen}}(i);\}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_a8be58cf64b6a4d49396839e77f2a0889}{isNotChosen}}(\textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_aec322475aa0e7800ccb3a56b7667ae1d}{getChosen}}(i)\ ==\ \textcolor{keyword}{false};\}}
 \DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PHRASEUNIQUEWORDS\_H}}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_phrase_unique_words_a77e6353dc1fac4f596f33b71030107f4}{updateChosenCounts}}()\{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}}\ =\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.count(\textcolor{keyword}{true});}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\_chosen\_count}}\ =\ \mbox{\hyperlink{class_base_data_a9f3e0f0ad303c88efa4a6bb486f8fe1f}{chosen}}.size()\ -\/\ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_phrase_unique_words_aeaa725b8bc527b875aec85ef34e4ed91}{updatePUWChosen}}(\mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}},\ \mbox{\hyperlink{class_base_data_a03495c43cb2cef152470a90d78ccebad}{not\_chosen\_count}});}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_phrase_unique_words_a83d034105c0ecc62d04791d48bf0a14b}{getChosenCount}}()\textcolor{keyword}{const}\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_base_data_ae7de2fcfcae5b632afe5ed089680be97}{chosen\_count}};\}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_phrase_unique_words_aaffb9d55af79d2799a4149f16b109ba9}{isChosen}}(\textcolor{keyword}{const}\ QString\&\ word)\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ \mbox{\hyperlink{class_phrase_unique_words_afd194d7ac0bc3be8456734ab2a5cf7bd}{word\_to\_index}}.value(word,-\/1);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i<0)\{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ "{}Warning/ERROR\ passed\ word\ that\ does\ nto\ exist\ in\ my\ data:"{}\ <<\ word;}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_phrase_unique_words_ad4e54c90ad6f39a69f71ff7413e4c0e7}{isChosen}}(i);}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PHRASEUNIQUEWORDS\_H}}
 
 \end{DoxyCode}

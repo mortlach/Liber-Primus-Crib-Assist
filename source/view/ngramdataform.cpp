@@ -16,9 +16,9 @@
 //    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //
 /////////////////////////////////////////////////////////////////////////////
-#include "NGramDataForm.h"
+#include "ngramdataform.h"
 #include "utilities.h"
-#include "ui_NGramDataForm.h"
+#include "ui_ngramdataform.h"
 #include <QMenu>
 
 NGramDataForm::NGramDataForm(QWidget *parent)
@@ -37,6 +37,9 @@ NGramDataForm::NGramDataForm(QWidget *parent)
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::findData,this, &NGramDataForm::on_findData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &NGramDataForm::on_saveAllData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::changeFilter,this, &NGramDataForm::on_changeFilter);
+    QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &NGramDataForm::on_changeFontSize);
+
+
     my_sortfilterproxymodel->setSourceModel(&model);
     ngram_selectionmodel->setModel(my_sortfilterproxymodel);
     ui->tableView->setModel(my_sortfilterproxymodel);
@@ -51,6 +54,12 @@ void NGramDataForm::on_changeFilter(int filter_num){
 NGramDataForm::~NGramDataForm(){
     delete ui;
 }
+
+void NGramDataForm::on_changeFontSize(int fs){
+    ui->tableView->changeFontSize(fs);
+    ui->tableView->resizeColumnsToContents();
+}
+
 
 void NGramDataForm::setNgramChosenCounts(const QList<int>& counts){
     //qDebug() << "NGramDataForm::setNgramChosenCounts";
@@ -187,6 +196,7 @@ void NGramDataForm::on_tableView_space_bar_sig(){
         ui->tableView->selectRow(new_selected_row);
     }
     model.toggleChosen(to_toggle);
+    model.toggleNgramChosen(to_toggle);
     update();
 }
 
@@ -216,12 +226,67 @@ void NGramDataForm::on_tableView_left_doubleclick_sig(){
         to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
     }
     model.toggleChosen(to_toggle);
+    model.toggleNgramChosen(to_toggle);
     update();
 }
 
+void NGramDataForm::on_tableView_t_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setChosen(to_set_t);
+    update();
+}
+void NGramDataForm::on_tableView_f_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setNotChosen(to_set_t);
+    update();
+}
+
+void NGramDataForm::on_tableView_alt_a_sig(){
+    qDebug() << "NGramDataForm::on_tableView_alt_a_sig";
+    ui->wordList_general_controls->setAllFilter();
+}
+void NGramDataForm::on_tableView_alt_c_sig(){
+    qDebug() << "NGramDataForm::on_tableView_alt_c_sig";
+    ui->wordList_general_controls->setChosenFilter();
+}
+void NGramDataForm::on_tableView_alt_n_sig(){
+    qDebug() << "NGramDataForm::on_tableView_alt_n_sig";
+    ui->wordList_general_controls->setNotChosenFilter();
+}
+void NGramDataForm::on_tableView_alt_f_sig(){
+    on_tableView_customContextMenuRequested();
+}
+
+
+void NGramDataForm::on_tableView_delete_sig(){
+    QModelIndexList to_delete;
+    int new_selected_row = model.rowCount() +2;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        to_delete.push_back(my_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+            new_selected_row = index.row();
+        }
+    }
+    model.deleteSelected(to_delete);
+    update();
+    // set the new selected row to be one above the
+    new_selected_row -= 1;
+    if(new_selected_row < 0)
+        new_selected_row = 0;
+    //qDebug() << new_selected_row;
+    ui->tableView->selectRow(new_selected_row);
+}
 void NGramDataForm::applyFilter(int a){
     //    check filters for phrase unqiue words
-    qDebug() << "ngramApplyFilter" << a;
+    qDebug() << "NGramDataForm" << a;
     switch(a){
     case not_chosen_filter: my_sortfilterproxymodel->setFilter("not_chosen"); break;
     case chosen_filter:     my_sortfilterproxymodel->setFilter("chosen");     break;
@@ -229,3 +294,24 @@ void NGramDataForm::applyFilter(int a){
     default:;
     }
 }
+void NGramDataForm::on_tableView_customContextMenuRequested(){
+    //qDebug() << pt.x() << pt.y();
+    //qDebug() << "showContextMenu passed" << pt.x() << pt.y();
+    //QPoint globalPos = ui->tableView->mapToGlobal(pt);
+    //qDebug() << globalPos.x() << globalPos.y();
+    qDebug() << QCursor().pos().x() << QCursor().pos().y();
+    QPoint pt2 = QPoint(QCursor().pos().x() - 100 , QCursor().pos().y()  );
+    QMenu contextMenu(tr("NGRAM Filter Menu"), this);
+    QAction* all = contextMenu.addAction("Filer: All");
+    QAction* chosen = contextMenu.addAction("Filer: Chosen");
+    QAction* not_chosen = contextMenu.addAction("Filer: Not Chosen");
+    //QAction* reload = contextMenu.addAction("Reload Data");
+    QAction* selectedItem = contextMenu.exec(pt2);
+    if (selectedItem == all){ on_tableView_alt_a_sig(); }
+    if (selectedItem == chosen){ on_tableView_alt_c_sig(); }
+    if (selectedItem == not_chosen){ on_tableView_alt_n_sig(); }
+    //if (selectedItem == reload){ applyFilter(3); }
+}
+
+
+

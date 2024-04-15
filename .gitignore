@@ -1,2 +1,3 @@
-
-bin/Users*
+LPCribAssist.pro.user
+build/*
+bin/win/Users*

@@ -45,6 +45,7 @@ PhraseUniqueWordsForm::PhraseUniqueWordsForm(QWidget *parent)
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::deleteData,this, &PhraseUniqueWordsForm::on_deleteData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::findData,this, &PhraseUniqueWordsForm::on_findData);
     QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &PhraseUniqueWordsForm::on_saveAllData);
+    QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &PhraseUniqueWordsForm::on_changeFontSize);
 
     QObject::connect(ui->wordList_general_controls,
                      &WordListGeneralControlsForm::changeFilter,
@@ -74,6 +75,12 @@ PhraseUniqueWordsForm::~PhraseUniqueWordsForm()
 {
     delete ui;
 }
+
+void PhraseUniqueWordsForm::on_changeFontSize(int fs){
+    ui->tableView->changeFontSize(fs);
+    ui->tableView->resizeColumnsToContents();
+}
+
 
 void PhraseUniqueWordsForm::setPUW(QList<PhraseUniqueWords*>& ptr)
 {
@@ -175,6 +182,26 @@ void PhraseUniqueWordsForm::on_changeFilter(int filter_num){
     applyFilter(filter_num);
 }
 
+//
+void PhraseUniqueWordsForm::on_tableView_delete_sig(){
+    qDebug() << "PhraseUniqueWordsForm::on_tableView_delete_sig";
+    QModelIndexList to_delete;
+    int new_selected_row = model.rowCount() +2;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        to_delete.push_back(my_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+           new_selected_row = index.row();
+        }
+    }
+    model.deleteSelected(to_delete);
+    update();
+    // set the new selected row to be one above the
+    new_selected_row -= 1;
+    if(new_selected_row < 0)
+              new_selected_row = 0;
+    //qDebug() << new_selected_row;
+    ui->tableView->selectRow(new_selected_row);
+}
 
 void PhraseUniqueWordsForm::on_tableView_space_bar_sig(){
     QModelIndexList to_toggle;
@@ -200,6 +227,42 @@ void PhraseUniqueWordsForm::on_tableView_space_bar_sig(){
         ui->tableView->selectRow(new_selected_row);
     }
     update();
+}
+
+
+void PhraseUniqueWordsForm::on_tableView_t_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setChosen(to_set_t);
+    update();
+}
+void PhraseUniqueWordsForm::on_tableView_f_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setNotChosen(to_set_t);
+    update();
+}
+
+void PhraseUniqueWordsForm::on_tableView_alt_a_sig(){
+    qDebug() << "PhraseUniqueWordsForm::on_tableview_alt_a_sig";
+    ui->wordList_general_controls->setAllFilter();
+}
+void PhraseUniqueWordsForm::on_tableView_alt_c_sig(){
+    qDebug() << "PhraseUniqueWordsForm::on_tableview_alt_c_sig";
+    ui->wordList_general_controls->setChosenFilter();
+}
+void PhraseUniqueWordsForm::on_tableView_alt_n_sig(){
+    qDebug() << "PhraseUniqueWordsForm::on_tableview_alt_n_sig";
+    ui->wordList_general_controls->setNotChosenFilter();
+}
+void PhraseUniqueWordsForm::on_tableView_alt_f_sig(){
+    on_tableView_customContextMenuRequested();
 }
 
 void PhraseUniqueWordsForm::on_findData(const QString& find_string){
@@ -252,14 +315,20 @@ void PhraseUniqueWordsForm::on_tableView_customContextMenuRequested(){
     //qDebug() << globalPos.x() << globalPos.y();
     qDebug() << QCursor().pos().x() << QCursor().pos().y();
     QPoint pt2 = QPoint(QCursor().pos().x() - 100 , QCursor().pos().y()  );
-    QMenu contextMenu(tr("NGRAM Filter Menu"), this);
+    QMenu contextMenu(tr("PUW Filter Menu"), this);
     QAction* all = contextMenu.addAction("Filer: All");
     QAction* chosen = contextMenu.addAction("Filer: Chosen");
     QAction* not_chosen = contextMenu.addAction("Filer: Not Chosen");
     //QAction* reload = contextMenu.addAction("Reload Data");
     QAction* selectedItem = contextMenu.exec(pt2);
-    if (selectedItem == all){ applyFilter(all_filter); }
-    if (selectedItem == chosen){ applyFilter(chosen_filter); }
-    if (selectedItem == not_chosen){ applyFilter(not_chosen_filter); }
+    if (selectedItem == all){
+        on_tableView_alt_a_sig();
+    }
+    if (selectedItem == chosen){
+        on_tableView_alt_c_sig();
+    }
+    if (selectedItem == not_chosen){
+        on_tableView_alt_n_sig();
+    }
     //if (selectedItem == reload){ applyFilter(3); }
 }

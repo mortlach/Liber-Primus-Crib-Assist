@@ -13,6 +13,7 @@ var class_raw1_gram_model =
     [ "clear", "class_raw1_gram_model.html#a84dcb3746613c98cb36d9bbd0a7a7a01", null ],
     [ "columnCount", "class_raw1_gram_model.html#affa396330791269386415ee695ec904a", null ],
     [ "data", "class_raw1_gram_model.html#a4b714a71cb795a3a44f8f089b9061210", null ],
+    [ "deleteSelected", "class_raw1_gram_model.html#a405a0a0d70a9e2ce965e764f91138756", null ],
     [ "flags", "class_raw1_gram_model.html#a3f607a7f20a678502c0c2aa18913db3d", null ],
     [ "getChosen", "class_raw1_gram_model.html#a4bc766e1b7cbdec7b0464be4d066e229", null ],
     [ "headerData", "class_raw1_gram_model.html#a5e0f8ddf105a60320f33c030da80e678", null ],

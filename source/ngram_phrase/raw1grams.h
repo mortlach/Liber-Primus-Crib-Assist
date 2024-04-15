@@ -117,7 +117,16 @@ public:
      * \return
      */
     const RawWordData& getRawWordDataRef(int word_len)const{
-        return *raw_word_data.at(word_len-1);
+        // todo what if passed bad value ?
+        if(word_len <= raw_word_data.size()){
+            qDebug() << "word_len-1=" << word_len- 1 << "/ raw_word_data.size()=" << raw_word_data.size();
+            return *raw_word_data.at(word_len-1);
+        }
+        else{
+            qDebug() << "RawWordData::getRawWordDataRef raw_word_data.size()" << raw_word_data.size();
+            qDebug() << "ERROR, asked for item" << word_len << "with raw_word_data.size() = " << raw_word_data.size();
+        }
+        return *raw_word_data.at(0);
     }
 
 };

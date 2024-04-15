@@ -43,8 +43,8 @@ void printSettings(const QSettings& settings){
     //TODO Write
 }
 //
-QFont getFont(){
-    QFont font("Courier New",9);
+QFont getFont(int fs ){
+    QFont font("Courier New",fs);
     font.setStyleHint(QFont::Monospace);
     return font;
 }
@@ -351,6 +351,9 @@ bool readCSVFile(const std::string& path, VVString& file_data){
             std::vector<std::string> new_data;
             // TODO no error checking
             while(std::getline(ss, tmp, definitions::COMMA)){
+
+                // remove "
+                tmp.erase( remove(tmp.begin(), tmp.end(), definitions::DOUBLE_QUOTE), tmp.end() );
                 new_data.push_back(tmp);
             }
             file_data.push_back(new_data);

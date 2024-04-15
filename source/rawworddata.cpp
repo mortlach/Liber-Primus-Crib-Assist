@@ -72,7 +72,6 @@ bool RawWordData::setFromAnyData(const std::vector<std::vector<std::any>>& raw_d
     counts.clear();
     chosen.clear();
     runes.clear();
-    runes.clear();
     gematria_sum.clear();
     words.reserve((qsizetype)raw_data.size());
     chosen.reserve((qsizetype)raw_data.size());

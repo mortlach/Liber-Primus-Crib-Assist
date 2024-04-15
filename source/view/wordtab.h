@@ -48,6 +48,16 @@ public slots:
     void on_tableView_customContextMenuRequested();
     void on_tableView_left_doubleclick_sig();
     void on_tableView_space_bar_sig();
+    void on_tableView_delete_sig();
+    void on_tableView_t_sig(); // set true
+    void on_tableView_f_sig(); // set false
+    void on_tableView_alt_a_sig(); // set filter - all
+    void on_tableView_alt_c_sig(); // set filter - chosen
+    void on_tableView_alt_n_sig(); // set filter - not chosen
+    void on_tableView_alt_f_sig(); //
+
+
+
     void update(); // main update function
     void updateLabel(); // main update function
     void updateTable(); // main update function
@@ -58,6 +68,7 @@ public slots:
     void on_deleteData();
     void on_findData(const QString& find_string);
     void on_changeFilter(int filter_num);
+    void on_changeFontSize(int fs);
 
     friend class MainWindow;
     friend class WordListGeneralControlsForm;
@@ -70,7 +81,7 @@ private:
     Ui::WordTab *ui;
     // eventuially will need a version of all of these
     QItemSelectionModel* onegram_selectionmodel;
-    FilterModel* onegram_sortfilterproxymodel;
+    FilterModel* my_sortfilterproxymodel;
     Raw1GramModel model;
     NgramDataHub data_hub;
     const Raw1Grams * const raw_1grams_ptr;

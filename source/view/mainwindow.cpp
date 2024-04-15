@@ -135,6 +135,7 @@ MainWindow::MainWindow(QSettings& settings_in, QWidget *parent)
         }
         setGUIEnabled(false);
     }
+    ui->tabWidget->setCurrentIndex(1);
 }
 MainWindow::~MainWindow(){
     s_textEdit = nullptr;

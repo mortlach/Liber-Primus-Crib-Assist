@@ -33,6 +33,7 @@ SOURCES += \
     source/rawworddata.cpp \
     source/utilities.cpp \
     source/view/baseform.cpp \
+    source/view/basiccommandsform.cpp \
     source/view/choosephrase.cpp \
     source/view/filtermodel.cpp \
     source/view/gng_tableview.cpp \
@@ -61,6 +62,7 @@ HEADERS += \
     source/raw1grammodel.h \
     source/utilities.h \
     source/view/baseform.h \
+    source/view/basiccommandsform.h \
     source/view/choosephrase.h \
     source/view/filtermodel.h \
     source/view/gng_tableview.h \
@@ -75,7 +77,9 @@ HEADERS += \
     source/view/wordpickform.h \
     source/view/wordtab.h
 
+
 FORMS += \
+    source/view/basiccommandsform.ui \
     source/view/choosephrase.ui \
     source/view/mainwindow.ui \
     source/view/ngramdataform.ui \
@@ -91,10 +95,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/config.ini \
-    build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Release/config.ini
+    README.md \
+    #build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/config.ini \
+    #build-LPCribAssist-Desktop_Qt_6_5_2_MinGW_64_bit-Release/config.ini \
+    config.ini
 
 win32 {
-DESTDIR = $$PWD/bin
-RC_ICONS = $$PWD/bin/assets/lpcribassist.ico
+DESTDIR = $$PWD/bin/win
+RC_ICONS = $$PWD/assets/lpcribassist.ico
 }

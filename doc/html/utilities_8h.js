@@ -9,7 +9,7 @@ var utilities_8h =
     [ "getConfigKeyValues", "utilities_8h.html#a890734d9df12fb6e9cc67709657e0bf9", null ],
     [ "getDirectory", "utilities_8h.html#af3cebec3a6cedfeeeade17fcd661ea67", null ],
     [ "getFileNameAndDir", "utilities_8h.html#a2fd16d0b729cdf0cb456b3bd3b800a4d", null ],
-    [ "getFont", "utilities_8h.html#a161c2681a44936d36b5a1c07fb31dc7a", null ],
+    [ "getFont", "utilities_8h.html#a442e45601f1493bf59de461db38c6233", null ],
     [ "getFullPath", "utilities_8h.html#a27e8066bddc76465fda036ba99cf1145", null ],
     [ "getFullPath", "utilities_8h.html#a2e945d2ed944e5f41e3793b616c3e661", null ],
     [ "getNgramDir", "utilities_8h.html#a995d2933527f8b4df4abe914ac06f23b", null ],

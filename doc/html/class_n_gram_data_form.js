@@ -4,6 +4,7 @@ var class_n_gram_data_form =
     [ "~NGramDataForm", "class_n_gram_data_form.html#a9d16b273de1bddaecc046e84a59fa78f", null ],
     [ "clear", "class_n_gram_data_form.html#a661ae08856a7bfb05001738525a986b4", null ],
     [ "on_changeFilter", "class_n_gram_data_form.html#a4d5bd474676ccef61d51555b4f5ad881", null ],
+    [ "on_changeFontSize", "class_n_gram_data_form.html#aa544368ac6f00e5307e730e74ca60294", null ],
     [ "on_deleteData", "class_n_gram_data_form.html#ac72e2c147717c9dda6bdc94a59bb5629", null ],
     [ "on_findData", "class_n_gram_data_form.html#a7c4411a616eda691c3cebb77d45c4112", null ],
     [ "on_loadData", "class_n_gram_data_form.html#af805f0cbba68dbc129356919b1e2fde9", null ],

@@ -24,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="tree_small.bmp"/></td>
   <td id="projectalign">
    <div id="projectname">LPCribAssist<span id="projectnumber">&#160;0.1</span>
    </div>
@@ -98,108 +99,128 @@ $(document).ready(function(){initNavTree('wordtab_8h_source.html',''); initResiz
   <div class="headertitle"><div class="title">wordtab.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="wordtab_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef WORDTAB_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define WORDTAB_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QItemSelectionModel&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="raw1grammodel_8h.html">raw1grammodel.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="raw1grams_8h.html">raw1grams.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="ngramdatahub_8h.html">ngramdatahub.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="filtermodel_8h.html">filtermodel.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ui.html">Ui</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_word_tab.html">WordTab</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_word_tab.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_word_tab.html">WordTab</a> : <span class="keyword">public</span> QWidget</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    Q_OBJECT</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_word_tab.html">WordTab</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_word_tab.html#a38a061d219b7b937805ea6f006a2abac">~WordTab</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_word_tab.html#a826b227020de173292979787586e0043">setWordListGeneralLabel</a>(<span class="keyword">const</span> QString&amp; text);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_word_tab.html#accae1af97a3b93e297385c2d528cdb9a">   24</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_word_tab.html#accae1af97a3b93e297385c2d528cdb9a">clear</a>(){ model.<a class="code hl_function" href="class_raw1_gram_model.html#a84dcb3746613c98cb36d9bbd0a7a7a01">clear</a>();}</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>signals:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_word_tab.html#aea1b12928553d04de19ac28b42632e9b">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_word_tab.html#aea1b12928553d04de19ac28b42632e9b">message</a>(<span class="keyword">const</span> QString&amp; str);</div>
+<a href="wordtab_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//    LPCribAssist v0.1: to help with cribbing the Liber Primus</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//    mortlach</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//    This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//    (at your option) any later version.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//    This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//    GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//    along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef WORDTAB_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define WORDTAB_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;QItemSelectionModel&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="raw1grammodel_8h.html">raw1grammodel.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="raw1grams_8h.html">raw1grams.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="ngramdatahub_8h.html">ngramdatahub.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="filtermodel_8h.html">filtermodel.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a72a581fb7b77039777470b9879902fb5">on_tableView_customContextMenuRequested</a>();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#ad93b97c0c9915cc30cda5d5965fd9279">on_tableView_left_doubleclick_sig</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#af7e5489414a0e16892b78faccc6184c6">on_tableView_space_bar_sig</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#af1176621bebd19a6b3777ff85d8ef1d9">update</a>(); <span class="comment">// main update function</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a7bdae8bd47524cfe1b7a5eb42d0abd60">updateLabel</a>(); <span class="comment">// main update function</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#ad159992b6b3d3549a4108820c7e19540">updateTable</a>(); <span class="comment">// main update function</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a1bf7d9a350f0ace887fc7bb60420963c">on_newDataChosen</a>(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#ae29c897e0217a322e7fe5e1d686ff6b3">on_loadData</a>();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a73666cfe530b59d834f3b94a1206cd99">on_saveData</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a1105fe1f346d61aca208aa4974a046c1">on_saveAllData</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#adefa8081fe18be432a650cc8a3e3775a">on_deleteData</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a92ff4c1fcaf6d31bdf36a0c618468480">on_findData</a>(<span class="keyword">const</span> QString&amp; find_string);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a012cddd87486b70421edd25f42469587">on_changeFilter</a>(<span class="keywordtype">int</span> filter_num);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">class </span><a class="code hl_class" href="class_word_tab.html">WordTab</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_word_tab.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="class_word_tab.html">WordTab</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    Q_OBJECT</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_word_tab.html">WordTab</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_word_tab.html#a38a061d219b7b937805ea6f006a2abac">~WordTab</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_word_tab.html#a826b227020de173292979787586e0043">setWordListGeneralLabel</a>(<span class="keyword">const</span> QString&amp; text);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_word_tab.html#accae1af97a3b93e297385c2d528cdb9a">   42</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_word_tab.html#accae1af97a3b93e297385c2d528cdb9a">clear</a>(){ model.<a class="code hl_function" href="class_raw1_gram_model.html#a84dcb3746613c98cb36d9bbd0a7a7a01">clear</a>();}</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_word_tab.html#af9db4b672c4d3104f5541893e08e1809">   44</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_word_tab.html#aec6bc6e87b958d4aaabe6a78042d363c">   45</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_word_list_general_controls_form.html">WordListGeneralControlsForm</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_word_tab.html#a57e32e361b3aa44cacd6289329f040bc">   46</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_choose_phrase.html">ChoosePhrase</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// set word data</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> setNewWordData(<span class="keywordtype">int</span> word_length);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> applyFilter(<span class="keywordtype">int</span> a);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Ui::WordTab *ui;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// eventuially will need a version of all of these</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    QItemSelectionModel* onegram_selectionmodel;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="class_filter_model.html">FilterModel</a>* onegram_sortfilterproxymodel;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="class_raw1_gram_model.html">Raw1GramModel</a> model;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="class_ngram_data_hub.html">NgramDataHub</a> data_hub;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_raw1_grams.html">Raw1Grams</a> * <span class="keyword">const</span> raw_1grams_ptr;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_class" href="class_raw_word_data.html">RawWordData</a>* current_raw_1grams_ptr;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">int</span> current_word_length;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">int</span> current_word_index;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">enum</span> Constants</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        all_filter = 0,</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        chosen_filter = 1,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        not_chosen_filter = 2</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>signals:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_word_tab.html#aea1b12928553d04de19ac28b42632e9b">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_word_tab.html#aea1b12928553d04de19ac28b42632e9b">message</a>(<span class="keyword">const</span> QString&amp; str);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a72a581fb7b77039777470b9879902fb5">on_tableView_customContextMenuRequested</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#ad93b97c0c9915cc30cda5d5965fd9279">on_tableView_left_doubleclick_sig</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#af7e5489414a0e16892b78faccc6184c6">on_tableView_space_bar_sig</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a02c9184a9b9cde67f69297828d1dc6b9">on_tableView_delete_sig</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#af1176621bebd19a6b3777ff85d8ef1d9">update</a>(); <span class="comment">// main update function</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a7bdae8bd47524cfe1b7a5eb42d0abd60">updateLabel</a>(); <span class="comment">// main update function</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#ad159992b6b3d3549a4108820c7e19540">updateTable</a>(); <span class="comment">// main update function</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a1bf7d9a350f0ace887fc7bb60420963c">on_newDataChosen</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#ae29c897e0217a322e7fe5e1d686ff6b3">on_loadData</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a73666cfe530b59d834f3b94a1206cd99">on_saveData</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a1105fe1f346d61aca208aa4974a046c1">on_saveAllData</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#adefa8081fe18be432a650cc8a3e3775a">on_deleteData</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a92ff4c1fcaf6d31bdf36a0c618468480">on_findData</a>(<span class="keyword">const</span> QString&amp; find_string);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a012cddd87486b70421edd25f42469587">on_changeFilter</a>(<span class="keywordtype">int</span> filter_num);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_word_tab.html#a0b264584c101bcbb1aa4e61cf42168b2">on_changeFontSize</a>(<span class="keywordtype">int</span> fs);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_word_tab.html#af9db4b672c4d3104f5541893e08e1809">   64</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_word_tab.html#aec6bc6e87b958d4aaabe6a78042d363c">   65</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_word_list_general_controls_form.html">WordListGeneralControlsForm</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_word_tab.html#a57e32e361b3aa44cacd6289329f040bc">   66</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_choose_phrase.html">ChoosePhrase</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// set word data</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> setNewWordData(<span class="keywordtype">int</span> word_length);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> applyFilter(<span class="keywordtype">int</span> a);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    Ui::WordTab *ui;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// eventuially will need a version of all of these</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    QItemSelectionModel* onegram_selectionmodel;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_class" href="class_filter_model.html">FilterModel</a>* onegram_sortfilterproxymodel;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_class" href="class_raw1_gram_model.html">Raw1GramModel</a> model;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="class_ngram_data_hub.html">NgramDataHub</a> data_hub;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_raw1_grams.html">Raw1Grams</a> * <span class="keyword">const</span> raw_1grams_ptr;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="class_raw_word_data.html">RawWordData</a>* current_raw_1grams_ptr;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span> current_word_length;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">int</span> current_word_index;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">enum</span> Constants</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        all_filter = 0,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        chosen_filter = 1,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        not_chosen_filter = 2</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    };</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// WORDTAB_H</span></div>
-<div class="ttc" id="aclass_choose_phrase_html"><div class="ttname"><a href="class_choose_phrase.html">ChoosePhrase</a></div><div class="ttdoc">The ChoosePhrase class.</div><div class="ttdef"><b>Definition</b> choosephrase.h:32</div></div>
-<div class="ttc" id="aclass_filter_model_html"><div class="ttname"><a href="class_filter_model.html">FilterModel</a></div><div class="ttdef"><b>Definition</b> filtermodel.h:9</div></div>
-<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdef"><b>Definition</b> mainwindow.h:40</div></div>
-<div class="ttc" id="aclass_ngram_data_hub_html"><div class="ttname"><a href="class_ngram_data_hub.html">NgramDataHub</a></div><div class="ttdoc">The NgramDataHub class holds main objects and functions for.</div><div class="ttdef"><b>Definition</b> ngramdatahub.h:15</div></div>
-<div class="ttc" id="aclass_raw1_gram_model_html"><div class="ttname"><a href="class_raw1_gram_model.html">Raw1GramModel</a></div><div class="ttdef"><b>Definition</b> raw1grammodel.h:9</div></div>
-<div class="ttc" id="aclass_raw1_gram_model_html_a84dcb3746613c98cb36d9bbd0a7a7a01"><div class="ttname"><a href="class_raw1_gram_model.html#a84dcb3746613c98cb36d9bbd0a7a7a01">Raw1GramModel::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> raw1grammodel.cpp:16</div></div>
-<div class="ttc" id="aclass_raw1_grams_html"><div class="ttname"><a href="class_raw1_grams.html">Raw1Grams</a></div><div class="ttdef"><b>Definition</b> raw1grams.h:12</div></div>
-<div class="ttc" id="aclass_raw_word_data_html"><div class="ttname"><a href="class_raw_word_data.html">RawWordData</a></div><div class="ttdef"><b>Definition</b> rawworddata.h:16</div></div>
-<div class="ttc" id="aclass_word_list_general_controls_form_html"><div class="ttname"><a href="class_word_list_general_controls_form.html">WordListGeneralControlsForm</a></div><div class="ttdef"><b>Definition</b> wordlistgeneralcontrolsform.h:11</div></div>
-<div class="ttc" id="aclass_word_tab_html"><div class="ttname"><a href="class_word_tab.html">WordTab</a></div><div class="ttdef"><b>Definition</b> wordtab.h:16</div></div>
-<div class="ttc" id="aclass_word_tab_html_a012cddd87486b70421edd25f42469587"><div class="ttname"><a href="class_word_tab.html#a012cddd87486b70421edd25f42469587">WordTab::on_changeFilter</a></div><div class="ttdeci">void on_changeFilter(int filter_num)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:74</div></div>
-<div class="ttc" id="aclass_word_tab_html_a1105fe1f346d61aca208aa4974a046c1"><div class="ttname"><a href="class_word_tab.html#a1105fe1f346d61aca208aa4974a046c1">WordTab::on_saveAllData</a></div><div class="ttdeci">void on_saveAllData() const</div><div class="ttdef"><b>Definition</b> wordtab.cpp:94</div></div>
-<div class="ttc" id="aclass_word_tab_html_a1bf7d9a350f0ace887fc7bb60420963c"><div class="ttname"><a href="class_word_tab.html#a1bf7d9a350f0ace887fc7bb60420963c">WordTab::on_newDataChosen</a></div><div class="ttdeci">void on_newDataChosen(int index)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:109</div></div>
-<div class="ttc" id="aclass_word_tab_html_a38a061d219b7b937805ea6f006a2abac"><div class="ttname"><a href="class_word_tab.html#a38a061d219b7b937805ea6f006a2abac">WordTab::~WordTab</a></div><div class="ttdeci">~WordTab()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:50</div></div>
-<div class="ttc" id="aclass_word_tab_html_a72a581fb7b77039777470b9879902fb5"><div class="ttname"><a href="class_word_tab.html#a72a581fb7b77039777470b9879902fb5">WordTab::on_tableView_customContextMenuRequested</a></div><div class="ttdeci">void on_tableView_customContextMenuRequested()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:192</div></div>
-<div class="ttc" id="aclass_word_tab_html_a73666cfe530b59d834f3b94a1206cd99"><div class="ttname"><a href="class_word_tab.html#a73666cfe530b59d834f3b94a1206cd99">WordTab::on_saveData</a></div><div class="ttdeci">void on_saveData() const</div><div class="ttdef"><b>Definition</b> wordtab.cpp:87</div></div>
-<div class="ttc" id="aclass_word_tab_html_a7bdae8bd47524cfe1b7a5eb42d0abd60"><div class="ttname"><a href="class_word_tab.html#a7bdae8bd47524cfe1b7a5eb42d0abd60">WordTab::updateLabel</a></div><div class="ttdeci">void updateLabel()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:123</div></div>
-<div class="ttc" id="aclass_word_tab_html_a826b227020de173292979787586e0043"><div class="ttname"><a href="class_word_tab.html#a826b227020de173292979787586e0043">WordTab::setWordListGeneralLabel</a></div><div class="ttdeci">void setWordListGeneralLabel(const QString &amp;text)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:114</div></div>
-<div class="ttc" id="aclass_word_tab_html_a92ff4c1fcaf6d31bdf36a0c618468480"><div class="ttname"><a href="class_word_tab.html#a92ff4c1fcaf6d31bdf36a0c618468480">WordTab::on_findData</a></div><div class="ttdeci">void on_findData(const QString &amp;find_string)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:156</div></div>
-<div class="ttc" id="aclass_word_tab_html_accae1af97a3b93e297385c2d528cdb9a"><div class="ttname"><a href="class_word_tab.html#accae1af97a3b93e297385c2d528cdb9a">WordTab::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> wordtab.h:24</div></div>
-<div class="ttc" id="aclass_word_tab_html_ad159992b6b3d3549a4108820c7e19540"><div class="ttname"><a href="class_word_tab.html#ad159992b6b3d3549a4108820c7e19540">WordTab::updateTable</a></div><div class="ttdeci">void updateTable()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:126</div></div>
-<div class="ttc" id="aclass_word_tab_html_ad93b97c0c9915cc30cda5d5965fd9279"><div class="ttname"><a href="class_word_tab.html#ad93b97c0c9915cc30cda5d5965fd9279">WordTab::on_tableView_left_doubleclick_sig</a></div><div class="ttdeci">void on_tableView_left_doubleclick_sig()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:172</div></div>
-<div class="ttc" id="aclass_word_tab_html_adefa8081fe18be432a650cc8a3e3775a"><div class="ttname"><a href="class_word_tab.html#adefa8081fe18be432a650cc8a3e3775a">WordTab::on_deleteData</a></div><div class="ttdeci">void on_deleteData()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:101</div></div>
-<div class="ttc" id="aclass_word_tab_html_ae29c897e0217a322e7fe5e1d686ff6b3"><div class="ttname"><a href="class_word_tab.html#ae29c897e0217a322e7fe5e1d686ff6b3">WordTab::on_loadData</a></div><div class="ttdeci">void on_loadData()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:78</div></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">// WORDTAB_H</span></div>
+<div class="ttc" id="aclass_choose_phrase_html"><div class="ttname"><a href="class_choose_phrase.html">ChoosePhrase</a></div><div class="ttdoc">The ChoosePhrase class.</div><div class="ttdef"><b>Definition</b> choosephrase.h:50</div></div>
+<div class="ttc" id="aclass_filter_model_html"><div class="ttname"><a href="class_filter_model.html">FilterModel</a></div><div class="ttdef"><b>Definition</b> filtermodel.h:27</div></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdef"><b>Definition</b> mainwindow.h:58</div></div>
+<div class="ttc" id="aclass_ngram_data_hub_html"><div class="ttname"><a href="class_ngram_data_hub.html">NgramDataHub</a></div><div class="ttdoc">The NgramDataHub class holds main objects and functions for.</div><div class="ttdef"><b>Definition</b> ngramdatahub.h:33</div></div>
+<div class="ttc" id="aclass_raw1_gram_model_html"><div class="ttname"><a href="class_raw1_gram_model.html">Raw1GramModel</a></div><div class="ttdef"><b>Definition</b> raw1grammodel.h:27</div></div>
+<div class="ttc" id="aclass_raw1_gram_model_html_a84dcb3746613c98cb36d9bbd0a7a7a01"><div class="ttname"><a href="class_raw1_gram_model.html#a84dcb3746613c98cb36d9bbd0a7a7a01">Raw1GramModel::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> raw1grammodel.cpp:34</div></div>
+<div class="ttc" id="aclass_raw1_grams_html"><div class="ttname"><a href="class_raw1_grams.html">Raw1Grams</a></div><div class="ttdef"><b>Definition</b> raw1grams.h:30</div></div>
+<div class="ttc" id="aclass_raw_word_data_html"><div class="ttname"><a href="class_raw_word_data.html">RawWordData</a></div><div class="ttdef"><b>Definition</b> rawworddata.h:34</div></div>
+<div class="ttc" id="aclass_word_list_general_controls_form_html"><div class="ttname"><a href="class_word_list_general_controls_form.html">WordListGeneralControlsForm</a></div><div class="ttdef"><b>Definition</b> wordlistgeneralcontrolsform.h:29</div></div>
+<div class="ttc" id="aclass_word_tab_html"><div class="ttname"><a href="class_word_tab.html">WordTab</a></div><div class="ttdef"><b>Definition</b> wordtab.h:34</div></div>
+<div class="ttc" id="aclass_word_tab_html_a012cddd87486b70421edd25f42469587"><div class="ttname"><a href="class_word_tab.html#a012cddd87486b70421edd25f42469587">WordTab::on_changeFilter</a></div><div class="ttdeci">void on_changeFilter(int filter_num)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:100</div></div>
+<div class="ttc" id="aclass_word_tab_html_a02c9184a9b9cde67f69297828d1dc6b9"><div class="ttname"><a href="class_word_tab.html#a02c9184a9b9cde67f69297828d1dc6b9">WordTab::on_tableView_delete_sig</a></div><div class="ttdeci">void on_tableView_delete_sig()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:156</div></div>
+<div class="ttc" id="aclass_word_tab_html_a0b264584c101bcbb1aa4e61cf42168b2"><div class="ttname"><a href="class_word_tab.html#a0b264584c101bcbb1aa4e61cf42168b2">WordTab::on_changeFontSize</a></div><div class="ttdeci">void on_changeFontSize(int fs)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:75</div></div>
+<div class="ttc" id="aclass_word_tab_html_a1105fe1f346d61aca208aa4974a046c1"><div class="ttname"><a href="class_word_tab.html#a1105fe1f346d61aca208aa4974a046c1">WordTab::on_saveAllData</a></div><div class="ttdeci">void on_saveAllData() const</div><div class="ttdef"><b>Definition</b> wordtab.cpp:120</div></div>
+<div class="ttc" id="aclass_word_tab_html_a1bf7d9a350f0ace887fc7bb60420963c"><div class="ttname"><a href="class_word_tab.html#a1bf7d9a350f0ace887fc7bb60420963c">WordTab::on_newDataChosen</a></div><div class="ttdeci">void on_newDataChosen(int index)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:135</div></div>
+<div class="ttc" id="aclass_word_tab_html_a38a061d219b7b937805ea6f006a2abac"><div class="ttname"><a href="class_word_tab.html#a38a061d219b7b937805ea6f006a2abac">WordTab::~WordTab</a></div><div class="ttdeci">~WordTab()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:70</div></div>
+<div class="ttc" id="aclass_word_tab_html_a72a581fb7b77039777470b9879902fb5"><div class="ttname"><a href="class_word_tab.html#a72a581fb7b77039777470b9879902fb5">WordTab::on_tableView_customContextMenuRequested</a></div><div class="ttdeci">void on_tableView_customContextMenuRequested()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:247</div></div>
+<div class="ttc" id="aclass_word_tab_html_a73666cfe530b59d834f3b94a1206cd99"><div class="ttname"><a href="class_word_tab.html#a73666cfe530b59d834f3b94a1206cd99">WordTab::on_saveData</a></div><div class="ttdeci">void on_saveData() const</div><div class="ttdef"><b>Definition</b> wordtab.cpp:113</div></div>
+<div class="ttc" id="aclass_word_tab_html_a7bdae8bd47524cfe1b7a5eb42d0abd60"><div class="ttname"><a href="class_word_tab.html#a7bdae8bd47524cfe1b7a5eb42d0abd60">WordTab::updateLabel</a></div><div class="ttdeci">void updateLabel()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:149</div></div>
+<div class="ttc" id="aclass_word_tab_html_a826b227020de173292979787586e0043"><div class="ttname"><a href="class_word_tab.html#a826b227020de173292979787586e0043">WordTab::setWordListGeneralLabel</a></div><div class="ttdeci">void setWordListGeneralLabel(const QString &amp;text)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:140</div></div>
+<div class="ttc" id="aclass_word_tab_html_a92ff4c1fcaf6d31bdf36a0c618468480"><div class="ttname"><a href="class_word_tab.html#a92ff4c1fcaf6d31bdf36a0c618468480">WordTab::on_findData</a></div><div class="ttdeci">void on_findData(const QString &amp;find_string)</div><div class="ttdef"><b>Definition</b> wordtab.cpp:211</div></div>
+<div class="ttc" id="aclass_word_tab_html_accae1af97a3b93e297385c2d528cdb9a"><div class="ttname"><a href="class_word_tab.html#accae1af97a3b93e297385c2d528cdb9a">WordTab::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition</b> wordtab.h:42</div></div>
+<div class="ttc" id="aclass_word_tab_html_ad159992b6b3d3549a4108820c7e19540"><div class="ttname"><a href="class_word_tab.html#ad159992b6b3d3549a4108820c7e19540">WordTab::updateTable</a></div><div class="ttdeci">void updateTable()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:152</div></div>
+<div class="ttc" id="aclass_word_tab_html_ad93b97c0c9915cc30cda5d5965fd9279"><div class="ttname"><a href="class_word_tab.html#ad93b97c0c9915cc30cda5d5965fd9279">WordTab::on_tableView_left_doubleclick_sig</a></div><div class="ttdeci">void on_tableView_left_doubleclick_sig()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:227</div></div>
+<div class="ttc" id="aclass_word_tab_html_adefa8081fe18be432a650cc8a3e3775a"><div class="ttname"><a href="class_word_tab.html#adefa8081fe18be432a650cc8a3e3775a">WordTab::on_deleteData</a></div><div class="ttdeci">void on_deleteData()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:127</div></div>
+<div class="ttc" id="aclass_word_tab_html_ae29c897e0217a322e7fe5e1d686ff6b3"><div class="ttname"><a href="class_word_tab.html#ae29c897e0217a322e7fe5e1d686ff6b3">WordTab::on_loadData</a></div><div class="ttdeci">void on_loadData()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:104</div></div>
 <div class="ttc" id="aclass_word_tab_html_aea1b12928553d04de19ac28b42632e9b"><div class="ttname"><a href="class_word_tab.html#aea1b12928553d04de19ac28b42632e9b">WordTab::message</a></div><div class="ttdeci">void message(const QString &amp;str)</div></div>
-<div class="ttc" id="aclass_word_tab_html_af1176621bebd19a6b3777ff85d8ef1d9"><div class="ttname"><a href="class_word_tab.html#af1176621bebd19a6b3777ff85d8ef1d9">WordTab::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:118</div></div>
-<div class="ttc" id="aclass_word_tab_html_af7e5489414a0e16892b78faccc6184c6"><div class="ttname"><a href="class_word_tab.html#af7e5489414a0e16892b78faccc6184c6">WordTab::on_tableView_space_bar_sig</a></div><div class="ttdeci">void on_tableView_space_bar_sig()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:130</div></div>
+<div class="ttc" id="aclass_word_tab_html_af1176621bebd19a6b3777ff85d8ef1d9"><div class="ttname"><a href="class_word_tab.html#af1176621bebd19a6b3777ff85d8ef1d9">WordTab::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:144</div></div>
+<div class="ttc" id="aclass_word_tab_html_af7e5489414a0e16892b78faccc6184c6"><div class="ttname"><a href="class_word_tab.html#af7e5489414a0e16892b78faccc6184c6">WordTab::on_tableView_space_bar_sig</a></div><div class="ttdeci">void on_tableView_space_bar_sig()</div><div class="ttdef"><b>Definition</b> wordtab.cpp:185</div></div>
 <div class="ttc" id="afiltermodel_8h_html"><div class="ttname"><a href="filtermodel_8h.html">filtermodel.h</a></div></div>
-<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition</b> choosephrase.h:9</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition</b> choosephrase.h:27</div></div>
 <div class="ttc" id="angramdatahub_8h_html"><div class="ttname"><a href="ngramdatahub_8h.html">ngramdatahub.h</a></div></div>
 <div class="ttc" id="araw1grammodel_8h_html"><div class="ttname"><a href="raw1grammodel_8h.html">raw1grammodel.h</a></div></div>
 <div class="ttc" id="araw1grams_8h_html"><div class="ttname"><a href="raw1grams_8h.html">raw1grams.h</a></div></div>

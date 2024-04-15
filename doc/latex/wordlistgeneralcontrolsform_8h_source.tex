@@ -2,63 +2,81 @@
 \hypertarget{wordlistgeneralcontrolsform_8h_source}{}\label{wordlistgeneralcontrolsform_8h_source}\index{source/view/wordlistgeneralcontrolsform.h@{source/view/wordlistgeneralcontrolsform.h}}
 \mbox{\hyperlink{wordlistgeneralcontrolsform_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WORDLISTGENERALCONTROLSFORM\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WORDLISTGENERALCONTROLSFORM\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
-\DoxyCodeLine{00008\ \}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}}\ :\ \textcolor{keyword}{public}\ QWidget}
-\DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \textcolor{keywordtype}{int}\ data\_count\ =\ 14);}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_word_list_general_controls_form_a1f0f1124910121438bb4fccdaa37789e}{\string~WordListGeneralControlsForm}}();}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a8b95a9a281cd4edc4d199c563f3ddbb7}{setLabel}}(\textcolor{keyword}{const}\ QString\&\ text);}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_ad987ff2afab5d9d9ba39a4f77b503c6a}{allWidgetsEnabled}}(\textcolor{keywordtype}{bool}\ value);}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a944c85aeb8972544e4eb26237967554b}{setDataIndex}}(\textcolor{keywordtype}{int}\ index\ =\ 0);}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a05578e54f06ee75f9b8d4792af77f0df}{setup}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ data\_count);}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a1749765d4ed0a5420adaa08bf84b4bfe}{setDeleteEnabled}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ LPCribAssist\ v0.1:\ to\ help\ with\ cribbing\ the\ Liber\ Primus}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ mortlach}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ WORDLISTGENERALCONTROLSFORM\_H}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ WORDLISTGENERALCONTROLSFORM\_H}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QWidget>}}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keyword}{public}\ slots:}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a6565c858da63c6cfb0e85e0fabc7a6d3}{on\_savePushButton\_clicked}}();}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a8b28e61d788ba46b1a2dd8df0071b7d5}{on\_saveAllPushButton\_clicked}}();}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a0a2cdd5ecfd32219d65ff025489c5ad0}{on\_loadPushButton\_clicked}}();}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_ab5be3d3a5362ac8d90546460470f8c64}{on\_findPushButton\_clicked}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_afb3e123057b8a1177b31bb0b77fd3595}{on\_findLineEdit\_editingFinished}}();}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a007f9814f7fff3c0aa1e321749a63396}{on\_deletePushButton\_clicked}}();}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a6002a9564b1106c3014d59b15795e091}{on\_updateChosenNotChosen}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ chosen\_count,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ not\_chosen\_count);}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a388bf602e213cd0d5a189988caf9a63c}{on\_filterChanged}}();}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a10a2b77278f081ad3ea37cd649cf0071}{on\_dataChoiceHorizontalScrollBar\_valueChanged}}();}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ signals:}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a23a55fc6349cd6fe3f21f6b39fbd3f8b}{newDataChosen}}(\textcolor{keywordtype}{int}\ index);}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_aaa37fc6b8fd928f2725a49762e32ffdb}{loadData}}();}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_af7222efe73b2c14b3bdddfc93b8ec723}{saveData}}();}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a6f74f8cba56277e8df467898199fe539}{saveAllData}}();}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a3b7d8eb6780949a1095b52ef5e676eda}{deleteData}}();}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_afd54307e0af3d276e0e1b8b0461419bb}{findData}}(\textcolor{keyword}{const}\ QString\&\ find\_string);}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a55e9c96b8f32db205150adc03cb38ee6}{message}}(\textcolor{keyword}{const}\ QString\&\ str);}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_ace94c752643c5508250be970241cddf9}{changeFilter}}(\textcolor{keywordtype}{int}\ filter\_num);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words_form}{PhraseUniqueWordsForm}};}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_gram_data_form}{NGramDataForm}};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00052\ \ \ \ \ Ui::WordListGeneralControlsForm\ *ui;}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ current\_index;}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ data\_count;}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ min\_index;}
-\DoxyCodeLine{00056\ \};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ 3WORDLISTGENERALCONTROLSFORM\_H}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}};}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_word_list_general_controls_form}{WordListGeneralControlsForm}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \textcolor{keywordtype}{int}\ data\_count\ =\ 14);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_word_list_general_controls_form_a1f0f1124910121438bb4fccdaa37789e}{\string~WordListGeneralControlsForm}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a8b95a9a281cd4edc4d199c563f3ddbb7}{setLabel}}(\textcolor{keyword}{const}\ QString\&\ text);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_ad987ff2afab5d9d9ba39a4f77b503c6a}{allWidgetsEnabled}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a944c85aeb8972544e4eb26237967554b}{setDataIndex}}(\textcolor{keywordtype}{int}\ index\ =\ 0);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a05578e54f06ee75f9b8d4792af77f0df}{setup}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ data\_count);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a1749765d4ed0a5420adaa08bf84b4bfe}{setDeleteEnabled}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a6565c858da63c6cfb0e85e0fabc7a6d3}{on\_savePushButton\_clicked}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a8b28e61d788ba46b1a2dd8df0071b7d5}{on\_saveAllPushButton\_clicked}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a0a2cdd5ecfd32219d65ff025489c5ad0}{on\_loadPushButton\_clicked}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_ab5be3d3a5362ac8d90546460470f8c64}{on\_findPushButton\_clicked}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_afb3e123057b8a1177b31bb0b77fd3595}{on\_findLineEdit\_editingFinished}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a007f9814f7fff3c0aa1e321749a63396}{on\_deletePushButton\_clicked}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a6002a9564b1106c3014d59b15795e091}{on\_updateChosenNotChosen}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ chosen\_count,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ not\_chosen\_count);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a388bf602e213cd0d5a189988caf9a63c}{on\_filterChanged}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a10a2b77278f081ad3ea37cd649cf0071}{on\_dataChoiceHorizontalScrollBar\_valueChanged}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a0db52afdf8482f707f6c5b04240a0f5e}{on\_fontSizeComboBox\_currentIndexChanged}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ signals:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a23a55fc6349cd6fe3f21f6b39fbd3f8b}{newDataChosen}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a9858211b1ceafe4ee4200ac3183b857a}{newFontSizeChosen}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_aaa37fc6b8fd928f2725a49762e32ffdb}{loadData}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_af7222efe73b2c14b3bdddfc93b8ec723}{saveData}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a6f74f8cba56277e8df467898199fe539}{saveAllData}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a3b7d8eb6780949a1095b52ef5e676eda}{deleteData}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_afd54307e0af3d276e0e1b8b0461419bb}{findData}}(\textcolor{keyword}{const}\ QString\&\ find\_string);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_a55e9c96b8f32db205150adc03cb38ee6}{message}}(\textcolor{keyword}{const}\ QString\&\ str);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_list_general_controls_form_ace94c752643c5508250be970241cddf9}{changeFilter}}(\textcolor{keywordtype}{int}\ filter\_num);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tab}{WordTab}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_choose_phrase}{ChoosePhrase}};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_phrase_unique_words_form}{PhraseUniqueWordsForm}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_gram_data_form}{NGramDataForm}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ Ui::WordListGeneralControlsForm\ *ui;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ current\_index;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ data\_count;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ min\_index;}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ 3WORDLISTGENERALCONTROLSFORM\_H}}
 
 \end{DoxyCode}

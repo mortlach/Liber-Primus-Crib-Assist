@@ -26,7 +26,7 @@ WordTab::WordTab(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::WordTab)
     , onegram_selectionmodel(new QItemSelectionModel())
-    , onegram_sortfilterproxymodel(new FilterModel(0))
+    , my_sortfilterproxymodel(new FilterModel(0))
     , model(Raw1GramModel())
     // todo move this
     , data_hub(NgramDataHub())
@@ -48,17 +48,19 @@ WordTab::WordTab(QWidget *parent)
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::deleteData,this, &WordTab::on_deleteData);
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::findData,this, &WordTab::on_findData);
         QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::saveAllData,this, &WordTab::on_saveAllData);
-        QObject::connect(ui->wordList_general_controls,
-                         &WordListGeneralControlsForm::changeFilter,this,
-                         &WordTab::on_changeFilter);
+        QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::changeFilter,this,&WordTab::on_changeFilter);
+        QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &WordTab::on_changeFontSize);
+        //QObject::connect(ui->wordList_general_controls, &WordListGeneralControlsForm::newFontSizeChosen,this, &WordTab::on_changeFontSize);
+
+
         auto* anyLayout = new QVBoxLayout();
         anyLayout->addWidget(new QLabel("Some Text in Section", ui->spoiler));
         anyLayout->addWidget(new QPushButton("Button in Section", ui->spoiler));
         ui->spoiler->setContentLayout(*anyLayout);
 //        // todo, can the following just be in constructor ?
-        onegram_sortfilterproxymodel->setSourceModel(&model);
-        onegram_selectionmodel->setModel(onegram_sortfilterproxymodel);
-        ui->tableView->setModel(onegram_sortfilterproxymodel);
+        my_sortfilterproxymodel->setSourceModel(&model);
+        onegram_selectionmodel->setModel(my_sortfilterproxymodel);
+        ui->tableView->setModel(my_sortfilterproxymodel);
         ui->tableView->setSelectionModel(onegram_selectionmodel);
         ui->tableView->show();
         ui->wordList_general_controls->setDataIndex();
@@ -69,8 +71,14 @@ WordTab::~WordTab()
 {
     delete ui;
 }
+
+void WordTab::on_changeFontSize(int fs){
+    ui->tableView->changeFontSize(fs);
+    ui->tableView->resizeColumnsToContents();
+}
+
 //
-void  WordTab::setNewWordData(int word_length_minus_one){
+void WordTab::setNewWordData(int word_length_minus_one){
     qDebug() << "\nWordTab::setNewWordData" << word_length_minus_one;
     if( word_length_minus_one < raw_1grams_ptr->raw_word_data.size() ){
         current_word_length = word_length_minus_one+1;
@@ -144,6 +152,65 @@ void WordTab::updateLabel(){
 void WordTab::updateTable(){
     ui->tableView->update();
 }
+
+
+void WordTab::on_tableView_t_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setChosen(to_set_t);
+    update();
+}
+void WordTab::on_tableView_f_sig(){
+    QModelIndexList to_set_t;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        //qDebug() << "row/col" << index.row() << "/" << index.column();
+        to_set_t.push_back(my_sortfilterproxymodel->mapToSource(index));
+    }
+    model.setNotChosen(to_set_t);
+    update();
+}
+
+
+void WordTab::on_tableView_alt_f_sig(){
+    on_tableView_customContextMenuRequested();
+}
+
+
+void WordTab::on_tableView_alt_a_sig(){
+    ui->wordList_general_controls->setAllFilter();
+}
+void WordTab::on_tableView_alt_c_sig(){
+    ui->wordList_general_controls->setChosenFilter();
+}
+void WordTab::on_tableView_alt_n_sig(){
+    ui->wordList_general_controls->setNotChosenFilter();
+}
+
+
+//
+void WordTab::on_tableView_delete_sig(){
+    qDebug() << "WordTab::on_tableView_delete_sig";
+    QModelIndexList to_delete;
+    int new_selected_row = 9999999;
+    for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
+        to_delete.push_back(my_sortfilterproxymodel->mapToSource(index));
+        if(index.row() < new_selected_row){
+            new_selected_row = index.row() - 1;
+        }
+    }
+    //new_selected_row = model.deleteSelected(to_delete);
+    model.deleteSelected(to_delete);
+    update();
+    // set the new selected row to be one above the
+    new_selected_row -= 1;
+    if(new_selected_row < 0)
+        new_selected_row = 0;
+    //qDebug() << new_selected_row;
+    ui->tableView->selectRow(new_selected_row);
+}
 //
 void WordTab::on_tableView_space_bar_sig(){
     QModelIndexList to_toggle;
@@ -152,7 +219,7 @@ void WordTab::on_tableView_space_bar_sig(){
     int new_selected_row = 0;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
         //qDebug() << "row/col" << index.row() << "/" << index.column();
-        to_toggle.push_back(onegram_sortfilterproxymodel->mapToSource(index));
+        to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
         if(add_row){
             new_selection = index;
             qDebug() << new_selection.row();
@@ -162,7 +229,7 @@ void WordTab::on_tableView_space_bar_sig(){
             add_row = false;
         }
     }
-    if(onegram_sortfilterproxymodel->filter_mode == QString("all") ){
+    if(my_sortfilterproxymodel->filter_mode == QString("all") ){
     }
     else{
         ui->tableView->selectRow(new_selected_row);
@@ -170,6 +237,9 @@ void WordTab::on_tableView_space_bar_sig(){
     model.toggleChosen(to_toggle);
     update();
 }
+
+
+
 //
 void WordTab::on_findData(const QString& find_string){
     qDebug() << "WordTab::on_findData" << find_string;
@@ -183,7 +253,7 @@ void WordTab::on_findData(const QString& find_string){
         );
     if(list.size() > 0){
         onegram_selectionmodel->select(list[0], QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
-        ui->tableView->scrollTo(onegram_sortfilterproxymodel->mapFromSource(list[0]));
+        ui->tableView->scrollTo(my_sortfilterproxymodel->mapFromSource(list[0]));
     }
 }
 
@@ -191,7 +261,7 @@ void WordTab::on_tableView_left_doubleclick_sig(){
     QModelIndexList to_toggle;
     for(const QModelIndex& index: ui->tableView->selectionModel()->selectedRows()){
         //qDebug() << "row/col" << index.row() << "/" << index.column();
-        to_toggle.push_back(onegram_sortfilterproxymodel->mapToSource(index));
+        to_toggle.push_back(my_sortfilterproxymodel->mapToSource(index));
     }
     model.toggleChosen(to_toggle);
     update();
@@ -199,12 +269,12 @@ void WordTab::on_tableView_left_doubleclick_sig(){
 
 void WordTab::applyFilter(int a){
     //    check filters for phrase unqiue words
-    qDebug() << "ngramApplyFilter" << a;
+    qDebug() << "WordTab" << a;
     switch(a){
-        case not_chosen_filter: onegram_sortfilterproxymodel->setFilter("not_chosen"); break;
-        case chosen_filter:     onegram_sortfilterproxymodel->setFilter("chosen");     break;
-        case all_filter:        onegram_sortfilterproxymodel->setFilter("");           break;
-        default:;
+    case not_chosen_filter: my_sortfilterproxymodel->setFilter("not_chosen"); break;
+    case chosen_filter:     my_sortfilterproxymodel->setFilter("chosen");     break;
+    case all_filter:        my_sortfilterproxymodel->setFilter("");           break;
+    default:;
     }
 }
 void WordTab::on_tableView_customContextMenuRequested(){
@@ -215,14 +285,19 @@ void WordTab::on_tableView_customContextMenuRequested(){
     QAction* chosen = contextMenu.addAction("Filer: Chosen");
     QAction* not_chosen = contextMenu.addAction("Filer: Not Chosen");
     QAction* selectedItem = contextMenu.exec(pt2);
-    if(selectedItem == all){
-        applyFilter(all_filter);
-    }
-    if(selectedItem == chosen){
-        applyFilter(chosen_filter);
-    }
-    if(selectedItem == not_chosen){
-        applyFilter(not_chosen_filter);
-    }
+
+    if (selectedItem == all){ on_tableView_alt_a_sig(); }
+    if (selectedItem == chosen){ on_tableView_alt_c_sig(); }
+    if (selectedItem == not_chosen){ on_tableView_alt_n_sig(); }
+
+    //    if(selectedItem == all){
+//        applyFilter(all_filter);
+//    }
+//    if(selectedItem == chosen){
+//        applyFilter(chosen_filter);
+//    }
+//    if(selectedItem == not_chosen){
+//        applyFilter(not_chosen_filter);
+//    }
 }
 

@@ -35,10 +35,11 @@ unsigned int Raw1Grams::onegram_file_count = 14;
 Raw1Grams::Raw1Grams()
 {}
 Raw1Grams::~Raw1Grams(){
-    qDeleteAll(phrase_word_data.begin(), phrase_word_data.end());
-    phrase_word_data.clear();
-    qDeleteAll(raw_word_data.begin(), raw_word_data.end());
-    raw_word_data.clear();
+     qDebug() << "destroy Raw1Grams";
+//    qDeleteAll(phrase_word_data.begin(), phrase_word_data.end());
+//    phrase_word_data.clear();
+//    qDeleteAll(raw_word_data.begin(), raw_word_data.end());
+//    raw_word_data.clear();
 }
 
 Raw1Grams::Raw1Grams(QSettings& settings_in){

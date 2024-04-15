@@ -38,6 +38,9 @@ public:
     void setDataIndex(int index = 0);
     void setup(int min, int data_count);
     void setDeleteEnabled(bool enabled);
+    void setAllFilter();
+    void setChosenFilter();
+    void setNotChosenFilter();
 
 public slots:
     void on_savePushButton_clicked();
@@ -49,9 +52,11 @@ public slots:
     void on_updateChosenNotChosen(unsigned int chosen_count,unsigned int not_chosen_count);
     void on_filterChanged();
     void on_dataChoiceHorizontalScrollBar_valueChanged();
+    void on_fontSizeComboBox_currentIndexChanged(int i);
 
 signals:
     void newDataChosen(int index);
+    void newFontSizeChosen(int index);
     void loadData();
     void saveData();
     void saveAllData();

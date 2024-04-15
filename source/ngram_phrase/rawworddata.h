@@ -29,7 +29,7 @@
 #include <QHash>
 #include "basedata.h"
 
-// TODO Rename ton RAW1grams or something
+// TODO Rename to RAW1grams or something
 class RawWordData : public QObject, public BaseData
 {
 #ifdef QT_SIG
@@ -157,6 +157,49 @@ public:
         chosen.replace(i, !chosen.at(i));
         updateChosenCounts();
     }
+
+    inline void deleteItem(int i){
+        Q_ASSERT( i < chosen.size() );
+        words.remove(i);
+        counts.remove(i);
+        runes.remove(i);
+        chosen.remove(i);
+        gematria_sum.remove(i);
+
+        words.squeeze();
+        counts.squeeze();
+        runes.squeeze();
+        chosen.squeeze();
+        gematria_sum.squeeze();
+
+
+        updateChosenCounts();
+    }
+
+
+    inline int deleteItems(QList<int>& items){
+        // remove items in reverse order, first sort descending
+        std::sort(items.begin(), items.end(), std::greater<int>());
+        for (auto& i : items) {
+            words.remove(i);
+            counts.remove(i);
+            runes.remove(i);
+            chosen.remove(i);
+            gematria_sum.remove(i);
+        }
+        words.squeeze();
+        counts.squeeze();
+        runes.squeeze();
+        chosen.squeeze();
+        gematria_sum.squeeze();
+        updateChosenCounts();
+        // return new row index to be selected after delete
+        int new_selection = items.last();
+        return new_selection;
+    }
+
+
+
     inline size_t size(){ return chosen.size(); }
     inline bool isChosen(int i)const{ return getChosen(i);}
     inline bool isNotChosen(int i)const{ return getChosen(i) == false;}

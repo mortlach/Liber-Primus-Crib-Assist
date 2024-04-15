@@ -55,7 +55,7 @@ namespace utilities{
                             std::vector<std::vector<std::string>>& file_data);
 
     extern bool parseLPSentencesDataFile(const QString &full_path, QList<QStringList>& file_data);
-    extern QFont getFont();
+    extern QFont getFont(int fs = 11);
     extern QString getNgramDir(int ngram_length);
     extern QPair<QString,QString> ngramSchemaDataToFilePath(const QDir& root, const QList<int>& ngram_lengths);
 
