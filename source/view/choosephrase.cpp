@@ -21,7 +21,7 @@
 #include "ui_choosephrase.h"
 #include <QFileInfo>
 #include <QSpinBox>
-#include <iostream>
+
 
 ChoosePhrase::ChoosePhrase(QWidget *parent)
     : QWidget(parent)
@@ -40,21 +40,23 @@ ChoosePhrase::ChoosePhrase(QWidget *parent)
     ui->filesNotFoundPlainTextEdit->setFont(utilities::getFont());
     ui->filePathLineEdit->setFont(utilities::getFont());
     ui->titleLabel->setFont(utilities::getFont());
-    ui->pwlLabel->setFont(utilities::getFont());
+    //ui->pwlLabel->setFont(utilities::getFont());
     ui->generateTemplatePushButton->setFont(utilities::getFont());
     ui->wordLengthLineEdit->setFont(utilities::getFont());
     ui->sentStartCheckBox->setFont(utilities::getFont());
     ui->sentEndCheckBox->setFont(utilities::getFont());
     ui->sentStartCheckBox->setFont(utilities::getFont());
-    ui->fileFinderLabel->setFont(utilities::getFont());
     ui->ngramLabel->setFont(utilities::getFont());
-    ui->file2LookForLabel->setFont(utilities::getFont());
-    ui->missingFileLabel->setFont(utilities::getFont());
+    ui->phrasewl_groupBox->setFont(utilities::getFont());
+    ui->rootpath_groupBox->setFont(utilities::getFont());
+    ui->missingfiles_groupBox->setFont(utilities::getFont());
+    ui->searchfiles_groupBox->setFont(utilities::getFont());
+    ui->ngramLabel_3->setFont(utilities::getFont());
     ui->browseLoadPathPushButton->setFont(utilities::getFont());
     ui->browseSavePathPushButton->setFont(utilities::getFont());
     ui->clearAllPushButton->setFont(utilities::getFont());
     ui->saveFilePathLineEdit->setFont(utilities::getFont());
-    ui->ngramFileLoadPushButton->setEnabled(false);
+    setPhraseBad();
 }
 ChoosePhrase::~ChoosePhrase(){
     delete ui;
@@ -77,7 +79,6 @@ void ChoosePhrase::on_browseLoadPathPushButton_clicked(){
     if(utilities::getDirectory(ngram_root_dir.absolutePath(),path,message)){
         setNgramPathRoot(QDir(path));
     }
-
 }
 void ChoosePhrase::on_filePathLineEdit_editingFinished(){
     qDebug() << "on_filePathLineEdit_editingFinished";
@@ -107,6 +108,8 @@ void ChoosePhrase::on_clearAllPushButton_clicked(){
     ui->filesToFindPlainTextEdit->clear();
     ui->filesNotFoundPlainTextEdit->clear();
     ui->wordLengthLineEdit->clear();
+    ui->sentStartCheckBox->setChecked(false);
+    ui->sentEndCheckBox->setChecked(false);
     word_lengths.clear();
     reset_schema_gridlayout();
     ui->ngramFileLoadPushButton->setEnabled(false);
@@ -217,8 +220,8 @@ void ChoosePhrase::setPhraseSchemaGridView(){
         // create ng length and start index spinboxesin schemaGridLayout
         QSpinBox* ngram_length_spinbox = new QSpinBox();
         ngram_length_spinbox->setFont(utilities::getFont());
-        ngram_length_spinbox->setMinimum(1);
-        ngram_length_spinbox->setValue(2);
+        ngram_length_spinbox->setMinimum(2);
+        ngram_length_spinbox->setValue(2); // NO Length 1 Ngrams are allowed!
         ngram_length_spinbox->setMaximum(5);
         schemaGridLayout->addWidget(ngram_length_spinbox, ng+row_offset, 0, 1, 1, Qt::AlignCenter);
         QSpinBox* ngram_index_spinbox = new QSpinBox();
@@ -245,6 +248,19 @@ void ChoosePhrase::setPhraseSchemaGridView(){
     }
     setWordLengthSpinboxes();
 }
+
+void ChoosePhrase::setPhraseBad(){
+    ui->ngramFileLoadPushButton->setEnabled(false);
+    ui->ngramFileLoadPushButton->setStyleSheet( utilities::getPaleRedString());
+    ui->wordLengthLineEdit->setStyleSheet( utilities::getPaleRedString());
+}
+void ChoosePhrase::setPhraseGood(){
+    ui->ngramFileLoadPushButton->setEnabled(true);
+    ui->ngramFileLoadPushButton->setStyleSheet( utilities::getPaleGreenString());
+    ui->wordLengthLineEdit->setStyleSheet( utilities::getPaleGreenString());
+}
+
+
 
 bool ChoosePhrase::setInputPhrase(const QString& phrase, bool has_sent_start_in, bool has_sent_end_in){
     qDebug() << "\nChoosePhrase::setInputPhrase got " << phrase << has_sent_start_in << has_sent_end_in;
@@ -403,11 +419,13 @@ void ChoosePhrase::testNgramSchema(){
 void ChoosePhrase::canLookForFiles(){
     ngram_schema_good = isNgramSchemaGood();
     if(ngram_schema_good){
-        ui->ngramFileLoadPushButton->setDisabled(false);
+        setPhraseGood();
+        //ui->ngramFileLoadPushButton->setDisabled(false);
         // todo more stuff
     }
     else{
-        ui->ngramFileLoadPushButton->setDisabled(true);
+        setPhraseBad();
+        //ui->ngramFileLoadPushButton->setDisabled(true);
     }
 }
 
@@ -478,6 +496,7 @@ void ChoosePhrase::setNgramFileData2(){
         //
         // W
         // add the indices of the words
+        qDebug() << "add the indices of the words";
         int word_counter = 0;
         for(const auto& item: new_ngramfiledata.ngram_tokens){
             if(item >0){
@@ -492,7 +511,7 @@ void ChoosePhrase::setNgramFileData2(){
         new_ngramfiledata.ngram_length = new_ngramfiledata.ngram_tokens.size();
         phrase_data_struct.ngram_token_lengths.push_back(new_ngramfiledata.ngram_length);
         // TODO filenames are set
-        qDebug() << "Schema-grid-gui row" << r << "data =" << new_ngramfiledata.ngram_tokens;
+        qDebug() << "setNgramFileData2 Schema-grid-gui row" << r << "data =" << new_ngramfiledata.ngram_tokens;
         // this converts the tags as well as word lengths to filepath
         auto fn_fp = utilities::ngramSchemaDataToFilePath(ngram_root_dir, new_ngramfiledata.ngram_tokens);
         //
@@ -551,16 +570,21 @@ void ChoosePhrase::setNgramFileData(){
         int end_row = schemaGridLayout->rowCount()-1;
         ui->filesToFindPlainTextEdit->clear();
         for(int r = start_row; r <= end_row; ++r){
+            qDebug() << "Process row = " << r;
             NgramMetaData new_ngramfiledata = NgramMetaData();
             // the index of this ngram
             new_ngramfiledata.ngram_index = r - start_row;
+            qDebug() << "new_ngramfiledata.ngram_index" << new_ngramfiledata.ngram_index;
             // phrase_tokens are all tokens in phrase (include s,e tags)
             new_ngramfiledata.phrase_tokens = phrase_tokens;
+            qDebug() << "new_ngramfiledata.phrase_tokens" << new_ngramfiledata.phrase_tokens;
             // the index of the first token in this ngram in the phrase
             QLayoutItem* item = schemaGridLayout->itemAtPosition(r,1); // MAGIC
             new_ngramfiledata.first_token_index_in_phrase = ((QSpinBox*)item->widget())->value();
+            qDebug() << "new_ngramfiledata.first_token_index_in_phrase" << new_ngramfiledata.first_token_index_in_phrase;
             //qDebug() << "Schema-grid-gui row" << r << "ngram start index=" << new_ngramfiledata.phrase_start_index;
             new_ngramfiledata.phrase_word_lengths = phrase_data_struct.phrase_word_lengths;
+            qDebug() << "new_ngramfiledata.phrase_word_lengths" << new_ngramfiledata.phrase_word_lengths;
             // "words" is the data without start end tags included
             new_ngramfiledata.first_word_index_in_phrase_word_indices = new_ngramfiledata.first_token_index_in_phrase;
             if(new_ngramfiledata.phrase_tokens.constFirst() == -1){
@@ -570,6 +594,7 @@ void ChoosePhrase::setNgramFileData(){
                 else{
                 }
             }
+            qDebug() << "new_ngramfiledata.first_word_index_in_phrase_word_indices" << new_ngramfiledata.first_word_index_in_phrase_word_indices;
             //  to save data
             new_ngramfiledata.ngram_root_dir = ngram_root_dir;
             // add phrase_start_index
@@ -580,10 +605,11 @@ void ChoosePhrase::setNgramFileData(){
                 if(checkbox->isChecked()){
                     QLayoutItem* word_len_item= schemaGridLayout->itemAtPosition(0,c);
                     new_ngramfiledata.ngram_tokens.push_back(((QSpinBox*)word_len_item->widget())->value());
-                    //new_data.ngram_length +=1;
+                    //new_data.ngram_length += 1;
                 }
             }
-            // add the idnices of the words
+            qDebug() << "new_ngramfiledata.ngram_tokens" << new_ngramfiledata.ngram_tokens;
+            // add the indices of the words
             int word_counter = 0;
             for(const auto& item: new_ngramfiledata.ngram_tokens){
                 if(item >0){
@@ -592,10 +618,11 @@ void ChoosePhrase::setNgramFileData(){
                 }
             }
             new_ngramfiledata.ngram_length = new_ngramfiledata.ngram_tokens.size();
-
+            qDebug()<< "new_ngramfiledata.ngram_length" << new_ngramfiledata.ngram_length;
             phrase_data_struct.ngram_token_lengths.push_back(new_ngramfiledata.ngram_length);
+            qDebug() << "phrase_data_struct.ngram_token_lengths" << phrase_data_struct.ngram_token_lengths;
 
-            qDebug() << "Schema-grid-gui row" << r << "data =" << new_ngramfiledata.ngram_tokens;
+            qDebug() << "setNgramFileData Schema-grid-gui row" << r << "data =" << new_ngramfiledata.ngram_tokens;
             // this converts the tags as well as word lengths to filepath
             auto fn_fp = utilities::ngramSchemaDataToFilePath(ngram_root_dir, new_ngramfiledata.ngram_tokens);
             //
@@ -629,6 +656,7 @@ void ChoosePhrase::setNgramFileData(){
 }
 
 void ChoosePhrase::lookForFilesAndSetGUI(){
+    qDebug() << "ChoosePhrase::lookForFilesAndSetGUI";
     ui->filesNotFoundPlainTextEdit->clear();
     // ready to build ngrams filepaths:
     bool missing_files = false;

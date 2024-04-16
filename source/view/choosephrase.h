@@ -57,6 +57,9 @@ public:
     void setNgramPathRoot(const QDir& dir);
     void setPhrasePathSaveRoot(const QDir& dir);
     bool setNgramPathSave(const QString& new_dir);
+    void setPhraseGood();
+    void setPhraseBad();
+
 
 public slots:
     void on_generateTemplatePushButton_clicked();

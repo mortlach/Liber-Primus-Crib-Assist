@@ -487,4 +487,18 @@ bool allRuneChar(const QString& word){
     return false;
 }
 
+QString getPaleRedString(){
+    QString myColor = "#FF9999";
+    QString styleSheet = "background-color: %1;";
+    return styleSheet.arg(myColor);
+}
+QString getPaleGreenString(){
+
+    QString myColor = "#98fb98";
+    QString styleSheet = "background-color: %1;";
+    return styleSheet.arg(myColor);
+    }
+
+
+
 };

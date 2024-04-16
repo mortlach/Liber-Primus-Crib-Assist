@@ -68,6 +68,9 @@ const QString PATH_TO_PHRASES = QString("PATH_TO_PHRASES");
 const QString empty_string = "_";
 const char empty_char = '_';
 
+
+const QString PALE_RED = QString("#E78587");
+
 };
 
 #endif // DEFINITIONS_H

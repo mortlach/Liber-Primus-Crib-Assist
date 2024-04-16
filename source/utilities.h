@@ -206,5 +206,9 @@ namespace utilities{
     extern bool getSaveFileName(const QString& start_dir, QString& path);
     extern bool extendPhrases(QList<QStringList>& phrase, const QList<QString>& words);
 
+
+    extern QString getPaleRedString();
+    extern QString getPaleGreenString();
+
 }
 #endif // UTILITIES_H
