@@ -130,6 +130,7 @@ A quick example using a single 2-gram with word lengths 1-8.  (More complex exam
 | a positive | [True] | [True, True] | [True]
  
  
+changes to:
  
  
 
