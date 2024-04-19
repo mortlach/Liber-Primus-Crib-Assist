@@ -129,6 +129,9 @@ A quick example using a single 2-gram with word lengths 1-8.  (More complex exam
 | i remember | [True] | [True, True] | [True]
 | a positive | [True] | [True, True] | [True]
  
+ 
+ 
+ 
 
 | Phrase     | ngram chosen | puw chosen| chosen by puw
 |------------|:-----:|:-----------:|:-----:|:-----------:|
