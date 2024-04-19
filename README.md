@@ -123,7 +123,7 @@ A quick example using a single 2-gram with word lengths 1-8.  (More complex exam
 - On rationlization the "phrase unique word" objects take precedence.  
 - This is best explained with an example. Suppose "a" has been set "chosen"  and "i" is "not chosen" and the ngram phrases before and after  rationalization with the 1st "phrase unique word" the data would look like:
 
-| Phrase     | ngram chosen | puw chosen| chosen by puw
+| Phrase     | ngram chosen | puw chosen| chosen by puw | 
 |------------|:-----:|:-----------:|:-----:|:-----------:|
 | a constant | [True] | [True, True] | [True]
 | i remember | [True] | [True, True] | [True]
@@ -134,7 +134,7 @@ changes to:
  
  
 
-| Phrase     | ngram chosen | puw chosen| chosen by puw
+| Phrase     | ngram chosen | puw chosen| chosen by puw | 
 |------------|:-----:|:-----------:|:-----:|:-----------:|
 | a constant | [True] | [True, True] | [True]
 | i remember | [False] | [False, True] | [False]
