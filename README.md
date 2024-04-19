@@ -30,12 +30,12 @@ It's a game of guess the words.
 ## Overview  <a name="Overview"></a>
 
 - Liber-Primus-Crib-Assistant is an application designed to help crib words and phrases found in the unsolved pages of Liber Primus. 
-- It aims to provide a simple interface to lists of pre-defined word data.;
+- It aims to provide a simple interface to lists of pre-defined word data.
 - Enable users to filter and chose / not choose different word combinations for phrases that fit the word structure of the Liber Primus. 
 - Generate crib lists to be used for further offline processing, or as data to be passed to decrypting attempts, (create a fake solution for the plaintext) etc. 
 
 
-This app is still in development, basic features are working, but there is plenty of oppertunity for further improvements to the code and features.   In the current verison the basic achitecture, data object definitions and interactions through a GUI are being tested.  There is plenty of scope for further features to be added but first that will depend on if it useful and if it works as intended.   
+This app is still in development, basic features are working, but there is plenty of opportunity for further improvements to the code and features.   In the current version the basic architecture, data object definitions and interactions through a GUI are being tested.  There is plenty of scope for further features to be added but first that will depend on if it useful and if it works as intended.   
 
 
 ## Main files and Path Definitions  <a name="Main-files-and-Path-Definitions"></a> 
@@ -43,35 +43,35 @@ This app is still in development, basic features are working, but there is plent
 All paths are relative to the application folder. If installed to a folder called "Liber-Primus-Crib-Assist" the windows binary would be at  "./bin/win/LPCribAssist.exe". The main folder structure with some example files should look something like this: 
 
 ```html
-Liber-Primus-Crib-Assist  [Applcation Root Directory ]
-├─ bin/[binaries direcTory ]
+Liber-Primus-Crib-Assist  [Application Root Directory ]
+├─ bin/[binaries Directory ]
 │  ├─ win/	
 │  │  ├─ LPCribAssist.exe [windows executable ] 	
 ├─ assets [MOVE ] 	
-├─ doc [documetation directory ] 	
+├─ doc [documentation directory ] 	
 ├─ data/
 │  ├─ n_grams/	
 │  │  ├─ 2-grams/				
 │  │  │  ├─ 1 2.txt	[1 2 ngrams data file]
 │  │  │  ├─ 1 3.txt	[1 3 ngrams data file]
 │  │  │  ├─ ... 	
-│  ├─ 1_grams_full / [1 grams dat directory (most complete wordlists) ]
+│  ├─ 1_grams_full / [1 grams data directory (most complete wordlists) ]
 │  ├─ phrases/[phrases ]
 │  │  ├─ 1 8/ [Tutorial phrase 1 8 ]
 │  │  │  ├─ 0_1 8.txt [data file for 1st ngram in phrase (0_) and ngram word lengths (1 8)]
-│  │  │  ├─ phrase_config.ini [This phrases configuraiton file ]
-│  │  │  ├─ puw_0.csv [data for for the 1st phrase unique words ]
-│  │  │  ├─ puw_1.csv [data for for the 2nd phrase unique words ]
-│  ├─lp_sents_2023.txt [dat for rune words, word lengths for each sentence in the sovled pages ]
+│  │  │  ├─ phrase_config.ini [This phrases configuration file ]
+│  │  │  ├─ puw_0.csv [data for the 1st phrase unique words ]
+│  │  │  ├─ puw_1.csv [data for the 2nd phrase unique words ]
+│  ├─lp_sents_2023.txt [data for rune words, word lengths for each sentence in the solved pages ]
 ├─ source/ [c++ source files ]
 ├─ config.ini  [main app config, plaintext, can be edited as needed ]
 ├─ README.md
 ├─ LICENSE
-├─ LPCribAssist.pro [qmake file for compilaiton ]
+├─ LPCribAssist.pro [qmake file for compilation ]
 ├─ ...
 ```
  
-File types (csv, txt, ini,  etc are what they are, all word data is held in what can be though of as csv fiels, and ini data is key,value pair data that are all read by the c++ parser. (At a future date these may be rationalised or abstracted). 
+File types (csv, txt, ini,  etc are what they are, all word data is held in what can be thought of as csv files, and ini data is key, value pair data that are all read by the c++ parser. (At a future date these may be rationalised or abstracted). 
  
  
 ## Quickstart - Installation <a name="Quickstart-Installation"></a>
@@ -83,7 +83,7 @@ Download the repository to your local PC.
 A compiled executable and other binary files are shared as part of the project simply run  "./bin/win/LPCribAssist.exe"
 
 ### linux <a name="Quickstart-Installation-linux"></a>
-As is often usual for linux users the best solution is to compile the source yourself. QT libraries and any dependancies are required for the build. If you use the QT developer tools (QT Creator) this should not be difficult, if you use your own tool-chain it may be. QT provides a .run file [https://download.qt.io/], for large linux distributions the package manager probably has a version and you can always build QT itself from source. When the LP-Crib-Assist is run raw data files are typically loaded using relative paths that assume the main executabale is contained two folders lower from the root directory. This means that placing the compiled binaries in a folder such as ./bin/linux/ is advised. This can be configured using the config.ini in the applications and by passing the path to config file on startup. I am very happy to help as best I can with installation.   
+As is often usual for linux users the best solution is to compile the source yourself. QT libraries and any dependencies are required for the build. If you use the QT developer tools (QT Creator) this should not be difficult, if you use your own toolchain it may be. QT provides a .run file [https://download.qt.io/], for large linux distributions the package manager probably has a version, and you can always build QT itself from source. When the LP-Crib-Assist is run raw data files are typically loaded using relative paths that assume the main executable is contained two folders lower from the root directory. This means that placing the compiled binaries in a folder such as ./bin/linux/ is advised. This can be configured using the config.ini in the applications and by passing the path to config file on startup. I am very happy to help as best I can with installation.   
  
 ## Quickstart - Tutorial  <a name="Quickstart-Tutorial"></a>
 
@@ -94,16 +94,16 @@ A quick example using a single 2-gram with word lengths 1-8.  (More complex exam
 1.**Choose a new phrase**.
 - In the "choose phrase tab" enter 1 8 (or 1,8) and press enter. 
 - The required file "../../data/n_grams/2-grams/1 8.txt" will be written to the "File to look for" text box. 
-- If files are written to the "Missing Files" either the paths aren't configured correctly or the files are missing. 
+- If files are written to the "Missing Files" either the paths aren't configured correctly, or the files are missing. 
 - A phrase consists of meta-data, the lengths of words, the number of ngram, the starting index of the ngram in the phrase, the number of words in the phrase, the number of words in each n-gram, etc.
-- A "phrase meta data" overview will be displayed at the bottom of the window. This is a represention of the data required to define all the objects in the phrase.   
+- A "phrase meta data" overview will be displayed at the bottom of the window. This is a representation of the data required to define all the objects in the phrase.   
 
 2. **Create the new phrase data and write files (only if a suitable phrase has been entered).**
-- If it is anticpated that the "phrase meta data" can be succesfully processed the "cretae new phrase" button will be green and can be pressed. 
-- When activated a pop up window should open at the "New Phrase" root directory. A new directory should be created in which to save the phrase data files being created. Once selected the app will run through the setup procedure.
+- If it is anticipated that the "phrase meta data" can be successfully processed the "create new phrase" button will be green and can be pressed. 
+- When activated a pop-up window should open at the "New Phrase" root directory. A new directory should be created in which to save the phrase data files being created. Once selected the app will run through the setup procedure.
 
 3. **Setup procedure**
-- Using the "phrase meta data" a series of structured data objects are created. These contain lists of words or n-gram phrases and a chosen status for each entry, and described below.  
+- Using the "phrase meta data" a series of structured data objects are created. These contain lists of words or n-gram phrases and a chosen status for each entry and described below.  
   - **Load ngram files**
     - Load "./data/2-gram/1 8.txt"  
   - **Cut the entries that contain words "not chosen" in the main-words lists**
@@ -114,13 +114,13 @@ A quick example using a single 2-gram with word lengths 1-8.  (More complex exam
     - files are created for the ngram data and the "phrase unique words" updates made to the data  should be saved to allow for  
   
 4. **Words and/or ngrams are chosen / not chosen by interacting with the tables**
-  - As well as the "phrase unique word" containing words ["a", "i"] they also have a "chosen" list containing [True, True].  The ngram data also has "chosen" list as long as the number of  entries. The chosen status for entries in the "ngram tab" or the "puw tab"  "phrase_unique words" can be toggled by using the mouse / keyboard controls. Filters can be set to view "chosen" "not chosen" or "all" words for any list. For longer phrases, different "phrase unique word" or ngrams data sets can be selected using the slider.  
+  - As well as the "phrase unique word" containing words ["a", "i"] they also have a "chosen" list containing [True, True].  The ngram data also has "chosen" list as long as the number of  entries. The chosen status for entries in the "ngram tab" or the "puw tab"  "phrase unique words" can be toggled by using the mouse / keyboard controls. Filters can be set to view "chosen" "not chosen" or "all" words for any list. For longer phrases, different "phrase unique word" or ngrams data sets can be selected using the slider.  
 
 5. **Rationalize the "phrase unique word" and n-gram data**
-- (e.g) The word lists are rationalized by using the combination of "phrase unique word" and "ngram" chosen values for each entry to decide which words are still chosen. 
-- In order to do this consistently the ngram data objects have another list of "chosen by phrase unique words"  flags. The ngram has a flag for each word in its phrase. For ngram 1-8 this means there is a nested list of length 2 lists, that would look like [[True, True],[True, True],[True, True],...] The number of entries is the number of ngram phrases. The values of these flags are set by the corresponding "phrase unique word" chosen status. 
+- (e.g.) The word lists are rationalized by using the combination of "phrase unique word" and "ngram" chosen values for each entry to decide which words are still chosen. 
+- In order to do this consistently the ngram data objects have another list of "chosen by phrase unique words"  flags. The ngram has a flag for each word in its phrase. For ngram 1-8 this means there is a nested list of length 2 lists, which would look like [[True, True],[True, True],[True, True],...] The number of entries is the number of ngram phrases. The values of these flags are set by the corresponding "phrase unique word" chosen status. 
 - If either of "ngram chosen" or "chosen by puw" are False the ngram will be set to "not chosen." 
-- On rationlization the "phrase unique word" objects take precedence.  
+- On rationalization the "phrase unique word" objects take precedence.  
 - This is best explained with an example. Suppose "a" has been set "chosen"  and "i" is "not chosen" and the ngram phrases before and after  rationalization with the 1st "phrase unique word" the data would look like:
 
 | Phrase     | ngram chosen | puw chosen| chosen by puw |
@@ -140,21 +140,21 @@ changes to:
 | i remember | False | False, True | False
 | a positive | True | True, True | True
 
-- If "i remember" is subsequently set to "chosen" on the ngram tab, and "i" is still set to "not chosen", it will revert to "not chosen" on the next raitonalization.  If it is wanted to keep  "i remember" chosen in genrtal then "i" will have to be chosen in the "phrase unique word" object.
+- If "i remember" is subsequently set to "chosen" on the ngram tab, and "i" is still set to "not chosen", it will revert to "not chosen" on the next rationalization.  If it is wanted to keep  "i remember" chosen in general then "i" will have to be chosen in the "phrase unique word" object.
 
 6. **All-pick tab**
 
 - When the number of possible words has been reduced this tab can be useful to try and pick out an exact crib. So far, Minimal development time has been spent here.    
 
 7. **All phrases tab**
-- At some point the number of unique phrases  that are still chosen should reach a numerb that can be printed to screen / file in a reaosnabel amount of time. These crib lists could be used for further offline processing, or as cribs-lists to be passed to decrypting attempts. When this happens and if it even works as intended in the current version is not fully known at the time of writing. 
+- At some point the number of unique phrases  that are still chosen should reach a number that can be printed to screen / file in a reasonable amount of time. These crib lists could be used for further offline processing, or as cribs-lists to be passed to decrypting attempts. When this happens and if it even works as intended in the current version is not fully known at the time of writing. 
 
 
 ## File formats  <a name="File-formats"></a>
 
 ### App Configuration <a name="File-formats-App-Configuration"></a> 
 
-Main configuration information is loaded on startup. It's a simple text file  using a [key-word] = [value] syntax. In this example paths are relative to the default application executable. The app expects 14 main word files, their exact name is configurable but the format must be the same as defined below.      
+Main configuration information is loaded on startup. It's a simple text file  using a key-word = value syntax. In this example paths are relative to the default application executable. The app expects 14 main word files, their exact name is configurable but the format must be the same as defined below.      
 
 ```
 path_to_lp_sentences=../../data/lp_sents_2023.txt
@@ -191,13 +191,13 @@ data
 debugging the app. If debugging the app it is recommended to use this or something similar.    
 ```
 
-The application expects 14 main-word word raw data files, with names defined in the config.ini. The format of the files is csv (for strings use of a " start/end tag is optional). Each line should containg a new word with the following column order (column labels should not be added to the file):  
+The application expects 14 main-word word raw data files, with names defined in the config.ini. The format of the files is csv (for strings use of a " start/end tag is optional). Each line should contain a new word with the following column order (column labels should not be added to the file):  
 English spelling, Counts, Chosen status, Runeglish Spelling, Gematria Sum  
 
 | English spelling     | Counts | Chosen status | Runeglish Spelling |Gematria Sum  | 
 |:------------:|:-----:|:-----------:|:-----:|:-----------:|
 
-Below is an example from the 1-gram word list (raw1grams_01.csv). The 1 rune words a and i are chosen and other words are not. there are multiple words that have the same spelling in Runelgish (e.g. u and v) This is not a problem, in general words are chosen using the english spelling. The sentences "V is my favorite letter." and "U is my favorite letter." are different in English but not in runes.   
+Below is an example from the 1-gram word list (raw1grams_01.csv). The 1 rune words a and i are chosen and other words are not. there are multiple words that have the same spelling in Runeglish (e.g. u and v) This is not a problem, in general words are chosen using the English spelling. The sentences "V is my favourite letter." and "U is my favourite letter." are different in English but not in runes.   
 :
 ```
 a,30285331759,1,ᚪ,97
@@ -239,7 +239,7 @@ oe,4859024,0,ᛟ,83
 
 ### Raw ngrams  <a name="File-formats-Raw-ngrams"></a> 
 
-Precomputed lists of word n-grams are used to build phrases. Currently only 2-grams are included, more are avialable here [https://github.com/mortlach/google_ngrams_Version-20200217]. Users can add their own files as long as they  match the required format. One idea to try is to get books from project runeberg that match the style you are interested in and then use them as the base data. 
+Precomputed lists of word n-grams are used to build phrases. Currently only 2-grams are included, more are available here [https://github.com/mortlach/google_ngrams_Version-20200217]. Users can add their own files as long as they  match the required format. One idea to try is to get books from project runeberg that match the style you are interested in and then use them as the base data. 
  : 
 
 ```html
@@ -252,7 +252,7 @@ data/
 │  ├─ 5-grams/	 [ not supplied]			
 ```
 
-The file name must match the rune length of the words in the file. E.g. A file names "3 12.txt" must contain lists of 2-grams with 3 then 12 runes per word. 2-gram file must contain two words, a 3-gram file must contain 3 english words. Raw ngrams files just contain the english spelling of the words and a count.  
+The file name must match the rune length of the words in the file. E.g. A file names "3 12.txt" must contain lists of 2-grams with 3 then 12 runes per word. 2-gram file must contain two words, a 3-gram file must contain 3 English words. Raw ngrams files just contain the English spelling of the words and a count.  
 
 | English spelling     | Counts |  
 |:------------:|:-----:|
@@ -271,7 +271,7 @@ and communication 11607661
 
 ### Phrase Phrase  <a name="File-formats-Phrase-Phrase"></a> 
 
-Each phrase contains a configuraiton file that defines the "phrase meta data" and the files that hold the word lists. It enables phrases to be saved and worked on over time. Configuration information is loaded on selecting load phrase from the menu phrase. It's a simple text file  using a [key-word] = [value] syntax. In this example paths are relative to the default application executable. These are defined when the phrase confgiguration file is first saved. They would be easy to manually change if need be. Loading and saving phrase with significantly different paths has not been robsutly tested. 
+Each phrase contains a configuration file that defines the "phrase meta data" and the files that hold the word lists. It enables phrases to be saved and worked on over time. Configuration information is loaded on selecting load phrase from the menu phrase. It's a simple text file  using a [key-word] = [value] syntax. In this example paths are relative to the default application executable. These are defined when the phrase configuration file is first saved. They would be easy to manually change if need be. Loading and saving phrase with significantly different paths has not been robustly tested. 
 
 
 ```
@@ -309,7 +309,7 @@ ngram0_ngram_index=0
 
 ### Phrase ngrams  <a name="File-formats-Phrase-ngrams"></a> 
 
-For a defined phrase, the "phrase unique words" required ngram-word files are copied into the phrase directory and extar columns are added (explained below). The names of the files are generated by the app. They are prepended by the order of this ngram in the phrase. For a  phrase with word lengths 3-12-5 there wre two 2-grams 3-12 and 12-5 so the phrase ngram files will be called "puw_1.csv" and "1_12 5.txt" repectively.  For thsi length ngram the file data looks like:
+For a defined phrase, the "phrase unique words" required ngram-word files are copied into the phrase directory and extra columns are added (explained below). The names of the files are generated by the app. They are prepended by the order of this ngram in the phrase. For a  phrase with word lengths 3-12-5 there were two 2-grams 3-12 and 12-5 so the phrase ngram files will be called "puw_1.csv" and "1_12 5.txt" respectively.  For this length ngram the file data looks like:
 
 
 | Ngram word 1  | Ngram word 2 | chosen by word 1  | chosen by word 1  | ngram chosen | counts | chosen |
@@ -341,11 +341,11 @@ i,268337417,8113,1
 ## GUI Overview <a name="Gui-Overview"></a> 
 
 Here an overview of the GUI controls will be given. Over time GUI's develop so the exact layout may change and new functionality can be added. Ideally, this should not effect existing features. 
-The GUI is laid out with tabs on the left handside which can be selected to interact with different features. Many of these tabs are for interacting with the wordlists, 1 tab is for generating a new phrase, and 1 tab contains a sumamry of the LP primus sentences and word lengths. Other tabs are either in development or helplful during debugging.   
+The GUI is laid out with tabs on the left hand side which can be selected to interact with different features. Many of these tabs are for interacting with the wordlists, 1 tab is for generating a new phrase, and 1 tab contains a summary of the LP primus sentences and word lengths. Other tabs are either in development or helpful during debugging.   
 
 ### Startup View Overview <a name="Gui-Overview-Startup-View-Overview"></a> 
 
-On startup the main-words tab should be selected and this should be the typical view: ![text](./doc/manual/images/main_tab_overview.png) 
+On startup the main-words tab should be selected and this should be the typical view: ![text ](./doc/manual/images/main_tab_overview.png) 
    
 #### Tabs <a name="Gui-Overview-Tabs"></a> 
 
@@ -354,23 +354,23 @@ Notes: TODO
 Main Words: The unique words from 1 to 14 runes, used as the base chosen / not chosen words when creating a new phrase.
 PUW: The "phrase unique words" for the current phrase.  
 ngram: The ngrams for the current phrase.  
-Word Pick: Drop down menu for eahc word in the phrase. Used for creating unique solutions. Plenty of oppertunity for extre features   
+Word Pick: Drop down menu for each word in the phrase. Used for creating unique solutions. Plenty of opportunity for extra features   
 All Phrase: (If possible) a list of all possible phrases (each combination of each "phrase unique word" in the phrase). ATM Not well defined or coded but has been seen to work.  
-LP Sentences: List of each sentence and thier word lengths
-Debug: Not used for now, may pipe logging text to to this screen in the future.    
+LP Sentences: List of each sentence and their word lengths
+Debug: Not used for now, may pipe logging text to this screen in the future.    
 
-![text](./doc/manual/images/startup_tabs.png) 
+![text ](./doc/manual/images/startup_tabs.png) 
 
 #### Main Word Controls  <a name="Gui-Overview-Main-Word-Controls"></a> 
 
 For the three word lists there are always the following basic controls.  
 
-![text](./doc/manual/images/main_tab_controls_with_text.png) 
+![text ](./doc/manual/images/main_tab_controls_with_text.png) 
 
    
 #### Table View of Data Objects <a name="Gui-Overview-Table-View-of-Data-Objects"></a>
 
-The data associated with each of the three types of word lists (main-words, "phrase unique words" and ngrams) is displayed with an interactive table. Sorting can be done by clicking the column headers. Currently three filters can be applied to the data, and future features can expand on thes. Multiple items can be selected by using a shift key. Toggling thr chosen / not chosen can be achieved by double clicking or pressing alt-f /  alt-t.  Below is an example table for the 1-gram main words. 
+The data associated with each of the three types of word lists (main-words, "phrase unique words" and ngrams) is displayed with an interactive table. Sorting can be done by clicking the column headers. Currently three filters can be applied to the data, and future features can expand on these. Multiple items can be selected by using a shift key. Toggling the chosen / not chosen can be achieved by double clicking or pressing alt-f /  alt-t.  Below is an example table for the 1-gram main words. 
 
-![text](./doc/manual/images/main_tab_table_selected.png) 
+![text ](./doc/manual/images/main_tab_table_selected.png) 
 
