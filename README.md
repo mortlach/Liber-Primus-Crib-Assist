@@ -197,7 +197,7 @@ English spelling, Counts, Chosen status, Runeglish Spelling, Gematria Sum
 | English spelling     | Counts | Chosen status | Runeglish Spelling |Gematria Sum  | 
 |:------------:|:-----:|:-----------:|:-----:|:-----------:|
 
-Below is an example from the 1-gram word list (raw1grams_01.csv). The 1 rune words a and i are chosen and other words are not. there are multiple words that have the same spelling in Runeglish (e.g. u and v) This is not a problem, in general words are chosen using the English spelling. The sentences "V is my favourite letter." and "U is my favourite letter." are different in English but not in runes.   
+Below is an example from the 1-gram word list (raw1grams_01.csv). The 1 rune words a and i are chosen and other words are not. there are multiple words that have the same spelling in Runeglish (e.g. u and v) This is not a problem, in general words are chosen using the English spelling. The sentences "V is my favorite letter." and "U is my favorite letter." are different in English but not in runes.   
 :
 ```
 a,30285331759,1,ᚪ,97
