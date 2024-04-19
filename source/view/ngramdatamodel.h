@@ -55,7 +55,7 @@ public:
     // required virtual overloads, columnCount done in derived classes
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     //int columnCount(const QModelIndex &parent = QModelIndex()) const override {return raw_data ? chosen_by_word_transposed.at(0).size() : 2; };
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override {Q_UNUSED(parent);return col_count; };
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override {Q_UNUSED(parent); return col_count; };
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     // function used when filtering on chosen
     bool isChosen(const QModelIndex& index)const; // todo  needed?
