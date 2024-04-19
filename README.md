@@ -125,9 +125,9 @@ A quick example using a single 2-gram with word lengths 1-8.  (More complex exam
 
 | Phrase     | ngram chosen | puw chosen| chosen by puw | 
 |------------|:-----:|:-----------:|:-----:|:-----------:|
-| a constant | [True] | [True, True] | [True]
-| i remember | [True] | [True, True] | [True]
-| a positive | [True] | [True, True] | [True]
+| a constant | True | True, True | True
+| i remember | True | True, True | True
+| a positive | True | True, True | True
  
  
 changes to:
@@ -136,9 +136,9 @@ changes to:
 
 | Phrase     | ngram chosen | puw chosen| chosen by puw | 
 |------------|:-----:|:-----------:|:-----:|:-----------:|
-| a constant | [True] | [True, True] | [True]
-| i remember | [False] | [False, True] | [False]
-| a positive | [True] | [True, True] | [True]
+| a constant | True | True, True | True
+| i remember | False | False, True | False
+| a positive | True | True, True | True
 
 - If "i remember" is subsequently set to "chosen" on the ngram tab, and "i" is still set to "not chosen", it will revert to "not chosen" on the next raitonalization.  If it is wanted to keep  "i remember" chosen in genrtal then "i" will have to be chosen in the "phrase unique word" object.
 
