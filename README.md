@@ -24,7 +24,7 @@ It's a game of guess the words.
   - [Tabs](#Gui-Overview-Tabs)
   - [Main-Word-Controls](#Gui-Overview-Main-Word-Controls)
   - [Table-View-of-Data-Objects](#Table-View-of-Data-Objects)
-- [License](#license)
+- [C++ Source](#C++-Source)
 
 
 ## Overview  <a name="Overview"></a>
@@ -374,3 +374,9 @@ The data associated with each of the three types of word lists (main-words, "phr
 
 ![text ](./doc/manual/images/main_tab_table_selected.png) 
 
+
+
+## C++ Source <a name="C++-Source"></a>
+
+For those of you interested the documentaion for the c++ source can currently be found here:
+[c++ docs](https://raw.githack.com/mortlach/Liber-Primus-Crib-Assist/6aeee0f598edede115529de507464e2fb1c99562/doc/html/index.html)
