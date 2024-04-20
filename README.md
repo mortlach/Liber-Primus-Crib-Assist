@@ -24,6 +24,7 @@ It's a game of guess the words.
   - [Tabs](#Gui-Overview-Tabs)
   - [Main-Word-Controls](#Gui-Overview-Main-Word-Controls)
   - [Table-View-of-Data-Objects](#Table-View-of-Data-Objects)
+  - [Choose-Phrase](#Gui-Overview-Choose-Phrase)
 - [License](#license)
 
 
@@ -33,6 +34,7 @@ It's a game of guess the words.
 - It aims to provide a simple interface to lists of pre-defined word data.
 - Enable users to filter and chose / not choose different word combinations for phrases that fit the word structure of the Liber Primus. 
 - Generate crib lists to be used for further offline processing, or as data to be passed to decrypting attempts, (create a fake solution for the plaintext) etc. 
+- Come to the [#cicadasolvers discord](https://discord.gg/eMmeaA9) for more information and discussion.
 
 
 This app is still in development, basic features are working, but there is plenty of opportunity for further improvements to the code and features.   In the current version the basic architecture, data object definitions and interactions through a GUI are being tested.  There is plenty of scope for further features to be added but first that will depend on if it useful and if it works as intended.   
@@ -89,7 +91,7 @@ As is often usual for linux users the best solution is to compile the source you
 
 ### super-quick  <a name="Quickstart-Tutorial-super-quick"></a>
 
-A quick example using a single 2-gram with word lengths 1-8.  (More complex examples would have multiple n-grams overlapping one another.) 
+A quick example using a single 2-gram with word lengths 1-8.  (More complex examples would have multiple n-grams overlapping one another.) The GUI overview also explains these controls, see [here](#my-multi-word-header) and [here](#Main-files-and-Path-Definitions). 
 
 1.**Choose a new phrase**.
 - In the "choose phrase tab" enter 1 8 (or 1,8) and press enter. 
@@ -192,7 +194,6 @@ debugging the app. If debugging the app it is recommended to use this or somethi
 ```
 
 The application expects 14 main-word word raw data files, with names defined in the config.ini. The format of the files is csv (for strings use of a " start/end tag is optional). Each line should contain a new word with the following column order (column labels should not be added to the file):  
-English spelling, Counts, Chosen status, Runeglish Spelling, Gematria Sum  
 
 | English spelling     | Counts | Chosen status | Runeglish Spelling |Gematria Sum  | 
 |:------------:|:-----:|:-----------:|:-----:|:-----------:|
@@ -239,9 +240,9 @@ oe,4859024,0,ᛟ,83
 
 ### Raw ngrams  <a name="File-formats-Raw-ngrams"></a> 
 
-Precomputed lists of word n-grams are used to build phrases. Currently only 2-grams are included, more are available here [https://github.com/mortlach/google_ngrams_Version-20200217]. Users can add their own files as long as they  match the required format. One idea to try is to get books from project runeberg that match the style you are interested in and then use them as the base data. 
- : 
-
+Precomputed lists of word n-grams are used to build phrases. These have been built by parsing, converting to runes and selecting from the [google n-gram database
+ V2](http://storage.googleapis.com/books/ngrams/books/datasetsv2.html) to runes.  Currently only 2-grams are included, [more are available here](https://github.com/mortlach/google_ngrams_Version-20200217). Users can add their own files as long as they  match the required format. One idea to try is to get books from [project runeberg](https://github.com/mortlach/projectRuneberg_2022) that match the style you are interested in and then use them as the base data. 
+ 
 ```html
 data/
 ├─ 2_grams/	
@@ -271,7 +272,7 @@ and communication 11607661
 
 ### Phrase Phrase  <a name="File-formats-Phrase-Phrase"></a> 
 
-Each phrase contains a configuration file that defines the "phrase meta data" and the files that hold the word lists. It enables phrases to be saved and worked on over time. Configuration information is loaded on selecting load phrase from the menu phrase. It's a simple text file  using a [key-word] = [value] syntax. In this example paths are relative to the default application executable. These are defined when the phrase configuration file is first saved. They would be easy to manually change if need be. Loading and saving phrase with significantly different paths has not been robustly tested. 
+Each phrase contains a configuration file that defines the "phrase meta data" and the files that hold the word lists. It enables phrases to be saved and worked on over time. Configuration information is loaded on selecting load phrase from the menu phrase. It's a simple text file  using a key-word = value syntax. In this example paths are relative to the default application executable. These are defined when the phrase configuration file is first saved. They would be easy to manually change if need be. Loading and saving phrase with significantly different paths has not been robustly tested. 
 
 
 ```
@@ -309,7 +310,7 @@ ngram0_ngram_index=0
 
 ### Phrase ngrams  <a name="File-formats-Phrase-ngrams"></a> 
 
-For a defined phrase, the "phrase unique words" required ngram-word files are copied into the phrase directory and extra columns are added (explained below). The names of the files are generated by the app. They are prepended by the order of this ngram in the phrase. For a  phrase with word lengths 3-12-5 there were two 2-grams 3-12 and 12-5 so the phrase ngram files will be called "puw_1.csv" and "1_12 5.txt" respectively.  For this length ngram the file data looks like:
+For a defined phrase, the "phrase unique words" required ngram-word files are copied into the phrase directory and extra columns are added (explained below). The names of the files are generated by the app. They are prepended by the order of this ngram in the phrase. For a  phrase with word lengths 3-12-5 there were two 2-grams 3-12 and 12-5 so the phrase ngram files will be called "0_3 12.txt" and "1_12 5.txt" respectively.  For this length ngram the file data looks like:
 
 
 | Ngram word 1  | Ngram word 2 | chosen by word 1  | chosen by word 1  | ngram chosen | counts | chosen |
@@ -373,4 +374,18 @@ For the three word lists there are always the following basic controls.
 The data associated with each of the three types of word lists (main-words, "phrase unique words" and ngrams) is displayed with an interactive table. Sorting can be done by clicking the column headers. Currently three filters can be applied to the data, and future features can expand on these. Multiple items can be selected by using a shift key. Toggling the chosen / not chosen can be achieved by double clicking or pressing alt-f /  alt-t.  Below is an example table for the 1-gram main words. 
 
 ![text ](./doc/manual/images/main_tab_table_selected.png) 
+
+   
+#### Choose Phrase <a name="Gui-Overview-Choose-Phrase"></a>
+
+For entering a new phrase also see [quickstart](#Quickstart-Tutorial-super-quick)
+
+![text ](./doc/manual/images/choose_phrase_controls_with_text_1.png) 
+![text ](./doc/manual/images/choose_phrase_controls_with_text_2.png) 
+
+## License  <a name="Overview"></a>
+
+Using the QT community edition it is mandatory to comply with (L)GPL
+
+https://www.qt.io/licensing
 
