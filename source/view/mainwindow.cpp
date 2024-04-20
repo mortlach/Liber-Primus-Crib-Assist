@@ -117,7 +117,7 @@ MainWindow::MainWindow(QSettings& settings_in, QWidget *parent)
         QString chosen_fn ="phrase_config.ini";
         ngram_data_hub.setPath(chosen_dir,chosen_fn);
         ui->progressBar->show();
-        ui->tabWidget->setCurrentIndex(7);
+        //ui->tabWidget->setCurrentIndex(7);
         // thread idiom, worker class passed to new thread and set up to run specific functions that take time
         if(!busy){
             busy = true;
@@ -164,7 +164,7 @@ void MainWindow::clearPhrase(){
 
 void MainWindow::openPhrase(){
     qDebug() << "MainWindow::openPhrase";
-    QString start_dir  = QDir(main_settings.value(definitions::PATH_TO_PHRASES).toString()).path();
+    QString start_dir  = QDir(main_settings.value(definitions::PATH_TO_PHRASE_SAVE_ROOT).toString()).path();
     QString chosen_dir = QString("");
     QString chosen_fn = QString("");
     QString message = QString("Chose folder, data in existing folders will be overwritten");
@@ -175,7 +175,7 @@ void MainWindow::openPhrase(){
     // thread idiom, worker class passed to new thread and set up to run specific functions that take time
     if(!busy){
         ui->progressBar->show();
-        ui->tabWidget->setCurrentIndex(7);
+        //ui->tabWidget->setCurrentIndex(7);
         busy = true;
         WorkerThread* worker_thread = new WorkerThread(this);
         NgramPhraseWorker* phrase_worker = new NgramPhraseWorker();

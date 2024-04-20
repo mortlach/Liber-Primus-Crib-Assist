@@ -402,8 +402,7 @@ bool readTrueCSVFile(const std::string& path, VVString& file_data){
     return true;
 }
 //
-bool getFileNameAndDir(const QString& start_dir,
-                              QString& chosen_dir, QString& chosen_filename)
+bool getFileNameAndDir(const QString& start_dir, QString& chosen_dir, QString& chosen_filename)
 {
     qDebug() << "getFileNameAndDir()";
     QFileDialog* fileDlg = new QFileDialog(nullptr,"Choose File",start_dir);
