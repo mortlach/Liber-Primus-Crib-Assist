@@ -25,6 +25,7 @@ It's a game of guess the words.
   - [Main-Word-Controls](#Gui-Overview-Main-Word-Controls)
   - [Table-View-of-Data-Objects](#Table-View-of-Data-Objects)
   - [Choose-Phrase](#Gui-Overview-Choose-Phrase)
+- [C++ Source](#C++-Source)
 - [License](#license)
 
 
@@ -198,7 +199,7 @@ The application expects 14 main-word word raw data files, with names defined in 
 | English spelling     | Counts | Chosen status | Runeglish Spelling |Gematria Sum  | 
 |:------------:|:-----:|:-----------:|:-----:|:-----------:|
 
-Below is an example from the 1-gram word list (raw1grams_01.csv). The 1 rune words a and i are chosen and other words are not. there are multiple words that have the same spelling in Runeglish (e.g. u and v) This is not a problem, in general words are chosen using the English spelling. The sentences "V is my favourite letter." and "U is my favourite letter." are different in English but not in runes.   
+Below is an example from the 1-gram word list (raw1grams_01.csv). The 1 rune words a and i are chosen and other words are not. there are multiple words that have the same spelling in Runeglish (e.g. u and v) This is not a problem, in general words are chosen using the English spelling. The sentences "V is my favorite letter." and "U is my favorite letter." are different in English but not in runes.   
 :
 ```
 a,30285331759,1,ᚪ,97
@@ -383,9 +384,17 @@ For entering a new phrase also see [quickstart](#Quickstart-Tutorial-super-quick
 ![text ](./doc/manual/images/choose_phrase_controls_with_text_1.png) 
 ![text ](./doc/manual/images/choose_phrase_controls_with_text_2.png) 
 
+
+
+## C++ Source <a name="C++-Source"></a>
+
+For those of you interested the documentaion for the c++ source can currently be found here
+[c++ docs](https://raw.githack.com/mortlach/Liber-Primus-Crib-Assist/6aeee0f598edede115529de507464e2fb1c99562/doc/html/index.html).
+
+
 ## License  <a name="Overview"></a>
 
-Using the QT community edition it is mandatory to comply with (L)GPL
+Using the [QT community edition](https://www.qt.io/licensing) it is mandatory to comply with (L)GPL.
 
-https://www.qt.io/licensing
+
 
